@@ -8,7 +8,7 @@ import partytown from '@astrojs/partytown';
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  site: 'https://whattodo.netlify.app',
+  site: 'https://whattodocan.netlify.app',
   output: 'server',
   adapter: netlify(),
   integrations: [tailwind(), react(), mdx(),
