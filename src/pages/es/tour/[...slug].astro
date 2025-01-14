@@ -1,0 +1,27 @@
+---
+export const prerender = true;
+
+import MdTourLayout from "@/layouts/MdTourLayout.astro";
+import { getCollectionByName } from "@/content/config";
+
+export async function getStaticPaths() {
+    const toursEntries = await getCollectionByName("tours", "es");
+
+    const paths = toursEntries.map((entry) => {
+        return {
+            params: { lang: entry?.data.lang || "es", slug: entry.new_slug },
+            props: entry,
+        };
+    });
+
+    return paths;
+}
+
+const { lang, slug } = Astro.params;
+const entry = Astro.props;
+const { Content } = await entry.render();
+---
+
+<MdTourLayout frontmatter={entry.data}>
+    <Content />
+</MdTourLayout>

@@ -1,0 +1,645 @@
+{
+    "SEO": {
+        "HOME_PAGE": {
+            "DESCRIPTION": "Encuentra todas las actividades, lugares maravillosos para visitar, Tours en Madrid y diviértete a lo grande durante tu visita a España.",
+            "KEYWORDS": "Cancún, México, tours, actividades, cosas que hacer, viajes, turismo, vacaciones, visitas turísticas, atracciones"
+        },
+        "ALL_TOUR_PAGE": {
+            "TITLE": "La guía definitiva de Cancún - What To Do In Cancun",
+            "DESCRIPTION": "¡Diviértete más con el mismo presupuesto!Encuentre recorridos y actividades baratas en Cancún por debajo de $ 59USD para aprovechar al máximo cada centavo.",
+            "KEYWORDS": "Cancún, México, tours, actividades, cosas que hacer, viajes, turismo cancun, vacaciones cancun, visitas turísticas, atracciones"
+        },
+        "COMBOS_PAGE": {
+            "TITLE": "Nuestros paquetes de Tour de Cancún - What To Do In Cancun",
+            "DESCRIPTION": "¡Descubre la mejor aventura con nuestros paquetes combinados exclusivos en Cancún!Ya sea que esté buscando duplicar las experiencias de emoción o mezcla y coincidir durante un día repleto de emoción, lo tenemos cubierto.",
+            "KEYWORDS": "Cancun, tours, actividades en cancun, que hacer por cancun, viajes, turismo en canucn, vacaciones en cancun, pasear, atracciones en cancun, paquetes y descuentos cancun, combos cancun"
+        },
+        "LAST_MINUTE_PAGE": {
+            "TITLE": "La guía definitiva de Cancún - What To Do In Cancun",
+            "DESCRIPTION": "Obtén un mejor precio con nuestras ofertas de Excursiones en Cancún, síguenos en redes sociales para recibir consejos sobre nuevas oportunidades para obtener una mejor tarifa."
+        },
+        "RESTAURANT_PAGE": {
+            "TITLE": "Los Mejores Restaurantes en Cancun - What To Do In Cancun",
+            "DESCRIPTION": "Si está buscando un lugar para comer en Cancún, tenemos las mejores opciones para encontrar el restaurante ideal para ese momento en particular, para probar nuevos sabores.",
+            "KEYWORDS": "Cancún, México, restaurantes, comida, bebida, gastronomía, cocina, platos, menú"
+        },
+        "TRANSPORTATION_PAGE": {
+            "TITLE": "Transporte del aeropuerto de Cancún - What To Do In Cancun",
+            "DESCRIPTION": "Nuestro servicio privado de transferencia de aeropuerto garantiza que llegue a su destino relajado y listo para disfrutar.",
+            "KEYWORDS": "Cancún, México, transporte, aeropuerto, traslado, taxi, autobús, coche, van, servicio"
+        },
+        "CONTACT_PAGE": {
+            "TITLE": "Contáctenos - What To Do In Cancun",
+            "DESCRIPTION": "Contactános para obtener más información sobre nuestros tours y actividades en el Caribe Mexicano. Estamos aquí para ayudarte a planificar tu viaje y aprovechar al máximo tu visita."
+        },
+        "ABOUT_PAGE": {
+            "TITLE": "Sobre Nosotros - What To Do In Cancun",
+            "DESCRIPTION": "Acerca de What To Do In Cancun, es una agencia de turismo para el visitante del Caribe mexicano, tenemos bastantes los recorridos y actividades."
+        },
+        "TERMS_PAGE": {
+            "TITLE": "Términos y Condiciones - What To Do In Cancun",
+            "DESCRIPTION": "Lea todos los términos y condiciones de What To Do In Cancun para el uso de los servicios turísticos, recursos y asistencia."
+        },
+        "PRIVACY_PAGE": {
+            "TITLE": "Aviso de privacidad - What To Do In Cancun",
+            "DESCRIPTION": "What To Do In Cancun se compromete a proteger la privacidad y la información personal de los visitantes y clientes de nuestro sitio web. Lea nuestro Aviso de privacidad para obtener más información."
+        }
+    },
+    "ACCESSIBILITY": {
+        "CALL_US": "Llámanos",
+        "OPEN_MENU": "Abrir menú",
+        "LOGO": "Logo de What To Do In Cancun",
+        "GO_TO_HOME": "Ir a la página de inicio",
+        "GO_TO_FACEBOOK": "Visita nuestro Facebook",
+        "GO_TO_INSTAGRAM": "Visita nuestro Instagram",
+        "GO_TO_YOUTUBE": "Visita nuestro YouTube",
+        "GO_TO_TIKTOK": "Visita nuestro TikTok",
+        "GO_TO_MAPS": "Encuentranos en Google Maps",
+        "GO_TO_WHATSAPP": "Chatea con nosotros en WhatsApp",
+        "GO_TO_REST_DETAILS": "Ver detalles del restaurante",
+        "GO_TO_TOUR_DETAILS": "Ver detalles del tour",
+        "ALT_IMG": "Imagen de",
+        "OPEN_GALLERY": "Abrir galería de imágenes",
+        "IMG": {
+            "STICKER_TRIPADVISOR": "5 años de excelencia",
+            "STICKER_CLIENTS": "Clientes satisfechos",
+            "CUSTOMER_SUPPORT": "Atención al cliente",
+            "SECURE_CHECKOUT": "Pagos seguros"
+        }
+    },
+    "HOME_PAGE": {
+        "INTRO": {
+            "TITLE": "Descubre lo mejor de What To Do In Cancun",
+            "DESCRIPTION": "¡Bienvenido a What To Do In Cancun !Descubra recorridos emocionantes, comidas exquisitas en restaurantes cercanos y aventuras culturales en el Caribe mexicano.Sumérjase en la vibrante vida nocturna o disfrute del lujo en un salón VIP.¡Permítanos ser su guía de experiencias inolvidables en este paraíso tropical!"
+        },
+        "BEST_ACTIVITIES": {
+            "TITLE": "Tours más buscados",
+            "DESCRIPTION": "Contamos con las actividades imprescindibles en Cancún que cautivarán tus sentidos, desde campos de golf de lujo en Cancún y un yate privado hasta navegar por el mar Caribe, recorrer la selva a bordo de un vehículo todo terreno y explorar el fondo del mar en un tour de snorkel. Aquí lo encontrarás en What To Do In Cancún"
+        },
+        "TOP_ACTIVITIES": {
+            "TITLE": "Tours más buscados",
+            "BUTTON": "Explora todos los tours"
+        },
+        "TOP_PARTIES": {
+            "TITLE": "Las mejores fiestas en Cancún",
+            "BUTTON": "Encuentra tu fiesta ahora"
+        },
+        "TOP_COMBOS": {
+            "TITLE": "Los mejores combos en Cancún",
+            "BUTTON": "Explora todos los combos"
+        },
+        "TOP_RESTAURANTS": {
+            "TITLE": "Restaurantes Mejor Valorados",
+            "BUTTON": "Explora todos los restaurantes"
+        },
+        "TESTIMONIALS": {
+            "TITLE": "Lo que dicen nuestros clientes",
+            "DESCRIPTION": "Todos nuestros clientes comparten su opinión en TripAdvisor y otras plataformas. Verifique nuestra reputación.",
+            "TESTIMONIAL_1": {
+                "USER": "Zachariah Collier",
+                "STARS": "4.5",
+                "DATE": "Septiembre 2023",
+                "TITLE": "Guía profesional",
+                "REVIEW": "Nuestra guía era profesional y conocedora. Hicieron vida a la historia de Chichen Itza e hicieron que la gira enriqueciera."
+            },
+            "TESTIMONIAL_2": {
+                "USER": "Mahamed Atkinson",
+                "STARS": "5.0",
+                "DATE": "Noviembre 2023",
+                "TITLE": "Cómodo salón",
+                "REVIEW": "EI visitó Cancún en Año Nuevo, la temporada más ocupada. Desde que aterrizamos, nos dimos cuenta de que las líneas y las esperas serían largas e incómodas, por lo que pensamos que era una buena idea mejorar nuestro regreso al aeropuerto, solo pensamos en la comida, pero realmente había un bar abierto, Mera VIP Lounge es muy cómodo y privado, muchas gracias por la recomendación."
+            },
+            "TESTIMONIAL_3": {
+                "USER": "Edie Sykes",
+                "STARS": "4.6",
+                "DATE": "Octubre 2023",
+                "TITLE": "ATV Tour para viajar con amigos",
+                "REVIEW": "La mejor experiencia de ATV Zipline Cancun para explorar la jungla, la naturaleza y conocer la cultura local. Especialmente si viajas con amigos."
+            },
+            "TESTIMONIAL_4": {
+                "USER": "Maria Cardenas",
+                "STARS": "5.0",
+                "DATE": "Octubre 2023",
+                "TITLE": "Mejor Taco Tour de todos los tiempos",
+                "REVIEW": "Deliciosa comida mexicana auténtica !!!, ¡Si estás en el área, no te lo pierdas!, ¡El personal es increíble y la comida OMG!"
+            },
+            "TESTIMONIAL_5": {
+                "USER": "Odd Solis",
+                "STARS": "4.7",
+                "DATE": "Noviembre 2023",
+                "TITLE": "Bueno, pero lleno",
+                "REVIEW": "El tour de catamarán a Isla Mujeres fue buena, pero el Beach Club estaba demasiado lleno. Sin embargo, el snorkel fue agradable."
+            }
+        }
+    },
+    "ALL_TOUR_PAGE": {
+        "TITLE": "Todos los tours en Cancún",
+        "DESCRIPTION": "¡Bienvenido What To Do In Cancún en la sección de Todos los tours! Sumérgete en aventuras inolvidables seleccionadas solo para ti. Explore las selvas, el snorkel en aguas serenas y haga que cada momento sea inolvidable. ¡Comienza tu viaje ahora!",
+        "CARD": {
+            "FROM": "Desde",
+            "BUTTON_BOOK_NOW": "Reservar",
+            "BUTTON_MORE": "Más detalles"
+        }
+    },
+    "COMBOS_PAGE": {
+        "TITLE": "Nuestros paquetes de Tours en Cancún",
+        "DESCRIPTION": "¡Descubre la mejor aventura con nuestros paquetes combinados exclusivos en Cancún!Si estás buscando duplicar la emoción O mezcle y coinciden con experiencias para un día repleto de emoción, lo tenemos cubierto.Nuestros combos especialmente curados te permiten Disfrute de múltiples actividades a un gran valor."
+    },
+    "LAST_MINUTE_PAGE": {
+        "TITLE": "Ofertas de último minuto en Cancún",
+        "DESCRIPTION": "¡Obtenga un mejor precio con nuestras ofertas de último minuto en Cancún!Siga nuestras redes sociales para recibir consejos sobre nuevas oportunidades para obtener una mejor tarifa.",
+        "SECTION_TIMER":{
+            "TITLE": "Descuentos por tiempo limitado",
+            "DAYS": "Días",
+            "HOURS": "Horas",
+            "MINUTES": "Minutos",
+            "SECONDS": "Segundos",
+            "FREE_CANCELLATION": "Cancelación gratuita",
+            "LOCAL_EXPERTS": "Expertos locales",
+            "SUPPORT": "Soporte en sus reservaciones",
+            "TRIPADVISOR": "Los favoritos de TripAdvisor"
+        }
+    },
+    "RESTAURANT_PAGE": {
+        "TITLE": "Restaurantes en Cancún",
+        "DESCRIPTION": "Tu aventura de sabores y emociones está a punto de comenzar. Si estás buscando un lugar para comer en Cancún , Tenemos las mejores opciones para encontrar el restaurante ideal para ese momento en particular, para probar nuevos sabores o pasar un buen rato.",
+        "CARD": {
+            "INCLUDES": "Incluye",
+            "COST": "Costo promedio",
+            "BUTTON_BOOK_NOW": "Reservar",
+            "BUTTON_VIEW_MORE": "Más detalles"
+        }
+    },
+    "TRANSPORTATION_PAGE": {
+        "TITLE": "El mejor transporte del aeropuerto de Cancún desde su hotel",
+        "HIGHLIGHTS": {
+            "PICKUP": "Recogida en el aeropuerto",
+            "TICKET": "Boleto móvil",
+            "OFFERED": "Inglés & Español",
+            "REVIEWS": "3,265 reseñas",
+            "LOCATION": "Aeropuerto de Cancún, Quintana Roo"
+        },
+        "NOTES": {
+            "TITLE": "Notas",
+            "LIST": {
+                "ITEM_1": "Debe llamarnos para confirmar su reserva de transporte.",
+                "ITEM_2": "El conductor debe verificar cualquier modificación de ruta.",
+                "ITEM_3": "Esté preparado 5 minutos antes de su hora de recogida.",
+                "ITEM_4": "Si necesita un asiento especial para bebés o bebés, contáctenos para verificar las opciones.",
+                "ITEM_5": "El tiempo de viaje puede variar según el tráfico o las condiciones climáticas."
+            }
+        },
+        "TRAVEL_TIME": {
+            "TITLE": "Tiempos de viaje desde el aeropuerto de Cancún a cada zona:",
+            "LIST": {
+                "ITEM_1": "Zona Hotelera Cancún: 30 minutos",
+                "ITEM_2": "Playa & Costa Mujeres: 45-60 minutos",
+                "ITEM_3": "Puerto Morelos: 30 minutos",
+                "ITEM_4": "Playa del Carmen: 45-60 minutos",
+                "ITEM_5": "Puerto Aventuras: 1 hora 20 minutos",
+                "ITEM_6": "Akumal: 1 hora 30 minuto"
+            }
+        },
+        "CHARACTERISTICS": {
+            "TITLE": "Características",
+            "LIST": {
+                "ITEM_1": "El precio es para una minivan privada.",
+                "ITEM_2": "De 1 a 10 pasajeros.",
+                "ITEM_3": "Transporte de ida."
+            }
+        },
+        "INFORMATION": {
+            "TITLE": "Traslados del Aeropuerto de Cancún",
+            "CANCUN_TO_TULUM": {
+                "TITLE": "Traslado del Aeropuerto de Cancún a Tulum",
+                "DESCRIPTION": "Embárcate en un viaje sin problemas desde el aeropuerto de Cancún hasta los impresionantes paisajes de Tulum. Nuestro servicio privado de transferencia de aeropuerto garantiza que llegue a su destino relajado y listo para disfrutar."
+            },
+            "CANCUN_TO_PLAYA_DEL_CARMEN": {
+                "TITLE": "Transporte de Playa del Carmen desde el aeropuerto de Cancún",
+                "DESCRIPTION": "Desde la energía del aeropuerto de Cancún hasta la atmósfera vibrante de Playa del Carmen, nuestro servicio de transporte privado garantiza un viaje suave y agradable."
+            },
+            "CANCUN_TO_RIVERA_MAYA": {
+                "TITLE": "El mejor transporte desde el aeropuerto de Cancún a la Riviera Maya",
+                "DESCRIPTION": "Para aquellos que buscan un viaje sin problemas a Riviera Maya, nuestro servicio de transporte desde el aeropuerto de Cancún se destaca.Disfrute de un viaje privado que asegura que llegue al destino elegido relajado y listo para explorar."
+            },
+            "CANCUN_TO_COBA": {
+                "TITLE": "Transporte desde el aeropuerto de Cancún a Bahía Principe Coba",
+                "DESCRIPTION": "Desde el momento en que aterriza en el aeropuerto de Cancún, nuestros choferes profesionales estarán listos para llevarlo a su destino elegido. Experimente la facilidad de transporte directo a Bahía Principe Coba."
+            },
+            "CANCUN_TO_AKUMAL": {
+                "TITLE": "Transporte desde el aeropuerto de Cancún hacia Akumal",
+                "DESCRIPTION": "Descubra la belleza de Akumal sin el estrés de la logística del aeropuerto.Nuestro servicio dedicado de transferencia de aeropuerto garantiza un viaje sin problemas desde el aeropuerto de Cancún hasta las costas serenas de Akumal."
+            },
+            "MOON_PALACE": {
+                "TITLE": "Transporte hacia el hotel Moon Palace",
+                "DESCRIPTION": "Embarca en un viaje sin preocupaciones desde el aeropuerto de Cancún hasta el Moon Palace. Nuestro servicio de transferencia privada garantiza que llegue a este exquisito destino en comodidad y estilo."
+            },
+            "OCCIDENTAL_XCARET": {
+                "TITLE": " Transporte desde el aeropuerto de Cancún a Occidental Xcaret ",
+                "DESCRIPTION": "Experimente la maravilla de Occidental Xcaret sin la molestia de la logística del aeropuerto.Nuestro servicio dedicado de transferencia de aeropuerto garantiza un viaje sin problemas desde el aeropuerto de Cancún a este extraordinario destino."
+            },
+            "CANCUN_TO_COSTA_MUJERES": {
+                "TITLE": " Transporte desde el aeropuerto de Cancún a Costa Mujeres",
+                "DESCRIPTION": "Disfrute de un viaje sin problemas desde el aeropuerto de Cancún hasta las tranquilas costas de Costa Mujeres.Nuestro servicio de transporte privado garantiza que llegue a este pintoresco destino relajado y listo para relajarse."
+            },
+            "RIU_PALACE": {
+                "TITLE": "Transporte desde el aeropuerto de Cancún al Riu Palace Costa Mujeres",
+                "DESCRIPTION": "Para un viaje sin estrés desde el aeropuerto de Cancún hasta el Palacio Riu Costa Mujeres, nuestro servicio de transferencia privada es la opción perfecta.Experimente la facilidad de transporte directo a este destino exquisito."
+            }
+        }
+    },
+    "ABOUT_PAGE": {
+        "TITLE": "Acerca de What to do in Cancun",
+        "DESCRIPTION": "Bienvenido a What To Do In Cancun: ¡su puerta de entrada a experiencias inolvidables!",
+        "PHRASE": "Explore, Descubra, Experimente.",
+        "BUTTON": "Explora todos los tours",
+        "OUR_VISION": {
+            "TITLE": "Nuestra visión",
+            "DESCRIPTION": "Fundada en 2021, What To Do In Cancun nació con una visión singular: ser la guía definitiva para viajeros que buscan experiencias excepcionales en Cancún y la Riviera Maya. Entendemos que su viaje no es solo un viaje; es una exploración, una colección de recuerdos que esperan ser creados. Nuestro compromiso es seleccionar las mejores recomendaciones de expertos en turismo experimentados, asegurándonos de que maximice su tiempo en este vibrante destino."
+        },
+        "OUR_BUSINESS_MODEL": {
+            "TITLE": "Nuestro Modelo de negocio",
+            "DESCRIPTION": "En What To Do In Cancun, nos enorgullecemos de un modelo de negocio centrado en usted, nuestro valioso cliente. A diferencia de las plataformas de viajes genéricas, damos prioridad al toque personal. Cada recomendación se elabora con cuidado y se adapta a sus preferencias y necesidades de viaje. Nuestro equipo de expertos dedicados está aquí para guiarlo a través de la gran cantidad de actividades y servicios disponibles, lo que garantiza una experiencia personalizada que resuene con sus aspiraciones de viaje únicas."
+        },
+        "WHY_CHOSE_US": {
+            "TITLE": "¿Por qué elegirnos?",
+            "EXPERTISE": {
+                "TITLE": "Experiencia",
+                "DESCRIPTION": "Nuestro equipo está formado por profesionales experimentados apasionados por los viajes y familiarizados íntimamente con Cancún y la Riviera Maya. Nos comprometemos a compartir nuestro conocimiento interno para mejorar su viaje."
+            },
+            "CAREFUL": {
+                "TITLE": "Selección cuidadosa",
+                "DESCRIPTION": "Cada recomendación en nuestra plataforma se somete a un escrutinio meticuloso. Creemos en la calidad por sobre la cantidad, lo que garantiza que cada sugerencia cumpla con nuestros altos estándares de excelencia."
+            },
+            "CLIENT_CENTRIC": {
+                "TITLE": "Enfoque centrado en el cliente",
+                "DESCRIPTION": "Su satisfacción es nuestra prioridad. Nos tomamos el tiempo para entender sus preferencias, asegurándonos de que nuestras recomendaciones se alineen perfectamente con sus expectativas."
+            },
+            "QUALITY": {
+                "TITLE": "Garantía de calidad",
+                "DESCRIPTION": {
+                    "TEXT_1": "En un mundo inundado de opciones, entendemos la importancia de la calidad. What To Do In Cancun se dedica a mantener los estándares más altos en todas nuestras recomendaciones. Seleccionamos experiencias que no solo cumplen sino que superan sus expectativas, prometiendo recuerdos que durarán toda la vida.",
+                    "TEXT_2": "Embárquese en su aventura en Cancún con confianza, sabiendo que What To Do In Cancun es su compañero de confianza, aquí para transformar sus sueños de viaje en realidad. Gracias por elegirnos como su puerta de entrada a experiencias incomparables."
+                }
+            }
+        }
+    },
+    "TERMS_PAGE": {
+        "TITLE_TERMS": "Términos y condiciones",
+        "TITLE_POLICY": "Política de privacidad",
+        "DESCRIPTION": "What To Do In Cancun es un servicio en línea que permite a los usuarios investigar, encontrar y reservar experiencias de viaje en Cancún. What To Do In Cancun ofrece una variedad de tours y servicios, puestos a disposición por proveedores externos de What To Do In a través de los sitios web, propiedades móviles y aplicaciones relacionadas de What To Do In y sus afiliados (colectivamente, este “Sitio web”). Los términos “nosotros”, “nos”, “nuestro” y “What To Do In Cancun” se refieren a What To Do In S.A, una corporación de Delaware y/o nuestros afiliados, empresa matriz y subsidiarias. El término 'usted' se refiere al cliente que visita el sitio web y/o que contribuye con contenido a este sitio web. Este sitio web y los productos disponibles en este sitio web se ofrecen a usted con la condición de que acepte sin modificaciones alguno o todos los términos, condiciones y avisos establecidos a continuación. Al acceder o utilizar este sitio web de cualquier manera, usted acepta estar sujeto al acuerdo y declara que ha leído y comprendido sus términos. Lea atentamente el acuerdo, ya que contiene información sobre sus derechos legales y limitaciones de estos derechos, así como una sección sobre la ley aplicable y la jurisdicción de las disputas. Si no acepta todos estos términos y condiciones, no utilice este sitio web ni reserve un producto. En todos los acuerdos de reserva, se considerará que la persona que realiza la reserva ha aceptado este Acuerdo en nombre de las personas nombradas en la reserva. Podemos cambiar o modificar el Acuerdo en el futuro, y usted comprende y acepta que su acceso o uso continuo de este sitio web después de dicho cambio significa su aceptación del Acuerdo actualizado o modificado. Indicaremos la fecha en la que se realizaron las últimas revisiones al Acuerdo en la parte superior de esta página, y cualquier revisión entrará en vigencia al momento de su publicación. Notificaremos a nuestros miembros sobre los cambios materiales a estos términos y condiciones mediante el envío de un aviso a la dirección de correo electrónico que nos proporcionó al momento de la inscripción o mediante la publicación de un aviso en nuestro sitio web. Asegúrese de volver a esta página periódicamente para revisar la versión más reciente del acuerdo.",
+        "USE_OF_WEBSITE": {
+            "TITLE": "Uso del sitio web",
+            "DESCRIPTION": "What To Do In Cancun es responsable de proteger su privacidad. En determinadas circunstancias, podemos divulgar información sobre usted a terceros si determinamos, a nuestro exclusivo criterio, que dicha divulgación es necesaria (a) para proteger los sistemas, activos, empleados, miembros y clientes de What To Do In Cancun; (b) para garantizar la integridad y el funcionamiento de nuestro negocio y sistemas; o (c) para cumplir con solicitudes gubernamentales, citaciones u órdenes judiciales legales y exigibles. Podemos optar por cumplir o ignorar dichas solicitudes u órdenes a nuestro exclusivo criterio. What To Do In Cancun tiene el derecho de divulgar información, incluida, entre otras, información del perfil del usuario (por ejemplo, nombre, dirección de correo electrónico, etc.), dirección IP e información de tráfico, historial de uso y contenido publicado."
+        },
+        "POLICY_DISCLOSURE": {
+            "TITLE": "Política de privacidad y divulgaciones",
+            "DESCRIPTION": "What To Do In Cancun es responsable de proteger su privacidad. En determinadas circunstancias, podemos divulgar información sobre usted a terceros si determinamos, a nuestro exclusivo criterio, que dicha divulgación es necesaria (a) para proteger los sistemas, activos, empleados, miembros y clientes de What To Do In Cancun; (b) para garantizar la integridad y el funcionamiento de nuestro negocio y sistemas; o (c) para cumplir con solicitudes gubernamentales, citaciones u órdenes judiciales legales y exigibles. Podemos optar por cumplir o ignorar dichas solicitudes u órdenes a nuestro exclusivo criterio. What To Do In Cancun tiene el derecho de divulgar información, incluida, entre otras, información del perfil del usuario (por ejemplo, nombre, dirección de correo electrónico, etc.), dirección IP e información de tráfico, historial de uso y contenido publicado."
+        },
+        "PROHIBITED_ACTIVITIES": {
+            "TITLE": "Actividades prohibidas",
+            "DESCRIPTION": {
+                "TEXT": "El contenido y la información de este sitio web (incluidos, entre otros, los precios y la disponibilidad de los servicios de viaje), así como la infraestructura utilizada para proporcionar dicho contenido e información, son de nuestra propiedad o de nuestros proveedores. Si bien puede hacer copias limitadas de su itinerario de viaje (y documentos relacionados) para las reservas de viajes o servicios realizadas a través de este sitio web, acepta no modificar, copiar, distribuir, transmitir, mostrar, ejecutar, reproducir, publicar, licenciar, crear trabajos derivados, transferir, vender o revender de otro modo cualquier información, software, productos o servicios obtenidos de o a través de este sitio web. Además, acepta no:",
+                "LIST": {
+                    "ITEM_1": "Utilizar este sitio web o sus contenidos con fines comerciales o ilegales.",
+                    "ITEM_2": "Acceder, monitorear o copiar cualquier contenido o información de este sitio web utilizando cualquier robot, araña, scraper u otro medio automatizado o cualquier proceso manual para acceder, scraping, indexar, recuperar o utilizar el sitio web o cualquier contenido del sitio web para cualquier propósito sin nuestro permiso expreso por escrito",
+                    "ITEM_3": "Violar las restricciones en los encabezados de exclusión de robots en este sitio web o eludir o pasar por alto otras medidas empleadas para prevenir o limitar el acceso a este sitio web.",
+                    "ITEM_4": "Tomar cualquier acción que imponga, o pueda imponer, a nuestro exclusivo criterio, una carga irrazonable o desproporcionadamente grande en nuestra infraestructura o cree demandas excesivas de tráfico en el sitio web.",
+                    "ITEM_5": "Enlaces profundos a cualquier parte de este sitio web para cualquier propósito sin nuestro permiso expreso por escrito.",
+                    "ITEM_6": "“Marcar”, “duplicar” o incorporar cualquier parte de este sitio web en cualquier otro sitio web sin nuestro permiso previo por escrito.",
+                    "ITEM_7": "Intentar modificar, traducir, adaptar, editar, descompilar, desensamblar o aplicar ingeniería inversa a cualquier programa de software utilizado por What To Do In Cancun en relación con el sitio web.",
+                    "ITEM_8": "Usar el sitio web para amenazar, acechar, defraudar, incitar, hostigar o promover el acoso de otra persona, o interferir con el uso del sitio web por parte de otro usuario.",
+                    "ITEM_9": "Usar el sitio web para enviar o transmitir spam, cartas en cadena, concursos, correo basura, esquemas piramidales, encuestas u otros mensajes masivos, ya sean de naturaleza comercial o no comercial; 10. usar el sitio web de una manera que pueda crear un conflicto de intereses, como intercambiar opiniones con otros propietarios de negocios o escribir o solicitar reseñas;",
+                    "ITEM_10": "Usar el sitio web para promover la intolerancia o la discriminación contra clases protegidas; usar el sitio web para infringir cualquier derecho de terceros, incluyendo cualquier violación de confidencialidad, derechos de autor, marca registrada, patente, secreto comercial, derecho moral, derecho de privacidad, derecho de publicidad o cualquier otra propiedad intelectual o derecho de propiedad.",
+                    "ITEM_11": "Usar el sitio para enviar o transmitir pornografía o contenido ilegal; utilizar el sitio para solicitar información personal a menores o para dañar o amenazar con dañar a menores.",
+                    "ITEM_12": "Intentar obtener acceso no autorizado al Sitio web, cuentas de usuario, sistemas informáticos o redes conectadas al Sitio web mediante piratería, extracción de contraseñas o cualquier otro medio; utilizar el Sitio web para transmitir virus informáticos, gusanos, defectos, caballos de Troya u otros elementos de naturaleza destructiva (colectivamente, “Virus”)",
+                    "ITEM_13": "Utilizar cualquier dispositivo, software o rutina que interfiera con el funcionamiento adecuado del sitio web o intente interferir con el funcionamiento adecuado del sitio web.",
+                    "ITEM_14": "Utilizar el sitio web para violar la seguridad de cualquier red informática, descifrar contraseñas o códigos de cifrado de seguridad; 16. interrumpir o interferir con la seguridad del sitio web o dañar el sitio web; o",
+                    "ITEM_15": "Eliminar, eludir, deshabilitar, dañar o interferir con las funciones relacionadas con la seguridad del sitio web, funciones que impidan o restrinjan el uso o la copia del contenido del sitio web o funciones que impongan limitaciones al uso del sitio web."
+                }
+            }
+        },
+        "ELECTRONIC_COMMUNICATIONS": {
+            "TITLE": "Comunicaciones electrónicas",
+            "DESCRIPTION": "Cuando utiliza el sitio web What To Do In Cancun o nos envía correos electrónicos, mensajes de TEXT y otras comunicaciones desde su computadora de escritorio o dispositivo móvil, se comunica con nosotros electrónicamente y acepta que podemos comunicarnos con usted de diversas maneras, como por correo electrónico, notificaciones automáticas en la aplicación o mediante la publicación de avisos y mensajes en el sitio web. Puede cancelar la suscripción a las comunicaciones por correo electrónico en cualquier momento por correo electrónico."
+        },
+        "PRODUCTS_RESERVATIONS": {
+            "TITLE": "Productos y Reservaciones",
+            "DESCRIPTION": "Al realizar una reserva de producto a través del Sitio Web, usted reconoce que acepta las prácticas descritas en nuestra Política de Privacidad y este Acuerdo. Además, garantiza que tiene 18 años de edad o más, que posee la autoridad legal para hacer uso de este Acuerdo, usar este Sitio Web, reservar el producto y que toda la información que proporciona es verdadera y precisa. Además, acepta que utilizará la funcionalidad de reserva de este sitio web para realizar solo reservas legítimas para usted o para otras personas para quienes está legalmente autorizado a actuar. Se prohíbe cualquier reserva falsa o fraudulenta. What To Do In Cancun no es una agencia de viajes y no proporciona ni posee servicios de transporte, alojamiento, tours, excursiones, recorridos u otras experiencias de viaje. Aunque What To Do In Cancun muestra información sobre experiencias de viaje ofrecidas por proveedores externos y facilita las reservas a dichos proveedores, dichas acciones de ninguna manera implican, sugieren o constituyen qué hacer. En el patrocinio o respaldo de proveedores externos, o cualquier afiliación entre What To Do In Cancun y proveedores externos. Aunque los miembros de What To Do In Cancun pueden calificar y revisar experiencias de viaje particulares en función de sus propias experiencias, What To Do In Cancun no respalda ni recomienda los productos o servicios de ningún proveedor externo. Usted acepta que What To Do In Cancun no es responsable de la precisión o integridad de la información que obtiene de proveedores externos y muestra en su sitio web. Si reserva una experiencia de viaje a través del sitio web, acepta revisar y estar sujeto a los términos y condiciones del proveedor y cualquier otra regla o política relacionada con la experiencia de viaje del proveedor. Sus interacciones con proveedores externos son bajo su propio riesgo. What To Do In Cancun no tendrá responsabilidad con respecto a los actos, omisiones, errores, representaciones, garantías, infracciones o negligencia de proveedores externos o por lesiones personales, muerte, daños a la propiedad u otros daños o gastos resultantes de sus interacciones con proveedores externos. Para los cálculos de tiempo y fecha límite, prevalecerá la zona horaria del proveedor. "
+        },
+        "RESERVATION_POLICIES": {
+            "TITLE": "Políticas de reserva",
+            "DESCRIPTION": {
+                "TEXT": "Consulta la sección “Pagos y cancelaciones” a continuación para obtener información adicional sobre la cancelación de una reserva.",
+                "LIST": {
+                    "ITEM_1": "What To Do In Cancun no cobra ninguna tarifa por modificar o cambiar las fechas de una reserva existente, siempre que nuestro equipo de atención al cliente reciba la solicitud con más de tres (3) días de antelación a la fecha de viaje confirmada.",
+                    "ITEM_2": "No es posible cambiar o modificar una entrada para un evento especial, teatro o espectáculo. Las ventas de estas entradas son definitivas y no se pueden cambiar una vez confirmada la compra original.",
+                    "ITEM_3": "Todas las demás solicitudes de cambio de fecha y modificaciones están sujetas a la disponibilidad de nuestros proveedores y/o prestadores de servicios; What To Do In Cancun no puede garantizar el éxito de ninguna solicitud de cambio de fecha.",
+                    "ITEM_4": "Si solicitas un cambio de fecha dentro de los tres (3) días o menos de la fecha de viaje confirmada, What To Do In Cancun intentará respetarla. ",
+                    "ITEM_5": "Si realiza una compra utilizando un código promocional de What To Do In Cancun, o si acepta un descuento o un precio de oferta especial durante el proceso de pago de What To Do In Cancun, puede anular su descuento o precio de oferta especial al realizar cambios o modificaciones a su itinerario una vez que se complete su compra. What To Do In Cancun puede decidir, a su exclusivo criterio, respetar su descuento o precio de oferta especial si realiza un cambio o modificación posterior a la compra a su itinerario. Sin embargo, What To Do In Cancun se reserva el derecho de invalidar su descuento o precio de oferta especial si realiza algún cambio en su itinerario confirmado. Ocasionalmente, nuestros proveedores y/o proveedores de servicios realizan cambios en las fechas, precios, inclusiones, cobertura, requisitos de edad y otras características y/o requisitos del producto. Como resultado, What To Do In Cancun se reserva el derecho de cancelar, cambiar o sustituir cualquier servicio, tour, boleto o producto que haya reservado en este sitio web, en cualquier momento y por cualquier motivo. En tales casos, si no está satisfecho con las alternativas ofrecidas, tiene derecho a un reembolso total del precio de compra original. No obstante lo anterior, cuando nuestros agentes, prestadores de servicios y/o proveedores nos informen de un cambio significativo en una reserva y/o tour, producto o evento, hacemos todos los esfuerzos razonables para notificar al consumidor, agente de viajes y/o distribuidor, según corresponda, para modificar o volver a emitir la reserva cuando sea posible.",
+                    "ITEM_6": "Las tarifas publicadas en el sitio Web solo son válidas al momento de la cotización; se garantizan al recibir el pago.",
+                    "ITEM_7": "Todas las reservas están sujetas a disponibilidad y no se pueden garantizar hasta que se reciba el pago total.",
+                    "ITEM_8": "Una reserva se considera completa cuando se le proporciona un número de confirmación y se ha aplicado el cargo correspondiente.",
+                    "ITEM_9": "Al momento de reservar, usted autoriza el uso de su número de tarjeta de crédito para el pago, y reconoce y acepta expresamente nuestras políticas de reserva, pago, exención de responsabilidad y cancelación.",
+                    "ITEM_10": "Es necesario que imprima su voucher de reserva y lo presente al momento de reclamar los servicios que reservó.",
+                    "ITEM_11": "Para que su reserva sea válida, es obligatorio que la persona que pagó por este servicio presente una identificación con fotografía válida y la tarjeta de crédito con la que realizó el pago al registrarse para su servicio reservado."
+                }
+            }
+        },
+        "PRICES_INCLUSIONS": {
+            "TITLE": "Precios e inclusiones/exclusiones",
+            "DESCRIPTION": "Los precios que figuran en el sitio web son por persona, a menos que se especifique lo contrario. Los precios se basan en la tasa local vigente al momento de la cotización, convertida al tipo de cambio vigente según lo determine What To Do In Cancun. Las cotizaciones de precios están sujetas a cambios sin previo aviso, hasta que se haya confirmado la reserva. A menos que se especifique lo contrario, los precios no incluyen impuestos locales ni tarifas de uso, incluidos los impuestos de salida del extranjero, seguridad, cargos portuarios, tarifas de parques, aduanas, inmigración, agricultura, instalaciones para pasajeros o transporte internacional. Los precios no incluyen propinas para conductores o guías locales; tarifas de pasaporte y visa; equipaje y seguro personal; ningún artículo de naturaleza personal; impuestos o aranceles; y ninguna bebida o alimento que no se incluya específicamente en “Inclusiones” en las páginas de productos del sitio web."
+        },
+        "PAYMENTS_CANCELLATIONS": {
+            "TITLE": "Pagos y cancelaciones",
+            "DESCRIPTION": {
+                "TEXT": "Cuando realiza una reserva de un producto a través del sitio web, What To Do In Cancun recopila su información de pago y procesa su pago como se describe a continuación en “Procesamiento de pagos”. What To Do In Cancun acepta las siguientes tarjetas de crédito: Mastercard, Visa y paypal. No hay cargos ni tarifas de servicio por procesar pagos con tarjeta de crédito o débito. Se requiere el pago total con tarjeta de crédito o débito para realizar una reserva. El estado de cuenta de la tarjeta de crédito o débito se indicará en el pago. No se realizan reembolsos una vez que se haya iniciado un tour o servicio, ni con respecto a ningún paquete, alojamiento, comidas o cualquier otro servicio utilizado. La cancelación de una reserva con What To Do In Cancun puede resultar en cargos por cancelación cobrados por What To Do In Cancun, como se describe a continuación. El proveedor individual o el operador turístico pueden cobrar cargos adicionales. En caso de cancelación de cualquier reserva, se le notificará por correo electrónico o teléfono el total de los cargos por cancelación.",
+                "LIST": {
+                    "ITEM_1": "Las entradas para eventos, atracciones, teatros, espectáculos o bonos no son reembolsables bajo ninguna circunstancia.",
+                    "ITEM_2": "Los certificados de regalo no son reembolsables bajo ninguna circunstancia.",
+                    "ITEM_3": "Otros productos y servicios turísticos Si cancela al menos 3 días antes de la salida programada, se le reembolsará el 100%. Si no cancela dentro de los 3 días anteriores a la salida programada, se le reembolsará el 0%. Si las condiciones meteorológicas, medidas administrativas, huelgas u otras circunstancias impiden la realización de la actividad o la hacen peligrosa, el proveedor cancelará la actividad pactada para la fecha específica. En este caso, se reembolsará el precio pagado. El proveedor tiene derecho a no permitirle participar o excluirlo, respectivamente, de una actividad si no cumple con las condiciones de participación en su persona, si su participación lo pone a usted o a otros en peligro, o si perturba de manera prolongada la ejecución de la actividad. Lo mismo se aplica a los usuarios que sean intermediados por usted. En estos casos, el precio pagado no puede ser reembolsado. En caso contrario, el proveedor se reserva el derecho de realizar cambios menores en el programa, si fuera necesario debido a circunstancias imprevisibles o inevitables. El reembolso se realizará mediante el medio de pago utilizado. En el caso de tarjetas de crédito con cargo mensual correspondiente, el importe se acreditará al final del período de facturación actual. La fecha exacta del reembolso depende del contrato de tarjeta de crédito del usuario. El reembolso a través de una cuenta se realiza en un plazo de siete días hábiles bancarios."
+                }
+            }
+        },
+        "DISCLAIMER": {
+            "TITLE": "Descargo de responsabilidad",
+            "DESCRIPTION": {
+                "TEXT": "What To Do In Cancun, no asumirá responsabilidad por ningún reclamo, costo o gasto que surja de lesiones personales o de terceros, accidente o muerte, pérdida o daño a la propiedad personal, falta de disfrute, enojo, decepción, angustia o frustración (ya sea mental o física) resultante de las siguientes causas:",
+                "LIST": {
+                    "ITEM_1": "Actos u omisiones de cualquier persona distinta a What To Do In Cancun o sus empleados",
+                    "ITEM_2": "Enfermedad, robo, disputas laborales, huelgas, fallas mecánicas, cuarentena, acciones gubernamentales, condiciones climáticas o cualquier otra causa fuera del control directo de What To Do In Cancun.",
+                    "ITEM_3": "Incapacidad del cliente para viajar debido a la falta de los documentos requeridos tales como, pero no limitado a, pasaportes válidos, visas, identificación personal, recetas o documentos y certificados médicos. What To Do In Cancun no es responsable ante el cliente o cualquier tercero debido a la incapacidad o falta de documentos personales del cliente.",
+                    "ITEM_4": "Cancelación o cambio por cualquier motivo de los servicios de viaje ofrecidos y contratados por el Cliente. What To Do In Cancun se reserva el derecho de cancelar o cambiar los servicios publicados, pero tratará de sustituirlos por servicios similares. Si una reservación debe cancelarse, la responsabilidad de What To Do In Cancun se limitará al reembolso de todo el dinero pagado por el cliente.",
+                    "ITEM_5": "Los reembolsos completos no aplican en situaciones en las que el viaje tenga que ser cancelado, interrumpido o pospuesto por What To Do In Cancun por razones fuera de su control (causas de fuerza mayor, como, pero no limitadas a, condiciones climáticas, huracanes, terremotos, huelgas, guerras, actos de terrorismo, etc.) y en las que las obligaciones contractuales de What To Do In Cancun con sus proveedores no le permitan obtener el reembolso del monto pagado o por pagar al proveedor en nombre del cliente. En estos casos, What To Do In Cancun se reserva el derecho de retener el 10% del monto total pagado por la reservación como cargo administrativo.",
+                    "ITEM_6": "Aunque las tarifas se actualizan constantemente, en casos remotos existe la posibilidad de que existan cambios en las tarifas sin previo aviso por contingencias o fuerza mayor. En estos casos, el proveedor podría no tener una forma de actualizar las tarifas rápidamente. What To Do In Cancun hace revisiones periódicas donde pueden existir diferencias entre el precio pagado por la reservación y el precio requerido para utilizar el servicio. En caso de un cambio de tarifa, si resulta en un precio menor, se cobrará ese precio y se reembolsará la diferencia. Si resulta en un precio mayor, uno de nuestros Asesores de Viajes se comunicará con El Cliente e informará sobre el cambio. En caso de inconformidad, What To Do In Cancun reembolsará el 100% del monto pagado, pero no se hace responsable de reclamos o inconvenientes derivados del cambio de tarifas o cancelación de la reserva."
+                }
+            }
+        },
+        "PAYMENT_PROCESSING": {
+            "TITLE": "Procesamiento de Pagos",
+            "DESCRIPTION": {
+                "TEXT_1": "Bajo este acuerdo, los servicios de procesamiento de pagos por los servicios adquiridos en este sitio web son proporcionados por What To Do In S.A.",
+                "TEXT_2": "Aceptamos Visa, MasterCard y PayPal como métodos de pago.",
+                "TEXT_3": "Si prefiere pagar por transferencia bancaria, por favor contacte a nuestros Asesores de Viajes.",
+                "TEXT_4": "El importe correspondiente a su reservación será cargado inmediatamente a su tarjeta de crédito.",
+                "TEXT_5": "Las tarifas mostradas en dólares estadounidenses serán convertidas a pesos mexicanos al tipo de cambio vigente en la fecha de la transacción.",
+                "TEXT_6": "Esta conversión puede causar que el importe que aparecerá en el estado de cuenta de su tarjeta de crédito muestre una variación de hasta un 5% por debajo o por encima de la fluctuación internacional de los tipos de cambio de divisas. WHAT TO DO IN CANCUN no es responsable de esta fluctuación y al aceptar esta política usted reconoce que tiene He sido informado de esta fluctuación del tipo de cambio y estoy de acuerdo con ella."
+            }
+        },
+        "PRIVATE_TOUR_GUIDES": {
+            "TITLE": "Guías turísticos privados",
+            "DESCRIPTION": "What To Do In Cancun ofrece a los clientes información sobre guías turísticos privados en muchos destinos a través del programa Wapp To Do. Los guías turísticos privados son contratistas independientes y no agentes ni afiliados de What To Do In Cancun. What To Do In Cancun no examina ni realiza verificaciones de antecedentes de los guías turísticos privados. El uso de guías turísticos privados es bajo su propio riesgo. Los clientes son responsables de trabajar directamente con los guías turísticos privados en cuanto a la programación, la hora y el lugar de las reuniones, los detalles del recorrido y, cuando se indique específicamente, las condiciones de pago. What To Do In Cancun no hace declaraciones ni garantías de ningún tipo con respecto a los guías turísticos privados o sus servicios."
+        },
+        "PASSPORT_VISA": {
+            "TITLE": "Pasaportes, visas y seguros",
+            "DESCRIPTION": "Al realizar reservas internacionales con proveedores externos a través de este sitio web, usted es responsable de asegurarse de cumplir con todos los requisitos de entrada al extranjero y de que sus documentos de viaje, incluidos pasaportes y visas, estén en regla. Para obtener información sobre los requisitos de pasaporte y visa, consulte con la embajada o consulado correspondiente. Dado que los requisitos pueden cambiar en cualquier momento, asegúrese de verificar la información actualizada antes de reservar y partir. What To Do In Cancun no acepta ninguna responsabilidad por los viajeros a los que se les niegue la entrada a un vuelo o a cualquier país debido a que el viajero no lleva consigo los documentos de viaje requeridos por cualquier aerolínea, autoridad o país, incluidos los países por los que el viajero pueda pasar en el camino a su destino. Como los requisitos de salud y visa están sujetos a cambios sin previo aviso, le recomendamos que verifique los requisitos de salud y visa con el consulado correspondiente antes de partir. También es su responsabilidad consultar a su médico sobre las recomendaciones actuales de vacunación antes de viajar al extranjero, y asegurarse de cumplir con todos los requisitos de salud para ingresar y seguir todos los consejos médicos relacionados con su viaje. Le recomendamos encarecidamente que compre una póliza de seguro de viaje integral antes de partir para proteger su compra de productos. Si cancela su viaje o cambia significativamente las fechas de viaje, su póliza de seguro de viaje puede reembolsar el costo de las tarifas de cancelación y los gastos relacionados. Revise cuidadosamente su póliza de seguro de viaje para conocer los términos y condiciones relacionados. Aunque la mayoría de los viajes, incluidos los viajes a destinos internacionales, se completan sin incidentes, viajar a ciertos destinos puede implicar un mayor riesgo que otros. AL PUBLICAR INFORMACIÓN RELEVANTE PARA VIAJAR A DESTINOS INTERNACIONALES PARTICULARES, QUÉ HACER EN CANCÚN NO DECLARA NI GARANTIZA QUE VIAJAR A DICHOS PUNTOS SEA ACONSEJABLE O SIN RIESGO, Y NO ES RESPONSABLE DE DAÑOS O PÉRDIDAS QUE PUEDAN RESULTAR DE VIAJAR A DICHOS DESTINOS."
+        },
+        "OUR_RESPONSIBILITY": {
+            "TITLE": "Nuestra responsabilidad",
+            "DESCRIPTION": {
+                "TEXT_1": "POR FAVOR LEA ESTA SECCIÓN CUIDADOSAMENTE. ESTA SECCIÓN LIMITA LA RESPONSABILIDAD DE WHAT TO DO IN CANCUN ANTE USTED POR ASUNTOS QUE PUEDAN SURGIR EN CONEXIÓN CON SU USO DE ESTE SITIO WEB. SI NO ENTIENDE LOS TÉRMINOS DE ESTA SECCIÓN O DE OTRA PARTE DEL ACUERDO, CONSULTE A UN ABOGADO PARA QUE LE ACLARE ANTES DE ACCEDER O UTILIZAR ESTE SITIO WEB. LA INFORMACIÓN, EL CONTENIDO, EL SOFTWARE, LOS PRODUCTOS Y LOS SERVICIOS PUBLICADOS EN ESTE SITIO WEB PUEDEN INCLUIR INEXACTITUDES O ERRORES, INCLUYENDO ERRORES DE DISPONIBILIDAD DE RESERVAS Y DE PRECIOS. WHAT TO DO IN CANCUN, SUS SUBSIDIARIAS Y SUS AFILIADAS CORPORATIVAS NO GARANTIZAN LA EXACTITUD DE, Y RENUNCIA A TODA RESPONSABILIDAD POR, CUALQUIER ERROR U OTRAS INEXACTITUDES RELACIONADAS CON LA INFORMACIÓN Y DESCRIPTION DE LOS PRODUCTOS Y SERVICIOS QUE SE MUESTRAN EN ESTE SITIO WEB (INCLUYENDO, SIN LIMITACIÓN, PRECIO, DISPONIBILIDAD, FOTOGRAFÍAS, CARACTERÍSTICAS, INCLUSIONES Y EXCLUSIONES, DESCRIPCIONES GENERALES DE PRODUCTOS, RESEÑAS Y CALIFICACIONES, ETC.). ADEMÁS, WHAT TO DO IN CANCUN SE RESERVA EXPRESAMENTE EL DERECHO DE CORREGIR CUALQUIER ERROR EN LA DISPONIBILIDAD Y PRECIOS EN NUESTRO SITIO WEB Y/O EN LAS RESERVAS PENDIENTES REALIZADAS BAJO UN PRECIO INCORRECTO.",
+                "TEXT_2": "WHAT TO DO IN CANCUN NO HACE DECLARACIONES SOBRE LA IDONEIDAD DE LA INFORMACIÓN, CONTENIDO, SOFTWARE, PRODUCTOS Y SERVICIOS CONTENIDOS EN ESTE SITIO WEB PARA CUALQUIER PROPÓSITO, Y LA INCLUSIÓN U OFERTA DE CUALQUIER PRODUCTO O SERVICIO EN ESTE SITIO WEB NO CONSTITUYE NINGÚN APROBACIÓN DE DICHOS PRODUCTOS O SERVICIOS POR PARTE DE WHAT TO DO IN CANCUN. TODA DICHA INFORMACIÓN, CONTENIDO, SOFTWARE, PRODUCTOS Y SERVICIOS SE PROPORCIONAN “TAL CUAL” SIN GARANTÍA DE NINGÚN TIPO. QUÉ HACER EN CANCÚN NIEGA TODAS LAS GARANTÍAS Y CONDICIONES DE QUE ESTE SITIO WEB, SUS SERVIDORES O CUALQUIER CORREO ELECTRÓNICO ENVIADO POR QUÉ HACER EN CANCÚN, ESTÉN LIBRES DE VIRUS U OTROS COMPONENTES DAÑINOS. WHAT TO DO IN CANCUN NIEGA POR LA PRESENTE TODAS LAS GARANTÍAS Y CONDICIONES CON RESPECTO A ESTA INFORMACIÓN, CONTENIDO, SOFTWARE, PRODUCTOS Y SERVICIOS, INCLUYENDO TODAS LAS GARANTÍAS Y CONDICIONES IMPLÍCITAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR, TITLE Y NO INFRACCIÓN, EN LA MEDIDA EN QUE LO PERMITA LA LEY.",
+                "TEXT_3": "LOS PROVEEDORES EXTERNOS Y LOS GUÍAS TURÍSTICOS PRIVADOS QUE OFRECEN PRODUCTOS U OTROS SERVICIOS EN ESTE SITIO WEB SON CONTRATISTAS INDEPENDIENTES Y NO AGENTES O EMPLEADOS DE WHAT TO DO IN CANCUN. WHAT TO DO IN CANCUN NO ES RESPONSABLE DE LOS ACTOS, ERRORES, OMISIONES, REPRESENTACIONES, GARANTÍAS, INCUMPLIMIENTOS, NEGLIGENCIA O MALA CONDUCTA DE DICHOS PROVEEDORES O GUÍAS TURÍSTICOS PRIVADOS O POR LESIONES PERSONALES, MUERTE, DAÑOS A LA PROPIEDAD U OTROS DAÑOS O GASTOS RESULTANTES DE ELLOS O QUE SURJAN DE OTRA MANERA DE LA RESERVA DE UN PRODUCTO O SERVICIO O SU USO DE UN PRODUCTO O SERVICIO. WHAT TO DO IN CANCUN NO SE HACE RESPONSABLE Y NO REALIZARÁ REEMBOLSOS EN CASO DE RETRASOS, CANCELACIONES, SOBREVIVIENTES, HUELGAS, FUERZA MAYOR U OTRAS CAUSAS FUERA DE SU CONTROL DIRECTO, Y NO SE HACE RESPONSABLE POR GASTOS ADICIONALES, OMISIONES, RETRASOS, REENRUTAMIENTOS O ACTOS DE CUALQUIER GOBIERNO O AUTORIDAD.",
+                "TEXT_4": "EN NINGÚN CASO WHAT TO DO IN CANCUN (O SUS FUNCIONARIOS, DIRECTORES Y AFILIADOS) SERÁN RESPONSABLES POR DAÑOS DIRECTOS, INDIRECTOS, PUNITIVOS, INCIDENTALES, ESPECIALES, EJEMPLARES O CONSECUENTES (INCLUYENDO, SIN LIMITACIÓN, PÉRDIDA DE DATOS O INFORMACIÓN O COSTOS PARA ADQUIRIR BIENES O SERVICIOS SUSTITUTOS) QUE SURJAN DE O ESTÉN RELACIONADOS CON LAS RESERVAS DE PRODUCTOS O SERVICIOS REALIZADOS A TRAVÉS DE ESTE SITIO WEB O SU ACCESO, VISUALIZACIÓN O USO DE ESTE SITIO WEB O LA DEMORA O INCAPACIDAD DE ACCEDER, VER O UTILIZAR ESTE SITIO WEB (INCLUIDA, PERO NO LIMITADA A, SU CONFIANZA EN LAS OPINIONES Y RESEÑAS QUE APARECEN EN ESTE SITIO WEB); CUALQUIER VIRUS INFORMÁTICO, INFORMACIÓN, SOFTWARE, SITIOS VINCULADOS, PRODUCTOS Y SERVICIOS OBTENIDOS A TRAVÉS DE ESTE SITIO WEB O DE OTRO MODO A PARTIR DEL ACCESO, LA VISUALIZACIÓN O EL USO DE ESTE SITIO WEB), YA SEA CON BASE EN UNA TEORÍA DE NEGLIGENCIA, CONTRATO, AGRAVIO, RESPONSABILIDAD ESTRICTA O DE OTRO MODO, E INCLUSO SI SE HA ADVERTIDO A WHAT TO DO IN CANCUN DE LA POSIBILIDAD DE DICHOS DAÑOS.",
+                "TEXT_5": "Si What To do In Cancun es responsable de cualquier pérdida o daño que surja de o esté relacionado de alguna manera con su uso de nuestros sitios web o su reserva o uso de productos o servicios disponibles a través de nuestro sitio web, entonces las responsabilidades de What To do In Cancun no excederán en ningún caso, en total, la mayor de (a) las tarifas de transacción pagadas por What To do In Cancun por la(s) transacción(es) en este sitio web que dan lugar al reclamo, o (b) – Cien dólares (US$100,00). La limitación de responsabilidad refleja la distribución de riesgos entre las partes. Las limitaciones especificadas en esta sección subsistirán y se aplicarán incluso si se determina que cualquier recurso limitado especificado en estos términos no ha cumplido su propósito esencial. Las limitaciones de responsabilidad previstas en estos términos redundan en beneficio de What To Do In Cancun."
+            }
+        },
+        "YOUR_RESPONSIBILITY": {
+            "TITLE": "Su responsabilidad",
+            "DESCRIPTION": {
+                "TEXT": "Usted acepta defender e indemnizar a What To Do In Cancun y a todos sus respectivos funcionarios, directores, empleados y agentes de y contra cualquier y todos los reclamos, causas de acción, demandas, juicios, procedimientos, investigaciones, pérdidas, daños, multas, sanciones, honorarios, gastos, costos y cualquier otra responsabilidad de cualquier tipo o naturaleza, incluidos, entre otros, los honorarios legales y contables razonables, que surjan de o estén relacionados con:",
+                "LIST": {
+                    "ITEM_1": "Su incumplimiento de este Acuerdo o de los documentos a los que se hace referencia en el presente.",
+                    "ITEM_2": "Su violación de cualquier ley, norma, reglamento o directriz;",
+                    "ITEM_3": "Su violación, infracción o apropiación indebida de los derechos de un tercero, incluidos, entre otros, los derechos de publicidad o privacidad;",
+                    "ITEM_4": "Su uso de este sitio web;",
+                    "ITEM_5": "Su reserva o uso de cualquier producto obtenido a través de este sitio web; o",
+                    "ITEM_6": "Su negligencia o mala conducta intencional."
+                }
+            }
+        },
+        "LINKS_TO_THIRD": {
+            "TITLE": "Enlaces a sitios web de terceros",
+            "DESCRIPTION": {
+                "TEXT_1": "A menos que se especifique lo contrario, el sitio web está disponible únicamente para proporcionar información y promover los servicios, sitios web, socios y otros productos de What To Do In Cancun disponibles en Cancún. El sitio web es controlado y operado por What To Do In Cancun desde sus oficinas en el estado de Quintana Roo en México. What To Do In Cancun no garantiza que los materiales del sitio web sean apropiados o estén disponibles para su uso fuera de México. Aquellos que eligen acceder al sitio web desde fuera de México lo hacen por iniciativa propia y son responsables del cumplimiento de las leyes locales, si y en la medida en que las leyes locales sean aplicables. El software del sitio web también está sujeto a los controles de exportación mexicanos.",
+                "TEXT_2": "Todo software que se encuentre disponible para descargar desde el sitio web (“Software”) es obra protegida por derechos de autor de What To Do In Cancun u otro software de terceros identificado. Su uso de dicho Software se rige por los términos del contrato de licencia de usuario final, si corresponde, que acompaña o se incluye con el Software (“Contrato de licencia”). No puede instalar ni utilizar ningún Software que esté acompañado por o incluya un Contrato de licencia a menos que primero acepte los términos del Contrato de licencia. Para cualquier Software disponible en este sitio web que no esté acompañado por un Contrato de licencia, le otorgamos a usted, el usuario, una licencia limitada, personal e intransferible para usar el Software para ver y usar este sitio web de acuerdo con estos términos y condiciones y para ningún otro propósito. Tenga en cuenta que todo el Software, incluido, entre otros, todo el código HTML, XML, Java y Active X contenido en este sitio web, es propiedad de What To Do In Cancuny/o sus afiliados y está protegido por las leyes de derechos de autor y las disposiciones de los tratados internacionales. Cualquier reproducción o redistribución del Software está expresamente prohibida y puede dar lugar a graves sanciones civiles y penales. Los infractores serán procesados ​​en la máxima medida posible. SIN PERJUICIO DE LO ANTERIOR, SE PROHÍBE EXPRESAMENTE COPIAR O REPRODUCIR EL SOFTWARE EN CUALQUIER OTRO SERVIDOR O UBICACIÓN PARA SU REPRODUCCIÓN O REDISTRIBUCIÓN POSTERIOR. EL SOFTWARE SE GARANTIZA, EN SU CASO, SÓLO DE CONFORMIDAD CON LOS TÉRMINOS DEL ACUERDO DE LICENCIA."
+            }
+        },
+        "CURRENCY_CONVERTER": {
+            "TITLE": "Conversor de divisas",
+            "DESCRIPTION": "Si se proporciona un conversor de divisas en los sitios web y aplicaciones de What To Do In Cancun, los tipos de cambio se basan en diversas fuentes disponibles públicamente y deben usarse solo como pautas. Los tipos de cambio no se verifican como precisos y los tipos de cambio reales pueden variar. Las cotizaciones de divisas pueden no actualizarse diariamente. Se cree que la información proporcionada por esta aplicación es precisa, pero What To Do in Cancun y/o sus afiliados no garantizan dicha precisión. Al utilizar esta información para cualquier propósito financiero, le recomendamos que consulte a un profesional calificado para verificar la precisión de los tipos de cambio. No autorizamos el uso de esta información para ningún otro propósito que no sea el uso personal y se le prohíbe expresamente revender, redistribuir y utilizar esta información para fines comerciales."
+        },
+        "GENERAL_PROVISIONS": {
+            "TITLE": "Disposiciones Generales",
+            "DESCRIPTION": {
+                "TEXT_1": "En cumplimiento a lo dispuesto por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (en adelante, LFPDPPP), WHAT TO DO IN CANCUN pone a su disposición la siguiente Política de Privacidad: WHAT TO DO IN CANCUN. (en adelante “WHAT TO DO IN CANCUN”), con domicilio en Cancún, Quintana Roo, C.P. 77533.",
+                "TEXT_2": "En What To Do In Cancun, reconocemos que ganar y mantener su confianza es una de las cosas más importantes que hacemos como empresa. Proteger su privacidad es una responsabilidad que tomamos muy en serio. Hemos preparado esta Política de Privacidad para ayudarle a entender lo que What To Do In Cancun recopila, usa y protege como la Información Personal (según se define a continuación) que usted nos proporciona en nuestros sitios web, aplicaciones móviles, correo electrónico y nuestros proveedores de servicios y socios de distribución. Esta política de privacidad no aborda, y no estamos responsable de la privacidad, información u otras prácticas de terceros, incluidos socios de distribución, proveedores externos y operadores turísticos, y cualquier tercero que opere cualquier sitio al que nuestros sitios web contengan un enlace. Al descargar, acceder o usar nuestros sitios web o contenido, o al usar una aplicación de What To Do In Cancun en un teléfono celular, tableta o dispositivo similar, o al proporcionarnos información en relación con nuestros sitios web, aplicaciones móviles u otros sitios o servicios, usted acepta los términos y condiciones de esta Política de privacidad. What To Do In Cancun es un servicio en línea que permite a los usuarios buscar y reservar experiencias de viaje en todo el mundo. Los productos y servicios de What To Do In Cancun están disponibles a través de WhatToDoInCancun.com y los sitios afiliados de What To Do In S.A..",
+                "TEXT_3": "WhatToDoInCancun.com es nuestro sitio web, donde ofrecemos nuestra gama completa de productos y servicios directamente a los consumidores.",
+                "TEXT_4": "What to Do In Cancun también trabaja con afiliados que distribuyen nuestros productos y servicios a los consumidores a través de sus sitios web individuales. Normalmente, alojamos la información de productos y las páginas de reserva de nuestros afiliados, y administramos la información de pago y de tarjetas de crédito.",
+                "TEXT_5": "También trabajamos con distribuidores que administran el alojamiento, la compra y el pago de nuestros productos y servicios. Si proporciona información directamente a nuestros afiliados, distribuidores o proveedores, se aplicarán a dichas divulgaciones los términos de sus respectivas políticas de privacidad, y no esta Política de privacidad. Debe revisar cuidadosamente las políticas de privacidad del socio afiliado, distribuidor o proveedor antes de proporcionar información a dichos terceros. Consulte “Nuestros afiliados, distribuidores y proveedores” a continuación para obtener información adicional."
+            }
+        },
+        "INFORMATION_COLLECT": {
+            "TITLE": "¿Qué información recopilamos?",
+            "DESCRIPTION": "Recibimos y almacenamos cualquier información que ingrese en nuestros sitios web o que nos proporcione de otra manera. Recopilamos dos tipos de información sobre usted en nuestros sitios web, aplicaciones móviles, por correo electrónico y a través de nuestros proveedores de servicios y socios de distribución. La información personal es información que lo identifica personalmente, como su nombre y apellido, dirección de correo electrónico, número de teléfono, direcciones postales y de correo electrónico, nombre de usuario y contraseña, e información de facturación (como su número de tarjeta de crédito, nombre del titular de la tarjeta y fecha de vencimiento de la tarjeta). También recopilamos otra información que no lo identifica personalmente, como género, país de residencia y otra información demográfica."
+        },
+        "INFORMATION_ABOUT_OTHERS": {
+            "TITLE": "Información sobre otros",
+            "DESCRIPTION": "Es posible que tenga la oportunidad de proporcionar información de contacto y de viaje a otras personas a través de nuestros sitios web. Si “recomienda a un amigo” o si compra productos o servicios para otra persona a través de What To Do In Cancun, debe enviar la información personal de esa persona. Debe obtener el consentimiento de otras personas antes de proporcionarnos su información personal."
+        },
+        "INFORMATION_OTHER_SOURCES": {
+            "TITLE": "Información de otras fuentes.",
+            "DESCRIPTION": "También podemos obtener periódicamente información personal y no personal sobre usted de entidades afiliadas, socios comerciales y otras fuentes independientes de terceros y agregarla con otra información sobre usted. Por ejemplo, si visita What To Do In Cancun haciendo clic en un sitio operado por uno de nuestros socios comerciales y se ha registrado con ese socio, entonces la información sobre usted que haya proporcionado a ese socio puede ser compartida con nosotros, como información de contacto e información demográfica. Como otro ejemplo, si accede a servicios de terceros, como servicios de redes sociales, a través de nuestro sitio web o antes de iniciar sesión en nuestro sitio web, podemos recopilar información como su nombre de usuario y otra información que se nos proporcione a través de esos servicios. Trabajaremos con nuestros socios actuales y futuros potenciales para mejorar y personalizar su uso de nuestro sitio web de acuerdo con las prácticas descritas en esta política de privacidad."
+        },
+        "AUTOMATIC_INFORMATION": {
+            "TITLE": "Información automática",
+            "DESCRIPTION": "Cuando visita WhatToDoInCancun.com o cualquiera de nuestros sitios web afiliados alojados por nosotros, nuestro servidor web reconoce y recopila automáticamente su dirección IP, que es asignada por su proveedor de servicios de Internet y no lo identifica personalmente a usted, software de navegador web y sitio web de referencia. Para ayudarnos a analizar el uso de nuestros sitios web y servicios relacionados, y para enviarle comunicaciones más relevantes, también recopilamos y rastreamos otra información sobre su actividad en línea, como contenido visto, páginas visitadas y búsquedas y/o reservas proporcionadas o realizadas. Uno de nuestros objetivos al recopilar esta información automática es ayudarnos a comprender los intereses y preferencias de nuestros usuarios y personalizar su experiencia de usuario. Por ejemplo, si visita con frecuencia París y Londres, podemos enviarle avisos especiales que enumeran ofertas y productos populares para esos destinos. Si está suscrito a cualquiera de nuestras comunicaciones de marketing por correo electrónico, incluidos boletines informativos y alertas de destino, se le solicita que revele información personal, como su nombre y dirección de correo electrónico, y Otra información, como su país de origen. origen."
+        },
+        "PAYMENT_INFORMATION": {
+            "TITLE": "Información de pago",
+            "DESCRIPTION": "Si reserva un tour o excursión con proveedores externos proporcionados por What To Do In Cancun, recopilaremos su información de pago, incluido el número de su tarjeta de crédito, el nombre del titular de la tarjeta, la fecha de vencimiento, el código de autenticación y la dirección de facturación. Podemos ofrecer a los miembros la opción de guardar información relacionada con el método y la opción de pago en nuestros sitios web. Si almacena dichos detalles de pago en What To Do In Cancun, puede agregar, eliminar o modificar esa información en cualquier momento en la configuración de su cuenta."
+        },
+        "LOCATION_DEVICE": {
+            "TITLE": "Ubicación y otra información del dispositivo",
+            "DESCRIPTION": "Cuando utilice una aplicación en un dispositivo, recopilaremos y utilizaremos información sobre usted de una manera generalmente similar y con fines similares a los que utiliza cuando utiliza el sitio web What To Do In Cancun. Además, podemos recopilar información sobre su ubicación si ha indicado a su dispositivo que envíe dicha información a la aplicación a través de la configuración de privacidad de ese dispositivo o si ha cargado fotos etiquetadas con información de ubicación. Podemos utilizar la información de ubicación recopilada de su dispositivo o fotos para mejorar su uso de la aplicación al brindarle contenido relevante y publicidad contextual. Por ejemplo, podemos utilizar su ubicación para mostrarle recorridos o excursiones cerca de usted cuando viaja. Puede cambiar la configuración de privacidad de su dispositivo en cualquier momento para deshabilitar la funcionalidad para compartir información de ubicación con la aplicación y/o la funcionalidad para etiquetar sus fotos con información de ubicación. Tenga en cuenta que deshabilitar el uso compartido de la ubicación puede afectar ciertas funciones de nuestra aplicación. Si tiene alguna pregunta sobre la configuración de privacidad de su dispositivo, le sugerimos que se comunique con el fabricante de su dispositivo o con su proveedor de servicios móviles para obtener ayuda."
+        },
+        "YOUR_CONTRIBUTIONS": {
+            "TITLE": "Sus contribuciones",
+            "DESCRIPTION": "Puede contribuir a los sitios web de What To Do In Cancun de diversas maneras, como escribir reseñas, cargar fotos, completar su perfil público y calificar las contribuciones de otros usuarios. Podemos almacenar estas contribuciones (su “Contenido”), mostrarlas públicamente en nuestros sitios web y aplicaciones y en los de nuestros socios afiliados y distribuidores, mostrarlas a otros usuarios, compartirlas con nuestros socios afiliados y distribuidores y usarlas con fines promocionales. Tenga en cuenta que si incluye información personal en su contenido, es posible que otros la usen y la vean. No somos responsables de la información que elija incluir en su contenido."
+        },
+        "HOW_USE_COOKIES": {
+            "TITLE": "Las cookies y cómo las utilizamos",
+            "DESCRIPTION": {
+                "TEXT_1": "Las cookies son fragmentos de información que su navegador web almacena en el disco duro de su computadora con fines de registro. Las cookies en sí mismas solo identifican su computadora; no lo identifican a usted personalmente.",
+                "TEXT_2": "First-party cookies: At What To Do In Cancun we use cookies to help us recognize your browser as a previous visitor and we save and remember any preferences that were set while your browser was visiting our site, record session information, collect information about how you visit and access our websites and applications. We may also record your password in a cookie if you checked the box titled “Save this password for automatic login”. Please note that member IDs, passwords and any other account-related data included in such cookies are encrypted for security reasons. We also use cookies to help us personalize the content, experience and advertisements we provide to you on our websites and apps, and to analyze and measure the effectiveness of our email communications, website features and offerings, and advertisements. Most web browsers allow you to disable cookies; however, disabling cookies will limit your use of our websites and applications. For more information on how to change your browser’s cookie settings, please see the appropriate informational link:",
+                "TEXT_3": "Cookies de terceros: What To Do In Cancun y sus sitios web afiliados se comprometen a proporcionarle contenido e información relevante en nuestros sitios. Para ello, podemos recopilar información sobre sus búsquedas y otras actividades del sitio y utilizar empresas de publicidad de terceros para publicar anuncios mientras visita nuestros sitios web y permitimos que estas empresas coloquen y accedan a sus propias cookies en su computadora durante la publicación de anuncios. Dichos anunciantes no tienen acceso a la información que recopilamos a través de las cookies de What To Do In Cancun. El uso de sus cookies por parte de otras empresas está sujeto a sus propias políticas de privacidad y no a las nuestras.",
+                "TEXT_4": "Web Beacons: Nuestros sitios web también pueden utilizar Web beacons (también conocidos como gifs transparentes, etiquetas de píxeles o Web bugs), que son pequeños gráficos con un identificador único, similar en función a las cookies, que se colocan en el código de una página web. Usamos web beacons para monitorear los patrones de tráfico de los usuarios de una página dentro de nuestros sitios a otra, para entregar o comunicarnos con cookies, para saber si ha llegado a nuestro sitio desde un anuncio en línea que se muestra en un sitio de terceros. sitio web y para mejorar el rendimiento del sitio. También podemos permitir que nuestros proveedores de servicios utilicen balizas web para ayudarnos a comprender qué correos electrónicos han abierto los destinatarios y para rastrear el tráfico de visitantes y las acciones en nuestro sitio. Esto nos ayuda a medir la eficacia de nuestro contenido y otras ofertas.",
+                "TEXT_5": "Datos recopilados por socios comerciales y redes publicitarias para brindarle publicidad relevante: muchos de los anuncios que ve en los sitios de What To Do In Cancun son proporcionados por What To Do In o sus proveedores de servicios; sin embargo, también permitimos que terceros recopilen información sobre sus actividades en línea a través de cookies y otras tecnologías. Estos terceros incluyen (1) socios comerciales, que recopilan información cuando ve o interactúa con uno de sus anuncios en nuestros sitios, y (2) redes publicitarias, que recopilan información sobre sus intereses cuando ve o interactúa con uno de los anuncios colocados en muchos sitios web diferentes en Internet. La información recopilada por estos terceros se utiliza para hacer predicciones sobre sus características, intereses o preferencias y para mostrar anuncios en nuestros sitios y en Internet adaptados a sus intereses aparentes. Tenga en cuenta que no tenemos acceso ni control sobre las cookies u otras tecnologías que estos terceros puedan utilizar para recopilar información sobre sus intereses, y las prácticas de información de estos terceros no están cubiertas por esta Política de privacidad. Algunas de estas empresas son miembros de la Iniciativa de publicidad en red, que proporciona una única ubicación para optar por no recibir anuncios de las empresas miembro. Respuesta a las señales de No rastrear: su navegador web puede transmitir una señal de No rastrear (DNT) a What to Do In Cancun y otros sitios web. Debido a las diferencias en la configuración predeterminada de los navegadores web y la forma en que los navegadores incorporan las señales DNT, a veces no está claro para los operadores del sitio si los visitantes del sitio han seleccionado la configuración DNT ellos mismos o si saben que pueden elegir la configuración. What To Do In Cancun actualmente no responde a las señales DNT. Una vez que la industria de Internet haya establecido los estándares relacionados con este tema y What To Do In Cancun reconozca esos estándares, podremos reevaluar este enfoque.",
+                "TEXT_6": "Cómo usamos y divulgamos su información personal",
+                "TEXT_7": "Usamos su información personal de las siguientes maneras:",
+                "LIST": {
+                    "ITEM_1": "Para registrar y administrar su cuenta, lo que incluye permitirle el acceso y uso de nuestro sitio; para comunicarnos con usted en general, lo que incluye proporcionarle información sobre Qué hacer en Cancún e invitaciones de la familia de empresas Qué hacer en Cancún",
+                    "ITEM_2": "Para brindarle la información que solicita sobre nuestros productos",
+                    "ITEM_3": "Para enviarle mensajes de marketing por correo electrónico e información",
+                    "ITEM_4": "Permitir que nuestros proveedores externos cumplan con sus reservas",
+                    "ITEM_5": "Para confirmar sus compras",
+                    "ITEM_6": "Para garantizar que se le facture correctamente",
+                    "ITEM_7": "Para permitirnos publicar contenido que nos envíe en nuestra familia de sitios web y en nuestras aplicaciones; para medir y rastrear detalles demográficos sobre nuestros clientes",
+                    "ITEM_8": "Para orientar el contenido de nuestro sitio web para que coincida mejor con sus intereses y personalizar su experiencia con Qué hacer en Cancún, lo que incluye personalizar los anuncios que se muestran",
+                    "ITEM_9": "Orientar el contenido apropiado para los mensajes de marketing por correo electrónico para que coincidan mejor con sus intereses",
+                    "ITEM_10": "Para responder a sus preguntas y comentarios",
+                    "ITEM_11": "Para medir el interés en nuestros productos, servicios, sitios web y aplicaciones y mejorarlos",
+                    "ITEM_12": "Para notificarle sobre ofertas y productos o servicios disponibles de nuestra parte o de nuestros socios que puedan ser de su interés",
+                    "ITEM_13": "Para solicitarle información, incluso a través de encuestas",
+                    "ITEM_14": "Para resolver disputas o problemas",
+                    "ITEM_15": "Para prevenir actividades potencialmente prohibidas o ilegales",
+                    "ITEM_16": "Para hacer cumplir nuestros Términos de uso",
+                    "ITEM_17": "Como se describe de otra manera en el punto de recopilación",
+                    "ITEM_18": "Adaptar nuestros productos y servicios para satisfacer sus intereses personales y la forma en que los visitantes usan nuestros sitios, aplicaciones y recursos de redes sociales",
+                    "ITEM_19": "Para operar, evaluar y mejorar nuestro negocio y los productos y servicios que ofrecemos",
+                    "ITEM_20": "Analizar y mejorar nuestras estrategias de comunicación y marketing (incluida la identificación de cuándo se han recibido y leído los correos electrónicos que le enviamos)",
+                    "ITEM_21": "Analizar las tendencias y estadísticas sobre el uso que hacen los visitantes de nuestros sitios, aplicaciones móviles y recursos de redes sociales, y las compras que realizan los visitantes en nuestros sitios",
+                    "ITEM_22": "Proteger y prevenir el fraude, las transacciones no autorizadas, las reclamaciones y otras responsabilidades, y gestionar la exposición al riesgo, incluida la identificación de posibles piratas informáticos y otros usuarios no autorizados"
+                },
+                "TEXT_8": "Le brindaremos opciones con respecto al uso y la divulgación de su información personal para fines de marketing."
+            }
+        },
+        "SHARING_SOCIAL_SERVICES": {
+            "TITLE": "Compartir con servicios de redes sociales",
+            "DESCRIPTION": "Si te conectas a What To Do In Cancun usando Facebook, podemos mostrarte reseñas, fotos y visitas que tus amigos de Facebook publicaron, compartieron, guardaron o compraron sobre What To Do In Cancun. Ten en cuenta que si tienes amigos de Facebook que usan What To Do In Cancun, también pueden compartir información sobre ti con nosotros a través de Facebook. Si deseas evitar que se comparta, revisa tu configuración de privacidad de Facebook. También puedes optar por acceder a sitios web y servicios de redes sociales de terceros a través de What To Do In Cancun (como Facebook y Twitter). Cuando lo haces, estás compartiendo información con esos sitios, y la información que compartes se rige por sus políticas de privacidad. También puedes modificar tu configuración de privacidad con estos sitios web de redes sociales de terceros. Compartir con proveedores de servicios Parte de la información personal que recopilamos se comparte con nuestros proveedores de servicios (por ejemplo, operadores turísticos) que están directamente involucrados en el cumplimiento de las compras que nos has realizado. Solo proporcionamos a nuestros proveedores de servicios su nombre e información de contacto local, si usted la proporciona (por ejemplo, el nombre del lugar de recogida y entrega de su hotel, su número de teléfono local, su número de teléfono celular, su dirección de correo electrónico, etc.). No proporcionamos a nuestros proveedores de servicios ninguna otra información personal. Si decide proporcionar cualquier información personal directamente a un proveedor de servicios, le recomendamos que revise la política de privacidad del proveedor de servicios para determinar cómo ese proveedor de servicios puede usar o divulgar su información personal"
+        },
+        "SHARING_THIRD_PARTY": {
+            "TITLE": "Compartir con proveedores externos",
+            "DESCRIPTION": "También compartimos su información personal con proveedores externos que brindan servicios o funciones en nuestro nombre, incluidos análisis comerciales, procesamiento de pagos, servicio al cliente, marketing, relaciones públicas, distribución de encuestas o sorteos y prevención de fraude. También podemos autorizar a proveedores externos a recopilar información en nuestro nombre, incluido, por ejemplo, según sea necesario para operar funciones de nuestros sitios web o aplicaciones o para facilitar la entrega de publicidad en línea adaptada a sus intereses. Los proveedores externos tienen acceso a la información y pueden recopilarla solo en la medida necesaria para realizar sus funciones y no se les permite compartirla ni usarla para ningún otro propósito. Actualmente, contratamos a varios socios externos en línea para que nos ayuden a administrar y optimizar nuestro negocio y nuestras comunicaciones en línea. Utilizamos los servicios de empresas de marketing externas para ayudarnos a medir la eficacia de nuestra publicidad y cómo los visitantes utilizan nuestro sitio web. Para ello, utilizamos balizas web y cookies proporcionadas por dichas empresas de marketing en relación con nuestros sitios web. La información que recopilamos nos ayuda a saber qué páginas son más atractivas para nuestros visitantes, cuáles de nuestros productos son los que más interesan a nuestros clientes y qué tipo de ofertas les gustan más a nuestros clientes"
+        },
+        "SHARING_REFERENCES": {
+            "TITLE": "Compartir con sitios web de referencia",
+            "DESCRIPTION": "Si fue referido a What To Do In Cancun desde otro sitio web, podemos compartir su información de registro, como su nombre, dirección de correo electrónico, dirección postal, número de teléfono y preferencias de viaje, sobre usted con ese sitio web de referencia. No hemos impuesto limitaciones al uso de información personal de los sitios web de referencia y le recomendamos que revise las políticas de privacidad de cualquier sitio web que lo haya referido a What To Do In Cancun. Compartir con empresas dentro de nuestra familia corporativa Podemos compartir su información personal dentro del grupo de empresas What To Do In y nuestras empresas y sitios web corporativos nacionales e internacionales afiliados. Este intercambio nos permite brindarle información sobre productos y servicios, tanto relacionados con viajes como de otro tipo, que pueden ser de su interés. En la medida en que nuestra empresa matriz y nuestras afiliadas corporativas tengan acceso a su información, seguirán prácticas que sean al menos tan restrictivas como las prácticas descritas en esta política de privacidad. También cumplirán con las leyes aplicables que rigen la transmisión de comunicaciones promocionales y, como mínimo, le brindarán la oportunidad en cualquier correo electrónico comercial que le envíen de optar por no recibir dichos mensajes de correo electrónico en el futuro"
+        },
+        "OTHER_SHARE": {
+            "TITLE": "Otras formas de compartir",
+            "DESCRIPTION": "También podemos usar o divulgar Información personal según lo consideremos necesario o apropiado: (a) según la ley aplicable, incluidas las leyes fuera de su país de residencia; (b) para cumplir con citaciones legales y exigibles, órdenes judiciales u otros procesos legales; (c) para responder a solicitudes de autoridades públicas o gubernamentales, incluidas autoridades públicas o gubernamentales fuera de su país de residencia; (d) para hacer cumplir nuestros términos y condiciones o establecer o ejercer nuestros derechos legales; (e) para proteger y defender nuestros derechos, propiedad o seguridad o los de cualquiera de nuestros afiliados, nuestros clientes u otros; (f) para proteger nuestros derechos, privacidad, seguridad o propiedad, o los de nuestros afiliados, usted u otros; (g) para permitirnos buscar los recursos disponibles o limitar los daños que podamos sufrir; (h) para investigar, prevenir o tomar medidas con respecto a actividades ilegales o presuntamente ilegales; (i) en relación con una transacción corporativa, como una desinversión, fusión, consolidación o venta de activos, o en el improbable caso de quiebra; o (j) según lo exija la ley."
+        },
+        "USE_DISCLOUSE": {
+            "TITLE": "Podemos usar y divulgar otra información para cualquier propósito.",
+            "DESCRIPTION": "En algunos casos, podemos combinar otra información con la Información personal (como combinar su nombre con su ubicación geográfica). Si combinamos cualquier otra información con la Información personal, trataremos la información combinada como Información personal, siempre que esté combinada. También podemos compartir información agregada o anónima con terceros, incluidos anunciantes e inversores. Por ejemplo, podemos informar a nuestros anunciantes la cantidad de visitantes a nuestro sitio web o las excursiones o recorridos más populares. Esta información no contiene ningún dato personal y se utiliza para desarrollar contenido y servicios que esperamos que sean de su interés."
+        },
+        "EMAIL_COMMUNICATIONS": {
+            "TITLE": "Comunicaciones por correo electrónico que puede esperar recibir de What to Do In Cancun",
+            "DESCRIPTION": {
+                "TEXT_1": "Podemos enviarle correos electrónicos de marketing con información sobre ofertas de What to Do In Cancun, novedades sobre productos y destinos, ofertas, concursos y otras promociones especiales que consideramos que le resultarán valiosas, interesantes o informativas. Le brindaremos opciones con respecto al uso que hacemos de su información personal con fines de marketing. Si ya no está interesado en recibir futuras comunicaciones de marketing por correo electrónico de What to Do In Cancun, tiene varias opciones para darse de baja de futuros correos:",
+                "TEXT_2": "Puede darse de baja en cualquier momento siguiendo las instrucciones y el enlace incluidos en cada mensaje de marketing por correo electrónico que le enviamos"
+            }
+        },
+        "OUR_AFFILIATES": {
+            "TITLE": "Nuestros afiliados, distribuidores y proveedores",
+            "DESCRIPTION": "Los tours, actividades y experiencias publicitadas en nuestro sitio están disponibles a través de nuestros afiliados, distribuidores y proveedores externos. Nuestros afiliados, distribuidores y proveedores pueden tener políticas de privacidad que difieran de la Política de privacidad de What To Do In Cancun. También debe tener en cuenta que algunos proveedores de productos o viajes y algunos de nuestros afiliados y distribuidores pueden necesitar información personal adicional o de otro tipo (como información de salud o estado físico) para determinar si puede participar en una actividad. Debe leer y confiar únicamente en la Política de privacidad del proveedor, afiliado o distribuidor relevante si What To Do In Cancun no recopila esta información directamente de usted. Algunos afiliados, distribuidores y/o proveedores pueden operar en países o estados que no tienen leyes o regulaciones para la protección y salvaguarda de la información personal. What To Do In Cancun busca tomar medidas razonables para persuadir a todos sus afiliados, distribuidores y proveedores para que adopten y se adhieran a políticas de privacidad que sean sustancialmente similares a esta. Sin embargo, tenga en cuenta que What to Do In Cancun no está en condiciones de obligar a que se cumpla, por lo que dependeremos de usted y de nuestros otros clientes para que nos informen si creen que nuestros afiliados, distribuidores y proveedores no están protegiendo adecuadamente su privacidad."
+        },
+        "ACCESS_YOUR_INFORMATION": {
+            "TITLE": "Cómo puede acceder a su información",
+            "DESCRIPTION": "Tomamos medidas razonables para garantizar que su información sea relevante para el uso previsto, precisa y completa. Puede acceder y actualizar su información de contacto iniciando sesión en su cuenta a través del sitio web de What to Do In Cancun. Si actualiza su información, podemos conservar una copia de la información que nos proporcionó originalmente en nuestros archivos para los usos documentados en esta política. Tenga en cuenta también que podemos conservar cierta información personal y otra información asociada con su cuenta en nuestros archivos, incluso para fines analíticos y de mantenimiento de registros, prevención de fraude, resolución de disputas, investigaciones y cumplimiento de los requisitos legales."
+        },
+        "YOUR_OPTIONS": {
+            "TITLE": "Sus opciones",
+            "DESCRIPTION": "Como se mencionó anteriormente, puede optar por no proporcionarnos ninguna información, aunque puede ser necesaria para aprovechar ciertas funciones ofrecidas en What To Do In Cancun. También puede agregar o actualizar información y cerrar su cuenta como se describe anteriormente. Además, como se describe anteriormente, puede optar por no recibir comunicaciones por correo electrónico de What To Do In Cancun. Tenga en cuenta que nos reservamos el derecho de enviarle otras comunicaciones, incluidos anuncios de servicios, mensajes administrativos y encuestas relacionadas con su cuenta de What To Do In Cancun, sin ofrecerle la oportunidad de optar por no recibirlas. La parte de Ayuda de la barra de herramientas en la mayoría de los navegadores le indicará cómo evitar que su navegador acepte nuevas cookies, cómo hacer que el navegador le notifique cuando recibe una nueva cookie o cómo deshabilitar las cookies por completo. Tenga en cuenta que si se niega a aceptar cookies de What To Do In Cancun, no podrá acceder a partes de nuestro sitio."
+        },
+        "OUR_SECURITY": {
+            "TITLE": "Nuestras medidas de seguridad y almacenamiento",
+            "DESCRIPTION": "En What To Do In Cancun, buscamos mantener la integridad y seguridad de su información personal. Utilizamos protocolos de encriptación estándar de la industria al recibir y transferir su información personal. De hecho, cuando usted nos envía información personal a través de Internet, primero solicitamos que se establezca una 'sesión segura' utilizando Secure Socket Layer (SSL). Intentamos almacenar su información personal en entornos operativos seguros que no sean accesibles al público en general, y tener medidas de seguridad en nuestras instalaciones físicas para proteger contra la pérdida, mal uso o alteración de su información personal por parte de nuestros empleados o terceros. Sin embargo, no podemos garantizar que la transmisión de datos a través de Internet o el entorno de almacenamiento de datos sea 100% seguro, por lo que no podemos garantizar que la información que nos proporcione estará segura en todo momento. What To Do In Cancun no será responsable de los eventos que surjan del acceso no autorizado a su información personal. What To do In Cancun dependerá de usted para informarnos si experimenta algún evento inusual que pueda indicar una violación de la seguridad de su información. Luego investigaremos si la violación de seguridad estuvo relacionada con las transmisiones de datos hacia o desde What To do In Cancun y le informaremos qué medidas se pueden tomar y se han tomado para ayudar a rectificar el problema. También pueden requerirse medidas adicionales, como informar incidentes a las autoridades policiales u otras autoridades correspondientes."
+        },
+        "CHILDREN_PRIVACY": {
+            "TITLE": "Privacidad de los niños",
+            "DESCRIPTION": "What To Do In Cancun es un sitio para el público en general y no ofrece servicios dirigidos a niños. Si un individuo que sabemos que es un niño menor de 13 años nos envía información personal, eliminaremos o destruiremos dicha información tan pronto como sea razonablemente posible."
+        },
+        "EXTERNAL_LINKS": {
+            "TITLE": "Enlaces externos",
+            "DESCRIPTION": "Si alguna parte de cualquier sitio de What To Do In Cancun lo vincula a otros sitios web, esos sitios web externos no operan bajo esta Política de privacidad. No somos responsables de las prácticas de privacidad de otros sitios y le recomendamos que examine las declaraciones de privacidad publicadas en esos otros sitios web para comprender sus procedimientos para recopilar, usar y divulgar información personal. volver arriba"
+        },
+        "CHANGES_TERMS": {
+            "TITLE": "Cambios en nuestra Política de Privacidad",
+            "DESCRIPTION": "Sabemos que nuestro negocio seguirá evolucionando a medida que introduzcamos nuevos productos y, como tal, de vez en cuando esta Política de Privacidad puede ser revisada y modificada. What To do In Cancun se reserva el derecho de cambiar esta Política de Privacidad publicando los cambios en su sitio web. Puede determinar cuándo se actualizó por última vez esta Política de Privacidad revisando la leyenda ÚLTIMA ACTUALIZACIÓN que aparece arriba y cualquier revisión entrará en vigencia al momento de su publicación. Notificaremos a nuestros miembros sobre los cambios materiales a esta Política de Privacidad enviándoles un aviso a la dirección de correo electrónico que nos haya proporcionado o mediante un aviso en nuestro sitio web. Le recomendamos que revise esta Política de Privacidad de vez en cuando para revisar la versión más reciente. El uso de nuestros sitios web o aplicaciones después de que se le haya enviado un aviso de cambios o se haya publicado en nuestro sitio web constituirá el consentimiento a los términos y prácticas modificados."
+        },
+        "CALL_RECORDING": {
+            "TITLE": "Grabación y monitoreo de llamadas",
+            "DESCRIPTION": {
+                "TEXT_1": "Tenga en cuenta que las llamadas hacia y desde What To Do In Cancun pueden ser grabadas. Podemos utilizar las grabaciones de llamadas para monitorear nuestro servicio al cliente con fines de calidad o cumplimiento, para verificar la precisión de la información que nos proporciona, con fines de prevención de fraude o para brindar capacitación a nuestro personal. Conservaremos las grabaciones de llamadas durante el tiempo que sea razonablemente necesario para realizar dichas actividades y luego las eliminaremos. Cualquier información personal que se obtenga de usted durante la llamada será tratada de conformidad con lo establecido en esta Política de Privacidad.",
+                "TEXT_2": "El artículo 28 de la LFPDPPP le otorga cuatro derechos a ejercer:- Tiene derecho a acceder a sus datos personales que obren en poder del responsable y a conocer la Política de Privacidad y sus finalidades.- Tiene derecho a rectificar sus datos en caso de que sean inexactos, incorrectos o estén desactualizados.- Tiene derecho a cancelar sus datos personales si considera que no están siendo utilizados para los fines establecidos en esta Política de Privacidad. Política.- Usted tiene derecho a oponerse al tratamiento de sus datos personales respecto de cualquiera de las finalidades previstas en esta Política de Privacidad."
+            }
+        },
+        "REVOKE_CONSENT": {
+            "TITLE": "Derecho a revocar el consentimiento al tratamiento de datos.",
+            "DESCRIPTION": {
+                "TEXT_1": "El Artículo 8o. de la LFPDPPP prevé la posibilidad de revocar el consentimiento otorgado por usted para el tratamiento de sus datos personales. Para ejercer este derecho, usted podrá solicitarlo utilizando el mismo mecanismo y procedimiento para ejercer los Derechos ARCO previstos en este Aviso de Privacidad. Sin embargo, what to do in Cancun le informa que conservar sus datos personales en su base de datos nos permitirá conocer mejor sus necesidades con base en su historial y así brindarle un mejor servicio en sus futuras reservaciones.",
+                "TEXT_2": "Medidas que tomamos para proteger su información y limitar el uso o divulgación de su información personal. what to do in Cancun tomará precauciones técnicas y organizativas razonables para evitar la pérdida, mal uso o alteración de su información personal. Hemos implementado medidas de seguridad físicas, técnicas y administrativas de conformidad con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares y demás normatividad aplicable. Para que usted pueda limitar el uso y divulgación de su información personal, usted tiene derecho a inscribirse en el Registro Público para Evitar Publicidad (REPEP) a cargo de la Procuraduría Federal de Protección de Datos Personales (PROFECO), con la finalidad de que sus datos personales no sean utilizados para recibir campañas de mercadotecnia o promociones de cualquier tipo de bien o servicio. Para mayor información sobre este asunto, por favor llame o póngase en contacto con la PROFECO a través de su sitio web oficial. Qué hacer en Cancún utiliza y recopila cookies propias y de terceros. Éstas contienen información sobre el uso que hace de su computadora, pero no incluyen información personal sobre usted (no almacenan su nombre, por ejemplo). Las utilizamos para analizar su comportamiento de navegación (en nuestro sitio) con el fin de ofrecerle un servicio más personalizado y acorde a sus intereses. Al acceder al sitio web, usted acepta que esta política de cookies se aplicará cada vez que acceda al sitio web en cualquier dispositivo."
+            }
+        },
+        "CONTACT_US": {
+            "TITLE": "Contacto",
+            "DESCRIPTION": "Para algunos servicios de Qué Hacer En Cancún, usted puede acceder y actualizar su registro e información personal en línea."
+        }
+    },
+    "THANKS_PAGE": {
+        "TITLE": "¡Gracias por tu mensaje!",
+        "DESCRIPTION": "Hemos recibido tu mensaje y nos pondremos en contacto contigo lo antes posible. Si tienes alguna pregunta urgente o necesitas asistencia inmediata, no dudes en llamarnos al {NUMBER}. ¡Gracias por elegir What To Do In Cancun!"
+    },
+    "ERROR_EMAIL_PAGE": {
+        "TITLE": "¡Ups! Algo salió mal",
+        "DESCRIPTION": "Lo sentimos, pero parece que hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde o comunícate con nosotros directamente al {NUMBER}. ¡Gracias por tu comprensión!"
+    },
+    "PARTNERS": {
+        "TITLE": "Nuestros socios",
+        "DESCRIPTION": "Estamos jugando en las mejores ligas de World Wide Tourism .Y no lo estamos haciendo solos."
+    },
+    "DETAILS_CONTENT": {
+        "GENERAL": {
+            "DURATION": "Duración",
+            "REVIEWS": "Reseñas",
+            "CATEGORY": "Categoría",
+            "OFFERED_IN": "Ofrecido en",
+            "OFFERED_LANG": "Inglés & Español",
+            "CANCELATION": "Política de cancelación",
+            "TICKET_MOBILE": "Entrada móvil",
+            "TITLE_TESTIMONIAL": "Lo que dicen nuestros clientes",
+            "TITLE_LOCATION": "Ubicación",
+            "TITLE_MAP_FRAME": "Ver ubicación en el mapa",
+            "SHARE": "Compartir",
+            "SHARE_LINK": "Compartir en redes sociales"
+        },
+        "FORM_RESERVATION": {
+            "TITLE": "Realiza tu Reservación",
+            "DESCRIPTION": "Complete el formulario para realizar su reservación.",
+            "PRICE_FROM": "Precio desde",
+            "PER_PERSON": "por persona",
+            "BUTTON_MODAL": "Reservar",
+            "BUTTON_SEND": "Realizar reserva",
+            "BUTTON_PROCESS": "Procesando...",
+            "AGE_ADULT": "Mayores de 13 años",
+            "AGE_CHILDREN": "A partir de 4 años",
+            "LABELS": {
+                "FULLNAME": "Nombre Completo",
+                "PHONE": "Teléfono",
+                "EMAIL": "Correo",
+                "ADULTS": "Adultos",
+                "CHILDRENS": "Niños",
+                "DATE": "Fecha"
+            },
+            "PLACEHOLDERS": {
+                "FULLNAME": "Ingrese su nombre completo",
+                "PHONE": "Ingrese su número de teléfono",
+                "EMAIL": "Ingrese su correo electrónico",
+                "DATE": "Seleccione la fecha de la reserva"
+            }
+        },
+        "QUESTION_POLICY": {
+            "CANCELLATION_POLICY": {
+                "TITLE": "Política de cancelación",
+                "DESCRIPTION": "Cancele su reserva con 24 horas por adelantado y obtenga un reembolso completo."
+            },
+            "QUESTIONS": {
+                "TITLE": "¿Tiene alguna pregunta?",
+                "DESCRIPTION": "Si tiene alguna pregunta o necesita ayuda con su reserva, ¡no dude en contactarnos!",
+                "BUTTON": "¡Contáctanos!"
+            }
+        }
+    }
+}

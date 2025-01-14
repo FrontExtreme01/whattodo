@@ -1,0 +1,57 @@
+---
+import { useTranslatedPath } from "@/i18n/utils";
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const { restaurant, lang } = Astro.props;
+const translatePath = useTranslatedPath(lang);
+const url = translatePath(`/restaurants/${restaurant.new_slug}/`);
+---
+
+<div class="w-full lg:w-3/12 sm:w-6/12 px-5 py-3 sm:py-5">
+    <div class="flex flex-wrap sm:flex-col rounded-lg bg-white shadow-lg border-slate-600 h-full">
+        <h3 class="mt-7 px-3 sm:hidden block w-full font-bold text-base text-justify text-green-700">{restaurant.data.title}</h3>
+        <div class="relative p-2.5 w-4/6 sm:w-full">
+            {restaurant.data.featured != "" && (
+                <span class="absolute -top-1 left-1/2 -translate-x-1/2 w-full sm:w-3/4 py-1 px-2 z-10 text-xs sm:text-sm font-bold rounded-3xl bg-orange-600 text-white text-center">
+                    {restaurant.data.featured}
+                </span>)
+            }
+            <a aria-label={i18n.ACCESSIBILITY.GO_TO_REST_DETAILS} href={url}>
+                <img width="650" height="450" loading="lazy" src={restaurant.data.image.src} class="w-full h-full object-cover rounded-md cursor-pointer duration-200 hover:scale-110" alt={restaurant.data.image.alt}>
+            </a>
+        </div>
+        
+        <div class="py-3 px-1.5 sm:px-4 sm:py-2 text-justify w-2/6 sm:w-full break-all">
+            <h3 class="hidden sm:block font-bold text-base sm:text-lg mt-4 mb-4 text-center sm:min-h-14 text-green-700">{restaurant.data.title}</h3>
+            <ul class="flex justify-around gap-2 flex-wrap mb-4 text-xs sm:text-sm">
+                <li class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
+                    <i class="at-restaurant"></i>{restaurant.data.cuisine}
+                </li>
+                <li class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
+                    <i class="at-tie"></i>{restaurant.data.dressCode}
+                </li>
+                <li class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
+                    <i class="at-messages-text"></i>{restaurant.data.reviews}
+                </li>
+            </ul>
+
+            <h4 class="hidden sm:block text-center font-bold text-base text-green-700 mb-2">{i18n.RESTAURANT_PAGE.CARD.INCLUDES}</h4>
+            <ul class="hidden sm:flex justify-around gap-2 flex-wrap mb-2 text-sm">
+                {restaurant.data.highlights.map((include) => (
+                    <li class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
+                        {include}
+                    </li>
+                ))} 
+            </ul>
+        </div>  
+
+        <div class="w-full flex flex-wrap justify-evenly mb-5 lg:px-5 gap-y-3 mt-auto">
+            {restaurant.data.bokun  && <a aria-label="" href={restaurant.data.bokun} class="text-sm sm:text-base w-auto text-center bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline" target="_blank">{i18n.ALL_TOUR_PAGE.CARD.BUTTON_BOOK_NOW}</a>}
+            <a aria-label={i18n.ACCESSIBILITY.GO_TO_REST_DETAILS} href={url} class="text-sm sm:text-base w-auto text-center bg-slate-200 hover:bg-slate-100 text-black font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline">
+                {i18n.RESTAURANT_PAGE.CARD.BUTTON_VIEW_MORE}
+            </a>
+        </div>
+    </div>
+</div>

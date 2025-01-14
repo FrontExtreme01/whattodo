@@ -1,0 +1,149 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getI18N } from "@/i18n";
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+
+const seoMetaDatos = {
+    title: i18n.SEO.ABOUT_PAGE.TITLE,
+    description: i18n.SEO.ABOUT_PAGE.DESCRIPTION,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    <section class="pt-10 sm:pt-20">
+        <div class="container mx-auto px-10 md:px-20 md:pb-24">
+            <h1 class="text-2xl sm:text-4xl font-extrabold text-black">
+                {i18n.ABOUT_PAGE.TITLE}
+            </h1>
+            <p class="text-base md:text-lg text-slate-500 mt-5">
+                {i18n.ABOUT_PAGE.DESCRIPTION}
+            </p>
+        </div>
+    </section>
+    <!-- About Us -->
+    <section class="pt-32 pb-20 relative bg-gradient-to-r from-green-700 from-10% via-green-500 via-40% to-emerald-600 to-90%">
+        <div class="custom-shape-divider-top-1735674240">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container mx-auto">
+            <div class="flex flex-wrap mx-10 sm:mx-0 md:mx-10 mb-5 text-justify">
+                <!-- Our Vision -->
+                <div class="w-full sm:w-1/2">
+                    <div class="flex flex-col justify-center h-full sm:px-10">
+                        <h2 class="text-center sm:text-start w-full text-2xl sm:text-4xl font-extrabold mb-10 text-white">
+                            {i18n.ABOUT_PAGE.OUR_VISION.TITLE}
+                        </h2>
+                        <p class="leading-8 text-white text-base md:text-lg">
+                            {i18n.ABOUT_PAGE.OUR_VISION.DESCRIPTION}
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2">
+                    <img src="/assets/backgrounds/slide-about-us-cancun.webp" alt={i18n.ABOUT_PAGE.TITLE} class="w-full h-full object-cover rounded-xl shadow-xl md:mt-0 mt-10" />
+                </div>
+            </div>
+            <div class="flex flex-wrap mx-10 mt-20 text-justify">
+                <!-- Model Business -->
+                <div class="order-2 md:order-1 w-full sm:w-1/2">
+                    <img src="/assets/backgrounds/cancun-to-tulum-tour-with-discount.webp" alt={i18n.ABOUT_PAGE.TITLE} class="w-full h-full object-cover rounded-xl shadow-xl md:mt-0 mt-10" />
+                </div>
+                <div class="order-1 md:order-2 w-full sm:w-1/2">
+                    <div class="flex flex-col justify-center h-full sm:px-10">
+                        <h2 class="text-center sm:text-start w-full text-2xl sm:text-4xl font-extrabold mb-10 text-white">
+                            {i18n.ABOUT_PAGE.OUR_BUSINESS_MODEL.TITLE}
+                        </h2>
+                        <p class="leading-8 text-white text-base md:text-lg">
+                            {i18n.ABOUT_PAGE.OUR_BUSINESS_MODEL.DESCRIPTION}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="bg-slate-200/65 py-10 md:py-20">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap mx-10 text-justify">
+                <h2 class="text-center sm:text-start w-full text-2xl sm:text-4xl font-extrabold mb-5 md:mb-10 text-black">
+                    {i18n.ABOUT_PAGE.WHY_CHOSE_US.TITLE}
+                </h2>
+                <div class="w-full sm:w-1/2 lg:w-1/4">
+                    <div class="p-5 flex flex-col items-start">
+                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl text-green-500">
+                            <i class="at-group-people-star"></i>
+                        </div>
+                        <div class="my-5">
+                            <h3 class="text-xl sm:text-2xl font-bold mb-3 text-black">
+                                {i18n.ABOUT_PAGE.WHY_CHOSE_US.EXPERTISE.TITLE}
+                            </h3>
+                            <p class="text-base md:text-lg leading-8">
+                                {i18n.ABOUT_PAGE.WHY_CHOSE_US.EXPERTISE.DESCRIPTION}
+                            </p>
+
+                        </div>  
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-1/4">
+                    <div class="p-5 flex flex-col items-start">
+                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl text-green-500">
+                            <i class="at-hands-gesture-diamond"></i>
+                        </div>
+                        <div class="my-5">
+                            <h3 class="text-xl sm:text-2xl font-bold mb-3 text-black">
+                                {i18n.ABOUT_PAGE.WHY_CHOSE_US.CAREFUL.TITLE}
+                            </h3>
+                            <p class="text-base md:text-lg leading-8">
+                                {i18n.ABOUT_PAGE.WHY_CHOSE_US.CAREFUL.DESCRIPTION}
+                            </p>
+
+                        </div>  
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-1/4">
+                    <div class="p-5 flex flex-col items-start">
+                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl text-green-500">
+                            <i class="at-hand-gesture-account"></i>
+                        </div>
+                        <div class="my-5">
+                            <h3 class="text-xl sm:text-2xl font-bold mb-3 text-black">
+                                {i18n.ABOUT_PAGE.WHY_CHOSE_US.CLIENT_CENTRIC.TITLE}
+                            </h3>
+                            <p class="text-base md:text-lg leading-8">
+                                {i18n.ABOUT_PAGE.WHY_CHOSE_US.CLIENT_CENTRIC.DESCRIPTION}
+                            </p>
+
+                        </div>  
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-1/4">
+                    <div class="p-5 flex flex-col items-start">
+                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl text-green-500">
+                            <i class="at-star-badge-award"></i>
+                        </div>
+                        <div class="my-5">
+                            <h3 class="text-xl sm:text-2xl font-bold mb-3 text-black">
+                                {i18n.ABOUT_PAGE.WHY_CHOSE_US.QUALITY.TITLE}
+                            </h3>
+                            <p class="text-base md:text-lg leading-8">
+                                {i18n.ABOUT_PAGE.WHY_CHOSE_US.QUALITY.DESCRIPTION.TEXT_1}
+                            </p>
+
+                        </div>  
+                    </div>
+                </div>
+                <a href={translatePath('/get-my-experience/')} aria-label="" class="mx-auto lg:mx-0 block w-fit bg-green-700 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-lg focus:outline-none focus:shadow-outline transition">
+                    {i18n.ABOUT_PAGE.BUTTON}
+                </a>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

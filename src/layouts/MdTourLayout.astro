@@ -1,0 +1,119 @@
+---
+import { getI18N } from "@/i18n";
+
+import BaseLayout from "./BaseLayout.astro";
+import ShareSM from "@components/detail-content/ShareSM";
+import Testimonials from "@/components/global/Testimonials";
+import QuestionPolicy from "@components/detail-content/QuestionPolicy.astro";
+import FormBokunMobile from "@components/detail-content/FormBokunMobile";
+import FormBokunDesktop from "@components/detail-content/FormBokunDesktop";
+import ButtonsContact from "@components/detail-content/ButtonsContact.astro";
+import SliderGallery from "@components/detail-content/SliderGallery";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const { frontmatter } = Astro.props;
+const siteWebURL = new URL(Astro.url.pathname, Astro.site);
+
+const allGalleries = import.meta.glob('@/img/galleries/tours/**/*.webp', { eager: true });
+
+const getGalleryImages = (slugGallery) => {
+    return Object.entries(allGalleries)
+    .filter(([path]) => path.includes(`tours/${slugGallery}/`))
+    .map(([, module]) => (module as { default: string }).default);
+};
+
+const gallery = getGalleryImages(frontmatter.slugGallery);
+
+const accessibility = {
+    altImg: `${i18n.ACCESSIBILITY.ALT_IMG} ${frontmatter.title}`,
+    ariaLabelGallery: i18n.ACCESSIBILITY.OPEN_GALLERY,
+};
+
+const dataForm = {
+    i18n: i18n.DETAILS_CONTENT.FORM_RESERVATION,
+    price: frontmatter.price,
+    titleCard: frontmatter.title,
+    reviews: frontmatter.reviews,
+    stars: frontmatter.stars,
+    image: frontmatter.image,
+    location: frontmatter.location,
+    urlCalendar: frontmatter.calendar,
+};
+
+const seoMetaDatos = {
+    title: frontmatter.title,
+    description: frontmatter.description,
+    image: frontmatter.image.src,
+    keywords: frontmatter.keywords,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    <section class="mx-6 md:mx-20 lg:mx-24 mt-12 mb-14">
+        <div class="flex flex-wrap">
+            <!-- Header -->
+            <header class="flex flex-wrap w-full">
+                <h1 class="w-10/12 text-2xl md:text-4xl font-bold italic text-green-700">
+                    {frontmatter.title}
+                </h1>
+                <div class="w-2/12 flex justify-center items-center">
+                    <ShareSM client:idle site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} />
+                </div>
+                <ul class="flex flex-wrap gap-2 md:gap-5 w-full my-6 text-sm md:text-lg">
+                    <li>
+                        <i class="at-star text-amber-500"></i>
+                        <span class="font-bold"> {frontmatter.stars} 
+                            <span class="text-slate-600 font-thin"> ({frontmatter.reviews})</span>
+                        </span>
+                    </li>
+                    <li>
+                        <i class="at-pin-destination text-green-700"></i>
+                        <span>{frontmatter.location}</span>
+                    </li>
+                </ul>
+            </header>
+            <!-- Content -->
+            <div class="w-full lg:w-8/12 md:pr-5">
+                <SliderGallery client:load images={gallery} accessibility={accessibility}/> 
+                <!-- Hightlight -->
+                <div class="flex flex-wrap w-full gap-5 lg:gap-10 my-6 justify-center text-sm md:text-lg text-center">
+                    <div class="text-slate-800 rounded-2xl">
+                        <i class="at-clock-time bg-slate-100 p-3 rounded-full"></i>
+                        <span>{frontmatter.duration}</span>
+                    </div>
+                    <div class="text-slate-800 rounded-2xl">
+                        <i class="at-exclamation-mobile bg-slate-100 p-3 rounded-full"></i>
+                        <span>{i18n.DETAILS_CONTENT.GENERAL.TICKET_MOBILE}</span>
+                    </div>
+                    <div class="text-slate-800 rounded-2xl">
+                        <i class="at-language-translation bg-slate-100 p-3 rounded-full"></i>
+                        <span><b>{i18n.DETAILS_CONTENT.GENERAL.OFFERED_IN}</b> {i18n.DETAILS_CONTENT.GENERAL.OFFERED_LANG}</span>
+                    </div>
+                    {frontmatter.highlights.map((item) =>(
+                        <div class="text-slate-800 rounded-2xl">
+                            <i class="at-check-circle bg-slate-100 p-3 rounded-full"></i>
+                            <span>{item}</span>
+                        </div>
+                    ))}
+                </div>
+
+                <ButtonsContact i18n={i18n.ACCESSIBILITY} />
+
+                <div class="text-justify">
+                    <slot />
+                </div>
+
+                <hr class="h-0.5 bg-slate-200 my-10">
+                <QuestionPolicy i18n={i18n.DETAILS_CONTENT.QUESTION_POLICY} />
+            </div>
+            <!-- FormSidebar -->
+            <FormBokunDesktop client:visible data={dataForm} />
+        </div>
+    </section>
+    <!-- Testimonials -->
+    {frontmatter.testimonials ? <Testimonials client:visible testimonials={frontmatter.testimonials} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_TESTIMONIAL}/> : "" }
+    <!-- Form Mobile -->
+    <FormBokunMobile client:visible data={dataForm} />
+</BaseLayout>

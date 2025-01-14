@@ -1,0 +1,87 @@
+---
+import { getI18N } from "@/i18n";
+import {getLangFromUrl, useTranslations, useTranslatedPath} from "@/i18n/utils";
+import Image from "astro/components/Image.astro";
+import {logoMain, secureCheckout, customerSuport} from "@/img/allImages";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<footer class="bg-[url('/assets/backgrounds/footer-bg.webp')] bg-repeat-x bg-right-top bg-contain mt-1 border-t border-slate-200">
+    <div class="container mx-auto py-10">
+        <div class="flex flex-wrap justify-center items-center">
+            <!-- Menu Nav -->
+            <div class="order-2 md:order-1 w-full sm:w-1/2 md:w-1/3">
+                <h5 class="font-extrabold text-green-700 uppercase w-fit mx-auto">What to do in cancun</h5>
+                <ul class="mt-5 w-fit mx-auto space-y-2 text-center sm:text-start">
+                    <li class="text-green-700 text-base">
+                        <a class="group hover:text-orange-500" href={translatePath('/about-us/')}>{t("nav.aboutUs")} <i class="at-arrow-right"></i></a>
+                    </li>
+                    <li class="text-green-700 text-base">
+                        <a class="group hover:text-orange-500" href={translatePath('/terms-conditions/')}>{t("nav.terms")} <i class="at-arrow-right"></i></a>
+                    </li>
+                    <li class="text-green-700 text-base">
+                        <a class="group hover:text-orange-500" href={translatePath('/legal-pages/')}>{t("nav.privacy")} <i class="at-arrow-right"></i></a>
+                    </li>
+                    <li class="text-green-700 text-base">
+                        <a class="group hover:text-orange-500" href="https://whattodoinmexicocity.com/" target="_blank">What To Do In México City <i class="at-arrow-right"></i></a>
+                    </li>
+                    <li class="text-green-700 text-base">
+                        <a class="group hover:text-orange-500" href="https://thingstodoinmadrid.com/" target="_blank">Things To Do In Madrid <i class="at-arrow-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Logo & Social Media -->
+            <div class="order-1 md:order-2 w-full md:w-1/3">
+                <a href={translatePath('/')} class="block mx-auto w-fit">
+                    <Image 
+                        src={logoMain} 
+                        alt={i18n.ACCESSIBILITY.LOGO}
+                        class="w-40 md:w-52" 
+                        widths={[240, 500, 720, logoMain.width]} 
+                        sizes={`(max-width: 360px) 240px, (max-width: 720px) 500px, (max-width: 1600px) 720px, ${logoMain.width}px`}
+                    />
+                </a>
+                <div class="flex flex-wrap justify-center items-center mt-5 mb-10 md:mt-10 gap-x-10">
+                    <a aria-label={i18n.ACCESSIBILITY.GO_TO_FACEBOOK} class="text-green-700 font-bold hover:text-orange-500 text-4xl" href="https://www.facebook.com/WhatToDoInCancun" target="_blank"><i class="at-facebook"></i></a>
+                    <a aria-label={i18n.ACCESSIBILITY.GO_TO_INSTAGRAM} class="text-green-700 font-bold hover:text-orange-500 text-4xl" href="https://www.instagram.com/whattodoincancun/" target="_blank"><i class="at-instagram"></i></a>
+                    <a aria-label={i18n.ACCESSIBILITY.GO_TO_YOUTUBE} class="text-green-700 font-bold hover:text-orange-500 text-4xl" href="https://www.youtube.com/channel/UCLTY6DJGNheDKop1Nj3pOSg/videos" target="_blank"><i class="at-youtube"></i></a>
+                    <a aria-label={i18n.ACCESSIBILITY.GO_TO_TIKTOK} class="text-green-700 font-bold hover:text-orange-500 text-4xl" href="https://www.tiktok.com/@whattodoincancun.com" target="_blank"><i class="at-tiktok"></i></a>
+                </div>
+            </div>
+            <!-- Images Info Customer -->
+            <div class="hidden sm:block order-3 md:order-3 w-full sm:w-1/2 md:w-1/3">
+                <div class="flex flex-wrap items-center mt-10 sm:mt-0">
+                    <div class="w-1/2">
+                        <Image 
+                        src={customerSuport} 
+                        alt={i18n.ACCESSIBILITY.IMG.CUSTOMER_SUPPORT} 
+                        class="mx-auto w-44" 
+                        widths={[240, 500, 720, customerSuport.width]} 
+                        sizes={`(max-width: 360px) 240px, (max-width: 720px) 500px, (max-width: 1600px) 720px, ${customerSuport.width}px`}
+                    />
+                    </div>
+                    <div class="w-1/2">
+                        <Image 
+                            src={secureCheckout} 
+                            alt={i18n.ACCESSIBILITY.IMG.SECURE_CHECKOUT}
+                            class="mx-auto w-44" 
+                            widths={[240, 500, 720, secureCheckout.width]} 
+                            sizes={`(max-width: 360px) 240px, (max-width: 720px) 500px, (max-width: 1600px) 720px, ${secureCheckout.width}px`}
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full bg-slate-900 text-white text-center py-6 px-5">
+        <p class="text-sm">&copy; {t("footer.copyrigth")}</p>
+        <p class="font-bold text-sm mt-2">{t("footer.design")}</p>
+    </div>
+</footer>
+

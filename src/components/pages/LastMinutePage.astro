@@ -1,0 +1,71 @@
+---
+import { getI18N } from "@/i18n";
+import { getLangFromUrl } from "@/i18n/utils";
+import { getAllLastMinute } from "@/content/config";
+import { getImgFromLang, review1, review2, review3, review4, review5 } from "@/img/allImages"
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SliderBanner from "@/components/global/SliderBanner";
+import ContadorDiscount from "@components/extras/ContadorDiscount";
+import Intro from "@components/global/Intro.astro";
+import Card from "@components/tours/Card.astro";
+import Testimonials from "@components/global/Testimonials";
+import Partners from "@components/global/Partners";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const allDiscounts = await getAllLastMinute(lang);
+
+const imgLang = getImgFromLang(currentLocale);
+
+const slides = [
+    { image: imgLang.slideHome1, alt: "", href: "" },
+    { image: imgLang.slideHome2, alt: "", href: "test" },
+    { image: imgLang.slideHome3, alt: "", href: "test" },
+    { image: imgLang.slideHome4, alt: "", href: "test" },
+    { image: imgLang.slideHome5, alt: "", href: "test" },
+];
+
+const testimonials = [
+    {image: review1, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.REVIEW },
+    {image: review2, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.REVIEW },
+    {image: review3, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.REVIEW },
+    {image: review4, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.REVIEW },
+    {image: review5, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.REVIEW },
+]
+
+
+const seoMetaDatos = {
+    title: i18n.SEO.LAST_MINUTE_PAGE.TITLE,
+    description: i18n.SEO.LAST_MINUTE_PAGE.DESCRIPTION,
+    image: imgLang.slideRest1.src,
+};
+
+const targetDate = "2024-12-23";
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    <SliderBanner
+        client:load
+        slides={slides}
+        i18nButton={i18n.ALL_TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
+    />
+
+    <ContadorDiscount client:visible i18n={i18n.LAST_MINUTE_PAGE.SECTION_TIMER} targetDate={targetDate} />
+
+    <Intro
+        title={i18n.LAST_MINUTE_PAGE.TITLE}
+        description={i18n.LAST_MINUTE_PAGE.DESCRIPTION}
+    />
+
+    <section class="container mx-auto mb-10">
+        <div class="flex flex-wrap">
+            {allDiscounts.map((tour) => <Card tour={tour} lang={lang} />)}
+        </div>
+    </section>
+
+    <Testimonials client:visible testimonials={testimonials} title={i18n.HOME_PAGE.TESTIMONIALS.TITLE} description={i18n.HOME_PAGE.TESTIMONIALS.DESCRIPTION} />
+    <Partners client:visible title={i18n.PARTNERS.TITLE} description={i18n.PARTNERS.DESCRIPTION} />
+</BaseLayout>

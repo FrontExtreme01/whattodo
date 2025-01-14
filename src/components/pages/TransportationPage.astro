@@ -1,0 +1,147 @@
+---
+import { getI18N } from "@/i18n";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ShareSM from "@components/detail-content/ShareSM";
+import SliderGallery from "@components/detail-content/SliderGallery";
+import QuestionPolicy from "@components/detail-content/QuestionPolicy.astro";
+import FormBokunDesktop from "@components/detail-content/FormBokunDesktop";
+import FormBokunMobile from "@components/detail-content/FormBokunMobile";
+import ButtonsContact from "@components/detail-content/ButtonsContact.astro";
+
+import cover from "@/img/galleries/transportation/hotel-pick-up-and-drop-off-transportation-in-cancun-hotel-zone-and-aiport.webp"
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const siteWebURL = new URL(Astro.url.pathname, Astro.site);
+const images = import.meta.glob('@/img/galleries/transportation/*.webp', { eager: true });
+const arrayImages = Object.values(images).map((img: { default: string }) => img.default);
+
+const accessibility = {
+    altImg: "Imagen de transporte en Cancún",
+    ariaLabelGallery: "Abrir galería de imágenes",
+};
+
+const dataForm = {
+    i18n: i18n.DETAILS_CONTENT.FORM_RESERVATION,
+    titleCard: i18n.TRANSPORTATION_PAGE.TITLE,
+    reviews: i18n.TRANSPORTATION_PAGE.HIGHLIGHTS.REVIEWS,
+    stars: 5.0,
+    image: cover,
+    location: i18n.TRANSPORTATION_PAGE.HIGHLIGHTS.LOCATION,
+    urlCalendar: "https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/803736",
+};
+
+const seoMetaDatos = {
+    title: i18n.SEO.TRANSPORTATION_PAGE.TITLE,
+    description: i18n.SEO.TRANSPORTATION_PAGE.DESCRIPTION,
+    keywords: i18n.SEO.TRANSPORTATION_PAGE.KEYWORDS,
+    image: cover.src,
+};
+
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    <main class="mx-7 md:mx-20 lg:mx-24 mt-12 mb-14">
+        <section class="flex flex-wrap">
+            <!-- Header -->
+            <header class="flex flex-wrap w-full">
+                <h1 class="w-10/12 text-2xl md:text-4xl font-bold italic text-green-700">
+                    {i18n.TRANSPORTATION_PAGE.TITLE}
+                </h1>
+                <div class="w-2/12 flex justify-center items-center">
+                    <ShareSM client:idle site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} />
+                </div>
+                <ul class="flex flex-wrap gap-2 md:gap-5 w-full my-6 text-sm md:text-lg">
+                    <li>
+                        <i class="at-star text-amber-500"></i>
+                        <span class="font-bold"> 5.0 
+                            <span class="text-slate-600 font-thin"> ({i18n.TRANSPORTATION_PAGE.HIGHLIGHTS.REVIEWS})</span>
+                        </span>
+                    </li>
+                    <li>
+                        <i class="at-pin-destination text-green-700"></i>
+                        <span>{i18n.TRANSPORTATION_PAGE.HIGHLIGHTS.LOCATION}</span>
+                    </li>
+                </ul>
+            </header>
+            <!-- Content -->
+            <div class="w-full lg:w-8/12 md:pr-5">
+                <!-- Gallery -->
+                <SliderGallery client:load images={arrayImages} accessibility={accessibility} />
+                <!-- Highlights -->
+                <div class="flex flex-wrap w-full gap-5 lg:gap-10 my-6 justify-center text-sm md:text-lg text-center">
+                    <div class="text-slate-800 rounded-2xl">
+                        <i class="at-taxi-front bg-slate-100 p-3 rounded-full"></i>
+                        <span>{i18n.TRANSPORTATION_PAGE.HIGHLIGHTS.PICKUP}</span>
+                    </div>
+                    <div class="text-slate-800 rounded-2xl">
+                        <i class="at-bell-mobile bg-slate-100 p-3 rounded-full"></i>
+                        <span>{i18n.TRANSPORTATION_PAGE.HIGHLIGHTS.TICKET}</span>
+                    </div>
+                    <div class="text-slate-800 rounded-2xl">
+                        <i class="at-language-translation bg-slate-100 p-3 rounded-full"></i>
+                        <span><b>{i18n.DETAILS_CONTENT.GENERAL.OFFERED_IN}:</b> {i18n.TRANSPORTATION_PAGE.HIGHLIGHTS.OFFERED}</span>
+                    </div>
+                </div>
+                <ButtonsContact i18n={i18n.ACCESSIBILITY} />
+                <!-- Includes -->
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-1/2 md:px-5">
+                        <h3 class="text-lg md:text-2xl font-bold mb-4 text-orange-600 mt-10">{i18n.TRANSPORTATION_PAGE.NOTES.TITLE}</h3>
+                        {Object.values(i18n.TRANSPORTATION_PAGE.NOTES.LIST).map((item) =>(
+                            <p class="text-base md:text-lg mb-2"><i class="at-info-circle text-green-700"></i> {item}</p>
+                        ))}
+                        <h3 class="text-lg md:text-2xl font-bold mb-4 text-orange-600 mt-10">{i18n.TRANSPORTATION_PAGE.CHARACTERISTICS.TITLE}</h3>
+                        {Object.values(i18n.TRANSPORTATION_PAGE.CHARACTERISTICS.LIST).map((item) =>(
+                            <p class="text-base md:text-lg mb-2"><i class="at-info-circle text-green-700"></i> {item}</p>
+                        ))}
+                    </div>
+                    <div class="w-full md:w-1/2 md:px-5">
+                        <h3 class="text-lg md:text-2xl font-bold mb-4 text-orange-600 mt-10">{i18n.TRANSPORTATION_PAGE.TRAVEL_TIME.TITLE}</h3>
+                        {Object.values(i18n.TRANSPORTATION_PAGE.TRAVEL_TIME.LIST).map((item) => (
+                            <p class="text-base md:text-lg mb-2"><i class="at-taxi-service text-green-700"></i> {item}</p>
+                        ))}
+                    </div>
+                </div>
+                <hr class="h-0.5 bg-slate-200 my-10">
+                <!-- Information -->
+                <div class="text-justify">
+                    <h2 class="text-xl md:text-3xl font-bold text-orange-600 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.TITLE}</h2>
+                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_TULUM.TITLE}</h3>
+                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_TULUM.DESCRIPTION}</p>
+                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_PLAYA_DEL_CARMEN.TITLE}</h3>
+                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_PLAYA_DEL_CARMEN.DESCRIPTION}</p>
+                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_RIVERA_MAYA.TITLE}</h3>
+                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_RIVERA_MAYA.DESCRIPTION}</p>
+                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COBA.TITLE}</h3>
+                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COBA.DESCRIPTION}</p>
+                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_AKUMAL.TITLE}</h3>
+                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_AKUMAL.DESCRIPTION}</p>
+                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.MOON_PALACE.TITLE}</h3>
+                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.MOON_PALACE.DESCRIPTION}</p>
+                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.OCCIDENTAL_XCARET.TITLE}</h3>
+                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.OCCIDENTAL_XCARET.DESCRIPTION}</p>
+                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COSTA_MUJERES.TITLE}</h3>
+                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COSTA_MUJERES.DESCRIPTION}</p>
+                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.RIU_PALACE.TITLE}</h3>
+                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.RIU_PALACE.DESCRIPTION}</p>
+                </div>
+                <hr class="h-0.5 bg-slate-200 my-10">
+
+                <QuestionPolicy i18n={i18n.DETAILS_CONTENT.QUESTION_POLICY} />
+            </div>
+            <!-- Form Sidebar -->
+            <FormBokunDesktop 
+                client:visible
+                data={dataForm} 
+            />
+        </section>  
+    </main>
+    <!-- Form Mobile -->
+    <FormBokunMobile 
+        client:visible 
+        data={dataForm}
+    />
+</BaseLayout>

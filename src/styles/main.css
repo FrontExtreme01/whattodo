@@ -1,0 +1,98 @@
+/*--------------------------------------------------------------
+# Global Styles
+--------------------------------------------------------------*/
+@import './fonts.css';
+@import url("/node_modules/@vectopus/atlas-icons/style.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", serif;
+    color: #444444;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Nunito", serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    font-family: "Nunito", serif;
+}
+
+/*--------------------------------------------------------------
+# Navbar Mobile
+--------------------------------------------------------------*/
+.menuMobile {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: 100%;
+    width: 300px;
+    transition: 400ms;
+    left: -50%;
+    transform: translateX(-50%);
+}
+
+.overlayMobile {
+    transition: 400ms;
+    left: -50%;
+    transform: translateX(-50%);
+}
+
+.expandedOverlay {
+    left: 50%;
+}
+
+.expanded {
+    left: 150px;
+}
+
+.w-full-important {
+    width: 100% !important;
+}
+.border-none-important {
+    border: none !important;
+}
+
+/*--------------------------------------------------------------
+# SVG SHAPE
+--------------------------------------------------------------*/
+.custom-shape-divider-top-1735674240 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1735674240 svg {
+    position: relative;
+    display: block;
+    width: calc(102% + 1.3px);
+    height: 136px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1735674240 .shape-fill {
+    fill: #FFFFFF;
+}

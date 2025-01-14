@@ -1,0 +1,57 @@
+---
+import { getI18N } from "@/i18n";
+import { getImgFromLang } from "@/img/allImages";
+import { getLangFromUrl } from "@/i18n/utils";
+import { getAllCombos } from "@/content/config";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SliderBanner from "@/components/global/SliderBanner";
+import Intro from "@components/global/Intro.astro";
+import Card from "@components/tours/Card.astro";
+import Partners from "@components/global/Partners";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const allCombos = await getAllCombos(lang);
+
+const imgLang = getImgFromLang(currentLocale);
+
+const slides = [
+    { image: imgLang.slideCombo1, alt: "", href: "test" },
+    { image: imgLang.slideCombo2, alt: "", href: "test" },
+    { image: imgLang.slideCombo4, alt: "", href: "test" },
+    { image: imgLang.slideCombo5, alt: "", href: "test" },
+    { image: imgLang.slideCombo6, alt: "", href: "test" },
+];
+
+const seoMetaDatos = {
+    title: i18n.SEO.COMBOS_PAGE.TITLE,
+    description: i18n.SEO.COMBOS_PAGE.DESCRIPTION,
+    keywords: i18n.SEO.COMBOS_PAGE.KEYWORDS,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    <SliderBanner
+        client:load
+        slides={slides}
+        i18nButton={i18n.ALL_TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
+    />
+    <Intro
+        title={i18n.COMBOS_PAGE.TITLE}
+        description={i18n.COMBOS_PAGE.DESCRIPTION}
+    />
+
+    <section class="container mx-auto mb-10">
+        <div class="flex flex-wrap">
+            {allCombos.map((combo) => <Card tour={combo} lang={lang} />)}
+        </div>
+    </section>
+    <Partners
+        client:visible
+        title={i18n.PARTNERS.TITLE}
+        description={i18n.PARTNERS.DESCRIPTION}
+    />
+</BaseLayout>

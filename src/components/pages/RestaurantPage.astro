@@ -1,0 +1,60 @@
+---
+import { getI18N } from "@/i18n";
+import { getImgFromLang } from "@/img/allImages";
+import { getLangFromUrl } from "@/i18n/utils";
+import { getCollectionByName } from "@/content/config";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SliderBanner from "@/components/global/SliderBanner";
+import Intro from "@components/global/Intro.astro";
+import Card from "@components/restaurants/Card.astro";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const allRestaurants = await getCollectionByName("restaurants", lang);
+
+const imgLang = getImgFromLang(currentLocale);
+
+const slides = [
+    { image: imgLang.slideRest1, alt: "", href: "" },
+    { image: imgLang.slideRest2, alt: "", href: "test" },
+    { image: imgLang.slideRest3, alt: "", href: "test" },
+    { image: imgLang.slideRest4, alt: "", href: "test" },
+    { image: imgLang.slideRest5, alt: "", href: "test" },
+    { image: imgLang.slideRest6, alt: "", href: "test" },
+    { image: imgLang.slideRest7, alt: "", href: "test" },
+    { image: imgLang.slideRest8, alt: "", href: "test" },
+];
+
+const seoMetaDatos = {
+    title: i18n.SEO.RESTAURANT_PAGE.TITLE,
+    description: i18n.SEO.RESTAURANT_PAGE.DESCRIPTION,
+    keywords: i18n.SEO.RESTAURANT_PAGE.KEYWORDS,
+    image: imgLang.slideRest1.src,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    <SliderBanner
+        client:load
+        slides={slides}
+        i18nButton={i18n.ALL_TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
+    />
+
+    <Intro
+        title={i18n.RESTAURANT_PAGE.TITLE}
+        description={i18n.RESTAURANT_PAGE.DESCRIPTION}
+    />
+
+    <section class="container mx-auto mb-10">
+        <div class="flex flex-wrap">
+            {
+                allRestaurants.map((rest) => (
+                    <Card restaurant={rest} lang={lang} />
+                ))
+            }
+        </div>
+    </section>
+</BaseLayout>

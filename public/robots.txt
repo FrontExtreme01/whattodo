@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://whattodo2.jhonnycanul.pro/sitemap-index.xml

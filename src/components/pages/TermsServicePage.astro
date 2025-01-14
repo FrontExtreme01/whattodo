@@ -1,0 +1,239 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const seoMetaDatos = {
+    title: i18n.SEO.TERMS_PAGE.TITLE,
+    description: i18n.SEO.TERMS_PAGE.DESCRIPTION,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    <section class="container mx-auto text-justify">
+        <div class="mx-10 my-10 md:my-20">
+            <h1 class="text-center uppercase text-2xl md:text-4xl text-green-700 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.TITLE_TERMS}
+            </h1>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.USE_OF_WEBSITE.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.USE_OF_WEBSITE.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.POLICY_DISCLOSURE.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.POLICY_DISCLOSURE.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.PROHIBITED_ACTIVITIES.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.PROHIBITED_ACTIVITIES.DESCRIPTION.TEXT}</p>
+            <ul class="my-5 ml-10 list-decimal">
+                {Object.values(i18n.TERMS_PAGE.PROHIBITED_ACTIVITIES.DESCRIPTION.LIST).map((item) => (
+                    <li class="text-base md:text-lg">{item}</li>
+                ))}
+            </ul>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.ELECTRONIC_COMMUNICATIONS.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.ELECTRONIC_COMMUNICATIONS.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.PRODUCTS_RESERVATIONS.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.PRODUCTS_RESERVATIONS.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.RESERVATION_POLICIES.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.RESERVATION_POLICIES.DESCRIPTION.TEXT}</p>
+            <ul class="my-5 ml-10 list-disc">
+                {Object.values(i18n.TERMS_PAGE.RESERVATION_POLICIES.DESCRIPTION.LIST).map((item) => (
+                    <li class="text-base md:text-lg">{item}</li>
+                ))}
+            </ul>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.PRICES_INCLUSIONS.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.PRICES_INCLUSIONS.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.PAYMENTS_CANCELLATIONS.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.PAYMENTS_CANCELLATIONS.DESCRIPTION.TEXT}</p>
+            <ul class="my-5 ml-10 list-disc">
+                {Object.values(i18n.TERMS_PAGE.PAYMENTS_CANCELLATIONS.DESCRIPTION.LIST).map((item) => (
+                    <li class="text-base md:text-lg">{item}</li>
+                ))}
+            </ul>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.DISCLAIMER.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.DISCLAIMER.DESCRIPTION.TEXT}</p>
+            <ul class="my-5 ml-10 list-disc">
+                {Object.values(i18n.TERMS_PAGE.DISCLAIMER.DESCRIPTION.LIST).map((item) => (
+                    <li class="text-base md:text-lg">{item}</li>
+                ))}
+            </ul>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.PAYMENT_PROCESSING.TITLE}
+            </h2>
+            {Object.values(i18n.TERMS_PAGE.PAYMENT_PROCESSING.DESCRIPTION).map((item) => (
+                <p class="text-base md:text-lg my-5">{item}</p>
+            ))}
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.PRIVATE_TOUR_GUIDES.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.PRIVATE_TOUR_GUIDES.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.PASSPORT_VISA.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.PASSPORT_VISA.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.OUR_RESPONSIBILITY.TITLE}
+            </h2>
+            {Object.values(i18n.TERMS_PAGE.OUR_RESPONSIBILITY.DESCRIPTION).map((item) => (
+                <p class="text-base md:text-lg my-5">{item}</p>
+            ))}
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.YOUR_RESPONSIBILITY.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.YOUR_RESPONSIBILITY.DESCRIPTION.TEXT}</p>
+            <ul class="my-5 ml-10 list-disc">
+                {Object.values(i18n.TERMS_PAGE.YOUR_RESPONSIBILITY.DESCRIPTION.LIST).map((item) => (
+                    <li class="text-base md:text-lg">{item}</li>
+                ))}
+            </ul>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.LINKS_TO_THIRD.TITLE}
+            </h2>
+            {Object.values(i18n.TERMS_PAGE.LINKS_TO_THIRD.DESCRIPTION).map((item) => (
+                <p class="text-base md:text-lg my-5">{item}</p>
+            ))}
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.CURRENCY_CONVERTER.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.CURRENCY_CONVERTER.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.GENERAL_PROVISIONS.TITLE}
+            </h2>
+            {Object.values(i18n.TERMS_PAGE.GENERAL_PROVISIONS.DESCRIPTION).map((item) => (
+                <p class="text-base md:text-lg my-5">{item}</p>
+            ))}
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.INFORMATION_COLLECT.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.INFORMATION_COLLECT.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.INFORMATION_ABOUT_OTHERS.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.INFORMATION_ABOUT_OTHERS.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.INFORMATION_OTHER_SOURCES.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.INFORMATION_OTHER_SOURCES.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.AUTOMATIC_INFORMATION.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.AUTOMATIC_INFORMATION.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.PAYMENT_INFORMATION.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.PAYMENT_INFORMATION.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.LOCATION_DEVICE.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.LOCATION_DEVICE.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.YOUR_CONTRIBUTIONS.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.YOUR_CONTRIBUTIONS.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.HOW_USE_COOKIES.TITLE}
+            </h2>
+            <p class="text-base md:text-lg my-5">{i18n.TERMS_PAGE.HOW_USE_COOKIES.DESCRIPTION.TEXT_1}</p>
+            <p class="text-base md:text-lg my-5">{i18n.TERMS_PAGE.HOW_USE_COOKIES.DESCRIPTION.TEXT_2}</p>
+            <p class="text-base md:text-lg my-5">{i18n.TERMS_PAGE.HOW_USE_COOKIES.DESCRIPTION.TEXT_3}</p>
+            <p class="text-base md:text-lg my-5">{i18n.TERMS_PAGE.HOW_USE_COOKIES.DESCRIPTION.TEXT_4}</p>
+            <p class="text-base md:text-lg my-5">{i18n.TERMS_PAGE.HOW_USE_COOKIES.DESCRIPTION.TEXT_5}</p>
+            <p class="text-base md:text-lg my-5">{i18n.TERMS_PAGE.HOW_USE_COOKIES.DESCRIPTION.TEXT_6}</p>
+            <p class="text-base md:text-lg my-5">{i18n.TERMS_PAGE.HOW_USE_COOKIES.DESCRIPTION.TEXT_7}</p>
+            <ul class="my-5 ml-10 list-disc">
+                {Object.values(i18n.TERMS_PAGE.HOW_USE_COOKIES.DESCRIPTION.LIST).map((item) => (
+                    <li class="text-base md:text-lg">{item}</li>
+                ))}
+            </ul>
+            <p class="text-base md:text-lg my-5">{i18n.TERMS_PAGE.HOW_USE_COOKIES.DESCRIPTION.TEXT_8}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.SHARING_SOCIAL_SERVICES.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.SHARING_SOCIAL_SERVICES.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.SHARING_THIRD_PARTY.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.SHARING_THIRD_PARTY.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.SHARING_REFERENCES.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.SHARING_REFERENCES.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.OTHER_SHARE.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.OTHER_SHARE.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.USE_DISCLOUSE.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.USE_DISCLOUSE.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.EMAIL_COMMUNICATIONS.TITLE}
+            </h2>
+            {Object.values(i18n.TERMS_PAGE.EMAIL_COMMUNICATIONS.DESCRIPTION).map((item) => (
+                <p class="text-base md:text-lg my-5">{item}</p>
+            ))}
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.OUR_AFFILIATES.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.OUR_AFFILIATES.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.ACCESS_YOUR_INFORMATION.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.ACCESS_YOUR_INFORMATION.DESCRIPTION}</p>
+
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.YOUR_OPTIONS.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.YOUR_OPTIONS.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.OUR_SECURITY.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.OUR_SECURITY.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.CHILDREN_PRIVACY.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.CHILDREN_PRIVACY.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.EXTERNAL_LINKS.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.EXTERNAL_LINKS.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.CHANGES_TERMS.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.CHANGES_TERMS.DESCRIPTION}</p>
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.CALL_RECORDING.TITLE}
+            </h2>
+            {Object.values(i18n.TERMS_PAGE.CALL_RECORDING.DESCRIPTION).map((item) => (
+                <p class="text-base md:text-lg my-5">{item}</p>
+            ))}
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.REVOKE_CONSENT.TITLE}
+            </h2>
+            {Object.values(i18n.TERMS_PAGE.REVOKE_CONSENT.DESCRIPTION).map((item) => (
+                <p class="text-base md:text-lg my-5">{item}</p>
+            ))}
+            <h2 class="uppercase text-lg md:text-2xl text-orange-500 font-bold mt-8 mb-4">
+                {i18n.TERMS_PAGE.CONTACT_US.TITLE}
+            </h2>
+            <p class="text-base md:text-lg">{i18n.TERMS_PAGE.CONTACT_US.DESCRIPTION}</p>
+        </div>
+    </section>
+</BaseLayout>

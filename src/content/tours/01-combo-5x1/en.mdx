@@ -1,0 +1,77 @@
+---
+slug: 'cancun-ultimate-5x1/en'
+status: 1
+lang: 'en'
+home: 1
+combo: 1
+slugGallery: '5x1'
+title: 'Cancun Ultimate 5x1 ATV Ziplines, Cenote, Tequila & Reef snorkel'
+description: 'Experience an action-packed adventure in Cancun with this all-in-one combo. Enjoy snorkeling, ziplining, ATV riding, and cenote swimming, all in a single day. Start with a boat ride to snorkel in the vibrant Puerto Morelos Reef National Park.'
+keywords: 'combo 5x1, cancun, atv, ziplines, cenote, tequila, reef snorkel, atv experience, ziplines adventure, cenote swim, tequila tasting, reef snorkeling'
+price: 90
+stars: '5.0'
+reviews: '1,158 reviews'
+image:
+    src: '/assets/covers/combos/cancun-ultimate-5x1-atv-ziplines-cenote-tequila-reef-snorke.webp'
+    alt: 'cover Cancun Ultimate 5x1 ATV'
+highlights: ['Pickup offered']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/888243?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/888243'
+location: 'Cancun, Mexico'
+duration: '8 hours (approx.)'
+---
+
+import Inclusions from '@components/detail-content/Inclusions.astro';
+import AdditionalInfo from '@components/detail-content/AdditionalInfo.astro';
+
+export const includes = [
+    'ATV ride & vehicle insurance',
+    '3-zipline circuit',
+    'Snorkeling gear',
+    'Fish tacos at Beachside restaurant',
+    'Hotel pickup & drop-off from most hotels',
+    'Entrance to Cenote Verde Lucero',
+    'Tequila Tasting',
+    'Mayan snack at Extreme adventure Eco Park',
+    'Professional Bilingual Guide on all activities'
+];
+
+export const notIncludes = [
+    'Reef & dock tax of $10 USD per person',
+    'Beverages',
+    'Locker rental at the park ($5 USD)'
+]
+
+export const i18n = {
+    INCLUDES: 'Included',
+    NOT_INCLUDES: 'Not Included',
+    INFORMATION: 'Additional Information'
+}
+
+export const information = [
+    'We can accommodate vegetarian dietary restrictions. Please let us know in advance if you require a vegetarian alternative.',
+    'Maximum weight allowed on the ziplines is 130 kg or 268 lb.',
+    'Maximum waist size allowed on the ziplines is 1.24 m or 49 in.',
+    'Confirmation will be received at time of booking.',
+    'Not wheelchair accessible.',
+    'Infants must sit on laps.',
+]
+
+<Inclusions
+    includes={includes} 
+    notIncludes={notIncludes}
+    i18n={i18n}
+/>  
+
+<h2 class="text-xl md:text-3xl font-bold text-orange-600 mt-10 mb-4">Overview</h2>
+
+<p class="text-base md:text-lg mb-2">Embark on a complete, comprehensive outdoor adventure in beautiful Puerto Morelos. Combine reef snorkeling, ATV offroad ride, ziplining and a cenote swim Start in idyllic Puerto Morelos, where your tour guide provides briefing on safety standards and snorkeling instructions. Once you’ve received your equipment, board the boat to a breathtaking snorkeling spot, where you can marvel at vibrant coral formations and diverse marine life in clear, shallow waters. Enjoy an hour exploring this underwater paradise at your own pace. Afterward, you can take a quick shower and relish a delicious light lunch at a beachside restaurant. Next, head deep into the Mayan jungle and the Extreme Adventure Park. Get ready to fly along the tree tops on 3 ziplines and feel the thrill of a 30-minute ATV ride through off-road trails. At last, cool off by diving into a natural, freshwater cenote. Back at the base, you can enjoy some traditional pork tacos before returning to your hotel. </p>
+
+<h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">Enjoy each detail</h3>
+
+<p class="text-base md:text-lg mb-2">Experience an action-packed adventure in Cancun with this all-in-one combo. Enjoy snorkeling, ziplining, ATV riding, and cenote swimming, all in a single day. Start with a boat ride to snorkel in the vibrant Puerto Morelos Reef National Park. Then, head into the Maya jungle for an exhilarating four-wheeling experience, ziplining through the trees, and splashing into a refreshing cenote. The day starts with a convenient pickup from most Cancun & Riviera Maya hotels. Upon arriving in Puerto Morelos, meet your guide for the safety brief on snorkeling, before heading out to open sea. Experience an hour of snorkeling at the coral reef and keep your eyes opened for the fascinating flora and fauna featuring tropical fish, sea turtles and even lobsters. Back in Puerto Morelos, enjoy a relaxing light lunch at a beachside restaurant overlooking the Caribbean, followed by some free time in the heart of the small town. Next stop is the Extreme Adventure Park, where you embark on an exciting ATV ride through the jungle combined with ziplining and a refreshing cenote swim. Last but not least, relish two delicious Mayan tacos prior to returning to your hotel.</p>
+
+<AdditionalInfo
+    information={information}
+    i18n={i18n}
+/>

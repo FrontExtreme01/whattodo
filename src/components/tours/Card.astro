@@ -1,0 +1,75 @@
+---
+import { getI18N } from "@/i18n";
+import { useTranslatedPath } from "@/i18n/utils";
+import { Image } from "astro:assets";
+import { IconLastminute } from "@/img/allImages";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const { tour, lang } = Astro.props;
+const translatePath = useTranslatedPath(lang);
+const url = translatePath(`/tour/${tour.new_slug}/`);
+---
+
+<div class="w-full lg:w-3/12 sm:w-6/12 px-5 py-3 sm:py-5">
+    <div class="relative flex flex-wrap sm:flex-col rounded-lg bg-white shadow-lg border-slate-600 h-full">
+        {tour.data.lastMinute && (
+            <span class="absolute z-10 -top-2 sm:top-0 -right-2 rotate-12">
+                <Image src={IconLastminute} alt="icon last minute" class="w-14 sm:w-20" />
+            </span>
+        )}
+        <h3 class="mt-7 px-3 sm:hidden block w-full font-bold text-base text-justify text-green-700">{tour.data.title}</h3>
+        <div class="relative p-2.5 w-4/6 sm:w-full">
+            <span class="absolute z-10 top-4 left-4 md:top-5 md:left-5 px-2.5 py-1 rounded-md text-sm bg-white font-bold shadow-lg">
+                <i class="at-star text-sm text-amber-500"></i>{tour.data.stars}
+            </span>
+            <a aria-label={i18n.ACCESSIBILITY.GO_TO_TOUR_DETAILS} href={url}>
+                <img width="650" height="450" loading="lazy" src={tour.data.image.src} class="w-full h-full object-cover rounded-md cursor-pointer duration-200 hover:scale-110" alt={tour.data.image.alt}>
+            </a>
+        </div>
+
+        <div class="py-3 px-1.5 sm:p-1 text-justify w-2/6 sm:w-full">
+            <h3 class="hidden sm:block font-bold text-base sm:text-lg mt-4 mb-4 text-center sm:min-h-14 text-green-700">{tour.data.title}</h3>
+            {tour.data.lastMinute && (
+                <p class="block sm:hidden font-bold text-red-600 text-xs line-through">
+                    ${(tour.data.price * 1.4).toFixed(0)} USD
+                </p>
+            )}
+            <p class="block sm:hidden font-bold text-green-700 text-lg sm:text-xl">
+                <span class="text-gray-800 text-xs">{i18n.ALL_TOUR_PAGE.CARD.FROM}:</span><br> ${tour.data.price} USD
+            </p>
+
+            <ul class="flex justify-around gap-2 flex-wrap mb-4 text-xs sm:text-sm break-all">
+                <li class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-green-600 transition duration-200">
+                    <i class="at-clock text-green-700"></i>{tour.data.duration}
+                </li>
+                <li class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-green-600 transition duration-200">
+                    <i class="at-messages-text text-green-700"></i>{tour.data.reviews}
+                </li>
+                {tour.data.highlights.map((item) => (
+                    <li class="hidden sm:flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-green-600 transition duration-200">
+                        <i class="at-info-circle text-green-700"></i> {item}
+                    </li>
+                ))}
+                <li class="hidden sm:flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-green-600 transition duration-200">
+                    <i class="at-language-translation text-green-700"></i><b>{i18n.DETAILS_CONTENT.GENERAL.OFFERED_IN}:</b> {i18n.DETAILS_CONTENT.GENERAL.OFFERED_LANG}
+                </li>
+            </ul>
+        </div>
+        
+        <div class="w-full flex flex-wrap justify-evenly mb-5 lg:px-5 gap-y-3 mt-auto">
+            <div class="hidden sm:block w-full text-center my-2">
+                {tour.data.lastMinute && (
+                    <p class="font-bold text-red-600 text-xs sm:text-sm line-through mb-2">
+                        <span>{i18n.ALL_TOUR_PAGE.CARD.FROM}:</span>
+                        ${(tour.data.price * 1.4).toFixed(0)} USD
+                    </p>
+                )}
+                <p class="font-bold text-green-700 text-lg sm:text-xl"><span class="text-gray-800 text-sm">{i18n.ALL_TOUR_PAGE.CARD.FROM}:</span> ${tour.data.price} USD</p>
+            </div>
+            {tour.data.bokun != '' && <a aria-label="" href={tour.data.bokun} class="text-sm sm:text-base w-auto text-center bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline" target="_blank">{i18n.ALL_TOUR_PAGE.CARD.BUTTON_BOOK_NOW}</a>}
+            <a aria-label={i18n.ACCESSIBILITY.GO_TO_TOUR_DETAILS} href={url} class="text-sm sm:text-base w-auto text-center bg-slate-200 hover:bg-slate-100 text-black font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline">{i18n.ALL_TOUR_PAGE.CARD.BUTTON_MORE}</a>
+        </div>
+    </div>
+</div>

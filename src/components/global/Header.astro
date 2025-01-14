@@ -1,0 +1,196 @@
+---
+import { Image } from "astro:assets";
+import { logoMain, logoHorizontal } from "@/img/allImages";
+
+import { getI18N } from "@/i18n"
+import { getLangFromUrl, useTranslations, useTranslatedPath, } from '@/i18n/utils';
+
+import LanguageSelector from "./LanguageSelector.astro";
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const navigation = [
+  {
+    icon: "all-tours-category.svg",
+    title: t("nav.allTours"),
+    link: translatePath('/get-my-experience/'),
+  },
+  {
+    icon: "tours-category.svg",
+    title: t("nav.tours"),
+    subMenu: [
+      {
+        title: t("nav.tours.cheap"),
+        link: "/#/",
+      },
+      {
+        title: t("nav.tours.favorite"),
+        link: "/#/",
+      },
+      {
+        title: t("nav.tours.adventure"),
+        link: "/#/",
+      },
+      {
+        title: t("nav.tours.couples"),
+        link: "/#/",
+      },
+      {
+        title: t("nav.tours.water"),
+        link: "/#/",
+      },
+      {
+        title: t("nav.tours.mayan"),
+        link: "/#/",
+      },
+    ]
+  },
+  {
+    icon: "fun-and-party-category.svg",
+    title: t("nav.funParty"),
+    subMenu: [
+      {
+        title: t("nav.funParty.events"),
+        link: "/#/",
+      },
+      {
+        title: t("nav.funParty.nightClubs"),
+        link: "/#/",
+      },
+      {
+        title: t("nav.funParty.beachClub"),
+        link: "/#/",
+      }
+    ]
+  },
+  {
+    icon: "discount.svg",
+    title: t("nav.lastMinute"),
+    link: translatePath('/cancun-excursion-deals/'),
+  },
+  {
+    icon:  "restaurants-category.svg",
+    title: t("nav.rest"),
+    link: translatePath('/restaurants/'),
+  },
+  {
+    icon: "transportation-category.svg",
+    title: t("nav.transportation"),
+    link: translatePath('/airport-transfer-cancun/'),
+  },
+  {
+    icon: "combos-category.svg",
+    title: t("nav.combos"),
+    link: translatePath('/combos/'),
+  },
+  {
+    icon: "blog-category.svg", 
+    title: "Blog", 
+    link: "https://whattodoincancun.com/blog/"
+  }
+];
+---
+
+<header class="bg-white sticky top-0 z-20 shadow-md">
+  <!-- Desktop Navbar-->
+  <nav class="mx-auto flex items-center justify-between p-2 xl:px-8" aria-label="Global">
+    <!-- Logo -->
+    <div class="flex sm:flex-1">
+      <a href={translatePath('/')} aria-label={i18n.ACCESSIBILITY.GO_TO_HOME} class="mx-auto p-1.5">
+        <span class="sr-only">What To Do In Cancun</span>
+        <Image
+          src={logoMain}
+          alt="logo what to do in cancun"
+          class="hidden sm:block h-24 w-auto object-contain"
+          widths={[240, 500, 720, logoMain.width]}
+          sizes={`(max-width: 360px) 240px, (max-width: 720px) 500px, (max-width: 1600px) 720px, ${logoMain.width}px`}
+        />
+        <Image
+          src={logoHorizontal}
+          alt="logo what to do in cancun"
+          class="block sm:hidden w-full h-auto"
+          widths={[240, 500, 720, logoHorizontal.width]}
+          sizes={`(max-width: 360px) 240px, (max-width: 720px) 500px, (max-width: 1600px) 720px, ${logoHorizontal.width}px`}
+        />
+      </a>
+    </div>
+    <!-- Navbar -->
+    <div class="hidden xl:flex xl:space-x-8">
+      {navigation.map((nav) => (
+          nav.subMenu ? (
+            <div class="relative group">
+              <a class="text-green-700 text-base hover:text-orange-500 font-bold leading-6">
+                {nav.title}
+                <svg class="w-6 h-6 inline-block mr-2 text-green-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <div class="hidden group-hover:block absolute top-full -left-10 bg-white shadow-lg py-4 px-6 rounded-lg">
+                {nav.subMenu.map((sub) => (
+                  <a href={sub.link} class="text-green-700 text-base hover:text-orange-500 font-bold leading-10 w-max block">
+                    {sub.title}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a href={nav.link} class={`${nav.title === t('nav.lastMinute') ?  'text-red-600': 'text-green-700'} text-base hover:text-orange-500 font-bold leading-6`}>
+              {nav.title}
+            </a>
+        ))
+      )}
+    </div>
+    <!-- Button Open Menu Mobile -->
+    <div class="order-2 sm:order-1 flex sm:flex-1 justify-center xl:hidden">
+      <button type="button" class="text-gray-700 navbarMobile">
+        <span class="sr-only">{i18n.ACCESSIBILITY.OPEN_MENU}</span>
+        <i class="at-justify text-lg font-bold mx-4"></i>
+      </button>
+    </div>
+    <!-- Button Call Us with Translate -->
+    <div class="order-1 m:order-2 flex sm:flex-1 justify-center items-center space-x-3">
+      <a href="tel:+34672246803" aria-label={i18n.ACCESSIBILITY.CALL_US} 
+        class="hidden sm:inline ml-4 order-1 lg:order-0 rounded-2xl text-base py-3 px-5 font-bold leading-6 bg-orange-600 hover:bg-orange-500 text-white text-center">
+        <i class="at-call-arrow-up-right"></i>
+        {i18n.ACCESSIBILITY.CALL_US}
+      </a>
+      <LanguageSelector />
+    </div>
+  </nav>
+
+  <!-- Mobile Navbar -->
+  <nav class="flex xl:hidden flex-column relative">
+    <div class="fixed top-0 left-0 bg-black/[.50] w-full h-full z-[100] overlayMobile"></div>
+    <div class="menuMobile z-[110]">
+      <span class="btnClose absolute top-5 right-2 z-[120] bg-orange-600 transition duration-400 cursor-pointer hover:bg-orange-500 text-white rounded-full w-9 h-9 grid place-items-center">
+        <i class="at-xmark-circle"></i>
+      </span>
+      <div class="bg-white h-full py-10 px-5">
+        <a href={translatePath('/')} aria-label={i18n.ACCESSIBILITY.GO_TO_HOME}>
+          <Image
+            src={logoMain}
+            alt={i18n.ACCESSIBILITY.LOGO}
+            class="max-h-24 h-auto w-auto mb-14 mx-auto"
+            widths={[240, 500, 720, logoMain.width]}
+            sizes={`(max-width: 360px) 240px, (max-width: 720px) 500px, (max-width: 1600px) 720px,  ${logoMain.width}px`}
+          />
+        </a>
+        <div class="flex flex-col space-y-7">
+          {
+            navigation.map((nav) => (
+              <a href={nav.link} class={`${nav.title === t('nav.lastMinute') ?  'text-red-600': 'text-green-700'} text-lg hover:text-orange-500 font-bold leading-6`}>
+                <img src={`/assets/icons/${nav.icon}`} class="w-6 h-6 inline-block mr-2" alt="" />
+                {nav.title}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
