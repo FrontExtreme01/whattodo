@@ -1,35 +1,30 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import { getI18N } from "@/i18n";
-import { getLangFromUrl, useTranslatedPath } from '@/i18n/utils';
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
 import { getCollectionHome, getCombosHome, getToursHome } from "@/content/config";
-import { getImgFromLang, StickerHappyCustomer, StickerTripAdvisor, review1, review2, review3, review4, review5 } from "@/img/allImages"
+import { getSlides, StickerHappyCustomer, StickerTripAdvisor, review1, review2, review3, review4, review5 } from "@/img/allImages"
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SliderBanner from "@components/global/SliderBanner";
 import Partners from "@components/global/Partners";
 import Testimonials from "@components/global/Testimonials";
-import CardRest from '@components/restaurants/Card.astro';
-import CardTour from '@components/tours/Card.astro';
+import CardRest from "@components/cards/RestaurantCard.astro";
+import CardTour from "@components/cards/TourCard.astro";
+import CardParty from "@components/cards/PartyCard.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
-const imgLang = getImgFromLang(currentLocale);
 
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 
+const slides = getSlides("HOME", lang);
+
 const restaurantsHome = await getCollectionHome("restaurants",lang);
 const combosHome = await getCombosHome(lang);
 const toursHome = await getToursHome(lang);
-
-const slides = [
-    {image: imgLang.slideHome1, alt: "", href: ""},
-    {image: imgLang.slideHome2, alt: "", href: "test"},
-    {image: imgLang.slideHome3, alt: "", href: "test"},
-    {image: imgLang.slideHome4, alt: "", href: "test"},
-    {image: imgLang.slideHome5, alt: "", href: "test"},
-];
+const partyHome = await getCollectionHome("parties",lang);
 
 const testimonials = [
     {image: review1, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.REVIEW },
@@ -42,11 +37,12 @@ const testimonials = [
 const seoMetaDatos = {
 	description: i18n.SEO.HOME_PAGE.DESCRIPTION,
     keywords: i18n.SEO.HOME_PAGE.KEYWORDS,
+    image: slides[0].image.src,
 }
 ---	
 
 <BaseLayout seo={seoMetaDatos}>
-    <SliderBanner client:load slides={slides} i18nButton={i18n.ALL_TOUR_PAGE.CARD.BUTTON_BOOK_NOW} />
+    <SliderBanner client:load slides={slides} i18nButton={i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW} />
     
     <!-- Intro -->
     <section class="bg-slate-100">
@@ -79,9 +75,10 @@ const seoMetaDatos = {
             </div>
             <!-- Top Parties -->
             <div class="flex flex-wrap mt-14">
-                <h2 class="w-full text-violet-700 text-2xl md:text-3xl font-bold mb-8">{i18n.HOME_PAGE.TOP_PARTIES.TITLE}</h2>
+                <h2 class="w-full text-purple-700 text-2xl md:text-3xl font-bold mb-8">{i18n.HOME_PAGE.TOP_PARTIES.TITLE}</h2>
+                {partyHome.map((party) => <CardParty party={party} lang={lang} />)}
                 <div class="w-full mt-5">
-                    <a href="#" class="mx-auto block w-fit bg-violet-700 hover:bg-violet-600 text-white font-bold py-4 px-10 rounded-lg focus:outline-none focus:shadow-outline transition">
+                    <a href="#" class="mx-auto block w-fit bg-purple-700 hover:bg-purple-500 text-white font-bold py-4 px-10 rounded-lg focus:outline-none focus:shadow-outline transition">
                         {i18n.HOME_PAGE.TOP_PARTIES.BUTTON}
                     </a>
                 </div>

@@ -26,28 +26,36 @@ const navigation = [
     subMenu: [
       {
         title: t("nav.tours.cheap"),
-        link: "/#/",
+        link: translatePath('/cheap-tours-in-cancun/'),
       },
       {
         title: t("nav.tours.favorite"),
-        link: "/#/",
+        link: translatePath('/cancun-favorite-activities/'),
       },
       {
         title: t("nav.tours.adventure"),
-        link: "/#/",
+        link: translatePath('/adventure-tours-in-cancun/'),
       },
       {
         title: t("nav.tours.couples"),
-        link: "/#/",
+        link: translatePath('/tours-for-couples-in-cancun/'),
       },
       {
         title: t("nav.tours.water"),
-        link: "/#/",
+        link: translatePath('/sailing-tours-in-cancun/'),
       },
       {
-        title: t("nav.tours.mayan"),
-        link: "/#/",
+        title: t("nav.tours.ruins"),
+        link: translatePath('/mayan-ruins-tours/'),
       },
+      {
+        title: t("nav.golf"),
+        link: translatePath('/cancun-golf-courses/'),
+      },
+      {
+        title: t("nav.yachts"),
+        link: translatePath('/cancun-yacht-rentals/'),
+      }
     ]
   },
   {
@@ -56,15 +64,15 @@ const navigation = [
     subMenu: [
       {
         title: t("nav.funParty.events"),
-        link: "/#/",
+        link: translatePath('/events-in-cancun/'),
       },
       {
         title: t("nav.funParty.nightClubs"),
-        link: "/#/",
+        link: translatePath('/nightlife-in-cancun/'),
       },
       {
         title: t("nav.funParty.beachClub"),
-        link: "/#/",
+        link: translatePath('/beachclub-in-cancun/'),
       }
     ]
   },
@@ -126,14 +134,14 @@ const navigation = [
             <div class="relative group">
               <a class="text-green-700 text-base hover:text-orange-500 font-bold leading-6">
                 {nav.title}
-                <svg class="w-6 h-6 inline-block mr-2 text-green-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <svg class="w-6 h-6 inline-block mr-2 text-green-700 group-hover:rotate-180 transition-all duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                     <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </a>
               <div class="hidden group-hover:block absolute top-full -left-10 bg-white shadow-lg py-4 px-6 rounded-lg">
-                {nav.subMenu.map((sub) => (
-                  <a href={sub.link} class="text-green-700 text-base hover:text-orange-500 font-bold leading-10 w-max block">
-                    {sub.title}
+                {nav.subMenu.map((category) => (
+                  <a href={category.link} class="text-green-700 text-base hover:text-orange-500 font-bold leading-10 w-max block">
+                    {category.title}
                   </a>
                 ))}
               </div>

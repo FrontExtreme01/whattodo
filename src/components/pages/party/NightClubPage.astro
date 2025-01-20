@@ -1,0 +1,62 @@
+---
+import { getI18N } from "@/i18n";
+import { getSlides } from "@/img/allImages";
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
+import { getPartiesType } from "@/content/config";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SliderBanner from "@/components/global/SliderBanner";
+import Intro from "@components/global/Intro.astro";
+import Partners from "@/components/global/Partners";
+import PartyCard from "@/components/cards/PartyCard.astro";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const allParties = await getPartiesType("NIGHTCLUB", lang);
+const translatedPath = useTranslatedPath(lang);
+
+const slides = getSlides("NIGHTCLUB", lang);
+
+const seoMetaDatos = {
+    title: i18n.SEO.PARTY_PAGE.NIGHTCLUB.TITLE,
+    description: i18n.SEO.PARTY_PAGE.NIGHTCLUB.DESCRIPTION,
+    keywords: i18n.SEO.PARTY_PAGE.NIGHTCLUB.KEYWORDS,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    
+    <SliderBanner
+        client:load
+        slides={slides}
+        i18nButton={i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
+    />
+
+    <Intro
+        title={i18n.PARTY_PAGE.NIGHTCLUB.TITLE}
+        description={i18n.PARTY_PAGE.NIGHTCLUB.DESCRIPTION}
+    />
+
+    <section class="container mx-auto mb-10">
+        <div class="flex flex-wrap justify-center">
+            {allParties.map((party) => <PartyCard party={party} lang={lang} />)}
+        </div>
+    </section>
+
+    <section class="container mx-auto mb-10">
+        <div class="px-5 py-2 text-justify">
+            {Object.values(i18n.PARTY_PAGE.NIGHTCLUB.INFORMATION).map((item) => (
+                <p class="text-base md:text-xl mb-5">{item}</p>
+            ))}
+            <p class="text-center text-base md:text-xl mt-10 mb-5 font-bold text-purple-700" >{i18n.PARTY_PAGE.NIGHTCLUB.BOOK_TICKETS}</p>
+            <p class="text-center flex flex-col">
+                <a href={translatedPath('/events-in-cancun/')} class="font-bold text-2xl md:text-3xl mt-10 text-purple-800 hover:text-purple-600 trnasition duration-100">{i18n.PARTY_PAGE.NIGHTCLUB.BUTTONS.EVENTS}</a>
+                <a href={translatedPath('/beachclub-in-cancun/')} class="font-bold text-2xl md:text-3xl my-5 text-purple-800 hover:text-purple-600 trnasition duration-100">{i18n.PARTY_PAGE.NIGHTCLUB.BUTTONS.BEACHCLUB}</a>
+            </p>
+        </div>
+    </section>
+
+    <Partners client:visible title={i18n.PARTNERS.TITLE} description={i18n.PARTNERS.DESCRIPTION} />
+</BaseLayout>

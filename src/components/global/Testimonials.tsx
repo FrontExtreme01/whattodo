@@ -75,7 +75,7 @@ export default function Testimonials({ testimonials, title, description }: any) 
                             <div className="bg-white py-8 px-8 sm:px-14 rounded-lg shadow-xl border border-slate-200">
                                 <div className="flex flex-wrap items-center">
                                     <div className="w-3/12 sm:w-2/12">
-                                        {test.image ? <img src={test.image.src} alt="" className="w-14 h-14 rounded-full object-cover" /> : <img src="/assets/testimonials/tours/default-user-review.webp" alt="" className="w-14 h-14 rounded-full object-cover" />}
+                                        {test.image ? <img src={test.image.src} alt="" width={test.image.width} height={test.image.height} className="w-14 h-14 rounded-full object-cover" /> : <img src="/assets/testimonials/tours/default-user-review.webp" alt="" className="w-14 h-14 rounded-full object-cover" />}
                                     </div>
                                     <div className="w-7/12 sm:w-8/12 text-start">
                                         <p className="text-base text-gray-600 font-bold">{test.user}</p>

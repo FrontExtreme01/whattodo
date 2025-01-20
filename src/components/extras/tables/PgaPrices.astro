@@ -1,0 +1,35 @@
+---
+const { i18n } = Astro.props;
+---
+
+<table class="table-auto w-full sm:w-3/4 border-separate border-spacing-2 text-sm sm:text-base my-5">
+    <tbody>
+        <tr>
+            <td colspan="4">
+                <h3 class="bg-slate-200 font-bold text-xl text-center p-4">{i18n.TABLE_TITLE}</h3>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" class="bg-slate-100 font-bold text-center p-2"></td>
+            <td colspan="2" class="bg-slate-100 font-bold text-center p-2">
+                <h5>{i18n.TABLE_COURSE1} <br> 18 {i18n.HOLES}</h5>
+            </td>
+            <td colspan="1" class="bg-slate-100 font-bold text-center p-2">
+                <h5>{i18n.TABLE_COURSE2} <br> 9 {i18n.HOLES}</h5>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-100 p-2">Green Fee:</th>
+            <td colspan="1" class="text-center"><strong>$ 131</strong> <br><em class="text-xs sm:text-sm">({i18n.BEFORE} Oct. 2023)</em></td>
+            <td colspan="1" class="text-center"><strong>$ 206</strong> <br><em class="text-xs sm:text-sm">({i18n.AFTER} Oct. 2023)</em></td>
+            <td class="text-center"><strong>$ 50</strong></td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-100 p-2">Twilight <br> fee:</th>
+            <td colspan="1" class="text-center"><strong>$ 107</strong><br><em class="text-xs sm:text-sm">({i18n.BEFORE} Oct. 2023)</em></td>
+            <td colspan="1" class="text-center"><strong>$ 157</strong><br><em class="text-xs sm:text-sm">({i18n.AFTER} Oct. 2023)</em></td>
+            <td class="text-center"><strong>$ 50</strong></td>
+        </tr>
+    </tbody>
+</table>
+<p class="text-sm text-red-600 italic my-3">{i18n.PRICES_CONDITIONS}</p>

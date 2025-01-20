@@ -5,7 +5,7 @@ import MdTourLayout from "@/layouts/MdTourLayout.astro";
 import { getCollectionByName } from "@/content/config";
 
 export async function getStaticPaths() {
-    const toursEntries = await getCollectionByName("tours","en");
+    const toursEntries = await getCollectionByName("tours", "en");
 
     const paths = toursEntries.map((entry) => {
         return {

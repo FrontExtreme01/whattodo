@@ -1,0 +1,101 @@
+---
+slug: 'pga-riviera-maya/en'
+status: 1
+lang: 'en'
+slugGallery: 'pga-riviera'
+titleSeo: 'PGA Riviera Maya Golf Course'
+title: 'PGA Riviera Maya'
+description: 'Discover golfing bliss at PGA Riviera Maya, a Robert Trent Jones II designed course integrated into the Mayan jungle. Experience best golf!'
+keywords: 'golf, PGA Riviera Maya, Riviera Maya, golf course, golfing experience'
+price: 108
+stars: '5.0'
+reviews: '1,234 reviews'
+image:
+    src: '/assets/covers/golfs/pga-riviera-maya-rates.webp'
+    alt: 'cover of PGA Riviera Maya'
+duration: '4 hours (approx.)'   
+holes: '18 holes'
+yards: '7,272 yards'
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/781984?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/781984'
+location: 'Carretera Chetumal Benito Juarez km 250 77760 Akumal, Q.R., Mexico'
+schedule: '06:00 am - 07:00 pm'
+availability: 'Mon to Sun'
+mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d478744.1601925098!2d-87.339955!3d20.375106!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e33b36bd37a3b%3A0xe96810df2aa79222!2sPGA%20Riviera%20Maya!5e0!3m2!1ses-419!2sus!4v1703699030808!5m2!1ses-419!2sus'
+---
+
+import { Image } from "astro:assets";
+import { pga1, pga2, pga3 } from "@/img/allImages";
+
+import AdditionalInfo from '@components/detail-content/AdditionalInfo.astro';
+import PgaPrices from "@components/extras/tables/PgaPrices.astro";
+
+export const detailsInfo = [
+    'Championship Course: 18 Holes.',
+    'Executive Course: 9 Holes.',
+    'Championship Yardage: 7,272.',
+    'Executive Yardage: 1,265.',
+    'Par: 72 | 27. ',
+    'Course Designer: Robert Trent Jones.',
+];
+
+export const i18n = {
+    INFORMATION: 'Details',
+    HOLES: 'Holes',
+    TABLE_TITLE: 'PGA Riviera Maya Rates',
+    TABLE_COURSE1: 'Championship Course',
+    TABLE_COURSE2: 'Executive Course',
+    BEFORE: 'Before',
+    AFTER: 'After',
+    PRICES_CONDITIONS: 'Prices expressed in US dollars (USD). Players under 17 years of age must be accompanied by an adult.'
+};
+
+<PgaPrices i18n={i18n} />   
+
+<AdditionalInfo information={detailsInfo} i18n={i18n} />
+
+<h2 class="text-xl md:text-3xl font-bold text-cyan-600 mt-10 mb-4">The Golfer’s Paradise in Riviera Maya</h2>
+
+<h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">A Masterpiece by Robert Trent Jones II</h3>
+
+<p class="text-base md:text-lg mb-2"><strong>PGA Riviera Maya</strong>, a part of Mexico’s Bahia Principe complex, showcases <strong>the genius of Robert Trent Jones II</strong>. This <strong>18-hole Par 72</strong> course beautifully blends into the Mayan jungle, featuring natural lakes and cenotes, making it one of the best resorts in Mexico and the Americas.</p>
+
+<Image class="mx-auto py-10" src={pga1} alt="Robert Trent Jones II Golf Course Architects" />
+
+<h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">PGA Golf Academy: Your Path to Golf Excellence</h3>
+
+<p class="text-base md:text-lg mb-2">Indeed, this Golf Club in Cancun offers the <strong>PGA Golf Academy</strong>, catering to each student’s abilities. Under the guidance of golf pros, you’ll develop the correct anatomical and biomechanical positions for a safe and effective swing, preventing injuries.</p>
+
+<h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">A Perfect Golfing Field for All</h3>
+
+<p class="text-base md:text-lg mb-2"><strong>PGA Golf Course in Riviera Maya</strong> boasts a professional 18-hole Par 72 course, a golfer’s dream designed by experts. With a length of 7272 yards, you can relish the sport’s essence amidst the stunning backdrop of the Riviera Maya.</p>
+
+<h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">Executive 9-Hole Course for All Skill Levels</h3>
+
+<p class="text-base md:text-lg mb-2">The club’s <strong>executive 9-hole Par 27 course</strong> is an ideal alternative for players of all levels. From experienced golfers honing their short game to newcomers seeking a laid-back experience, everyone can enjoy golf’s beauty surrounded by the natural elements of the region.</p>
+
+<h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">Discover Our Extensive Driving Range</h3>
+
+<p class="text-base md:text-lg mb-2">At <strong>PGA Riviera Maya</strong>, indulge in our vast driving range area, <strong>spanning over 300 yards</strong> and accommodating over 50 players. With an approach area, bunkers, a large putting green, and a chipping green, perfect your skills and embrace the joy of golf.</p>
+
+<Image class="mx-auto py-10" src={pga2} alt="PGA Riviera Maya Scorecard" />
+
+<h4 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Partner of PGA of America</h4>
+
+<p class="text-base md:text-lg mb-2">As an official partner of the PGA of America, This Golf Course in Cancun supports <strong>golfer development</strong> and tourism experiences. Be assured of exceptional golfing experiences at this world-class golf club.</p>
+
+<h4 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Convenient Location in Riviera Maya</h4>
+
+<p class="text-base md:text-lg mb-2">Situated approximately 15 miles from the trendy tourist destination, Tulum, PGA Riviera Maya offers a golfer’s haven surrounded by natural beauty and tranquility.</p>
+
+<h4 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Enjoy Affordable & Fun Golf</h4>
+
+<p class="text-base md:text-lg mb-2">PGA Riviera Maya’s executive 9-hole course is perfect for players looking for simplicity and affordability. Embrace a leisurely round of golf amidst nature’s splendor and stunning cenotes.</p>
+
+<Image class="mx-auto py-10" src={pga3} alt="PGA Riviera Maya Golf brands" />
+
+<h4 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Top-Notch Facilities & Equipment</h4>
+
+<p class="text-base md:text-lg mb-2">Experience golfing excellence with PGA Riviera Maya’s well-equipped facilities. From rental clubs to carts with GPS, everything you need for an exceptional game awaits.</p>
+
+<p class="text-base md:text-lg mb-2">PGA Riviera Maya Golf Club provides an unparalleled golfing experience in the heart of Riviera Maya. Whether you’re a seasoned golfer or new to the sport, <a class="font-bold text-cyan-600 italic" href="https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/781984?partialView=1&_ga=2.150333878.162478979.1703687360-1887048101.1703687359">book your tee time now</a> and bask in the beauty of this extraordinary golf course.</p>

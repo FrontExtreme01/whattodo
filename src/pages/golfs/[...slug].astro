@@ -1,0 +1,27 @@
+---
+export const prerender = true;
+
+import MdGolfLayout from "@/layouts/MdGolfLayout.astro";
+import { getCollectionByName } from "@/content/config";
+
+export async function getStaticPaths() {
+    const golfEntries = await getCollectionByName("golfs", "en");
+
+    const paths = golfEntries.map((entry) => {
+        return {
+            params: { lang: entry?.data.lang || "en", slug: entry.new_slug },
+            props: entry,
+        };
+    });
+
+    return paths;
+}
+
+const { lang, slug } = Astro.params;
+const entry = Astro.props;
+const { Content } = await entry.render();
+---
+
+<MdGolfLayout frontmatter={entry.data}>
+    <Content />
+</MdGolfLayout>

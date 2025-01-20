@@ -44,8 +44,8 @@ export default function SliderGallery({ images, accessibility }: any) {
                             alt={accessibility.altImg} 
                             loading="eager"
                             decoding="async" 
-                            width="900"
-                            height="600"
+                            width={image.width}
+                            height={image.height}
                             />
                             <a data-fancybox="gallery" href={image.src} aria-label={accessibility.ariaLabelGallery}>
                                 <i className="at-magnifying-glass-plus bg-slate-50 text-black rounded-full p-3 sm:p-4 hover:bg-slate-200 sm:opacity-0 group-hover:opacity-100 transition duration-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  flex items-center justify-center"></i>

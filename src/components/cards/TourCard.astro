@@ -12,7 +12,7 @@ const translatePath = useTranslatedPath(lang);
 const url = translatePath(`/tour/${tour.new_slug}/`);
 ---
 
-<div class="w-full lg:w-3/12 sm:w-6/12 px-5 py-3 sm:py-5">
+<div class="w-full sm:w-6/12 lg:w-4/12 xl:w-3/12 px-5 py-2 sm:py-5">
     <div class="relative flex flex-wrap sm:flex-col rounded-lg bg-white shadow-lg border-slate-600 h-full">
         {tour.data.lastMinute && (
             <span class="absolute z-10 -top-2 sm:top-0 -right-2 rotate-12">
@@ -36,8 +36,8 @@ const url = translatePath(`/tour/${tour.new_slug}/`);
                     ${(tour.data.price * 1.4).toFixed(0)} USD
                 </p>
             )}
-            <p class="block sm:hidden font-bold text-green-700 text-lg sm:text-xl">
-                <span class="text-gray-800 text-xs">{i18n.ALL_TOUR_PAGE.CARD.FROM}:</span><br> ${tour.data.price} USD
+            <p class="block sm:hidden font-extrabold text-green-700 text-lg sm:text-xl">
+                <span class="text-gray-800 text-xs">{i18n.TOUR_PAGE.CARD.FROM}:</span><br> ${tour.data.price} USD
             </p>
 
             <ul class="flex justify-around gap-2 flex-wrap mb-4 text-xs sm:text-sm break-all">
@@ -62,14 +62,14 @@ const url = translatePath(`/tour/${tour.new_slug}/`);
             <div class="hidden sm:block w-full text-center my-2">
                 {tour.data.lastMinute && (
                     <p class="font-bold text-red-600 text-xs sm:text-sm line-through mb-2">
-                        <span>{i18n.ALL_TOUR_PAGE.CARD.FROM}:</span>
+                        <span>{i18n.TOUR_PAGE.CARD.FROM}:</span>
                         ${(tour.data.price * 1.4).toFixed(0)} USD
                     </p>
                 )}
-                <p class="font-bold text-green-700 text-lg sm:text-xl"><span class="text-gray-800 text-sm">{i18n.ALL_TOUR_PAGE.CARD.FROM}:</span> ${tour.data.price} USD</p>
+                <p class="font-extrabold text-green-700 text-lg sm:text-xl"><span class="text-gray-800 text-sm">{i18n.TOUR_PAGE.CARD.FROM}:</span> ${tour.data.price} USD</p>
             </div>
-            {tour.data.bokun != '' && <a aria-label="" href={tour.data.bokun} class="text-sm sm:text-base w-auto text-center bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline" target="_blank">{i18n.ALL_TOUR_PAGE.CARD.BUTTON_BOOK_NOW}</a>}
-            <a aria-label={i18n.ACCESSIBILITY.GO_TO_TOUR_DETAILS} href={url} class="text-sm sm:text-base w-auto text-center bg-slate-200 hover:bg-slate-100 text-black font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline">{i18n.ALL_TOUR_PAGE.CARD.BUTTON_MORE}</a>
+            {tour.data.bokun != '' && <a aria-label="" href={tour.data.bokun} class="text-sm sm:text-base w-auto text-center bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline" target="_blank">{i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}</a>}
+            <a aria-label={i18n.ACCESSIBILITY.GO_TO_TOUR_DETAILS} href={url} class="text-sm sm:text-base w-auto text-center bg-slate-200 hover:bg-slate-100 text-black font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline">{i18n.TOUR_PAGE.CARD.BUTTON_MORE}</a>
         </div>
     </div>
 </div>

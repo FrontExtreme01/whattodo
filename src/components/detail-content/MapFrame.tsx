@@ -4,7 +4,7 @@ export default function MapFrame({ url, titleAct, textMap }: any) {
     const [showIframe, setShowIframe] = useState(false);
 
     return (
-        <div className="w-full h-60 md:h-96 my-10">
+        <div className="w-full h-80 md:h-[450px] my-10">
             {showIframe ? (
                 <iframe title={`ubicación de ${titleAct}`} className="w-full h-full rounded-2xl" src={url} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             ) : (

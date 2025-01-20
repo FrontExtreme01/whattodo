@@ -4,10 +4,44 @@
             "DESCRIPTION": "Encuentra todas las actividades, lugares maravillosos para visitar, Tours en Madrid y diviértete a lo grande durante tu visita a España.",
             "KEYWORDS": "Cancún, México, tours, actividades, cosas que hacer, viajes, turismo, vacaciones, visitas turísticas, atracciones"
         },
-        "ALL_TOUR_PAGE": {
-            "TITLE": "La guía definitiva de Cancún - What To Do In Cancun",
-            "DESCRIPTION": "¡Diviértete más con el mismo presupuesto!Encuentre recorridos y actividades baratas en Cancún por debajo de $ 59USD para aprovechar al máximo cada centavo.",
-            "KEYWORDS": "Cancún, México, tours, actividades, cosas que hacer, viajes, turismo cancun, vacaciones cancun, visitas turísticas, atracciones"
+        "TOUR_PAGE": {
+            "ALL_TOURS": {
+                "TITLE": "La guía definitiva de Cancún - What To Do In Cancun",
+                "DESCRIPTION": "¡Diviértete más con el mismo presupuesto!Encuentre recorridos y actividades baratas en Cancún por debajo de $ 59USD para aprovechar al máximo cada centavo.",
+                "KEYWORDS": "Cancún, México, tours, actividades, cosas que hacer, viajes, turismo cancun, vacaciones cancun, visitas turísticas, atracciones"
+            },
+            "CATEGORY_TOURS": {
+                "CHEAP": {
+                    "TITLE": "Tours baratos en Cancún por menos de $59USD - What To Do In Cancun",
+                    "DESCRIPTION": "¡Diviértete más con el mismo presupuesto! Encuentre recorridos y actividades baratas en Cancún por debajo de $ 59USD para aprovechar al máximo cada centavo.",
+                    "KEYWORDS": "Cancún, México, tours, actividades, cosas que hacer, viajes, turismo cancun, vacaciones cancun, visitas turísticas, atracciones"
+                },
+                "FAVORITES": {
+                    "TITLE": "Las actividades favoritas por viajeros en Cancún y Riviera Maya - What To Do In Cancun",
+                    "DESCRIPTION": "Estas son nuestras actividades favoritas en Cancún y Riviera Maya. Solo la mejor selección de tours para tus vacaciones.",
+                    "KEYWORDS": "Cancún, México, tours, actividades, cosas que hacer, viajes, turismo cancun, vacaciones cancun, visitas turísticas, atracciones"
+                },
+                "ADVENTURE": {
+                    "TITLE": "Las mejores actividades de aventura en Cancún - What To Do In Cancun",
+                    "DESCRIPTION": "Encuentra las mejores giras de aventura en Cancún y Riviera Maya, obtenga la parte superior de las emociones y vaya más allá de los demás para atreverse.",
+                    "KEYWORDS": "Cancún, México, tours, actividades, cosas que hacer, viajes, turismo cancun, vacaciones cancun, visitas turísticas, atracciones"
+                },
+                "COUPLES": {
+                    "TITLE": "Los mejores tours para parejas en Cancún",
+                    "DESCRIPTION": "Las mejores actividades para parejas en Cancún, obtengan el romance, la aventura, la acción o simplemente nuevas experiencias con su persona favorita.",
+                    "KEYWORDS": "actividades para parejas, Cancún, México, tours, actividades, cosas que hacer, viajes, turismo cancun, vacaciones cancun, visitas turísticas, atracciones"
+                },
+                "WATER": {
+                    "TITLE": "Los mejores tours en velero en Cancún y actividades de snorkel",
+                    "DESCRIPTION": "Los mejores Tours en Velero en Cancún y actividades de snorkel en Riviera Maya para explorar el mar y las maravillas submarinas.",
+                    "KEYWORDS": "actividades de snorkel, tours en velero, Cancún, México, tours, actividades, cosas que hacer, viajes, turismo cancun, vacaciones cancun, visitas turísticas, atracciones"
+                },
+                "RUINS": {
+                    "TITLE": "Visita los mejores tours a las ruinas mayas de México",
+                    "DESCRIPTION": "Descubre las más sorprendentes Ruinas Mayas de México en Cancún y Riviera Maya, adquiere tus boletos con transportación y nada en un hermoso cenote.",
+                    "KEYWORDS": "Ruinas Mayas, tours a ruinas, Cancún, México, tours, actividades, cosas que hacer, viajes, turismo cancun, vacaciones cancun, visitas turísticas, atracciones"
+                }
+            }
         },
         "COMBOS_PAGE": {
             "TITLE": "Nuestros paquetes de Tour de Cancún - What To Do In Cancun",
@@ -28,6 +62,33 @@
             "DESCRIPTION": "Nuestro servicio privado de transferencia de aeropuerto garantiza que llegue a su destino relajado y listo para disfrutar.",
             "KEYWORDS": "Cancún, México, transporte, aeropuerto, traslado, taxi, autobús, coche, van, servicio"
         },
+        "PARTY_PAGE": {
+            "BEACHCLUB": {
+                "TITLE": "Clubes de playa en Cancún y las mejores fiestas para vacaciones de primavera - What To Do In Cancun",
+                "DESCRIPTION": "¡Descubra una experiencia de playa inolvidable en los vibrantes clubes de playa de Cancún!Sumérgete en los ritmos rítmicos de los mejores DJ mientras se mezclan con otros viajeros de todo el mundo.",
+                "KEYWORDS": ""
+            },
+            "NIGHTCLUB": {
+                "TITLE": "Vida nocturna en Cancún y las mejores fiestas para vacaciones de primavera - What To Do In Cancun",
+                "DESCRIPTION": "La vida nocturna en Cancún es conocida por sus clubes y bares animados y emocionantes para elegir.Encuentra tu estilo de fiesta y disfruta de las vacaciones de primavera.",
+                "KEYWORDS": ""
+            },
+            "EVENTS": {
+                "TITLE": "Eventos, fiestas en Cancún y vacaciones de primavera - What To Do In Cancun",
+                "DESCRIPTION": "México también es famoso por organizar una amplia gama de eventos en Cancún, desde festivales de música hasta competiciones deportivas.",
+                "KEYWORDS": ""
+            }
+        },
+        "GOLF_PAGE": {
+            "TITLE": "Los mejores campos de golf en Cancún - What To Do In Cancun",
+            "DESCRIPTION": "Los mejores campos de golf en Cancún y Riviera Maya, consigue las mejores ofertas y descuentos para tus vacaciones de golf.",
+            "KEYWORDS": "Cancún, México, golf, campos de golf, golfistas, golf en cancun, golf en riviera maya, golf en mexico"
+        },
+        "YACHT_PAGE": {
+            "TITLE": "Las mejores rentas de yates en Cancún - What To Do In Cancun",
+            "DESCRIPTION": "Mejore su viaje al lujo con el servicio de renta de yates en Cancún para cenas románticas, despedidas de soltera o navegación privada.",
+            "KEYWORDS": "Cancún, México, yates, alquiler de yates, yates en cancun, yates de lujo, yates privados, yates para fiestas"
+        },
         "CONTACT_PAGE": {
             "TITLE": "Contáctenos - What To Do In Cancun",
             "DESCRIPTION": "Contactános para obtener más información sobre nuestros tours y actividades en el Caribe Mexicano. Estamos aquí para ayudarte a planificar tu viaje y aprovechar al máximo tu visita."
@@ -43,6 +104,10 @@
         "PRIVACY_PAGE": {
             "TITLE": "Aviso de privacidad - What To Do In Cancun",
             "DESCRIPTION": "What To Do In Cancun se compromete a proteger la privacidad y la información personal de los visitantes y clientes de nuestro sitio web. Lea nuestro Aviso de privacidad para obtener más información."
+        },
+        "NOT_FOUND_PAGE": {
+            "TITLE": "404 Página no encontrada - What To Do In Cancun",
+            "DESCRIPTION": "Lo sentimos, la página que está buscando no se encuentra. Vuelva a la página de inicio o contáctenos para obtener más información."
         }
     },
     "ACCESSIBILITY": {
@@ -132,9 +197,37 @@
             }
         }
     },
-    "ALL_TOUR_PAGE": {
-        "TITLE": "Todos los tours en Cancún",
-        "DESCRIPTION": "¡Bienvenido What To Do In Cancún en la sección de Todos los tours! Sumérgete en aventuras inolvidables seleccionadas solo para ti. Explore las selvas, el snorkel en aguas serenas y haga que cada momento sea inolvidable. ¡Comienza tu viaje ahora!",
+    "TOUR_PAGE": {
+        "ALL_TOURS": {
+            "TITLE": "Todos los tours en Cancún",
+            "DESCRIPTION": "¡Bienvenido What To Do In Cancún en la sección de Todos los tours! Sumérgete en aventuras inolvidables seleccionadas solo para ti. Explore las selvas, el snorkel en aguas serenas y haga que cada momento sea inolvidable. ¡Comienza tu viaje ahora!"
+        },
+        "CATEGORY_TOURS": {
+            "CHEAP": {
+                "TITLE": "Tours baratos en Cancún por menos de $59USD",
+                "DESCRIPTION": "Encuentra los mejores tours económicos en Cancún. Aprovecha al máximo cada centavo en tus próximas vacaciones, disfruta de más diversión y experiencias por el mismo presupuesto. Disfruta de las mejores vacaciones en Cancún y Riviera Maya con actividades económicas"
+            },
+            "FAVORITES": {
+                "TITLE": "Nuestras Actividades favoritas en Cancún",
+                "DESCRIPTION": "Explore las actividades mejor calificadas de Cancún, favorecidas por los viajeros en todo el mundo. Sumérgete en aguas cristalinas, descubre las ruinas mayas antiguas, la tirolesa a través de exuberantes selvas, o simplemente relájese en playas vírgenes. Estas experiencias seleccionadas prometen emociones, inmersión cultural y recuerdos inolvidables."
+            },
+            "ADVENTURE": {
+                "TITLE": "Tours de aventura en Cancún",
+                "DESCRIPTION": "Los amantes de los tours de aventura buscan nuevas experiencias en el Caribe mexicano. Aquí tenemos las mejores atracciones para ir más allá de lo que otros se atreven. Disfruta al máximo de tus vacaciones y aprovecha nuestros descuentos."
+            },
+            "COUPLES": {
+                "TITLE": "Tours para parejas en Cancún",
+                "DESCRIPTION": "Todas las parejas en Cancún buscan aventuras con su persona favorita. Las actividades más comúnes son experiencias románticas, de aventura, de acción y más que pueden hacer juntos. Disfruta del lado romántico del Caribe mexicano y ahorra con nuestros descuentos en Cancún."
+            },
+            "WATER": {
+                "TITLE": "Actividades acuáticas en Cancún",
+                "DESCRIPTION": "Experimente la belleza del Caribe con nuestros tours de snorkel y navegación en Cancún. Si es un amante del mar, quedará cautivado por la inmensidad de las olas y los intensos colores del océano. Nuestros tours ofrecen una selección de actividades acuáticas y recorridos en velero que son perfectos para explorar las maravillas naturales del océano Atlántico."
+            },
+            "RUINS": {
+                "TITLE": "Explora las ruinas mayas de México",
+                "DESCRIPTION": "Hay muchas ruinas mayas México en Cancún y Riviera Maya, estar frente a estas majestuosas construcciones te permite calibrar lo avanzada que era la cultura maya, conocer su historia y mucha información interesante, además, obtener los mejores selfies de tu viaje."
+            }
+        },
         "CARD": {
             "FROM": "Desde",
             "BUTTON_BOOK_NOW": "Reservar",
@@ -148,7 +241,7 @@
     "LAST_MINUTE_PAGE": {
         "TITLE": "Ofertas de último minuto en Cancún",
         "DESCRIPTION": "¡Obtenga un mejor precio con nuestras ofertas de último minuto en Cancún!Siga nuestras redes sociales para recibir consejos sobre nuevas oportunidades para obtener una mejor tarifa.",
-        "SECTION_TIMER":{
+        "SECTION_TIMER": {
             "TITLE": "Descuentos por tiempo limitado",
             "DAYS": "Días",
             "HOURS": "Horas",
@@ -235,17 +328,122 @@
                 "DESCRIPTION": "Embarca en un viaje sin preocupaciones desde el aeropuerto de Cancún hasta el Moon Palace. Nuestro servicio de transferencia privada garantiza que llegue a este exquisito destino en comodidad y estilo."
             },
             "OCCIDENTAL_XCARET": {
-                "TITLE": " Transporte desde el aeropuerto de Cancún a Occidental Xcaret ",
+                "TITLE": "Transporte desde el aeropuerto de Cancún a Occidental Xcaret ",
                 "DESCRIPTION": "Experimente la maravilla de Occidental Xcaret sin la molestia de la logística del aeropuerto.Nuestro servicio dedicado de transferencia de aeropuerto garantiza un viaje sin problemas desde el aeropuerto de Cancún a este extraordinario destino."
             },
             "CANCUN_TO_COSTA_MUJERES": {
-                "TITLE": " Transporte desde el aeropuerto de Cancún a Costa Mujeres",
+                "TITLE": "Transporte desde el aeropuerto de Cancún a Costa Mujeres",
                 "DESCRIPTION": "Disfrute de un viaje sin problemas desde el aeropuerto de Cancún hasta las tranquilas costas de Costa Mujeres.Nuestro servicio de transporte privado garantiza que llegue a este pintoresco destino relajado y listo para relajarse."
             },
             "RIU_PALACE": {
                 "TITLE": "Transporte desde el aeropuerto de Cancún al Riu Palace Costa Mujeres",
                 "DESCRIPTION": "Para un viaje sin estrés desde el aeropuerto de Cancún hasta el Palacio Riu Costa Mujeres, nuestro servicio de transferencia privada es la opción perfecta.Experimente la facilidad de transporte directo a este destino exquisito."
             }
+        }
+    },
+    "PARTY_PAGE": {
+        "BEACHCLUB": {
+            "TITLE": "Fiesta en Beach Club en Cancún",
+            "DESCRIPTION": "¡Descubra una experiencia de playa inolvidable en los vibrantes clubes de playa de Cancun !Sumérgete en los ritmos rítmicos de los mejores DJ mientras se mezclan con otros viajeros de todo el mundo.Estos clubes de playa son la definición del sueño del Caribe, que ofrecen diversión sin fin bajo el sol.Desde programas cautivadores hasta competiciones emocionantes, siempre está sucediendo algo emocionante para garantizar un momento increíble, sin importar la temporada.¡Únete a nosotros para una aventura junto a la playa como ninguna otra!",
+            "EXPERIENCE": {
+                "TITLE": "Experiencia en un club de playa de Cancún",
+                "DESCRIPTION": "¿Estás planeando un viaje a Cancún y buscas la mejor experiencia de fiesta en la playa? ¡No busques más! En What To Do in Cancun, te ofrecemos los mejores clubes de playa de la ciudad."
+            },
+            "ADVENTURE": {
+                "TITLE": "Reserve su aventura en el club de playa",
+                "DESCRIPTION": {
+                    "TEXT_1": "¿Listo para absorber el sol y bailar el día en los clubes de playa más populares de Cancún?Con nuestra conveniente plataforma de reserva en línea, asegurar su lugar en los lugares más populares es muy fácil.Ya sea que anhele una cabaña VIP o un asiento de primera fila a la mejor fiesta de la playa, la reserva de antemano garantiza que no se pierda la diversión.",
+                    "TEXT_2": "En esencia, Cancún cuenta con una escena electrizante del club de playa que promete una emoción interminable y recuerdos inolvidables.Ya sea que esté celebrando una ocasión especial o simplemente anhelando un día de relajación y juerga, nuestro sitio web ofrece un acceso perfecto a las mejores experiencias de clubes de playa en Cancún."
+                }
+            },
+            "BOOK_TICKETS": "Entonces, reserve sus boletos y prepárese para experimentar lo mejor de BeachClub de Cancún!",
+            "BUTTONS": {
+                "NIGHTCLUB": "Ver clubes nocturnos en Cancún",
+                "EVENTS": "Ver eventos en Cancún"
+            }
+        },
+        "NIGHTCLUB": {
+            "TITLE": "Fiesta en los mejores clubes nocturnos de Cancún",
+            "DESCRIPTION": "La vida nocturna en Cancún es conocido por sus clubes y bares animados y emocionantes para elegir. Si está buscando clubes en Cancún , encontrará una amplia gama de opciones para se adapta a todos los gustos y presupuestos.",
+            "INFORMATION": {
+                "TEXT_1": "Los mejores clubes de Cancún se concentran en la Zona Hotelera, que es también donde encontrarás la mayor parte de la vida nocturna de la ciudad. Ya sea que estés buscando una noche salvaje o una experiencia más exclusiva, hay un club en Cancún para todos.",
+                "TEXT_2": "La vida nocturna en Cancún es especialmente popular durante las vacaciones de primavera, ya que muchos estudiantes acuden a la ciudad para divertirse. Si estás planeando unas vacaciones de primavera en Cancún, encontrarás una variedad de clubes y bares que ofrecen bebidas especiales, música en vivo y otros entretenimientos.",
+                "TEXT_3": "¡Bienvenido a la electrizante vida nocturna de Cancún, donde cada momento late con emoción y cada fiesta es una aventura esperando a desarrollarse!",
+                "TEXT_4": "Si te estás preparando para una despedida de soltero o soltera en Cancún, te espera una sorpresa. Desde clubes elegantes hasta experiencias VIP, la ciudad ofrece un caleidoscopio de opciones para todos los gustos y preferencias.",
+                "TEXT_5": "Si bien las fiestas en la playa de Cancún son un gran atractivo para los turistas, hay mucho más para explorar después de la puesta del sol. Sumérgete en la vibrante escena de clubes de la ciudad, donde los ritmos son calientes, las bebidas son frías y la energía es contagiosa.",
+                "TEXT_6": "Pero, ¿por qué esperar hasta el anochecer? Las fiestas en la piscina durante el día de Cancún son legendarias y ofrecen una combinación perfecta de sol, arena y ritmos sensacionales. Es la mejor manera de tomar el sol mientras bailas todo el día.",
+                "TEXT_7": "¿Listo para sumergirte? Reservar tus boletos o reservar una mesa en los lugares más populares de Cancún es más fácil que nunca con las opciones disponibles en línea. Ya sea que estés planeando una noche salvaje con amigos o una celebración especial, reservar tu lugar con anticipación garantiza una experiencia perfecta de principio a fin.",
+                "TEXT_8": "En resumen, Cancún no se trata solo de fiestas en la playa, es un patio de recreo para los entusiastas de la vida nocturna quebuscan experiencias inolvidables. Así que, ya sea que estés deseando ir a los mejores clubes, a las mejores fiestas en la piscina o a una despedida de soltero o soltera épica, Cancún lo tiene todo y más. ¡Prepárate para pintar la ciudad de rojo y bailar hasta el amanecer en esta vibrante ciudad que nunca duerme!"
+            },
+            "BOOK_TICKETS": "Así que, ¡reserva tus entradas y prepárate para vivir lo mejor de la vida nocturna de Cancún!",
+            "BUTTONS": {
+                "BEACHCLUB": "Ver clubes de playa en Cancún",
+                "EVENTS": "Ver eventos en Cancún"
+            }
+        },
+        "EVENTS": {
+            "TITLE": "Eventos, fiestas en Cancún y vacaciones de primavera",
+            "DESCRIPTION": "México también es famoso por organizar una amplia gama de eventos en Cancún, desde festivales de música hasta competiciones deportivas. Si está buscando eventos en Cancún, encontrará una amplia gama de opciones para se adapta a todos los gustos y presupuestos.",
+            "INFORMATION": {
+                "TEXT_1": "Uno de los eventos más populares en Cancún es la escena de vida nocturna .La ciudad es el hogar de algunos de los mejores clubes nocturnos. En el mundo, como Coco Bongo, la ciudad , y mandala .Estos clubes ofrecen una experiencia inolvidable con música en vivo, DJ de clase mundial y actuaciones impresionantes.",
+                "TEXT_2": "Si está interesado en un ambiente más relajado , Cancun también ofrece muchas opciones.Muchos clubes de playa organizan eventos como shows de música en vivo, fiestas de playa , y festivales de comida .Estos eventos brindan la oportunidad perfecta para relajarse y disfrutar de las impresionantes vistas del mar del Caribe."
+            },
+            "CANCUN_EVENTS": {
+                "TITLE": "Más eventos de Cancún",
+                "DESCRIPTION": "Cancún también es famoso por organizar varios eventos anuales que atraen a visitantes de todo el mundo.Uno de los eventos más famosos es el Cancun International Film Festival , que presenta proyecciones de películas internacionales, talleres y eventos especiales. El Festival de Vinos y Alimentos de Cancún-Riviera Maya es otro evento popular que muestra la cocina y el vino locales e internacionales."
+            },
+            "SPORTS": {
+                "TITLE": "Eventos deportivos en Cancún",
+                "DESCRIPTION": "Los entusiastas de los deportes también pueden encontrar eventos para adaptarse a sus intereses en Cancún.La ciudad organiza varios eventos deportivos durante todo el año, incluido el Cancún International Triatlon, el Ironman 70.3 y el Cancun International Marathon .Estos eventos ofrecen una oportunidad para desafiarse a sí mismo, divertirse y explorar el hermoso paisaje natural de la región."
+            },
+            "FAMILY_FRIENDLY": {
+                "TITLE": "Actividades familiares",
+                "DESCRIPTION": {
+                    "TEXT_1": "Si está buscando qué hacer en Cancún para eventos familiares, Cancún lo tiene cubierto.La ciudad ofrece una variedad de actividades para niños, como parques y actividades acuáticas , parques temáticos y Acuarios .Estas atracciones son perfectas para las vacaciones familiares y brindan una gran oportunidad. pasar tiempo de calidad con sus seres queridos y llevarlos a un Aventure Park .",
+                    "TEXT_2": "En conclusión, Cancún ofrece una amplia gama de eventos que satisfacen cada interés y grupo de edad. de festivales de música y eventos de vida nocturna a competiciones deportivas y actividades familiares , hay algo para todos en Cancún.Entonces, si estás buscando un lugar para divertirte, Relájese y explore, luego visite Cancún y Riviera Maya."
+                }
+            },
+            "BUTTONS": {
+                "BEACHCLUB": "Ver clubes de playa",
+                "NIGHTCLUB": "Ver clubes nocturnos"
+            }
+        }
+    },
+    "GOLF_PAGE": {
+        "TITLE_BANNER": "Campos de golf Cancún",
+        "TITLE": "Los mejores paquetes de golf de Cancún",
+        "DESCRIPTION": "Los mejores campos de golf en Cancún y Riviera Maya, consigue las mejores ofertas y descuentos para tus vacaciones de golf."
+    },
+    "YACHT_PAGE": {
+        "TITLE": "Los mejores alquileres de yates en Cancún",
+        "DESCRIPTION": "¿Estás listo para embarcarse en un viaje inolvidable a lo largo de las aguas vírgenes de Cancún?No busque más que nuestros alquileres exclusivos de yates de Cancun .Descubra el epítome del lujo, la comodidad y la aventura mientras se establece Navegue en la extensión turquesa del Caribe.Desde chárteres de yates privados hasta fiestas de yates con todo incluido, ofrecemos una variedad de experiencias que atienden a todos sus deseos.Permítanos ser su guía para un escape marítimo excepcional.",
+        "YACHT_CHARTER": {
+            "TITLE": "El mejor chárter de yates Cancún",
+            "DESCRIPTION": "Experimente lo último en opulencia con nuestros servicios de chárter de Yacht en Cancún.Elija entre una flota meticulosamente curada de lujosos yates, Cada uno diseñado para proporcionar un nivel incomparable de comodidad y elegancia.Ya sea que esté planeando una escapada romántica, una celebración con amigos, O un evento corporativo, nuestras cartas de yates ofrecen un viaje personalizado que se alinea con sus preferencias."
+        },
+        "ALL_INCLUSIVE": {
+            "TITLE": "Yate Todo Incluido Cancún",
+            "DESCRIPTION": "Eleve su aventura marítima con nuestros alquileres de yates con todo incluido en Cancún.Imagínese disfrutando del sol en la cubierta, saboreando delicioso Cocina preparada por un chef privado y disfrutando de bebidas premium contra el telón de fondo de la impresionante belleza del Caribe.Nuestros paquetes con todo incluido Asegúrese de que cada momento de su viaje esté marcado por la relajación, el entretenimiento y la indulgencia."
+        },
+        "YACHT_PARTY": {
+            "TITLE": "Encuentre una fiesta de yates en Cancún",
+            "DESCRIPTION": "Prepárese para bailar, mezclarse y celebrar las olas con nuestras vibrantes fiestas de yates en Cancún.Únete a los juerguistas de ideas afines para una experiencia electrizante mientras Cruise por la costa.Con música, entretenimiento y un ambiente animado, nuestras fiestas de yates son la manera perfecta de crear recuerdos inolvidables con amigos o compañeros de viaje."
+        },
+        "PRIVATE_YACHT": {
+            "TITLE": "Yate privado Cancún",
+            "DESCRIPTION": "Para aquellos que buscan exclusividad y privacidad, nuestros alquileres privados de yates en Cancún ofrecen un escape apartado como ningún otro.Ya sea que esté planeando una propuesta romántica, una reunión íntima, O simplemente un día sereno en el agua, nuestros yates privados proporcionan un tranquilo oasis en medio del esplendor del Caribe."
+        },
+        "CANCUN_PROPOSAL": {
+            "TITLE": "Cancún Propuesta de yates Carter",
+            "DESCRIPTION": "Crea un momento que se apreciará para siempre con nuestra carta de yates de propuesta de Cancún.Navegue hacia la puesta de sol mientras se hace la pregunta en el contexto de los tonos dorados del mar.Nuestro experimentado La tripulación se asegura de que cada detalle se ejecute sin problemas, convirtiendo su propuesta en una experiencia verdaderamente mágica."
+        },
+        "RESERVATION": {
+            "TITLE": "Reserve su viaje inolvidable",
+            "DESCRIPTION": "¿Estás listo para hacer olas en Cancún?Embárcate en un viaje marítimo que combina lujo, aventura y relajación como nunca antes.Con nuestra gama de opciones de alquiler de yates, incluidas las cartas privadas, todo incluido Paquetes y fiestas vibrantes, ofrecemos una experiencia adaptada a sus deseos.Desde explorar los vibrantes arrecifes de coral hasta saborear la cocina gourmet en la cubierta, cada momento está diseñado para dejar una marca indeleble en su memoria."
+        },
+        "NAUTICAL_ADVENTURE": {
+            "TITLE": "Reserve ahora para una aventura náutica como ninguna otra",
+            "DESCRIPTION": "Si está celebrando una ocasión especial, buscando un escape íntimo o anhelando una fiesta animada en las olas, nuestros alquileres de yates de Cancún son su puerta de entrada al paraíso marítimo.No se pierda la oportunidad de experimentar el Caribe Belleza de la cubierta de un lujoso yate.Reserve su viaje hoy y navegue para un viaje que promete redefinir su percepción de lujo y aventura."
         }
     },
     "ABOUT_PAGE": {
@@ -577,6 +775,11 @@
             "TITLE": "Contacto",
             "DESCRIPTION": "Para algunos servicios de Qué Hacer En Cancún, usted puede acceder y actualizar su registro e información personal en línea."
         }
+    },
+    "NOT_FOUND_PAGE": {
+        "TITLE": "¡Página no encontrada!",
+        "DESCRIPTION": "Lo sentimos, pero la página que estás buscando ha sido movida o no existe. Por favor, verifica la URL e inténtalo de nuevo. Si crees que esto es un error, por favor contáctanos.",
+        "BUTTON": "Volver a la página de inicio"
     },
     "THANKS_PAGE": {
         "TITLE": "¡Gracias por tu mensaje!",

@@ -1,37 +1,38 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination, Autoplay } from 'swiper/modules';
-
-// Importar CSS Module
-import styles from '@/styles/slider.module.css';
+import 'swiper/css/navigation';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 export default function SliderBanner({ slides, i18nButton }: any) {
     return (
         <div className="relative">
+            <div className="next-slide absolute top-1/2 right-[5%] -translate-y-1/2 z-10 p-2.5 sm:p-4 bg-black/40 text-white rounded-full flex items-center justify-center shadow-md cursor-pointer transition duration-500 hover:bg-slate-200">
+                <i className="at-arrow-right"></i>
+            </div>
+            <div className="prev-slide absolute top-1/2 left-[5%] -translate-y-1/2 z-10 p-2.5 sm:p-4 bg-black/40 text-white rounded-full flex items-center justify-center shadow-md cursor-pointer transition duration-500 hover:bg-slate-200">
+                <i className="at-arrow-left"></i>
+            </div>
             <Swiper
                 spaceBetween={5}
-                pagination={{
-                    el: "#containerForBullets",
-                    type: "bullets",
-                    bulletClass: `${styles.bulletSliderHome}`,
-                    bulletActiveClass: `${styles.bulletSliderHomeActive}`,
-                    clickable: true,
+                navigation={{
+                    nextEl: '.next-slide',
+                    prevEl: '.prev-slide',
+                    disabledClass: 'hidden',
                 }}
                 loop={true}
                 autoplay={{
-                    delay: 4000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 }}
-                modules={[Pagination, Autoplay]}
-                className={`mySwiper ${styles.sliderHome}`}
+                modules={[Navigation, Autoplay]}
+                className="mySwiper w-full h-60 sm:h-80 md:h-[80dvh] md:min-h-[400px] bg-slate-100"
             >
                 {slides.map((slide: any, index: number) => (
                     <SwiperSlide key={index}>
                         <img
-                            className={styles.imgSlider}
-                            width="1920"
-                            height="994"
+                            className="object-cover w-full h-full"
+                            width={slide.image.width}
+                            height={slide.image.height}
                             src={slide.image.src}
                             alt={slide.alt}
                             loading='eager'
@@ -45,7 +46,6 @@ export default function SliderBanner({ slides, i18nButton }: any) {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <div id="containerForBullets" className={`${styles.containerBullet}`}></div>
         </div>
     );
 }

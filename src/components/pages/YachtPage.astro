@@ -1,0 +1,97 @@
+---
+import { getI18N } from "@/i18n";
+import { getLangFromUrl } from "@/i18n/utils";
+import { getCollectionByName } from "@/content/config";
+import { getSlides } from "@/img/allImages";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const allYachts = await getCollectionByName("yachts", lang);
+
+const slides = getSlides("YACHTS", lang);
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SliderBanner from "@components/global/SliderBanner";
+import Intro from "@components/global/Intro.astro";
+import YachtCard from "@components/cards/YachtCard.astro";
+
+const seoMetaDatos = {
+    title: i18n.SEO.YACHT_PAGE.TITLE,
+    description: i18n.SEO.YACHT_PAGE.DESCRIPTION,
+    keywords: i18n.SEO.YACHT_PAGE.KEYWORDS,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+
+    <SliderBanner
+        client:load
+        slides={slides}
+        i18nButton={i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
+    />
+
+    <Intro
+        title={i18n.YACHT_PAGE.TITLE}
+        description={i18n.YACHT_PAGE.DESCRIPTION}
+    />
+
+    <section class="container mx-auto mb-10">
+        <div class="flex flex-wrap justify-center">
+            {allYachts.map((yacht) => <YachtCard yacht={yacht} lang={lang} />)}
+        </div>
+    </section>
+
+    <section class="container mx-auto text-justify">
+        <div class="mx-10 my-10 md:my-20">
+            <h2 class="text-xl md:text-2xl font-extrabold text-green-700">
+                {i18n.YACHT_PAGE.YACHT_CHARTER.TITLE}
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 my-5">
+                {i18n.YACHT_PAGE.YACHT_CHARTER.DESCRIPTION}
+            </p>
+            <h2 class="text-xl md:text-2xl font-extrabold text-green-700 mt-10">
+                {i18n.YACHT_PAGE.ALL_INCLUSIVE.TITLE}
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 my-5">
+                {i18n.YACHT_PAGE.ALL_INCLUSIVE.DESCRIPTION}
+            </p>
+
+            <h2 class="text-xl md:text-2xl font-extrabold text-green-700 mt-10">
+                {i18n.YACHT_PAGE.YACHT_PARTY.TITLE}
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 my-5">
+                {i18n.YACHT_PAGE.YACHT_PARTY.DESCRIPTION}
+            </p>
+            
+            <h2 class="text-xl md:text-2xl font-extrabold text-green-700 mt-10">
+                {i18n.YACHT_PAGE.PRIVATE_YACHT.TITLE}
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 my-5">
+                {i18n.YACHT_PAGE.PRIVATE_YACHT.DESCRIPTION}
+            </p>
+
+            <h2 class="text-xl md:text-2xl font-extrabold text-green-700 mt-10">
+                {i18n.YACHT_PAGE.CANCUN_PROPOSAL.TITLE}
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 my-5">
+                {i18n.YACHT_PAGE.CANCUN_PROPOSAL.DESCRIPTION}
+            </p>
+
+            <h2 class="text-xl md:text-2xl font-extrabold text-green-700 mt-10">
+                {i18n.YACHT_PAGE.RESERVATION.TITLE}
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 my-5">
+                {i18n.YACHT_PAGE.RESERVATION.DESCRIPTION}
+            </p>
+
+            <h2 class="text-xl md:text-2xl font-extrabold text-green-700 mt-10">
+                {i18n.YACHT_PAGE.NAUTICAL_ADVENTURE.TITLE}
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 my-5">
+                {i18n.YACHT_PAGE.NAUTICAL_ADVENTURE.DESCRIPTION}
+            </p>
+        </div>
+    </section>
+</BaseLayout>

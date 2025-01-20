@@ -2,13 +2,13 @@
 import { getI18N } from "@/i18n";
 import { getLangFromUrl } from "@/i18n/utils";
 import { getAllLastMinute } from "@/content/config";
-import { getImgFromLang, review1, review2, review3, review4, review5 } from "@/img/allImages"
+import { getSlides, review1, review2, review3, review4, review5 } from "@/img/allImages"
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SliderBanner from "@/components/global/SliderBanner";
 import ContadorDiscount from "@components/extras/ContadorDiscount";
 import Intro from "@components/global/Intro.astro";
-import Card from "@components/tours/Card.astro";
+import TourCard from "@components/cards/TourCard.astro";
 import Testimonials from "@components/global/Testimonials";
 import Partners from "@components/global/Partners";
 
@@ -18,15 +18,7 @@ const i18n = getI18N({ currentLocale });
 const lang = getLangFromUrl(Astro.url);
 const allDiscounts = await getAllLastMinute(lang);
 
-const imgLang = getImgFromLang(currentLocale);
-
-const slides = [
-    { image: imgLang.slideHome1, alt: "", href: "" },
-    { image: imgLang.slideHome2, alt: "", href: "test" },
-    { image: imgLang.slideHome3, alt: "", href: "test" },
-    { image: imgLang.slideHome4, alt: "", href: "test" },
-    { image: imgLang.slideHome5, alt: "", href: "test" },
-];
+const slides = getSlides("HOME", lang);
 
 const testimonials = [
     {image: review1, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.REVIEW },
@@ -40,7 +32,7 @@ const testimonials = [
 const seoMetaDatos = {
     title: i18n.SEO.LAST_MINUTE_PAGE.TITLE,
     description: i18n.SEO.LAST_MINUTE_PAGE.DESCRIPTION,
-    image: imgLang.slideRest1.src,
+    image: slides[0].image.src,
 };
 
 const targetDate = "2024-12-23";
@@ -50,7 +42,7 @@ const targetDate = "2024-12-23";
     <SliderBanner
         client:load
         slides={slides}
-        i18nButton={i18n.ALL_TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
+        i18nButton={i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
     />
 
     <ContadorDiscount client:visible i18n={i18n.LAST_MINUTE_PAGE.SECTION_TIMER} targetDate={targetDate} />
@@ -61,8 +53,8 @@ const targetDate = "2024-12-23";
     />
 
     <section class="container mx-auto mb-10">
-        <div class="flex flex-wrap">
-            {allDiscounts.map((tour) => <Card tour={tour} lang={lang} />)}
+        <div class="flex flex-wrap justify-center">
+            {allDiscounts.map((tour) => <TourCard tour={tour} lang={lang} />)}
         </div>
     </section>
 

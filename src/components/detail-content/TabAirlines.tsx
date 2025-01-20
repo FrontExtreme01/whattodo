@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Terminal2 from '@components/airlines/Terminal2';
-import Terminal3 from '@components/airlines/Terminal3';
-import Terminal4 from '@components/airlines/Terminal4';
+import Terminal2 from '@/components/extras/tables/Terminal2';
+import Terminal3 from '@/components/extras/tables/Terminal3';
+import Terminal4 from '@/components/extras/tables/Terminal4';
 
 export default function TabTerminals({ i18n }: any) {
     const [activeTab, setActiveTab] = useState(0);

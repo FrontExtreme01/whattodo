@@ -65,7 +65,7 @@ export default function FormReservation({ dataForm }: any) {
         formData.append('childrens', counterChildren.toString());
         formData.append('nameReservation', dataForm.titleCard);
         formData.append('dateReservation', value.toString());
-        formData.append('imgReservation', dataForm.image.url);
+        formData.append('imgReservation', dataForm.image.src);
         formData.append('priceReservation', priceTotal.toString());
 
         // for (let [key, value] of formData.entries()) {

@@ -4,17 +4,51 @@
             "DESCRIPTION": "Find what to do in Cancun. From adventures, snorkeling, sailing, Mayan ruins, dining, and more experiences you will love.",
             "KEYWORDS": "Cancun, Mexico, tours, activities, things to do, travel, tourism, vacation, sightseeing, attractions"
         },
-        "ALL_TOUR_PAGE": {
-            "TITLE": "The Definitive Cancun Guide - What To Do In Cancun",
-            "DESCRIPTION": "Get more fun with the same budget! Find cheap tours and activities in Cancún under $59USD to get the most out of every penny.",
-            "KEYWORDS": "Cancun, tours, activities, things to do, travel, tourism, vacation, sightseeing, attractions"
+        "TOUR_PAGE": {
+            "ALL_TOURS": {
+                "TITLE": "The Definitive Cancun Guide - What To Do In Cancun",
+                "DESCRIPTION": "Get more fun with the same budget! Find cheap tours and activities in Cancún under $59USD to get the most out of every penny.",
+                "KEYWORDS": "Cancun, tours, activities, things to do, travel, tourism, vacation, sightseeing, attractions"
+            },
+            "CATEGORY_TOURS": {
+                "CHEAP": {
+                    "TITLE": "Cheap Tours in Cancun under $59USD - What To Do In Cancun",
+                    "DESCRIPTION": "Get more fun with the same budget! Find cheap tours and activities in Cancún under $59USD to get the most out of every penny.",
+                    "KEYWORDS": "Cancun, tours, activities, things to do, travel, tourism, vacation, sightseeing, attractions"
+                },
+                "FAVORITES": {
+                    "TITLE": "The Cancun Favorite Activities and Riviera Maya - What To Do In Cancun",
+                    "DESCRIPTION": "These are our Cancun favorite activities and Riviera Maya. Only the best selection of tours for your vacations.",
+                    "KEYWORDS": "Cancun, tours, activities, things to do, travel, tourism, vacation, sightseeing, attractions"
+                },
+                "ADVENTURE": {
+                    "TITLE": "The Best Adventure Tours in Cancun - What To Do In Cancun",
+                    "DESCRIPTION": "Find the best Adventure tours in Cancun and Riviera Maya, get the top of emotions and go beyond the others use to dare.",
+                    "KEYWORDS": "adventure tours, cancun, mexico, tours, activities, things to do, travel, tourism, cancun vacations, sightseeing, attractions"
+                },
+                "COUPLES": {
+                    "TITLE": "The Best Tours for couples in Cancun - What To Do In Cancun",
+                    "DESCRIPTION": "The best activities for couples in Cancun, get the romance, adventure, action or simply new experiences with your favorite person.",
+                    "KEYWORDS": "couples tours, cancun, mexico, tours, activities, things to do, travel, tourism, cancun vacations, sightseeing, attractions"
+                },
+                "WATER": {
+                    "TITLE": "The Best Sailing Tours in Cancun and Snorkel Activities",
+                    "DESCRIPTION": "The best Sailing Tours in Cancun and snorkel activities in Riviera Maya to explore the sea and the underwater marvels.",
+                    "KEYWORDS": "sailing tours, snorkel activities, cancun, mexico, tours, activities, things to do, travel, tourism, cancun vacations, sightseeing, attractions"
+                },
+                "RUINS": {
+                    "TITLE": "Visit the Best Mayan Ruins Mexico Tours",
+                    "DESCRIPTION": "Discover the most amazing Mayan Ruins Mexico in Cancun and Riviera Maya, get your tickets with transportation and swim in a beautiful cenote.",
+                    "KEYWORDS": "mayan ruins mexico, cancun, mexico, tours, activities, things to do, travel, tourism, cancun vacations, sightseeing, attractions"
+                }
+            }
         },
-        "COMBOS_PAGE":{
+        "COMBOS_PAGE": {
             "TITLE": "Our Cancun Tour Packages - What To Do In Cancun",
             "DESCRIPTION": "Discover the ultimate adventure with our exclusive combo packages in Cancun! Whether you’re looking to double the thrill or mix and match experiences for a day packed with excitement, we’ve got you covered.",
             "KEYWORDS": "Cancun, tours, activities, things to do, travel, tourism, vacation, sightseeing, attractions, packages, combos cancun"
         },
-        "LAST_MINUTE_PAGE":{
+        "LAST_MINUTE_PAGE": {
             "TITLE": "What To Do In Cancun The Definitive Cancun Guide",
             "DESCRIPTION": "Get a better price with our Cancun Excursion deals, follow us on social media to get advice about new opportunities to get a better rate."
         },
@@ -28,6 +62,33 @@
             "DESCRIPTION": "Our private airport transfer service ensures you arrive at your destination relaxed and ready to enjoy.",
             "KEYWORDS": "Cancun, airport, transportation, shuttle, transfer, taxi, car, van, bus"
         },
+        "PARTY_PAGE": {
+            "BEACHCLUB": {
+                "TITLE": "Beachclubs in Cancun and the Best Parties for Spring Break - What To Do In Cancun",
+                "DESCRIPTION": "Discover an unforgettable beach experience at Cancun's vibrant Beach Clubs! Immerse yourself in the rhythmic beats of top DJs while mingling with fellow travelers from across the globe.",
+                "KEYWORDS": "Cancun, beach clubs, beach vacations, beach deals, beach discounts"
+            },
+            "NIGHTCLUB": {
+                "TITLE": "Nightlife in Cancun and the Best Parties for Spring Break - What To Do In Cancun",
+                "DESCRIPTION": "Nightlife in Cancun is known for its lively and exciting clubs and bars to choose from. Find your party style and enjoy spring break.",
+                "KEYWORDS": "Cancun, nightclubs, nightlife, night vacations, night deals, night discounts"
+            },
+            "EVENTS": {
+                "TITLE": "Events in Cancun and Sprin Break Parties - What To Do In Cancun",
+                "DESCRIPTION": "Mexico is also famous for hosting a wide range of events in Cancun from music festivals to sports competitions.",
+                "KEYWORDS": "Cancun, events, parties, spring break, music festivals, sports competitions"
+            }
+        },
+        "GOLF_PAGE": {
+            "TITLE": "The Best Golf Courses in Cancun - What To Do In Cancun",
+            "DESCRIPTION": "The best golf courses in Cancun and Riviera Maya, get the best deals and discounts for your golf vacations.",
+            "KEYWORDS": "Cancun, golf, golf courses, golf vacations, golf deals, golf discounts"
+        },
+        "YACHT_PAGE": {
+            "TITLE": "The Best Yacht Rentals in Cancun - What To Do In Cancun",
+            "DESCRIPTION": "Upgrade your trip to luxury with Cancun Yacht Rentals Service for romantic dinners, bachelorette parties, or private sailing.",
+            "KEYWORDS": "Cancun, yacht, yacht rentals, yacht vacations, yacht deals, yacht discounts"
+        },
         "ABOUT_PAGE": {
             "TITLE": "The Cancun Favorite Activities and Riviera Maya - What To Do In Cancun",
             "DESCRIPTION": "About What to do in Cancun its a Tour Agency for the Mexican Caribbean visitor, we have all the tours and activities."
@@ -39,6 +100,10 @@
         "PRIVACY_PAGE": {
             "TITLE": "Privacy Policy - What To Do In Cancun",
             "DESCRIPTION": "What To Do In Cancun is committed to protecting the privacy and personal information of our website visitors and customers. Please read our Privacy Notice for more information."
+        },
+        "NOT_FOUND_PAGE": {
+            "TITLE": "404 Not Found - What To Do In Cancun",
+            "DESCRIPTION": "The page you are looking for does not exist. Please return to the home page."
         }
     },
     "ACCESSIBILITY": {
@@ -76,11 +141,11 @@
             "TITLE": "Most wanted tours",
             "BUTTON": "Explore all tours"
         },
-        "TOP_PARTIES":{
+        "TOP_PARTIES": {
             "TITLE": "All the Parties in Cancun",
             "BUTTON": "Find your party now"
         },
-        "TOP_COMBOS":{
+        "TOP_COMBOS": {
             "TITLE": "The Best Combos in Cancun",
             "BUTTON": "Explore all combos"
         },
@@ -128,23 +193,51 @@
             }
         }
     },
-    "ALL_TOUR_PAGE": {
-        "TITLE": "All Tours in Cancun",
-        "DESCRIPTION": "Welcome to What To Do In Cancun's All Tours section! Dive into unforgettable adventures curated just for you. Explore jungles, snorkel in serene waters, and make every moment in Cancun unforgettable. Start your journey now!",
+    "TOUR_PAGE": {
+        "ALL_TOURS": {
+            "TITLE": "All Tours in Cancun",
+            "DESCRIPTION": "Welcome to What To Do In Cancun's All Tours section! Dive into unforgettable adventures curated just for you. Explore jungles, snorkel in serene waters, and make every moment in Cancun unforgettable. Start your journey now!"
+        },
+        "CATEGORY_TOURS": {
+            "CHEAP": {
+                "TITLE": "Cheap Tours in Cancun under $59USD",
+                "DESCRIPTION": "Get more fun with the same budget! Find cheap tours and activities in Cancún under $59USD to get the most out of every penny."
+            },
+            "FAVORITES": {
+                "TITLE": "Our Cancun Favorite Activities",
+                "DESCRIPTION": "Explore Cancun's top-rated tours, favored by travelers worldwide. Dive into crystal-clear waters, uncover ancient Mayan ruins, zip-line through lush jungles, or simply unwind on pristine beaches. These handpicked experiences promise thrills, cultural immersion, and unforgettable memories."
+            },
+            "ADVENTURE": {
+                "TITLE": "Adventure Tours in Cancun",
+                "DESCRIPTION": "Adventure Tours lovers seek new experiences in the Mexican Caribbean. Here we have the best attractions to go beyond what others dare. Enjoy your vacation to the fullest and take advantage of our discounts."
+            },
+            "COUPLES": {
+                "TITLE": "Tours For Couples in Cancun",
+                "DESCRIPTION": "All the couples in Cancun are looking for adventures with their favorite person. The most common activities are romantic, adventure, action, and more experiences that you can do together. Enjoy the romantic side of the Mexican Caribbean and save with our Cancun discounts."
+            },
+            "WATER": {
+                "TITLE": "Water activities in Cancun",
+                "DESCRIPTION": "Experience the beauty of the Caribbean with our snorkel and sailing tours in Cancun. If you’re a sea lover, you’ll be captivated by the immensity of the waves and the intense colors of the ocean. Our tours offer a selection of water activities and sailing tours that are perfect for exploring the natural wonders of the Atlantic Ocean."
+            },
+            "RUINS": {
+                "TITLE": "Explore Mayan Ruins Mexico",
+                "DESCRIPTION": "There are many Mayan ruins Mexico in Cancun and Riviera Maya, being in front of these majestic constructions allows you to gauge how advanced the Mayan culture was, learn about its history, and a lot of interesting information, in addition, obtain the best selfies of your trip."
+            }
+        },
         "CARD": {
             "FROM": "From",
             "BUTTON_BOOK_NOW": "Book now",
             "BUTTON_MORE": "More details"
         }
     },
-    "COMBOS_PAGE":{
+    "COMBOS_PAGE": {
         "TITLE": "Our Cancun Tour Packages",
         "DESCRIPTION": "Discover the ultimate adventure with our exclusive combo packages in Cancun! Whether you’re looking to double the thrill or mix and match experiences for a day packed with excitement, we’ve got you covered. Our specially curated combos let you enjoy multiple activities at a great value."
     },
-    "LAST_MINUTE_PAGE":{
-        "TITLE": " Last Minute Cancun Deals ",
+    "LAST_MINUTE_PAGE": {
+        "TITLE": "Last Minute Cancun Deals ",
         "DESCRIPTION": "Get a better price with our Cancun Excursion deals, follow us on social media to get advice about new opportunities to get a better rate.",
-        "SECTION_TIMER":{
+        "SECTION_TIMER": {
             "TITLE": "Limited-Time Discounts",
             "DAYS": "Days",
             "HOURS": "Hours",
@@ -242,6 +335,111 @@
                 "TITLE": "Cancun Airport to Riu Palace Costa Mujeres",
                 "DESCRIPTION": "For a stress-free journey from Cancun Airport to Riu Palace Costa Mujeres, our private transfer service is the perfect choice. Experience the ease of direct transportation to this exquisite destination."
             }
+        }
+    },
+    "PARTY_PAGE": {
+        "BEACHCLUB": {
+            "TITLE": "The Best Beach Clubs in Cancun",
+            "DESCRIPTION": "Discover an unforgettable beach experience at Cancun's vibrant Beach Clubs! Immerse yourself in the rhythmic beats of top DJs while mingling with fellow travelers from across the globe. These Beach Clubs are the definition of the Caribbean dream, offering endless fun under the sun. From captivating shows to thrilling competitions, there's always something exciting happening to ensure an incredible time, no matter the season. Join us for a beachside adventure like no other!",
+            "EXPERIENCE": {
+                "TITLE": "Cancun Beach Club Experience",
+                "DESCRIPTION": "Planning a trip to Cancun and seeking the ultimate beach party experience? Look no further! At What To Do in Cancun, we've got you covered with the best beach clubs in town."
+            },
+            "ADVENTURE": {
+                "TITLE": "Book Your Beach Club Adventure",
+                "DESCRIPTION": {
+                    "TEXT_1": "Ready to soak up the sun and dance the day away at Cancun's hottest beach clubs? With our convenient online booking platform, securing your spot at the most popular venues is a breeze. Whether you're craving a VIP cabana or a front-row seat to the ultimate beach bash, booking in advance ensures you won't miss out on the fun.",
+                    "TEXT_2": "In essence, Cancun boasts an electrifying beach club scene that promises endless excitement and unforgettable memories. Whether you're celebrating a special occasion or simply craving a day of relaxation and revelry, our website offers seamless access to the best beach club experiences in Cancun."
+                }
+            },
+            "BOOK_TICKETS": "So, book your tickets and get ready to experience the best of Cancun’s beachclub!",
+            "BUTTONS": {
+                "NIGHTCLUB": "See Nightlife in Cancun",
+                "EVENTS": "See Events in Cancun"
+            }
+        },
+        "NIGHTCLUB": {
+            "TITLE": "The Best Nightclubs in Cancun",
+            "DESCRIPTION": "Nightlife in Cancun is known for its lively and exciting clubs and bars to choose from. If you’re looking for clubs in Cancun, you’ll find a diverse range of options to suit all tastes and budgets.",
+            "INFORMATION": {
+                "TEXT_1": "The best clubs in Cancun are concentrated in the Hotel Zone, which is also where you’ll find most of the city’s nightlife. Whether you’re looking for a wild night out or a more upscale experience, there’s a club in Cancun for everyone.",
+                "TEXT_2": "Nightlife in Cancun is especially popular during spring break, with many students flocking to the city to party. If you’re planning a Cancun spring break, you’ll find a variety of clubs and bars offering drink specials, live music, and other entertainment.",
+                "TEXT_3": "Welcome to the electrifying nightlife of Cancun, where every moment pulses with excitement and every party is an adventure waiting to unfold!",
+                "TEXT_4": "If you're gearing up for a bachelorette or bachelor party in Cancun, you're in for a treat. From chic clubs to VIP experiences, the city offers a kaleidoscope of options to suit every taste and preference.",
+                "TEXT_5": "While Cancun's beach parties are a major draw for tourists, there's so much more to explore after the sun sets. Dive into the city's vibrant club scene, where the beats are hot, the drinks are cold, and the energy is infectious.",
+                "TEXT_6": "But why wait until nightfall? Cancun's daytime pool parties are the stuff of legend, offering a perfect blend of sun, sand, and sensational beats. It's the ultimate way to soak up the sun while dancing the day away.",
+                "TEXT_7": "Ready to dive in? Booking your tickets or reserving a table at Cancun's hottest spots is easier than ever with online options available. Whether you're planning a wild night with friends or a special celebration, securing your spot in advance ensures a seamless experience from start to finish.",
+                "TEXT_8": "In summary, Cancun isn't just about beach parties—it's a playground for nightlife enthusiasts seeking unforgettable experiences. So whether you're craving the best clubs, the hottest pool parties, or an epic bachelorette or bachelor bash, Cancun has it all and more. Get ready to paint the town red and dance until dawn in this vibrant city that never sleeps!"
+            },
+            "BOOK_TICKETS": "So, book your tickets and get ready to experience the best of Cancun’s nightlife!",
+            "BUTTONS": {
+                "BEACHCLUB": "See Beach Clubs in Cancun",
+                "EVENTS": "See Events in Cancun"
+            }
+        },
+        "EVENTS": {
+            "TITLE": "Events in Cancun",
+            "DESCRIPTION": "All the Events in Cancun, a popular destination in Mexico, is well-known for its stunning beaches, turquoise waters, and vibrant nightlife. The city is also famous for hosting a wide range of events throughout the year that attract visitors from all over the world. From music festivals to sports competitions, there’s always something exciting happening in Cancun.",
+            "INFORMATION": {
+                "TEXT_1": "One of the most popular events in Cancun is the nightlife scene. The city is home to some of the best nightclubs in the world, such as Coco Bongo, The City, and Mandala. These clubs offer an unforgettable experience with live music, world-class DJs, and impressive performances.",
+                "TEXT_2": "If you’re interested in a more laid-back atmosphere, Cancun also offers plenty of options. Many beach clubs organize events such as live music shows, beach parties, and food festivals. These events provide the perfect opportunity to relax and enjoy the stunning Caribbean Sea views."
+            },
+            "CANCUN_EVENTS": {
+                "TITLE": "More Cancun Events",
+                "DESCRIPTION": "Cancun is also famous for hosting several annual events that attract visitors from around the world. One of the most famous events is the Cancun International Film Festival, which features screenings of international films, workshops, and special events. The Cancun-Riviera Maya Wine and Food Festival is another popular event that showcases local and international cuisine and wine."
+            },
+            "SPORTS": {
+                "TITLE": "Sport Events in Cancun",
+                "DESCRIPTION": "Sports enthusiasts can also find events to suit their interests in Cancun. The city hosts several sporting events throughout the year, including the Cancun International Triathlon, the Ironman 70.3, and the Cancun International Marathon. These events offer a chance to challenge yourself, have fun, and explore the beautiful natural scenery of the region."
+            },
+            "FAMILY_FRIENDLY": {
+                "TITLE": "Family-friendly activities",
+                "DESCRIPTION": {
+                    "TEXT_1": "If you’re looking for what to do in Cancun for family-friendly events, Cancun has you covered. The city offers a variety of activities for kids, such as water parks and activities, theme parks, and aquariums. These attractions are perfect for family vacations and provide a great opportunity to spend quality time with your loved ones and Take them to an Aventure Park.",
+                    "TEXT_2": "In conclusion, Cancun offers a wide range of events that cater to every interest and age group. From music festivals and nightlife events to sports competitions and family-friendly activities, there’s something for everyone in Cancun. So, if you’re looking for a place to have fun, relax, and explore, then visit Cancun and Riviera Maya."
+                }
+            },
+            "BUTTONS": {
+                "BEACHCLUB": "See Beach Clubs in Cancun",
+                "NIGHTCLUB": "See Nightlife in Cancun"
+            }
+        }
+    },
+    "GOLF_PAGE": {
+        "TITLE_BANNER": "Cancun golf Courses",
+        "TITLE": "The Best Cancun golf Packages",
+        "DESCRIPTION": "The best golf courses in Cancun and Riviera Maya, get the best deals and discounts for your golf vacations."
+    },
+    "YACHT_PAGE": {
+        "TITLE": "The Best Yacht Rentals in Cancun",
+        "DESCRIPTION": "Are you ready to embark on an unforgettable journey along the pristine waters of Cancun? Look no further than our exclusive Cancun yacht rentals. Discover the epitome of luxury, comfort, and adventure as you set sail on the Caribbean’s turquoise expanse. From private yacht charters to all-inclusive yacht parties, we offer an array of experiences that cater to your every desire. Let us be your guide to an exceptional maritime escape.",
+        "YACHT_CHARTER": {
+            "TITLE": "The Best Yacht Charter Cancun",
+            "DESCRIPTION": "Experience the ultimate in opulence with our yacht charter services in Cancun. Choose from a meticulously curated fleet of luxurious yachts, each designed to provide an unparalleled level of comfort and elegance. Whether you’re planning a romantic getaway, a celebration with friends, or a corporate event, our yacht charters offer a personalized journey that aligns with your preferences."
+        },
+        "ALL_INCLUSIVE": {
+            "TITLE": "All Inclusive Yacht Cancun",
+            "DESCRIPTION": "Elevate your maritime adventure with our all-inclusive yacht rentals in Cancun. Picture yourself basking in the sun on the deck, savoring delectable cuisine prepared by a private chef, and enjoying premium beverages against the backdrop of the Caribbean’s breathtaking beauty. Our all-inclusive packages ensure that every moment of your voyage is marked by relaxation, entertainment, and sheer indulgence."
+        },
+        "YACHT_PARTY": {
+            "TITLE": "Find a Yacht Party in Cancun",
+            "DESCRIPTION": "Get ready to dance, mingle, and celebrate on the waves with our vibrant yacht parties in Cancun. Join like-minded revelers for an electrifying experience as you cruise along the coastline. With music, entertainment, and a lively atmosphere, our yacht parties are the perfect way to create unforgettable memories with friends or fellow travelers."
+        },
+        "PRIVATE_YACHT": {
+            "TITLE": "Private Yacht Cancun",
+            "DESCRIPTION": "For those seeking exclusivity and privacy, our private yacht rentals in Cancun offer a secluded escape like no other. Whether you’re planning a romantic proposal, an intimate gathering, or simply a serene day on the water, our private yachts provide a tranquil oasis amidst the Caribbean’s splendor."
+        },
+        "CANCUN_PROPOSAL": {
+            "TITLE": "Cancun Proposal Yacht Charter",
+            "DESCRIPTION": "Create a moment that will be cherished forever with our Cancun proposal yacht charter. Sail into the sunset as you pop the question against the backdrop of the sea’s golden hues. Our experienced crew ensures that every detail is executed flawlessly, turning your proposal into a truly magical experience."
+        },
+        "RESERVATION": {
+            "TITLE": "Reserve Your Unforgettable Voyage",
+            "DESCRIPTION": "Are you ready to make waves in Cancun? Embark on a maritime journey that combines luxury, adventure, and relaxation like never before. With our range of yacht rental options, including private charters, all-inclusive packages, and vibrant parties, we offer an experience tailored to your desires. From exploring the vibrant coral reefs to savoring gourmet cuisine on deck, every moment is designed to leave an indelible mark on your memory."
+        },
+        "NAUTICAL_ADVENTURE": {
+            "TITLE": "Book Now for a Nautical Adventure Like No Other",
+            "DESCRIPTION": "Whether you’re celebrating a special occasion, seeking an intimate escape, or craving a lively party on the waves, our Cancun yacht rentals are your gateway to maritime paradise. Don’t miss out on the opportunity to experience the Caribbean’s beauty from the deck of a luxurious yacht. Book your voyage today and set sail for a journey that promises to redefine your perception of luxury and adventure."
         }
     },
     "ABOUT_PAGE": {
@@ -573,6 +771,11 @@
             "TITLE": "Contact",
             "DESCRIPTION": "For some What To Do In Cancun services, you can access and update your registration and personal information online."
         }
+    },
+    "NOT_FOUND_PAGE": {
+        "TITLE": "Page not found!",
+        "DESCRIPTION": "We're sorry, but the page you're looking for has been moved or does not exist. Please check the URL and try again. If you think this is an error, please contact us.",
+        "BUTTON": "Go back to home"
     },
     "THANKS_PAGE": {
         "TITLE": "Thank you for your message",
