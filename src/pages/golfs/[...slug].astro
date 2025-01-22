@@ -2,7 +2,7 @@
 export const prerender = true;
 
 import MdGolfLayout from "@/layouts/MdGolfLayout.astro";
-import { getCollectionByName } from "@/content/config";
+import { getCollectionByName } from "@/content/functions";
 
 export async function getStaticPaths() {
     const golfEntries = await getCollectionByName("golfs", "en");

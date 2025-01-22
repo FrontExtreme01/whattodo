@@ -1,22 +1,23 @@
 ---
 import { getI18N } from "@/i18n";
 import { getLangFromUrl } from "@/i18n/utils";
-import { getAllLastMinute } from "@/content/config";
+import { getTypeDeal } from "@/content/functions";
 import { getSlides, review1, review2, review3, review4, review5 } from "@/img/allImages"
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import SliderBanner from "@/components/global/SliderBanner";
+import SliderBanner from "@components/global/SliderBanner";
 import ContadorDiscount from "@components/extras/ContadorDiscount";
 import Intro from "@components/global/Intro.astro";
 import TourCard from "@components/cards/TourCard.astro";
 import Testimonials from "@components/global/Testimonials";
 import Partners from "@components/global/Partners";
+import PartyCard from "@components/cards/PartyCard.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
 const lang = getLangFromUrl(Astro.url);
-const allDiscounts = await getAllLastMinute(lang);
+const allDiscounts = await getTypeDeal("lastMinute", lang);
 
 const slides = getSlides("HOME", lang);
 
@@ -27,7 +28,6 @@ const testimonials = [
     {image: review4, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.REVIEW },
     {image: review5, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.REVIEW },
 ]
-
 
 const seoMetaDatos = {
     title: i18n.SEO.LAST_MINUTE_PAGE.TITLE,
@@ -54,7 +54,13 @@ const targetDate = "2024-12-23";
 
     <section class="container mx-auto mb-10">
         <div class="flex flex-wrap justify-center">
-            {allDiscounts.map((tour) => <TourCard tour={tour} lang={lang} />)}
+            {allDiscounts.map((entry) => {
+                if (entry.collection === 'tours') {
+                    return <TourCard tour={entry} lang={lang} />;
+                } else if (entry.collection === 'parties') {
+                    return <PartyCard party={entry} lang={lang} />;
+                }
+            })}
         </div>
     </section>
 

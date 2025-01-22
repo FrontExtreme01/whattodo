@@ -2,26 +2,26 @@
 import { getI18N } from "@/i18n";
 import { getSlides } from "@/img/allImages";
 import { getLangFromUrl } from "@/i18n/utils";
-import { getAllCombos } from "@/content/functions";
+import { getTypeDeal } from "@/content/functions";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SliderBanner from "@components/global/SliderBanner";
 import Intro from "@components/global/Intro.astro";
-import TourCard from "@components/cards/TourCard.astro";
 import Partners from "@components/global/Partners";
+import TourCard from "@components/cards/TourCard.astro";
+import PartyCard from "@components/cards/PartyCard.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
-
 const lang = getLangFromUrl(Astro.url);
-const allCombos = await getAllCombos(lang);
 
-const slides = getSlides("COMBOS", lang);
+const slides = getSlides("HOME", lang);
+
+const allEarlyBird = await getTypeDeal("earlyBird", lang);
 
 const seoMetaDatos = {
-    title: i18n.SEO.COMBOS_PAGE.TITLE,
-    description: i18n.SEO.COMBOS_PAGE.DESCRIPTION,
-    keywords: i18n.SEO.COMBOS_PAGE.KEYWORDS,
+    title: i18n.SEO.EARLY_BIRD_PAGE.TITLE,
+    description: i18n.SEO.EARLY_BIRD_PAGE.DESCRIPTION,
     image: slides[0].image.src,
 };
 ---
@@ -33,13 +33,19 @@ const seoMetaDatos = {
         i18nButton={i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
     />
     <Intro
-        title={i18n.COMBOS_PAGE.TITLE}
-        description={i18n.COMBOS_PAGE.DESCRIPTION}
+        title={i18n.EARLY_BIRD_PAGE.TITLE}
+        description={i18n.EARLY_BIRD_PAGE.DESCRIPTION}
     />
 
     <section class="container mx-auto mb-10">
         <div class="flex flex-wrap justify-center">
-            {allCombos.map((combo) => <TourCard tour={combo} lang={lang} />)}
+            {allEarlyBird.map((entry) => {
+                if (entry.collection === 'tours') {
+                    return <TourCard tour={entry} lang={lang} />;
+                } else if (entry.collection === 'parties') {
+                    return <PartyCard party={entry} lang={lang} />;
+                }
+            })}
         </div>
     </section>
     

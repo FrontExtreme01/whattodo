@@ -2,7 +2,7 @@
 export const prerender = true;
 
 import MdPartyLayout from "@/layouts/MdPartyLayout.astro";
-import { getCollectionByName } from "@/content/config";
+import { getCollectionByName } from "@/content/functions";
 
 export async function getStaticPaths() {
     const partyEntries = await getCollectionByName("parties","es");

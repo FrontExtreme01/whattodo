@@ -10,9 +10,9 @@ const translatePath = useTranslatedPath(lang);
 const url = translatePath(`/yachts/${yacht.new_slug}/`);
 ---
 
-<div class="w-full sm:w-6/12 lg:w-4/12 xl:w-3/12 px-5 py-2 sm:py-5">
+<div class="w-full sm:w-6/12 lg:w-4/12 xl:w-3/12 px-5 py-1 sm:py-5">
     <div class="relative flex flex-wrap sm:flex-col rounded-lg bg-white shadow-lg border-slate-600 h-full">
-        <h3 class="mt-7 px-3 sm:hidden block w-full font-bold text-lg text-justify text-green-700">{yacht.data.title}</h3>
+        <h3 class="mt-7 px-3 sm:hidden block w-full font-extrabold text-lg text-start text-cyan-600">{yacht.data.title}</h3>
         <div class="relative p-2.5 w-4/6 sm:w-full">
             <span class="absolute z-10 top-4 left-4 md:top-5 md:left-5 px-2.5 py-1 rounded-md text-sm bg-white font-bold shadow-lg">
                 <i class="at-star text-sm text-amber-500"></i>{yacht.data.stars}
@@ -22,24 +22,21 @@ const url = translatePath(`/yachts/${yacht.new_slug}/`);
             </a>
         </div>
 
-        <div class="py-3 px-1.5 sm:px-5 text-justify w-2/6 sm:w-full">
-            <h3 class="hidden sm:block font-bold text-base sm:text-lg mb-4 text-center text-green-700">{yacht.data.title}</h3>
-            <p class="block sm:hidden font-extrabold text-green-700 text-lg sm:text-xl">
+        <div class="py-3 px-1.5 sm:px-5 sm:py-1 text-justify w-2/6 sm:w-full">
+            <h3 class="hidden sm:block font-bold text-base sm:text-lg mb-4 text-center text-cyan-600">{yacht.data.title}</h3>
+            <p class="block sm:hidden font-extrabold text-cyan-600 text-lg sm:text-xl">
                 <span class="text-gray-800 text-xs">{i18n.TOUR_PAGE.CARD.FROM}:</span><br> ${yacht.data.price} USD
             </p>
-            <p class="hidden sm:block text-gray-800 text-base text-justify line-clamp-3 mb-5">
-                {yacht.data.description}
-            </p>
-            <ul class="flex justify-around gap-2 flex-wrap mb-4 text-xs sm:text-sm break-all">
-                <li class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-green-600 transition duration-200">
-                    <i class="at-ship-cruise text-green-700"></i>{yacht.data.size}
+            <ul class="flex flex-col gap-2 sm:px-5 my-4 text-xs sm:text-sm text-start">
+                <li class="flex items-center gap-2 text-slate-600">
+                    <i class="at-ship-cruise text-cyan-600"></i>{yacht.data.size}
                 </li>
-                <li class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-green-600 transition duration-200">
-                    <i class="at-accounts-group-people text-green-700"></i>{yacht.data.capacity}
+                <li class="flex items-center gap-2 text-slate-600">
+                    <i class="at-accounts-group-people text-cyan-600"></i>{yacht.data.capacity}
                 </li>
                 {yacht.data.highlights.map((item) => (
-                    <li class="hidden sm:flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-green-600 transition duration-200">
-                        <i class="at-info-circle text-green-700"></i> {item}
+                    <li class="hidden sm:flex items-center gap-2 text-slate-600">
+                        <i class="at-info-circle text-cyan-600"></i> {item}
                     </li>
                 ))}
             </ul>
@@ -47,9 +44,9 @@ const url = translatePath(`/yachts/${yacht.new_slug}/`);
         
         <div class="w-full flex flex-wrap justify-evenly mb-5 lg:px-5 gap-y-3 mt-auto">
             <div class="hidden sm:block w-full text-center my-2">
-                <p class="font-extrabold text-green-700 text-lg sm:text-xl"><span class="text-gray-800 text-sm">{i18n.TOUR_PAGE.CARD.FROM}:</span> ${yacht.data.price} USD</p>
+                <p class="font-extrabold text-cyan-600 text-lg sm:text-xl"><span class="text-gray-800 text-sm">{i18n.TOUR_PAGE.CARD.FROM}:</span> ${yacht.data.price} USD</p>
             </div>
-            {yacht.data.bokun != '' && <a aria-label="" href={yacht.data.bokun} class="text-sm sm:text-base w-auto text-center bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline" target="_blank">{i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}</a>}
+            {yacht.data.bokun != '' && <a aria-label="" href={yacht.data.bokun} class="text-sm sm:text-base w-auto text-center bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline" target="_blank">{i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}</a>}
             <a aria-label={i18n.ACCESSIBILITY.GO_TO_TOUR_DETAILS} href={url} class="text-sm sm:text-base w-auto text-center bg-slate-200 hover:bg-slate-100 text-black font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline">{i18n.TOUR_PAGE.CARD.BUTTON_MORE}</a>
         </div>
     </div>

@@ -25,10 +25,11 @@ import pga3 from "@/img/extras/golf/pga-riviera-maya-scorecard.webp";
 
 // Slides Home
 import HomeES1 from "@/img/slides/home/2025-new-year-discounts-in-cancun.webp";
-import HomeES2 from "@/img/slides/home/isla-mujeres-catamaran-tour-premium-service.webp";
-import HomeES3 from "@/img/slides/home/atv-zipline-and-cenote-in-cancun-tours.webp";
-import HomeES4 from "@/img/slides/home/city-and-taco-tour-and-tequila-tasting-in-cancun-puerto-morelos.webp";
-import HomeES5 from "@/img/slides/home/cancun-airport-vip-lounge-service.webp";
+import HomeES2 from "@/img/slides/home/slide-pirate-ship-cancun-jolly-roger.webp";
+import HomeES3 from "@/img/slides/home/isla-mujeres-catamaran-tour-premium-service.webp";
+import HomeES4 from "@/img/slides/home/atv-zipline-and-cenote-in-cancun-tours.webp";
+import HomeES5 from "@/img/slides/home/city-and-taco-tour-and-tequila-tasting-in-cancun-puerto-morelos.webp";
+import HomeES6 from "@/img/slides/home/cancun-airport-vip-lounge-service.webp";
 
 // Slides Restaurant
 import Rest1 from "@/img/slides/restaurant/best-reastaurants-in-cancun-with-free-welcome-drink.webp";
@@ -67,7 +68,8 @@ const images = {
             { image: HomeES2, alt: "banner promocional", href: "" },
             { image: HomeES3, alt: "banner promocional", href: "" },
             { image: HomeES4, alt: "banner promocional", href: "" },
-            { image: HomeES5, alt: "banner promocional", href: "" }
+            { image: HomeES5, alt: "banner promocional", href: "" },
+            { image: HomeES6, alt: "banner promocional", href: ""}
         ],
         RESTAURANT: [
             { image: Rest1, alt: "banner restaurantes", href: "" },
@@ -141,10 +143,11 @@ const images = {
     en: {
         HOME: [
             { image: HomeES1, alt: "banner 2025", href: "" },
-            { image: HomeES2, alt: "promotional banner", href: "" },
-            { image: HomeES3, alt: "promotional banner", href: "" },
-            { image: HomeES4, alt: "promotional banner", href: "" },
-            { image: HomeES5, alt: "promotional banner", href: "" }
+            { image: HomeES2, alt: "banner promocional", href: "" },
+            { image: HomeES3, alt: "banner promocional", href: "" },
+            { image: HomeES4, alt: "banner promocional", href: "" },
+            { image: HomeES5, alt: "banner promocional", href: "" },
+            { image: HomeES6, alt: "banner promocional", href: ""}
         ],
         RESTAURANT: [
             { image: Rest1, alt: "restaurant banner", href: "" },

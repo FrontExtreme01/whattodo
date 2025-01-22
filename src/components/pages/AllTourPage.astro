@@ -2,10 +2,10 @@
 import { getI18N } from "@/i18n";
 import { getSlides } from "@/img/allImages";
 import { getLangFromUrl } from "@/i18n/utils";
-import { getAllTours } from "@/content/config";
+import { getAllTours } from "@/content/functions";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import SliderBanner from "@/components/global/SliderBanner";
+import SliderBanner from "@components/global/SliderBanner";
 import Intro from "@components/global/Intro.astro";
 import TourCard from "@components/cards/TourCard.astro";
 import Partners from "@components/global/Partners";
@@ -36,6 +36,7 @@ const seoMetaDatos = {
         title={i18n.TOUR_PAGE.ALL_TOURS.TITLE}
         description={i18n.TOUR_PAGE.ALL_TOURS.DESCRIPTION}
     />
+    
 
     <section class="container mx-auto mb-10">
         <div class="flex flex-wrap justify-center">

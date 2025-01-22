@@ -2,7 +2,7 @@
 export const prerender = true;
 
 import MdYachtLayout from "@/layouts/MdYachtLayout.astro";
-import { getCollectionByName } from "@/content/config";
+import { getCollectionByName } from "@/content/functions";
 
 export async function getStaticPaths() {
     const yachtEntries = await getCollectionByName("yachts", "es");

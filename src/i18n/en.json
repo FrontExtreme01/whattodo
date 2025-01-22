@@ -52,6 +52,10 @@
             "TITLE": "What To Do In Cancun The Definitive Cancun Guide",
             "DESCRIPTION": "Get a better price with our Cancun Excursion deals, follow us on social media to get advice about new opportunities to get a better rate."
         },
+        "EARLY_BIRD_PAGE": {
+            "TITLE": "Early Bird Cancun Deals - What To Do In Cancun",
+            "DESCRIPTION": "Get a better price with our Cancun Excursion deals, follow us on social media to get advice about new opportunities to get a better rate."
+        },
         "RESTAURANT_PAGE": {
             "TITLE": "The Best Restaurants in Cancun - What To Do In Cancun",
             "DESCRIPTION": "If you are looking for a place to eat in Cancun, we have the best options for you to find the ideal restaurant for that particular moment, to taste new flavors.",
@@ -248,6 +252,10 @@
             "SUPPORT": "Support in your reservation",
             "TRIPADVISOR": "TripAdvisor Favorites"
         }
+    },
+    "EARLY_BIRD_PAGE": {
+        "TITLE": "Early Bird Cancun Deals",
+        "DESCRIPTION": "Get a better price with our early bird deals in Cancun! Consider booking early to get the best prices and secure your spot on the most popular activities."
     },
     "RESTAURANT_PAGE": {
         "TITLE": "Restaurants in Cancun",

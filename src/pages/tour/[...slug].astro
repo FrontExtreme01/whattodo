@@ -2,7 +2,7 @@
 export const prerender = true;
 
 import MdTourLayout from "@/layouts/MdTourLayout.astro";
-import { getCollectionByName } from "@/content/config";
+import { getCollectionByName } from "@/content/functions";
 
 export async function getStaticPaths() {
     const toursEntries = await getCollectionByName("tours", "en");

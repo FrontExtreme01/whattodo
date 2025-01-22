@@ -2,13 +2,13 @@
 import { getI18N } from "@/i18n";
 import { getSlides } from "@/img/allImages";
 import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
-import { getPartiesEvent } from "@/content/config";
+import { getPartiesEvent } from "@/content/functions";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import SliderBanner from "@/components/global/SliderBanner";
+import SliderBanner from "@components/global/SliderBanner";
 import Intro from "@components/global/Intro.astro";
-import Partners from "@/components/global/Partners";
-import PartyCard from "@/components/cards/PartyCard.astro";
+import Partners from "@components/global/Partners";
+import PartyCard from "@components/cards/PartyCard.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });

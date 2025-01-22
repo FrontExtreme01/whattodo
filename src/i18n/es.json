@@ -52,6 +52,10 @@
             "TITLE": "La guía definitiva de Cancún - What To Do In Cancun",
             "DESCRIPTION": "Obtén un mejor precio con nuestras ofertas de Excursiones en Cancún, síguenos en redes sociales para recibir consejos sobre nuevas oportunidades para obtener una mejor tarifa."
         },
+        "EARLY_BIRD_PAGE": {
+            "TITLE": "Ofertas de Tours en Cancún - What To Do In Cancun",
+            "DESCRIPTION": "¡Obtenga un mejor precio con nuestras ofertas de Tours en Cancún!Siga nuestras redes sociales para recibir consejos sobre nuevas oportunidades para obtener una mejor tarifa."
+        },
         "RESTAURANT_PAGE": {
             "TITLE": "Los Mejores Restaurantes en Cancun - What To Do In Cancun",
             "DESCRIPTION": "Si está buscando un lugar para comer en Cancún, tenemos las mejores opciones para encontrar el restaurante ideal para ese momento en particular, para probar nuevos sabores.",
@@ -252,6 +256,10 @@
             "SUPPORT": "Soporte en sus reservaciones",
             "TRIPADVISOR": "Los favoritos de TripAdvisor"
         }
+    },
+    "EARLY_BIRD_PAGE": {
+        "TITLE": "Ofertas Anticipadas en nuestros Tours",
+        "DESCRIPTION": "¡Obtenga un mejor precio con nuestras ofertas anticipadas en Cancún! Considere reservar con anticipación para obtener los mejores precios y asegurar su lugar en las actividades más populares."
     },
     "RESTAURANT_PAGE": {
         "TITLE": "Restaurantes en Cancún",
