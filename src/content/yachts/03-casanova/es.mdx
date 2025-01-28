@@ -1,0 +1,106 @@
+---
+slug: 'yacht-rental-cancun-casanova/es'
+status: 1
+lang: 'es'
+slugGallery: 'casanova'
+title: 'Renta de Yate Cancún Casanova'
+description: ''
+keywords: ''
+price: 932
+stars: '5.0'
+reviews: '963 Reseñas'
+image: 
+    src: '/assets/covers/yachts/yacht-casanova-cover.webp'
+    alt: 'portada de yate casanova'
+capacity: 'Máximo 15 pasajeros'
+size: 'Tamaño: 48 pies'
+highlights: ['Chalecos salvavidas y máscaras de snorkel', 'Música Bluetooth']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/949734?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/949734'
+location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+faqs:
+-   question: '¿Necesito llevar algo para el viaje?'
+    answer: 'Proporcionamos todo lo que necesitarás para una experiencia lujosa y cómoda. Sin embargo, recomendamos traer protector solar, un sombrero y cualquier artículo personal que desees para el día. Si planeas nadar o hacer snorkel, siéntete libre de traer trajes de baño y toallas, aunque estos también pueden ser proporcionados.'
+-   question: '¿Qué sucede si el clima es malo el día de mi alquiler?'
+    answer: 'Tu seguridad y comodidad son nuestra máxima prioridad. Si las condiciones climáticas no son seguras, trabajaremos contigo para reprogramar tu reserva u ofrecer opciones alternativas. Monitoreamos de cerca los pronósticos del tiempo para garantizar la mejor experiencia posible.'
+-   question: '¿Hay restricciones de edad para los pasajeros en el yate?'
+    answer: 'No hay restricciones estrictas de edad, pero por razones de seguridad, recomendamos que los niños pequeños estén acompañados por un adulto responsable. El yate está equipado con características de seguridad, incluidos chalecos salvavidas, para garantizar una experiencia segura para todos los huéspedes.'
+-   question: '¿Necesito experiencia en navegación para alquilar el yate Casanova?'
+    answer: 'No, no necesitas experiencia en navegación. El yate viene con una tripulación profesional para manejar todos los aspectos de la navegación, asegurando un viaje suave y agradable para ti y tus invitados.'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import TabPricesYacht from "@components/extras/TabPricesYacht";
+
+export const includes = [
+    '24 cervezas.',
+    '24 aguas.',
+    '24 refrescos y hielo.',
+    'Chalecos salvavidas y máscaras de snorkel.',
+    'Capitán y marinero al Servicio de pasajeros.',
+    'Habitación privada, área de descanso y baño.',
+    'Bocinas Bluetooth.',
+];
+
+export const notIncludes = [
+    'Tarifa de muelle marítimo ($10USD por persona)',
+    'Propinas para tripulantes.',
+    'Fotos.',
+    'Recuerdos.',
+    'Comida o bocadillos.',
+    'Transporte terrestre.',
+];
+
+export const shouldKnow = [
+    'Sujeto a disponibilidad',
+    'La actividad de snorkel depende del clima.',
+    'Si el clima no permite participar en la actividad, la actividad podría reprogramarse según disponibilidad.',
+    'La actividad de snorkel no se recomienda para mujeres embarazadas. ',
+    'Actividad de snorkel no recomendada para participantes con problemas cardiacos, cirugías recientes, problemas de espalda o movilidad reducida',
+];
+
+export const shouldBring = [
+    'Toalla',
+    'Traje de baño',
+    'Ropa de cambio',
+    'Sombrero',
+    'Lentes de sol',
+    'Protector solar biodegradable',
+    'Efectivo adicional o forma de pago',
+];
+
+export const infoPrices = [
+    {
+        duration: '4 horas',
+        price: '932',
+    },
+    {
+        duration: '6 horas',
+        price: '1,085',
+    },
+    {
+        duration: '8 horas',
+        price: '1,247',
+    },
+];
+
+export const i18n = {
+    INCLUDES: 'Incluye',
+    NOT_INCLUDES: 'No incluye',
+    SHOULD_KNOW: 'Antes de reservar, ten en cuenta lo siguiente:',
+    SHOULD_BRING: 'Lo que debes llevar',
+};
+
+<TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<TagP><em><strong><small>Póngase en contacto con nosotros con anticipación para confirmar la hora de inicio de su actividad</small></strong></em></TagP>
+
+<TagH2>Descripción General</TagH2>
+
+<TagP>Embárcate en un viaje inolvidable a bordo del Casanova, un yate de lujo de 48 pies que zarpa desde la hermosa Marina Kaybal en Cancún. Ya sea que estés planeando una celebración especial, una escapada relajante o un día lleno de diversión en el agua, el Casanova ofrece el entorno perfecto. Con sus amplias cubiertas, elegantes interiores y comodidades excepcionales, disfrutarás cada momento con comodidad y elegancia. Explora la impresionante costa caribeña, relájate con un servicio personalizado y crea recuerdos inolvidables. Reserva tu lugar hoy y experimenta lo último en lujo, aventura y tranquilidad en el agua. </TagP>
+
+<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />

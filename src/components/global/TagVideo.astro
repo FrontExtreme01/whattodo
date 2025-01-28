@@ -1,0 +1,8 @@
+---
+const { src, lang } = Astro.props;
+---
+
+<video class="mx-auto my-10 rounded-lg shadow-sm w-full h-auto sm:px-20" controls width="600" autoplay loop>
+    <source src={src} type="video/mp4" />
+    {lang === 'es' ? 'Tu navegador no soporta el elemento de video.' : 'Your browser does not support the video tag.'}
+</video>

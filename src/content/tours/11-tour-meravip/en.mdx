@@ -68,10 +68,13 @@ testimonials:
     review: 'Decent VIP Lounge Option! The MERA VIP Lounge at Cancun Airport provided a comfortable space to relax before my flight. The buffet had a decent selection of food, and the open bar was a nice perk. However, the lounge could benefit from better organization and more seating options for guests.'
 ---
 
-import Inclusions from '@components/detail-content/Inclusions.astro';
-import AdditionalInfo from '@components/detail-content/AdditionalInfo.astro';
-import TabTerminals from '@components/detail-content/TabTerminals';
-import TabAirlines from '@components/detail-content/TabAirlines';
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import TabTerminals from "@components/detail-content/TabTerminals";
+import TabAirlines from "@components/detail-content/TabAirlines";
 
 export const includes = [
     'Buffet & á la carte menu',
@@ -114,19 +117,19 @@ export const i18n = {
 
 <Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
 
-<h2 class="text-xl md:text-3xl font-bold text-orange-600 mt-10 mb-4">Wait in style at Cancun Airport VIP Lounge</h2>
+<TagH2>Wait in style at Cancun Airport VIP Lounge</TagH2>
 
-<p class="text-base md:text-lg mb-2">Experience travel like never before at the MERA Airport VIP Lounge, your haven of comfort and luxury in bustling Cancun Airport. Say goodbye to airport stress as you step into our exclusive retreat, away from the hustle and bustle of the terminals.</p>
+<TagP>Experience travel like never before at the MERA Airport VIP Lounge, your haven of comfort and luxury in bustling Cancun Airport. Say goodbye to airport stress as you step into our exclusive retreat, away from the hustle and bustle of the terminals.</TagP>
 
-<p class="text-base md:text-lg mb-2">Savor every moment with a delicious array of buffet and á la carte options, thoughtfully prepared to tantalize your taste buds. Wash it all down with your favorite drinks from our well-stocked open bar, ensuring your pre-flight relaxation reaches new heights.</p>
+<TagP>Savor every moment with a delicious array of buffet and á la carte options, thoughtfully prepared to tantalize your taste buds. Wash it all down with your favorite drinks from our well-stocked open bar, ensuring your pre-flight relaxation reaches new heights.</TagP>
 
-<p class="text-base md:text-lg mb-2">Escape the chaos and unwind in style on our plush armchairs and sofas, where every moment is designed for your comfort. Stay connected with complimentary WiFi, keep your devices charged with convenient stations, and make last-minute calls with ease.</p>
+<TagP>Escape the chaos and unwind in style on our plush armchairs and sofas, where every moment is designed for your comfort. Stay connected with complimentary WiFi, keep your devices charged with convenient stations, and make last-minute calls with ease.</TagP>
 
-<p class="text-base md:text-lg mb-2">Embrace the luxury you deserve and elevate your travel experience at the MERA Airport VIP Lounge.</p>
+<TagP>Embrace the luxury you deserve and elevate your travel experience at the MERA Airport VIP Lounge.</TagP>
 
 <AdditionalInfo information={information} i18n={i18n} />
 
-<h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Schedule</h3>
+<TagH3>Schedule</TagH3>
 <ul class="space-y-4 text-base md:text-lg">
     <li><i class="at-clock text-green-600"></i> <em>VIP Terminal 2</em> | <strong>5:30 am to 9:30 pm</strong></li>
     <li><i class="at-clock text-green-600"></i> <em>VIP Terminal 3</em> | <strong>6:30 am to 9:30 pm</strong></li>
@@ -135,22 +138,22 @@ export const i18n = {
     <li><i class="at-clock text-green-600"></i> <em>Duration:</em> 3 hours for international lounges. 2 hours for national lounges.</li>
 </ul>
 
-<h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Comfort at any Cancun airport terminal</h3>
+<TagH3>Comfort at any Cancun airport terminal</TagH3>
 
-<p class="text-base md:text-lg mb-2">The <strong>Terminal 4 for International Flights</strong> lounge is even equipped with shower facilities, towels and sleeping pods <strong>(subject to availability)</strong>.</p>
+<TagP>The <strong>Terminal 4 for International Flights</strong> lounge is even equipped with shower facilities, towels and sleeping pods <strong>(subject to availability)</strong>.</TagP>
 
 <TabTerminals client:visible i18n={i18n} />
 
 <TabAirlines client:visible i18n={i18n} />
 
-<h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">Enjoy each detail</h3>
+<TagH3>Enjoy each detail</TagH3>
 
-<p class="text-base md:text-lg mb-4">Prepare to take your airport experience to new heights at the Mera VIP Lounges in Cancun Airport! Right in the heart of the action, these lounges are your ticket to a whole new level of relaxation and indulgence.</p>
+<TagP>Prepare to take your airport experience to new heights at the Mera VIP Lounges in Cancun Airport! Right in the heart of the action, these lounges are your ticket to a whole new level of relaxation and indulgence.</TagP>
 
-<p class="text-base md:text-lg mb-4">Get cozy and connected with our lightning-fast WiFi – perfect for catching up on your socials or streaming your favorite shows. And don't forget to let the world know about your VIP treatment with a quick check-in!</p>
+<TagP>Get cozy and connected with our lightning-fast WiFi – perfect for catching up on your socials or streaming your favorite shows. And don't forget to let the world know about your VIP treatment with a quick check-in!</TagP>
 
-<p class="text-base md:text-lg mb-4">Keep your devices powered up and ready for anything with our convenient charging stations – no more worrying about low battery anxiety. When it's time to refuel, get ready to tantalize your taste buds with a feast like no other.</p>
+<TagP>Keep your devices powered up and ready for anything with our convenient charging stations – no more worrying about low battery anxiety. When it's time to refuel, get ready to tantalize your taste buds with a feast like no other.</TagP>
 
-<p class="text-base md:text-lg mb-4">From mouthwatering á la carte dishes to tempting buffet spreads, there's something to satisfy every craving. Wash it all down with a selection of premium drinks from our open bar – because every journey deserves a little luxury.</p>
+<TagP>From mouthwatering á la carte dishes to tempting buffet spreads, there's something to satisfy every craving. Wash it all down with a selection of premium drinks from our open bar – because every journey deserves a little luxury.</TagP>
 
-<p class="text-base md:text-lg mb-4">Say goodbye to ordinary airport experiences and hello to the VIP treatment you deserve. Join us in the Mera VIP Lounges for an unforgettable moments.</p>
+<TagP>Say goodbye to ordinary airport experiences and hello to the VIP treatment you deserve. Join us in the Mera VIP Lounges for an unforgettable moments.</TagP>

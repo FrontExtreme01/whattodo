@@ -18,6 +18,37 @@ consumption: '15 drink tickets'
 admission: 'VIP admission to 3 nightclubs'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/850597?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/850597'
-location: 'Av. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29771.86446650854!2d-86.746938!3d21.133166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2898a0a9e54b%3A0xb293c2f5881121d0!2sMandala%20Nightclub!5e0!3m2!1ses!2smx!4v1704732310770!5m2!1ses!2smx'
 ---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+
+export const includes = [
+    'VIP admission to 3 nightclubs',
+    '15 drink tickets',
+];
+
+export const notIncludes = [
+    'Bottle service',
+    'Upgrades during special events',
+    'Transportation to and from meeting point',
+];
+
+export const i18n = {
+    INCLUDES: 'Cover Includes',
+    NOT_INCLUDES: 'Not Included',
+};
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+
+<TagH2>About Madness Tour & Nightclub Admission</TagH2>
+
+<TagP>Embark on an unforgettable journey with the Madness Tour, where the pulsating heartbeat of Cancun's nightlife awaits. Join us as we traverse through three of the city's premier party destinations, immersing you in an electrifying atmosphere of revelry and excitement. Say goodbye to the hassle of planning and hello to a seamless party experience, where VIP treatment is not just a luxury but a given. </TagP>
+
+<TagP>Our expert party hosts will lead the way, ensuring every moment is filled with thrill and enjoyment. From the moment you step into each venue, you'll be greeted with complimentary VIP admissions, granting you exclusive access to the hottest spots in town. Sip on your favorite drinks as you dance the night away, surrounded by fellow party enthusiasts and the pulsating beats of Cancun's vibrant nightlife scene. </TagP>
+
+<TagP>Let loose, make memories, and embrace the madness that awaits you on this exhilarating journey through Cancun's nocturnal playground. </TagP>

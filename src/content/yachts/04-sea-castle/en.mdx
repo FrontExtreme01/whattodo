@@ -1,0 +1,106 @@
+---
+slug: 'yacht-rental-cancun-sea-castle/en'
+status: 1
+lang: 'en'
+slugGallery: 'sea-castle'
+title: 'Yacht Rental Cancun Sea Castle'
+description: ''
+keywords: ''
+price: 1318
+stars: '5.0'
+reviews: '765 Reviews'
+image: 
+    src: '/assets/covers/yachts/yacht-sea-castle-cover.webp'
+    alt: 'cover Sea Castle yacht'
+capacity: 'Max 20 passengers'
+size: 'Size: 53 ft'
+highlights: ['Life jackets and snorkel masks', 'Bluetooth music']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/949739?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/949739'
+location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+faqs:
+-   question: 'How many people can board the Sea Castle yacht?'
+    answer: 'The sea castle can accommodate up to 20 people, providing an intimate and comfortable environment for small groups or families.'
+-   question: 'Can I bring my own food and drinks on board?'
+    answer: 'Yes, you are welcome to bring your own food and drinks.'
+-   question: 'What is the duration of the yacht rental?'
+    answer: 'The Sea Castle rental can be for 4, 6 or 8 hrs, depending on the experience you choose.'
+-   question: 'What happens if the weather conditions are bad on the day of my booking?'
+    answer: 'If weather conditions are unfavorable, we will work with you to reschedule your booking. Your safety and comfort are our priority, and we will always ensure the best experience'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import TabPricesYacht from "@components/extras/TabPricesYacht";
+
+export const includes = [
+    '24 beers.',
+    '24 waters.',
+    '24 sodas and ice.',
+    'Life jackets and snorkel masks.',
+    'Captain and sailor at the service of passengers.',
+    'Private Room, rest area and bathroom.',
+    'Bluetooth speakers.',
+];
+
+export const notIncludes = [
+    'Marine dock fee ($10USD per person)',
+    'Tips for crew members.',
+    'Photos.',
+    'Souvenirs.',
+    'Food or snacks.',
+    'Ground transportation.',
+];
+
+export const shouldKnow = [
+    'Subject to availability',
+    'The snorkel activity is weather dependent.',
+    'If weather does not allow to participate on the activity, the activity could be reschedule according to availability.',
+    'Snorkel activity not recommended for pregnant women ',
+    'Snorkel activity not recommended for participants with heart conditions, recent surgeries Back problems or reduce mobility',
+];
+
+export const shouldBring = [
+    'Towel',
+    'Swimwear',
+    'Change of clothes',
+    'Hat',
+    'Sunglasses',
+    'Biodegrádable sunscreen',
+    'Additional cash or form of payment',
+];
+
+export const infoPrices = [
+    {
+        duration: '4 hours',
+        price: '1,318',
+    },
+    {
+        duration: '6 hours',
+        price: '1,470',
+    },
+    {
+        duration: '8 hours',
+        price: '1,704',
+    },
+];
+
+export const i18n = {
+    INCLUDES: 'Included',
+    NOT_INCLUDES: 'Not included',
+    SHOULD_KNOW: 'What you should know',
+    SHOULD_BRING: 'What you should bring',
+};
+
+<TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<TagP><em><strong><small>Please contact us in advance to confirm the start time of your activity</small></strong></em></TagP>
+
+<TagH2>Overview </TagH2>
+
+<TagP> Embark on an unforgettable journey aboard the Sea Castle, a stunning 53-foot yacht departing from the exclusive and prestige Marina Towers in Cancun. Whether you're seeking a peaceful escape or an adventure on the Caribbean’s crystal-clear waters, this luxury yacht is your perfect choice. With ample deck space, modern amenities, and impeccable service, your experience will be nothing short of extraordinary. Soak in breathtaking views, feel the fresh sea breeze, and relax in ultimate comfort. Perfect for private events, romantic outings, or a relaxing day on the water, the Sea Castle offers a premium cruising experience. Book your adventure today! </TagP>
+
+<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />

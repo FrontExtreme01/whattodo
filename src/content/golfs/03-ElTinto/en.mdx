@@ -1,0 +1,91 @@
+---
+slug: 'el-tinto-golf-course-in-cancun/en'
+status: 1
+lang: 'en'
+slugGallery: 'el-tinto'
+title: 'El Tinto Golf Course Cancun'
+description: 'Experience El Tinto Golf Course in Cancun, a Nick Price signature design. Play 18 holes of excellence, enjoy and book your tee time now!'
+keywords: ''
+price: 131
+stars: '4.5'
+reviews: '876 reviews'
+image:
+    src: '/assets/covers/golfs/El-Tinto-Golf-Course-in-Cancun.webp'
+    alt: 'cover of El Tinto Golf Course in Cancun'
+duration: '4 hours'
+holes: '18 holes'
+yards: '7,435 yards'
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/781987?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/781987'
+location: 'Carr. Federal 307, Chetumal Km 388, Cancún, Q.R.'
+schedule: '7:00 am - 6:00 pm'
+availability: 'Mon to Sun'
+mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d476760.37453542685!2d-86.872868!3d21.005043!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e80efffd56609%3A0x63c8693d7132e2d3!2sEl%20Tinto%20Golf%20Course%20Cancun!5e0!3m2!1ses-419!2sus!4v1703704785607!5m2!1ses-419!2sus'
+---
+
+import { Image } from "astro:assets";
+import { ElTinto1, ElTinto2 } from "@/img/allImages";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagH4 from "@components/global/TagH4.astro";
+import TagP from "@components/global/TagP.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ElTintoPrices from "@components/extras/tables/ElTintoPrices.astro";
+
+export const information = [
+    'Number of Holes: 18',
+    'Yardage: 7,435 yards',
+    'Par: 72',
+    'Course Designer: Nick Price | Tom Fazio'
+];
+
+export const i18n = {
+    INFORMATION: 'Details',
+    TABLE_TITLE: 'El Tinto Golf Course Prices',
+    PER_PERSON: 'per person',
+    AFTER: 'after',
+};
+
+<AdditionalInfo i18n={i18n} information={information} />
+
+<ElTintoPrices i18n={i18n} />
+
+<TagH2>Experience Excellence at El Tinto Golf Course in Cancun </TagH2>
+
+<TagP>>Discover the allure of <strong>El Tinto Golf</strong> Course. A masterpiece in the Mexican Caribbean. Besides, immerse yourself in the expertise of architects <strong>Tom Fazio and Nick Price</strong> as you tee off on this Par 72, 18-hole beauty. </TagP>
+
+<TagH3>World-Class Design and Signature Style</TagH3>
+
+<TagP><strong>El Tinto</strong> proudly carries the <strong>signature design of Nick Price</strong>. Moreover a major champion known for his meticulous approach to the game. Together with <strong>renowned architect Tom Fazio</strong>, they crafted a golfing masterpiece that showcases the beauty of the Mexican Caribbean.</TagP>
+
+<Image class="mx-auto py-10" src={ElTinto1} alt="El Tinto Golf Course in Cancun" />
+
+<TagH3>A Challenge Awaits – Par 72, 18 Holes </TagH3>
+
+<TagP>Test your skills on “El Tinto” Golf Course’s Par 72 layout, featuring 18 captivating holes. Indeed, designed to cater to players of all levels, the course boasts a variety of tee options. With slope ratings ranging from 123 to 138 for men and 122 to 138 for women. </TagP>
+
+<TagH3>Dress Code & Golf Lessons </TagH3>
+
+<TagP>Elevate your golfing experience by adhering to the dress code: proper golf outfit and soft spikes are required. In brief for those looking to refine their skills, golf lessons are available, ensuring you make the most of your time on this exceptional course. </TagP>
+
+<Image class="mx-auto py-10" src={ElTinto2} alt="El Tinto Golf Course in Cancun" /> 
+
+<TagH3>Experience Convenience and Comfort </TagH3>
+
+<TagP>Open daily from 6:30 am till sunset. This <strong>Golf Course in Cancun</strong> provides ample time to enjoy the stunning surroundings and the challenge of the course. Clubs and shoe rentals are available, ensuring that you have everything you need for a seamless golfing experience. </TagP>
+
+<TagH3>Indulge at Hole 9 Snack Bar & Spectacular Clubhouse </TagH3>
+
+<TagP>Amidst your game, take a break at the Hole 9 snack bar, serving delicious treats to keep you energized. Afterward, head to the impressive clubhouse. Where you can unwind, relish in the ambiance, and share stories of your rounds with fellow golf enthusiasts. </TagP>
+
+<TagH3>Perfect Your Swing at the Driving Range </TagH3>
+
+<TagP>Fine-tune your skills at the driving range, complete with a putter green and chipping range. Whether you’re a beginner seeking improvement or a seasoned player honing your technique. Then the driving range offers an ideal setting for practice. </TagP>
+
+<TagH4>Embrace the Best Golf in Cancun </TagH4>
+
+<TagP>“El Tinto” Golf Course stands as one of the top Cancun golf courses, attracting players from around the world. Certainly, immerse yourself in the enchanting Mexican Caribbean as you tee off on this remarkable course. </TagP>
+
+<TagH4>Book Your Tee Time Today </TagH4>
+
+<TagP>Finally, don’t miss the opportunity to experience the “El Tinto” Golf Course in Cancun. Book your tee time now and savor a golfing journey like no other. Where excellence, nature, and expertise converge for an unforgettable game. </TagP>

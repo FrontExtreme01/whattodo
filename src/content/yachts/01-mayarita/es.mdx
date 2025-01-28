@@ -17,6 +17,90 @@ size: 'Tamaño: 37 ft'
 highlights: ['Chalecos salvavidas y máscaras de snorkel', 'Música Bluetooth']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/946931?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/946931'
-location: ''
-testimonials: []
+location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+faqs:
+-   question: '¿Cuántas personas pueden abordar el yate Mayarita?'
+    answer: 'El yate Mayarita puede acomodar hasta 12 personas, proporcionando un ambiente íntimo y cómodo para grupos pequeños o familias.'
+-   question: '¿Puedo llevar mi propia comida y bebidas a bordo?'
+    answer: 'Sí, puedes traer tu propia comida y bebidas.'
+-   question: '¿El yate Mayarita está disponible para alquileres de medio día o día completo?'
+    answer: 'Sí, el yate Mayarita está disponible para alquileres de medio día o día completo, adaptados a tus necesidades y preferencias.'
+-   question: '¿El yate cuenta con equipo de seguridad para todos los pasajeros?'
+    answer: 'Sí, el yate Mayarita está equipado con todo el equipo de seguridad necesario para todos los pasajeros, incluyendo chalecos salvavidas, bengalas y otros dispositivos de seguridad. La seguridad de nuestros huéspedes es nuestra máxima prioridad.'
 ---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import TabPricesYacht from "@components/extras/TabPricesYacht";
+
+export const includes = [
+    '24 cervezas.',
+    '24 aguas.',
+    '24 refrescos y hielo.',
+    'Chalecos salvavidas y máscaras de snorkel.',
+    'Capitán y marinero al servicio de los pasajeros.',
+    'Cuarto privado, área de descanso y baño.',
+    'Altavoces Bluetooth.',
+];
+
+export const notIncludes = [
+    'Tarifa de muelle marino ($10USD por persona)',
+    'Propinas para los miembros de la tripulación.',
+    'Fotos.',
+    'Recuerdos.',
+    'Comida o snacks.',
+    'Transporte terrestre.',
+];
+
+export const shouldKnow = [
+    'Sujeto a disponibilidad.',
+    'La actividad de snorkel depende del clima.',
+    'Si el clima no permite participar en la actividad, la actividad podría reprogramarse según disponibilidad.',
+];
+
+export const shouldBring = [
+    'Toalla',
+    'Traje de baño',
+    'Ropa de cambio',
+    'Sombrero',
+    'Lentes de sol',
+    'Protector solar biodegradable',
+    'Efectivo adicional o forma de pago',
+];
+
+export const infoPrices = [
+    {
+        duration: '4 horas',
+        information: '(sin cruzar a la isla)',
+        price: '699',
+    },
+    {
+        duration: '6 horas',
+        price: '851',
+    },
+    {
+        duration: '8 horas',
+        price: '1,085',
+    },
+];
+
+export const i18n = {
+    INCLUDES: 'Incluye',
+    NOT_INCLUDES: 'No Incluye',
+    SHOULD_KNOW: 'Antes de reservar, ten en cuenta lo siguiente:',
+    SHOULD_BRING: 'Lo que debes llevar',
+};
+
+<TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+
+<TagP><em><strong><small>Por favor contáctenos con anticipación para confirmar la hora de inicio de su actividad.</small></strong></em></TagP>
+
+<TagH2>Descripción General</TagH2>
+
+<TagP>Zarpe a bordo del Mayarita, un yate de 37 pies que sale de la Marina Kaybal de Cancún. Este modelo 2014 está impecablemente mantenido, con tapicería impecable, motores potentes y equipamiento de primer nivel, lo que garantiza un viaje suave y lujoso. Ya sea que busque un día relajante en el agua, una celebración con amigos o una escapada privada, el Mayarita ofrece la escapada perfecta. Disfrute de impresionantes vistas del Caribe, aguas cristalinas y la comodidad de un yate completamente equipado. Cree recuerdos inolvidables mientras navega con estilo a bordo de este yate bien conservado. ¡Reserve ahora y experimente la belleza de Cancún desde el mar! </TagP>
+
+<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />

@@ -1,0 +1,106 @@
+---
+slug: 'yacht-rental-cancun-sea-castle/es'
+status: 1
+lang: 'es'
+slugGallery: 'sea-castle'
+title: 'Renta de Yate Cancún Sea Castle'
+description: ''
+keywords: ''
+price: 1318
+stars: '5.0'
+reviews: '765 Reseñas'
+image: 
+    src: '/assets/covers/yachts/yacht-sea-castle-cover.webp'
+    alt: 'portada yate Sea Castle'
+capacity: 'Máximo 20 pasajeros'
+size: 'Tamaño: 53 pies'
+highlights: ['Chalecos salvavidas y máscaras de snorkel', 'Música Bluetooth']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/949739?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/949739'
+location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+faqs:
+-   question: '¿Cuántas personas pueden abordar el yate Sea Castle?'
+    answer: 'El Sea Castle puede acomodar hasta 20 personas, proporcionando un ambiente íntimo y cómodo para grupos pequeños o familias.'
+-   question: '¿Puedo llevar mi propia comida y bebida a bordo?'
+    answer: 'Sí, puedes traer tu propia comida y bebida.'
+-   question: '¿Cuál es la duración del alquiler del yate?'
+    answer: 'El alquiler del Sea Castle puede ser de 4, 6 u 8 hrs, dependiendo de la experiencia que elijas.'
+-   question: '¿Qué sucede si las condiciones climáticas son malas el día de mi reserva?'
+    answer: 'Si las condiciones climáticas son desfavorables, trabajaremos contigo para reprogramar tu reserva. Tu seguridad y comodidad son nuestra prioridad, y siempre garantizaremos la mejor experiencia.'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import TabPricesYacht from "@components/extras/TabPricesYacht";
+
+export const includes = [
+    '24 cervezas.',
+    '24 aguas.',
+    '24 refrescos y hielo.',
+    'Chalecos salvavidas y máscaras de snorkel.',
+    'Capitán y marinero al Servicio de pasajeros.',
+    'Habitación privada, área de descanso y baño.',
+    'Bocinas Bluetooth.',
+];
+
+export const notIncludes = [
+    'Tarifa de muelle marítimo ($10USD por persona)',
+    'Propinas para tripulantes.',
+    'Fotos.',
+    'Recuerdos.',
+    'Comida o bocadillos.',
+    'Transporte terrestre.',
+];
+
+export const shouldKnow = [
+    'Sujeto a disponibilidad',
+    'La actividad de snorkel depende del clima.',
+    'Si el clima no permite participar en la actividad, la actividad podría reprogramarse según disponibilidad.',
+    'La actividad de snorkel no se recomienda para mujeres embarazadas. ',
+    'Actividad de snorkel no recomendada para participantes con problemas cardiacos, cirugías recientes, problemas de espalda o movilidad reducida',
+];
+
+export const shouldBring = [
+    'Toalla',
+    'Traje de baño',
+    'Ropa de cambio',
+    'Sombrero',
+    'Lentes de sol',
+    'Protector solar biodegradable',
+    'Efectivo adicional o forma de pago',
+];
+
+export const infoPrices = [
+    {
+        duration: '4 horas',
+        price: '1,318',
+    },
+    {
+        duration: '6 horas',
+        price: '1,470',
+    },
+    {
+        duration: '8 horas',
+        price: '1,704',
+    }
+]
+
+export const i18n = {
+    INCLUDES: 'Incluye',
+    NOT_INCLUDES: 'No Incluye',
+    SHOULD_KNOW: 'Antes de reservar, ten en cuenta lo siguiente:',
+    SHOULD_BRING: 'Lo que debes llevar',
+};
+
+<TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<TagP><em><strong><small>Póngase en contacto con nosotros con anticipación para confirmar la hora de inicio de su actividad</small></strong></em></TagP>
+
+<TagH2>Descripción General</TagH2>
+
+<TagP> Embárcate en un viaje inolvidable a bordo del Sea Castle, un impresionante yate de 53 pies que zarpa desde el exclusivo y prestigioso Marina Towers en Cancún. Ya sea que busques una escapada tranquila o una aventura en las aguas cristalinas del Caribe, este yate de lujo es tu elección perfecta. Con un amplio espacio en la cubierta, comodidades modernas y un servicio impecable, tu experiencia será extraordinaria. Sumérgete en las impresionantes vistas, siente la fresca brisa marina y relájate con la máxima comodidad. Perfecto para eventos privados, salidas románticas o un día relajante en el agua, el Sea Castle ofrece una experiencia de crucero de primera. ¡Reserva tu aventura hoy! </TagP>
+
+<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />

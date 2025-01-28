@@ -1,0 +1,23 @@
+---
+const { i18n } = Astro.props;
+---
+
+<table class="table-auto w-full sm:w-3/4 border-separate border-spacing-2 text-sm sm:text-base my-5">
+    <thead>
+        <tr>
+            <td colspan="4">
+                <h3 class="bg-slate-200 font-bold text-xl text-center p-4">{i18n.TABLE_TITLE}</h3>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">Green Fee:</th>
+            <td colspan="1" class="bg-slate-100 text-center p-2"><strong>$ 180.00 USD</strong> {i18n.PER_PERSON}</td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">Twilight fee:</th>
+            <td colspan="1" class="bg-slate-100 text-center p-2"><strong>$ 91.00 USD</strong> {i18n.PER_PERSON}<br><em class="text-xs">({i18n.AFTER} 12:00 pm)</em></td>
+        </tr>
+    </tbody>
+</table><br>

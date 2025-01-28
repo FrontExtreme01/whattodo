@@ -9,6 +9,7 @@ import FormBokunMobile from "@components/detail-content/FormBokunMobile";
 import FormBokunDesktop from "@components/detail-content/FormBokunDesktop";
 import ButtonsContact from "@components/detail-content/ButtonsContact.astro";
 import SliderGallery from "@components/detail-content/SliderGallery";
+import FAQs from "@components/detail-content/FAQs";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -55,17 +56,18 @@ const seoMetaDatos = {
     <section class="mx-6 md:mx-20 lg:mx-24 mt-12 mb-14">
         <div class="flex flex-wrap">
             <!-- Header -->
-            <header class="flex flex-wrap w-full">
-                <h1 class="w-10/12 text-2xl md:text-4xl font-bold italic text-green-700">
+            <header class="flex flex-wrap items-center w-full">
+                <h1 class="pr-1 w-9/12 text-2xl md:text-4xl font-bold italic text-green-700 relative">
                     {frontmatter.title}
                 </h1>
-                <div class="w-2/12 flex justify-center items-center">
+                <div class="w-3/12 flex flex-col md:flex-row justify-center items-center gap-3">
+                    <img class="w-16 md:w-20" src="/assets/icons/best-seller-icon.svg" height="80" width="80" alt="icon best seller">
                     <ShareSM client:idle site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} />
                 </div>
                 <ul class="flex flex-wrap gap-2 md:gap-5 w-full my-6 text-sm md:text-lg">
                     <li>
                         <i class="at-star text-amber-500"></i>
-                        <span class="font-bold"> {frontmatter.stars} 
+                        <span class="font-bold"> {frontmatter.stars}
                             <span class="text-slate-600 font-thin"> ({frontmatter.reviews})</span>
                         </span>
                     </li>
@@ -76,7 +78,7 @@ const seoMetaDatos = {
                 </ul>
             </header>
             <!-- Content -->
-            <div class="w-full lg:w-8/12 md:pr-5">
+            <div class="w-full lg:w-8/12 md:pr-14">
                 <SliderGallery client:load images={gallery} accessibility={accessibility}/> 
                 <!-- Hightlight -->
                 <div class="flex flex-wrap w-full gap-5 lg:gap-10 my-6 justify-center text-sm md:text-lg text-center">
@@ -110,7 +112,9 @@ const seoMetaDatos = {
         </div>
     </section>
     <!-- Testimonials -->
-    {frontmatter.testimonials ? <Testimonials client:visible testimonials={frontmatter.testimonials} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_TESTIMONIAL}/> : "" }
+    {frontmatter.testimonials && <Testimonials client:visible testimonials={frontmatter.testimonials} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_TESTIMONIAL}/> }
+    <!-- FAQs -->
+    {frontmatter.faqs && <FAQs client:visible FAQS={frontmatter.faqs} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_FAQS} description={i18n.DETAILS_CONTENT.GENERAL.DESCRIPTION_FAQS}/> }
     <!-- Form Mobile -->
     <FormBokunMobile client:visible data={dataForm} />
 </BaseLayout>

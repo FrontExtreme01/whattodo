@@ -8,6 +8,9 @@ import QuestionPolicy from "@components/detail-content/QuestionPolicy.astro";
 import FormBokunDesktop from "@components/detail-content/FormBokunDesktop";
 import FormBokunMobile from "@components/detail-content/FormBokunMobile";
 import ButtonsContact from "@components/detail-content/ButtonsContact.astro";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
 
 import cover from "@/img/galleries/transportation/hotel-pick-up-and-drop-off-transportation-in-cancun-hotel-zone-and-aiport.webp"
 
@@ -90,43 +93,59 @@ const seoMetaDatos = {
                 <div class="flex flex-wrap">
                     <div class="w-full md:w-1/2 md:px-5">
                         <h3 class="text-lg md:text-2xl font-bold mb-4 text-orange-600 mt-10">{i18n.TRANSPORTATION_PAGE.NOTES.TITLE}</h3>
-                        {Object.values(i18n.TRANSPORTATION_PAGE.NOTES.LIST).map((item) =>(
-                            <p class="text-base md:text-lg mb-2"><i class="at-info-circle text-green-700"></i> {item}</p>
-                        ))}
-                        <h3 class="text-lg md:text-2xl font-bold mb-4 text-orange-600 mt-10">{i18n.TRANSPORTATION_PAGE.CHARACTERISTICS.TITLE}</h3>
-                        {Object.values(i18n.TRANSPORTATION_PAGE.CHARACTERISTICS.LIST).map((item) =>(
-                            <p class="text-base md:text-lg mb-2"><i class="at-info-circle text-green-700"></i> {item}</p>
-                        ))}
+                        <ul class="space-y-4 text-base md:text-lg">
+                            {Object.values(i18n.TRANSPORTATION_PAGE.NOTES.LIST).map((item) =>(
+                                <li><i class="at-info-circle text-green-700"></i> {item}</li>
+                            ))}
+                        </ul>
                     </div>
                     <div class="w-full md:w-1/2 md:px-5">
                         <h3 class="text-lg md:text-2xl font-bold mb-4 text-orange-600 mt-10">{i18n.TRANSPORTATION_PAGE.TRAVEL_TIME.TITLE}</h3>
-                        {Object.values(i18n.TRANSPORTATION_PAGE.TRAVEL_TIME.LIST).map((item) => (
-                            <p class="text-base md:text-lg mb-2"><i class="at-taxi-service text-green-700"></i> {item}</p>
-                        ))}
+                        <ul class="space-y-4 text-base md:text-lg">
+                            {Object.values(i18n.TRANSPORTATION_PAGE.TRAVEL_TIME.LIST).map((item) => (
+                                <li><i class="at-taxi-service text-green-700"></i> {item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/2 md:px-5">
+                        <h3 class="text-lg md:text-2xl font-bold mb-4 text-orange-600 mt-10">{i18n.TRANSPORTATION_PAGE.CHARACTERISTICS.TITLE}</h3>
+                        <ul class="space-y-4 text-base md:text-lg">
+                            {Object.values(i18n.TRANSPORTATION_PAGE.CHARACTERISTICS.LIST).map((item) =>(
+                                <li><i class="at-info-circle text-green-700"></i> {item}</li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
                 <hr class="h-0.5 bg-slate-200 my-10">
                 <!-- Information -->
                 <div class="text-justify">
-                    <h2 class="text-xl md:text-3xl font-bold text-orange-600 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.TITLE}</h2>
-                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_TULUM.TITLE}</h3>
-                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_TULUM.DESCRIPTION}</p>
-                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_PLAYA_DEL_CARMEN.TITLE}</h3>
-                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_PLAYA_DEL_CARMEN.DESCRIPTION}</p>
-                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_RIVERA_MAYA.TITLE}</h3>
-                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_RIVERA_MAYA.DESCRIPTION}</p>
-                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COBA.TITLE}</h3>
-                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COBA.DESCRIPTION}</p>
-                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_AKUMAL.TITLE}</h3>
-                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_AKUMAL.DESCRIPTION}</p>
-                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.MOON_PALACE.TITLE}</h3>
-                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.MOON_PALACE.DESCRIPTION}</p>
-                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.OCCIDENTAL_XCARET.TITLE}</h3>
-                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.OCCIDENTAL_XCARET.DESCRIPTION}</p>
-                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COSTA_MUJERES.TITLE}</h3>
-                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COSTA_MUJERES.DESCRIPTION}</p>
-                    <h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">{i18n.TRANSPORTATION_PAGE.INFORMATION.RIU_PALACE.TITLE}</h3>
-                    <p class="text-base md:text-lg mb-2">{i18n.TRANSPORTATION_PAGE.INFORMATION.RIU_PALACE.DESCRIPTION}</p>
+                    <TagH2>{i18n.TRANSPORTATION_PAGE.INFORMATION.TITLE}</TagH2>
+                    <TagH3>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_TULUM.TITLE}</TagH3>
+                    <TagP>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_TULUM.DESCRIPTION}</TagP>
+
+                    <TagH3>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_PLAYA_DEL_CARMEN.TITLE}</TagH3>
+                    <TagP>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_PLAYA_DEL_CARMEN.DESCRIPTION}</TagP>
+
+                    <TagH3>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_RIVERA_MAYA.TITLE}</TagH3>
+                    <TagP>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_RIVERA_MAYA.DESCRIPTION}</TagP>
+
+                    <TagH3>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COBA.TITLE}</TagH3>
+                    <TagP>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COBA.DESCRIPTION}</TagP>
+
+                    <TagH3>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_AKUMAL.TITLE}</TagH3>
+                    <TagP>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_AKUMAL.DESCRIPTION}</TagP>
+
+                    <TagH3>{i18n.TRANSPORTATION_PAGE.INFORMATION.MOON_PALACE.TITLE}</TagH3>
+                    <TagP>{i18n.TRANSPORTATION_PAGE.INFORMATION.MOON_PALACE.DESCRIPTION}</TagP>
+
+                    <TagH3>{i18n.TRANSPORTATION_PAGE.INFORMATION.OCCIDENTAL_XCARET.TITLE}</TagH3>
+                    <TagP>{i18n.TRANSPORTATION_PAGE.INFORMATION.OCCIDENTAL_XCARET.DESCRIPTION}</TagP>
+
+                    <TagH3>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COSTA_MUJERES.TITLE}</TagH3>
+                    <TagP>{i18n.TRANSPORTATION_PAGE.INFORMATION.CANCUN_TO_COSTA_MUJERES.DESCRIPTION}</TagP>
+                    
+                    <TagH3>{i18n.TRANSPORTATION_PAGE.INFORMATION.RIU_PALACE.TITLE}</TagH3>
+                    <TagP>{i18n.TRANSPORTATION_PAGE.INFORMATION.RIU_PALACE.DESCRIPTION}</TagP>
                 </div>
                 <hr class="h-0.5 bg-slate-200 my-10">
 

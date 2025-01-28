@@ -2,7 +2,7 @@
 import { getI18N } from "@/i18n";
 import { useTranslatedPath } from "@/i18n/utils";
 import { Image } from "astro:assets";
-import { IconLastminute } from "@/img/allImages";
+import { IconLastminute, IconEarlyBird } from "@/img/allImages";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -27,11 +27,21 @@ const url = translatePath(`/tour/${tour.new_slug}/`);
                     <Image src={IconLastminute} alt="icon last minute" class="w-14 sm:w-20" />
                 </span>
             )}
+            {tour.data.earlyBird && (
+                <span class="absolute z-10 top-3 right-3 sm:top-0 sm:-right-2">
+                    <Image src={IconEarlyBird} alt="icon early birds" class="w-14 sm:w-20" />
+                </span>
+            )}
         </div>
 
         <div class="py-3 px-1.5 sm:px-5 sm:py-1 text-justify w-2/6 sm:w-full">
             <h3 class="hidden sm:block font-bold text-base sm:text-lg mb-4 text-center text-green-700">{tour.data.title}</h3>
             {tour.data.lastMinute && (
+                <p class="block sm:hidden font-extrabold text-red-500 text-sm line-through">
+                    ${(tour.data.price * 1.4).toFixed(0)} USD
+                </p>
+            )}
+            {tour.data.combo && (
                 <p class="block sm:hidden font-extrabold text-red-500 text-sm line-through">
                     ${(tour.data.price * 1.4).toFixed(0)} USD
                 </p>
@@ -61,6 +71,12 @@ const url = translatePath(`/tour/${tour.new_slug}/`);
         <div class="w-full flex flex-wrap justify-evenly mb-5 lg:px-5 gap-y-3 mt-auto">
             <div class="hidden sm:block w-full text-center my-2">
                 {tour.data.lastMinute && (
+                    <p class="font-bold text-red-600 text-xs sm:text-sm line-through mb-2">
+                        <span>{i18n.TOUR_PAGE.CARD.FROM}:</span>
+                        ${(tour.data.price * 1.4).toFixed(0)} USD
+                    </p>
+                )}
+                {tour.data.combo && (
                     <p class="font-bold text-red-600 text-xs sm:text-sm line-through mb-2">
                         <span>{i18n.TOUR_PAGE.CARD.FROM}:</span>
                         ${(tour.data.price * 1.4).toFixed(0)} USD

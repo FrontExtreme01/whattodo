@@ -1,0 +1,84 @@
+---
+slug: 'playa-mujeres-golf-club-in-cancun/en'
+status: 1
+lang: 'en'
+slugGallery: 'playa-mujeres'
+title: 'Playa Mujeres Golf Club in Cancun'
+description: 'Experience golfing bliss at Playa Mujeres Golf Club in Cancun. Enjoy 18 holes of strategic challenges, ammenities and stunning views.'
+keywords: ''
+price: 172
+stars: '4.5'
+reviews: '419 reviews'
+image:
+    src: '/assets/covers/golfs/playa-mujeres-golf-club.webp'
+    alt: 'cover of Playa Mujeres Golf Club in Cancun'
+duration: '4 hours'
+holes: '18 holes'
+yards: '7,218 yards'
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/785123?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/785123'
+location: 'Prol. Bonampak, Carr. a Punta Sam s/n, Cancún, Q.R.'
+schedule: '7:00 am - 7:00 pm'
+availability: 'Mon to Sun'
+mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d475946.9739375763!2d-86.820433!3d21.258174!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c31fa8b775585%3A0x47dff73fe0858902!2sPLAYA%20MUJERES%20GOLF%20CLUB!5e0!3m2!1ses-419!2sus!4v1703707160222!5m2!1ses-419!2sus'
+---
+
+import { Image } from "astro:assets";
+import { PM1, PM2 } from "@/img/allImages";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagH4 from "@components/global/TagH4.astro";
+import TagP from "@components/global/TagP.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import PlayaMujeresPrices from "@components/extras/tables/PlayaMujeresPrices.astro";
+
+export const information = [
+    'Number of Holes: 18',
+    'Yardage: 7,218 yards',
+    'Par: 72',
+    'Course Designer: Greg Norman Golf Course Design.',
+];
+
+export const i18n = {
+    INFORMATION: 'Details',
+    TABLE_TITLE: 'Playa Mujeres Golf Club Rates',
+    CONDITIONS: 'Players under 17 years of age must be accompanied by an adult.',
+    AFTER: 'After',
+    AGE_JUNIOR: '17 yrs. and under'
+};
+
+<AdditionalInfo information={information} i18n={i18n} />
+
+<PlayaMujeresPrices i18n={i18n} />
+
+<TagH2>A Golfer’s Paradise in Cancun </TagH2>
+
+<TagP><strong>Playa Mujeres Golf Club</strong>, a renowned 18-hole course, embraces the natural beauty of the surrounding fauna and environmentally sensitive areas. Besides, being <strong>strategically designed</strong>, the course caters to players of all abilities, demanding precision in each shot. </TagP>
+
+<Image class="mx-auto py-10" src={PM1} alt="Playa Mujeres Golf Club in Cancun" />
+
+<TagH3>Unmatched Amenities for Your Pleasure </TagH3>
+
+<TagP>Enjoy an unforgettable golfing experience with amenities designed for your comfort. Moreover, our <strong>Pro Shop features</strong> major golf brands and souvenirs. Indeed, the Lagoon Grill at the Clubhouse offers a delightful menu and full bar service with a spectacular view of the 18th hole. </TagP>
+
+<TagH3>Top-Notch Rental Clubs & Technology </TagH3>
+
+<TagP>Rent premium Callaway Golf clubs at an accessible rate or opt for the latest technology with brand new <strong>TaylorMade</strong> M2 and Kalea sets. In any case, men’s, ladies’, and junior rental sets are available, ensuring you have the best tools for an exceptional game. </TagP>
+
+<TagH3>Course Details & Location </TagH3>
+
+<TagP><strong>Par 72 with a yardage of 7,218</strong>, the course features on-course beverage carts and golf carts with GPS Visage system and Bluetooth speakers. In addition, the rate includes a shared golf cart with GPS, round-trip transportation from any Cancun area hotel, and access to practice facilities. </TagP>
+
+<Image class="mx-auto py-10" src={PM2} alt="Playa Mujeres Golf Club in Cancun" /> 
+
+<TagH4>Convenient & Luxurious Location </TagH4>
+
+<TagP>Playa Mujeres Golf Club is <strong>situated in Costa Mujeres</strong>, offering natural beauty and secluded luxury. In brief, is located just <strong>20 miles north of Cancun International Airport</strong> and 9 miles from Cancun downtown, ferry boat transportation is not necessary. </TagP>
+
+<TagH4>Dress Code & Rider Policy </TagH4>
+
+<TagP>Golfers must wear appropriate attire, including a collared golf shirt and Bermuda/Golf style shorts. Furthermore, denim, swimwear, cut-offs, t-shirts, halter tops, tank tops, and flip-flops are not permitted. In fact, outside food and beverage are also not allowed. Finally, rider availability is subject to golf cart availability and cannot be guaranteed in advance. </TagP>
+
+<TagH4>Experience Golfing Perfection </TagH4>
+
+<TagP>Playa Mujeres Golf Club invites you to savor an extraordinary golfing journey in the heart of Cancun. Book your tee time now and bask in the beauty of this exceptional golf course. </TagP>

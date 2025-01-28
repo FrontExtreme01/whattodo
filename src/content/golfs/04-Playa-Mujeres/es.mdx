@@ -1,0 +1,84 @@
+---
+slug: 'playa-mujeres-golf-club-in-cancun/es'
+status: 1
+lang: 'es'
+slugGallery: 'playa-mujeres'
+title: 'Playa Mujeres Golf Club en Cancún'
+description: 'Experimenta la dicha de jugar golf en Playa Mujeres Golf Club en Cancún. Disfruta de 18 hoyos de desafíos estratégicos, amenidades y vistas impresionantes.'
+keywords: ''
+price: 172
+stars: '4.5'
+reviews: '419 reseñas'
+image:
+    src: '/assets/covers/golfs/playa-mujeres-golf-club.webp'
+    alt: 'portada de Playa Mujeres Golf Club en Cancún'
+duration: '4 horas'
+holes: '18 hoyos'
+yards: '7,218 yardas'
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/785123?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/785123'
+location: 'Prol. Bonampak, Carr. a Punta Sam s/n, Cancún, Q.R.'
+schedule: '7:00 am - 7:00 pm'
+availability: 'Lun a Dom'
+mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d475946.9739375763!2d-86.820433!3d21.258174!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c31fa8b775585%3A0x47dff73fe0858902!2sPLAYA%20MUJERES%20GOLF%20CLUB!5e0!3m2!1ses-419!2sus!4v1703707160222!5m2!1ses-419!2sus'
+---
+
+import { Image } from "astro:assets";
+import { PM1, PM2 } from "@/img/allImages";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagH4 from "@components/global/TagH4.astro";
+import TagP from "@components/global/TagP.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import PlayaMujeresPrices from "@components/extras/tables/PlayaMujeresPrices.astro";
+
+export const information = [
+    'Número de Hoyos: 18',
+    'Yardas: 7,218 yardas',
+    'Par: 72',
+    'Diseñador del Campo: Greg Norman Golf Course Design.',
+];
+
+export const i18n = {
+    INFORMATION: 'Detalles',
+    TABLE_TITLE: 'Tarifas de Playa Mujeres Golf Club',
+    CONDITIONS: 'Los jugadoras menores de 17 años deben estar acompañados por un adulto.',
+    AFTER: 'Después de',
+    AGE_JUNIOR: '17 años y menores'
+};
+
+<AdditionalInfo information={information} i18n={i18n} />
+
+<PlayaMujeresPrices i18n={i18n} />
+
+<TagH2>Un Paraíso para los Golfistas en Cancún </TagH2>
+
+<TagP><strong>Playa Mujeres Golf Club</strong>, un renombrado campo de 18 hoyos, abraza la belleza natural de la fauna circundante y áreas sensibles al medio ambiente. Además, al ser <strong>diseñado estratégicamente</strong>, el campo atiende a jugadores de todas las habilidades, exigiendo precisión en cada tiro. </TagP>
+
+<Image class="mx-auto py-10" src={PM1} alt="Playa Mujeres Golf Club en Cancún" />
+
+<TagH3>Amenidades Inigualables para tu Placer </TagH3>
+
+<TagP>Disfrute de una experiencia de golf inolvidable con comodidades diseñadas para su comodidad. Además, nuestra <strong>Pro Shop</strong> cuenta con las principales marcas de golf y souvenirs. De hecho, el Lagoon Grill en la Casa Club ofrece un delicioso menú y servicio de bar completo con una vista espectacular del hoyo 18. </TagP>
+
+<TagH3>Palos de golf de primera calidad y tecnología </TagH3>
+
+<TagP>Alquile palos de golf Callaway premium a un precio accesible u opte por la última tecnología con los nuevos sets <strong>TaylorMade</strong> M2 y Kalea. En cualquier caso, hay sets de alquiler disponibles para hombres, mujeres y niños, lo que garantiza que tendrá las mejores herramientas para un juego excepcional. </TagP>
+
+<TagH3>Detalles y ubicación del campo </TagH3>
+
+<TagP><strong>Par 72 con una distancia de 7,218 yardas</strong>, el campo cuenta con carritos de bebidas en el campo y carritos de golf con sistema GPS Visage y parlantes Bluetooth. Además, la tarifa incluye un carrito de golf compartido con GPS, transporte de ida y vuelta desde cualquier hotel del área de Cancún y acceso a las instalaciones de práctica. </TagP>
+
+<Image class="mx-auto py-10" src={PM2} alt="Playa Mujeres Golf Club en Cancún" />
+
+<TagH4>Ubicación conveniente y lujosa</TagH4>
+
+<TagP>Playa Mujeres Golf Club está <strong>situado en Costa Mujeres</strong>, y ofrece belleza natural y lujo aislado. En resumen, está ubicado a solo <strong>20 millas al norte del Aeropuerto Internacional de Cancún</strong> y a 9 millas del centro de Cancún, por lo que no es necesario el transporte en ferry. </TagP>
+
+<TagH4>Código de vestimenta y política de participantes </TagH4>
+
+<TagP>Los golfistas deben usar vestimenta apropiada, que incluya una camisa de golf con cuello y bermudas/pantalones cortos estilo golf. Además, no se permiten jeans, trajes de baño, pantalones cortos, camisetas, tops con cuello halter, camisetas sin mangas y chanclas. De hecho, tampoco se permite comida ni bebida del exterior. Por último, la disponibilidad de participantes está sujeta a la disponibilidad de carritos de golf y no se puede garantizar con anticipación. </TagP>
+
+<TagH4>Viva la perfección del golf </TagH4>
+
+<TagP>Playa Mujeres Golf Club lo invita a disfrutar de una experiencia de golf extraordinaria en el corazón de Cancún. Reserve su hora de salida ahora y disfrute de la belleza de este excepcional campo de golf. </TagP>

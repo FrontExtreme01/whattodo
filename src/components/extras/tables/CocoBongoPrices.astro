@@ -1,0 +1,92 @@
+---
+const { lang } = Astro.props;
+---
+<div class="overflow-x-scroll">
+<table class="table-auto w-full mx-auto sm:w-3/4 border-separate border-spacing-0 text-sm sm:text-base my-5">
+    <thead>
+        <tr>
+            <th class="border border-gray-300 p-3 bg-slate-100 font-bold">{lang === "en" ? 'Day': 'Día'}</th>
+            <th class="border border-gray-300 p-3 bg-slate-100 font-bold">Drink Pack</th>
+            <th class="border border-gray-300 p-3 bg-slate-100 font-bold">Regular</th>
+            <th class="border border-gray-300 p-3 bg-slate-100 font-bold">Premium</th>
+            <th class="border border-gray-300 p-3 bg-slate-100 font-bold">Miembro Gold</th>
+            <th class="border border-gray-300 p-3 bg-slate-100 font-bold">Royal Service</th>
+            <th class="border border-gray-300 p-3 bg-slate-100 font-bold">Front Row</th>
+            <th class="border border-gray-300 p-3 bg-slate-100 font-bold">Bongo Tour</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="border border-gray-300 p-3 bg-slate-100 font-bold">{lang === "en" ? 'Monday': 'Lunes'}</td>
+            <td class="border border-gray-300 p-3">$ 60</td>
+            <td class="border border-gray-300 p-3">$ 87</td>
+            <td class="border border-gray-300 p-3">$ 120</td>
+            <td class="border border-gray-300 p-3">$ 155</td>
+            <td class="border border-gray-300 p-3">$ 175</td>
+            <td class="border border-gray-300 p-3">$ 185</td>
+            <td class="border border-gray-300 p-3">$ 140</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 p-3 bg-slate-100 font-bold">{lang === "en" ? 'Tuesday': 'Martes'}</td>
+            <td class="border border-gray-300 p-3">$ 60</td>
+            <td class="border border-gray-300 p-3">$ 87</td>
+            <td class="border border-gray-300 p-3">$ 120</td>
+            <td class="border border-gray-300 p-3">$ 155</td>
+            <td class="border border-gray-300 p-3">$ 175</td>
+            <td class="border border-gray-300 p-3">$ 185</td>
+            <td class="bg-amber-400 border border-gray-300 p-3">N/A</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 p-3 bg-slate-100 font-bold">{lang === "en" ? 'Wednesday': 'Miércoles'}</td>
+            <td class="border border-gray-300 p-3">$ 60</td>
+            <td class="border border-gray-300 p-3">$ 87</td>
+            <td class="border border-gray-300 p-3">$ 120</td>
+            <td class="border border-gray-300 p-3">$ 155</td>
+            <td class="border border-gray-300 p-3">$ 175</td>
+            <td class="border border-gray-300 p-3">$ 185</td>
+            <td class="bg-amber-400 border border-gray-300 p-3">N/A</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 p-3 bg-slate-100 font-bold">{lang === "en" ? 'Thursday': 'Jueves'}</td>
+            <td class="border border-gray-300 p-3">$ 70</td>
+            <td class="border border-gray-300 p-3">$ 87</td>
+            <td class="border border-gray-300 p-3">$ 135</td>
+            <td class="border border-gray-300 p-3">$ 165</td>
+            <td class="border border-gray-300 p-3">$ 185</td>
+            <td class="border border-gray-300 p-3">$ 200</td>
+            <td class="bg-amber-400 border border-gray-300 p-3">N/A</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 p-3 bg-slate-100 font-bold">{lang === "en" ? 'Friday': 'Viernes'}</td>
+            <td class="bg-amber-400 border border-gray-300 p-3">N/A</td>
+            <td class="border border-gray-300 p-3">$ 120</td>
+            <td class="border border-gray-300 p-3">$ 135</td>
+            <td class="border border-gray-300 p-3">$ 165</td>
+            <td class="border border-gray-300 p-3">$ 185</td>
+            <td class="border border-gray-300 p-3">$ 200</td>
+            <td class="border border-gray-300 p-3">$ 160</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 p-3 bg-slate-100 font-bold">{lang === "en" ? 'Saturday': 'Sábado'}</td>
+            <td class="bg-amber-400 border border-gray-300 p-3">N/A</td>
+            <td class="bg-amber-400 border border-gray-300 p-3">N/A</td>
+            <td class="border border-gray-300 p-3">$ 135</td>
+            <td class="border border-gray-300 p-3">$ 165</td>
+            <td class="border border-gray-300 p-3">$ 185</td>
+            <td class="border border-gray-300 p-3">$ 200</td>
+            <td class="border border-gray-300 p-3">$ 160</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 p-3 bg-slate-100 font-bold">{lang === "en" ? 'Sunday': 'Domingo'}</td>
+            <td class="border border-gray-300 p-3">$ 70</td>
+            <td class="border border-gray-300 p-3">$ 87</td>
+            <td class="border border-gray-300 p-3">$ 120</td>
+            <td class="border border-gray-300 p-3">$ 155</td>
+            <td class="border border-gray-300 p-3">$ 175</td>
+            <td class="border border-gray-300 p-3">$ 185</td>
+            <td class="bg-amber-400 border border-gray-300 p-3">N/A</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p class="text-sm"><em>{lang === "en" ? '*Showing prices in USD (United States Dollars)': '*Mostrando precios en USD (Dólares estadounidenses)*'}</em></p>

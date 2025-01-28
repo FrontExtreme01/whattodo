@@ -1,0 +1,109 @@
+---
+slug: 'yacht-rental-cancun-dejavu/en'
+status: 1
+lang: 'en'
+slugGallery: 'dejavu'
+title: 'Dejavu Yacht Rental Cancun'
+description: ''
+keywords: ''
+price: 0
+stars: '4.6'
+reviews: '840 reviews'
+image: 
+    src: '/assets/covers/yachts/yacht-dejavu-cover.webp'
+    alt: 'cover Dejavu Yacht Rental Cancun'
+capacity: 'Max 15 passengers'
+size: 'Size: 45 ft'
+highlights: ['Life jackets and snorkel masks', 'Bluetooth music']
+bokun: ''
+calendar: ''
+location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+faqs:
+-   question: 'What is included in the yacht rental?'
+    answer: 'The rental includes a fully equipped yacht with spacious decks, comfortable seating, and amenities like a sound system, a cooler with ice, and a professional crew to ensure you have a smooth and enjoyable experience.'
+-   question: 'How many people can the yacht accommodate?'
+    answer: ' The Deja Vu can comfortably accommodate up to 15 guests, making it perfect for intimate gatherings or small groups looking to enjoy a private and luxurious experience on the water.'
+-   question: 'Is the yacht available for special events or celebrations?'
+    answer: 'Absolutely! The Deja Vu is the perfect venue for birthdays, anniversaries, corporate events, or any special occasion. We can help you organize the event to fit your needs, offering everything from music and decorations to catering and entertainment.'
+-   question: 'What happens if the weather is bad on the day of my booking?'
+    answer: 'If the weather conditions are unsafe for sailing, we will offer to reschedule your booking or provide a full refund. Your safety is our top priority, and we will keep you informed of any changes in advance.'
+-   question: 'Is transportation to the marina included?'
+    answer: 'Transportation to and from the marina is not included in the rental price, but we can arrange private transportation for you upon request. Let us know if you need assistance with your transport, and we’ll be happy to help.'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import TabPricesYacht from "@components/extras/TabPricesYacht";
+
+export const includes = [
+    '24 beers.',
+    '24 waters.',
+    '24 sodas and ice.',
+    'Life jackets and snorkel masks.',
+    'Captain and sailor at the service of passengers.',
+    'Private Room, rest area and bathroom.',
+    'Bluetooth speakers.',
+];
+
+export const notIncludes = [
+    'Marine dock fee ($10USD per person)',
+    'Tips for crew members.',
+    'Photos.',
+    'Souvenirs.',
+    'Food or snacks.',
+    'Ground transportation.',
+];
+
+export const shouldKnow = [
+    'Subject to availability',
+    'The snorkel activity is weather dependent.',
+    'If weather does not allow to participate on the activity, the activity could be reschedule according to availability.',
+    'Snorkel activity not recommended for pregnant women ',
+    'Snorkel activity not recommended for participants with heart conditions, recent surgeries Back problems or reduce mobility',
+];
+
+export const shouldBring = [
+    'Towel',
+    'Swimwear',
+    'Change of clothes',
+    'Hat',
+    'Sunglasses',
+    'Biodegrádable sunscreen',
+    'Additional cash or form of payment',
+];
+
+export const infoPrices = [
+    {
+        duration: '4 hours',
+        information: '(without crossing to the island)',
+        price: '$$',
+    },
+    {
+        duration: '6 hours',
+        price: '$$',
+    },
+    {
+        duration: '8 hours',
+        price: '$$',
+    },
+];
+
+export const i18n = {
+    INCLUDES: 'Included',
+    NOT_INCLUDES: 'Not included',
+    SHOULD_KNOW: 'What you should know',
+    SHOULD_BRING: 'What you should bring',
+};
+
+<TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<TagP><em><strong><small>Please contact us in advance to confirm the start time of your activity</small></strong></em></TagP>
+
+<TagH2>Overview</TagH2>
+
+<TagP>Embark on an unforgettable adventure aboard the Deja Vu, a luxurious 45-foot yacht that departs from Marina Kaybal in Cancún. Perfect for any occasion, whether it's a romantic escape, a celebration with friends, or simply a day of relaxation. With spacious decks, stunning ocean views, and top-tier amenities, the Deja Vu guarantees a premium experience on the crystal-clear waters of the Caribbean. Enjoy exceptional service and a seamless journey tailored to create lasting memories. Set sail with us today and indulge in the ultimate yachting experience. Book your trip now and let the adventure begin!</TagP>
+
+<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />

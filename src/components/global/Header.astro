@@ -339,7 +339,7 @@ const navigationMobile = [
                             <div id={`sub-menu-${index}`} class="flex flex-col gap-y-4 pl-5 overflow-hidden h-0 transition-all duration-300">
                                 {nav.subMenu.map((category) => (
                                     <a href={category.link} class={`${category.title === t("nav.lastMinute") ? "text-red-600 relative" : "text-green-700"} text-base hover:text-orange-500 font-bold leading-6 flex items-center`}>
-                                        {category.icon ? <img src={`/assets/icons/${category.icon}`} class="w-6 h-6 inline-block mr-2" alt="" /> : <i class="at-arrow-left-line"></i>}    {category.title}
+                                        {category.icon ? <img src={`/assets/icons/${category.icon}`} class="w-6 h-6 inline-block mr-2" alt="" /> : <i class="at-arrow-left-line mr-2"></i> } {category.title}
                                     </a>
                                 ))}
                             </div>

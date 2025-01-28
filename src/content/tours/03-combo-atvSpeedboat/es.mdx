@@ -1,0 +1,73 @@
+---
+slug: 'atv-zipline-cenote-adventure-speedboat/es'
+status: 1
+lang: 'es'
+home: 1
+combo: 1
+slugGallery: 'atv-speedboat-combo'
+titleSeo: 'Combo de Aventura ATV, Tirolesa y Cenote y Tour de Snorkel en Lancha Rápida'
+title: 'Combo ATV, Tirolesa & Cenote + Lancha Rápida'
+description: 'Experimenta las mejores actividades de aventura en Cancún con este combo de valor que incluye paseo en ATV y tirolesa en la selva, nado en un cenote escénico, y paseo en lancha rápida y snorkel en el arrecife Nizuc.'
+keywords: ''
+price: 90
+stars: '5.0'
+reviews: '2,387 reseñas'
+image:
+    src: '/assets/covers/combos/atv-zipline-cenote-speedboat.webp'
+    alt: 'portada combo atv tirolesa cenote lancha rápida'
+highlights: ['Traslado incluido']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/885792?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/885792'
+location: 'Cancún, México'
+duration: '2 días'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+
+export const includes = [
+    'Almuerzo',
+    'Paseo en ATV, circuito de 3 tirolesas y entrada al cenote',
+    'Uso de equipo de snorkel',
+    'Lancha rápida compartida de 2 plazas y tour de snorkel en el arrecife Nizuc',
+    'Recogida y regreso al hotel (solo tour en ATV)',
+    'Degustación de tequila',
+];
+
+export const notIncludes = [
+    'Recogida y regreso al hotel (Tour de Snorkel y Lancha Rápida en el Arrecife Nizuc)',
+    'Tarifa del parque marino de 20 dólares estadounidenses por persona (Tour de Snorkel y Lancha Rápida en el Arrecife Nizuc)',
+];
+
+export const infoAditional = [
+    'Se recibirá confirmación al momento de la reservación',
+    'No es accesible para silla de ruedas',
+    'Cerca del transporte público',
+    'No es recomendable para viajeros con problemas de espalda',
+    'No es recomendable para mujeres embarazadas',
+    'No hay problemas cardíacos u otras condiciones médicas graves',
+    'La mayoría de viajeros pueden participar',
+    'Debe tener 16 años o más para conducir ATV acompañado de un adulto',
+    'Debe tener 18 años o más para conducir ATV individual',
+    'Peso máximo para tirolesas es de 130 kg/ 300 lbs',
+    'Tamaño máximo de cintura para tirolesas es de 1.24 mts / 49 pulgadas',
+    'No es recomendable para viajeros con problemas cardíacos o cirugías recientes',
+    'Esta excursión o actividad tendrá un máximo de 20 viajeros',
+];
+
+export const i18n = {
+    INCLUDES: 'Incluye',
+    NOT_INCLUDES: 'No incluye',
+    INFORMATION: 'Información adicional'
+};
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+
+<TagH2>Descripción General</TagH2>
+
+<TagP>Experimente las mejores actividades de aventura de Cancún con este combo económico que incluye paseos en vehículos todo terreno y tirolesa en la jungla, natación en un cenote panorámico, y paseos en lancha rápida y esnórquel en el arrecife Nizuc. El recorrido en vehículos todo terreno por la jungla comienza con una conveniente recogida en su hotel o en un punto de encuentro cercano. Diríjase a la naturaleza y a la densa jungla de Yucatán, justo al lado de la famosa Ruta de los Cenotes. La aventura comienza con un paseo en vehículos todo terreno de 30 minutos por caminos fangosos, polvorientos y llenos de baches. Continúe con un emocionante vuelo en un circuito de 3 tirolesas antes de refrescarse en un exótico cenote en medio de la jungla. Embárquese en una emocionante expedición, conduciendo su lancha rápida a través de la laguna Nichupté y hacia el Caribe. Practique esnórquel en el pintoresco arrecife Nizuc y observe las fascinantes exhibiciones del famoso Museo Subacuático de Arte. </TagP>
+
+<AdditionalInfo information={infoAditional} i18n={i18n} />

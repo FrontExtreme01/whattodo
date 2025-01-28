@@ -20,9 +20,11 @@ calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-6828281
 location: 'Cancun, Mexico'
 duration: '2 days'
 ---
-
-import Inclusions from '@components/detail-content/Inclusions.astro';
-import AdditionalInfo from '@components/detail-content/AdditionalInfo.astro';
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
 
 export const Includes = [
     'ATV Jungle Tour with Ziplines & Cenote',
@@ -66,19 +68,19 @@ export const Information = [
     i18n={i18n}
 />
 
-<h2 class="text-xl md:text-3xl font-bold text-orange-600 mt-10 mb-4">Overview</h2>
+<TagH2>Overview</TagH2>
 
-<p class="text-base md:text-lg mb-4"> Experience two of the best-selling experiences Cancun has to offer—a wild off-road adventure with ATV, ziplines & cenote at Extreme Adventure Cancun, and an exciting water & sailing adventure on a catamaran to Isla Mujeres. With this tour combo taking place on two different days, you will see & live some of the best adventures during your holiday. The ATV Jungle Tour with Ziplines & Cenote lasts 4 hours excluding transportation time (around 2 hours in total from Cancun). Upon arrival at the park, embark on a thrilling 30-minute ATV ride through the Maya jungle. Next, fly across the tree tops on the 3-zipline circuit before cooling off in an authentic, exotic cenote in the heart of the jungle. On your second tour date, head to the Playa Tortugas Marine Terminal to board the catamaran for your Isla Mujeres Day Tour. Sail out to open waters, where you start with a 30-minute snorkeling adventure, before reaching the beautiful island. Visit famous Playa Norte beach, enjoy some free time in the island's main town, and relax and relish a buffet lunch at our beach club. Open bar is included on the catamaran, as well as at the beach club. </p>
+<TagP> Experience two of the best-selling experiences Cancun has to offer—a wild off-road adventure with ATV, ziplines & cenote at Extreme Adventure Cancun, and an exciting water & sailing adventure on a catamaran to Isla Mujeres. With this tour combo taking place on two different days, you will see & live some of the best adventures during your holiday. The ATV Jungle Tour with Ziplines & Cenote lasts 4 hours excluding transportation time (around 2 hours in total from Cancun). Upon arrival at the park, embark on a thrilling 30-minute ATV ride through the Maya jungle. Next, fly across the tree tops on the 3-zipline circuit before cooling off in an authentic, exotic cenote in the heart of the jungle. On your second tour date, head to the Playa Tortugas Marine Terminal to board the catamaran for your Isla Mujeres Day Tour. Sail out to open waters, where you start with a 30-minute snorkeling adventure, before reaching the beautiful island. Visit famous Playa Norte beach, enjoy some free time in the island's main town, and relax and relish a buffet lunch at our beach club. Open bar is included on the catamaran, as well as at the beach club. </TagP>
 
 <AdditionalInfo
     information={Information}
     i18n={i18n}
 />
 
-<h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">Enjoy each detail</h3>
+<TagH3>Enjoy each detail</TagH3>
 
-<p class="text-base md:text-lg mb-4">Embark on two unforgettable Cancun adventures with this incredible combo package! </p>
+<TagP>Embark on two unforgettable Cancun adventures with this incredible combo package! </TagP>
 
-<p class="text-base md:text-lg mb-4"><strong>Day 1:</strong> Unleash your inner thrill-seeker on a wild ATV Jungle Tour. Race through the Mayan jungle, soar through the treetops on ziplines, and refresh yourself in a hidden cenote. This adrenaline-pumping experience lasts 4 hours, with an additional 2 hours for transportation from Cancun. </p>
+<TagP><strong>Day 1:</strong> Unleash your inner thrill-seeker on a wild ATV Jungle Tour. Race through the Mayan jungle, soar through the treetops on ziplines, and refresh yourself in a hidden cenote. This adrenaline-pumping experience lasts 4 hours, with an additional 2 hours for transportation from Cancun. </TagP>
 
-<p class="text-base md:text-lg mb-4"><strong>Day 2:</strong> Set sail for paradise on an Isla Mujeres Catamaran Tour. Cruise the crystal-clear waters, snorkel alongside vibrant marine life, and explore the charming island of Isla Mujeres. Relax on Playa Norte's famous beach, stroll through the town center, and savor a delicious buffet lunch at our exclusive beach club. Enjoy unlimited drinks onboard the catamaran and at the beach club. This two-day adventure combo offers the perfect blend of excitement and relaxation, ensuring you create lasting memories of your Cancun vacation. </p>
+<TagP><strong>Day 2:</strong> Set sail for paradise on an Isla Mujeres Catamaran Tour. Cruise the crystal-clear waters, snorkel alongside vibrant marine life, and explore the charming island of Isla Mujeres. Relax on Playa Norte's famous beach, stroll through the town center, and savor a delicious buffet lunch at our exclusive beach club. Enjoy unlimited drinks onboard the catamaran and at the beach club. This two-day adventure combo offers the perfect blend of excitement and relaxation, ensuring you create lasting memories of your Cancun vacation. </TagP>

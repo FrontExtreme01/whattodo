@@ -1,0 +1,80 @@
+---
+slug: 'mandala-cancun/es'
+status: 1
+home: 1
+lastMinute: 1
+lang: 'es'
+type: 'NIGHTCLUB'
+slugGallery: 'mandala-nightclub'
+title: 'Mandala Cancún Nightclub'
+description: 'Mandala Cancún es un club nocturno de renombre. Conocido por su atmósfera electrizante y su ubicación frente a la playa, es uno de los mejores clubes de Cancún.'
+keywords: ''
+price: 20
+stars: '5.0'
+reviews: '6,231 reseñas'
+image:
+    src: '/assets/covers/parties/mandala-cancun-cover.webp'
+    alt: 'portada de Mandala Cancún Nightclub'
+duration: '6 horas'
+consumption: 'Crédito de consumo'
+admission: 'Boleto de admisión'
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/745893?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/745893'
+location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29771.86446650854!2d-86.746938!3d21.133166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2898a0a9e54b%3A0xb293c2f5881121d0!2sMandala%20Nightclub!5e0!3m2!1ses!2smx!4v1704732310770!5m2!1ses!2smx'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import TagVideo from "@components/global/TagVideo.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+
+export const includes = [
+    'Admisión',
+    'Crédito de consumo (solo si se selecciona el Pase Golden)',
+];
+
+export const notIncludes = [
+    'Transporte hacia y desde el lugar',
+    'Propinas',
+    'Reservación de mesa',
+];
+
+export const information = [
+    'El check-in debe completarse antes de las 10 PM',
+    'Duración: 6 horas',
+];
+
+export const i18n = {
+    INCLUDES: 'Incluye',
+    NOT_INCLUDES: 'No incluye',
+    INFORMATION: 'Por favor, ten en cuenta',
+};
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+
+<AdditionalInfo information={information} i18n={i18n} />
+
+<TagVideo src="/assets/videos/mandala-nightlife.mp4" lang={frontmatter.lang} />
+
+<TagH2>Bienvenido al corazón palpitante de la vida nocturna de Cancún - Mandala Cancún!</TagH2>
+
+<TagP>Ubicado a lo largo de las cautivadoras costas de la Zona Hotelera, este icónico club nocturno es un faro de energía, atrayendo a buscadores de emociones y entusiastas de la fiesta de todo el mundo. </TagP>
+
+<TagP>Entra en un mundo donde la emoción no tiene límites, donde cada momento está impregnado de una vibra electrizante a la que es imposible resistirse. Con su ubicación privilegiada frente a la playa, Mandala prepara el escenario para una noche inolvidable de juerga bajo las estrellas. </TagP>
+
+<TagP>Pero espera, ¡hay más! Embárcate en tu aventura con nuestros pases exclusivos, que te otorgan acceso a una experiencia inigualable. Desde el <strong>General Pass de $20 USD</strong> hasta el lujoso <strong>Golden Pass de $60 USD</strong>, hay un boleto para todos los gustos y presupuestos. </TagP>
+
+<TagP>Sumérgete en la energía contagiosa de la atmósfera dinámica de Mandala. Siente la adrenalina mientras te lanzas a la pista de baile, donde te espera una sinfonía de ritmos electrónicos y latinos. Con amplias pistas de baile, múltiples bares y lujosas áreas para sentarse, las posibilidades son infinitas en Mandala. </TagP>
+
+<TagP>Convenientemente ubicado en el Boulevard Kukulcan Km 9.5 en el corazón de la Zona Hotelera, Mandala está a un tiro de piedra de los hoteles y atracciones más buscados de Cancún. Ya seas un local experimentado o un viajero curioso, el viaje a Mandala siempre es una aventura que vale la pena emprender. </TagP>
+
+<TagP>¿Qué estás esperando? Únete a nosotros en Mandala Cancún, donde cada noche es una celebración y cada momento es una oportunidad para crear recuerdos inolvidables. ¡Prepárate para perderte en el paraíso de la fiesta! </TagP>
+
+<TagH3>Discotecas en Cancún</TagH3>
+
+<TagP>Además, con su impresionante ubicación, su atmósfera llena de energía y sus servicios de primera categoría, Mandala es sin duda una de las mejores discotecas de Cancún. Sin embargo, hay muchas otras discotecas fantásticas en la zona que vale la pena visitar, como Abolengo Cancún, La Vaquita, D´cave, Rakata y The City Cancún. </TagP>
+
+<TagP>En conclusión, Mandala Cancún es un destino excelente para cualquiera que busque experimentar lo mejor de la vida nocturna de Cancún. Desde su estricto código de vestimenta hasta su gama de servicios VIP, esta discoteca ofrece una experiencia de discoteca premium que no se puede perder. Así que, si estás planeando un viaje a Cancún y buscas un lugar para bailar toda la noche, asegúrate de visitar Mandala Nightclub. </TagP>

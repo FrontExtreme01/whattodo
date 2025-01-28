@@ -9,13 +9,16 @@ import SliderBanner from "@components/global/SliderBanner";
 import Intro from "@components/global/Intro.astro";
 import Partners from "@components/global/Partners";
 import PartyCard from "@components/cards/PartyCard.astro";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
 const lang = getLangFromUrl(Astro.url);
 const allParties = await getPartiesEvent(lang);
-const translatedPath = useTranslatedPath(lang);
+const translatePath = useTranslatedPath(lang);
 
 const slides = getSlides("EVENTS", lang);
 
@@ -41,8 +44,8 @@ const seoMetaDatos = {
 
     <section class="container mx-auto mb-10">
         <div class="px-5 py-2 text-justify">
-            <p class="text-base md:text-xl mb-5">{i18n.PARTY_PAGE.EVENTS.INFORMATION.TEXT_1}</p>
-            <p class="text-base md:text-xl mb-5">{i18n.PARTY_PAGE.EVENTS.INFORMATION.TEXT_2}</p>
+            <TagP>{i18n.PARTY_PAGE.EVENTS.INFORMATION.TEXT_1}</TagP>
+            <TagP>{i18n.PARTY_PAGE.EVENTS.INFORMATION.TEXT_2}</TagP>
         </div>
     </section>
 
@@ -54,20 +57,20 @@ const seoMetaDatos = {
 
     <section class="container mx-auto mb-10">
         <div class="px-5 py-2 text-justify">
-            <h2 class="font-bold text-2xl md:text-3xl text-orange-600 mb-5">{i18n.PARTY_PAGE.EVENTS.CANCUN_EVENTS.TITLE}</h2>
-            <p class="text-base md:text-xl mb-5">{i18n.PARTY_PAGE.EVENTS.CANCUN_EVENTS.DESCRIPTION}</p>
+            <TagH2>{i18n.PARTY_PAGE.EVENTS.CANCUN_EVENTS.TITLE}</TagH2>
+            <TagP>{i18n.PARTY_PAGE.EVENTS.CANCUN_EVENTS.DESCRIPTION}</TagP>
 
-            <h3 class="font-bold text-xl md:text-2xl text-green-700 mb-5">{i18n.PARTY_PAGE.EVENTS.SPORTS.TITLE}</h3>
-            <p class="text-base md:text-xl mb-5">{i18n.PARTY_PAGE.EVENTS.SPORTS.DESCRIPTION}</p>
+            <TagH3>{i18n.PARTY_PAGE.EVENTS.SPORTS.TITLE}</TagH3>
+            <TagP>{i18n.PARTY_PAGE.EVENTS.SPORTS.DESCRIPTION}</TagP>
 
-            <h3 class="font-bold text-xl md:text-2xl text-green-700 mb-5">{i18n.PARTY_PAGE.EVENTS.FAMILY_FRIENDLY.TITLE}</h3>
-            <p class="text-base md:text-xl mb-5">{i18n.PARTY_PAGE.EVENTS.FAMILY_FRIENDLY.DESCRIPTION.TEXT_1}</p>
-            <p class="text-base md:text-xl mb-5">{i18n.PARTY_PAGE.EVENTS.FAMILY_FRIENDLY.DESCRIPTION.TEXT_2}</p>
+            <TagH3>{i18n.PARTY_PAGE.EVENTS.FAMILY_FRIENDLY.TITLE}</TagH3>
+            <TagP>{i18n.PARTY_PAGE.EVENTS.FAMILY_FRIENDLY.DESCRIPTION.TEXT_1}</TagP>
+            <TagP>{i18n.PARTY_PAGE.EVENTS.FAMILY_FRIENDLY.DESCRIPTION.TEXT_2}</TagP>
 
-            <p class="text-center flex flex-col">
-                <a href={translatedPath('/nightlife-in-cancun/')} class="font-bold text-2xl md:text-3xl mt-10 text-purple-800 hover:text-purple-600 trnasition duration-100">{i18n.PARTY_PAGE.EVENTS.BUTTONS.NIGHTCLUB}</a>
-                <a href={translatedPath('/beachclub-in-cancun/')} class="font-bold text-2xl md:text-3xl my-5 text-purple-800 hover:text-purple-600 trnasition duration-100">{i18n.PARTY_PAGE.EVENTS.BUTTONS.BEACHCLUB}</a>
-            </p>
+            <div class="flex flex-wrap justify-center gap-4 mt-10">
+                <a href={translatePath('/nightlife-in-cancun/')} class="w-fit block px-5 py-3 rounded-xl text-white bg-gradient-to-r font-bold text-xl from-purple-700 to-fuchsia-600 hover:scale-90 hover:shadow-2xl transition-all duration-200">{i18n.PARTY_PAGE.EVENTS.BUTTONS.NIGHTCLUB}</a>
+                <a href={translatePath('/beachclub-in-cancun/')} class="w-fit block px-5 py-3 rounded-xl text-white bg-gradient-to-r font-bold text-xl from-purple-700 to-fuchsia-600 hover:scale-90 hover:shadow-2xl transition-all duration-200">{i18n.PARTY_PAGE.EVENTS.BUTTONS.BEACHCLUB}</a>
+            </div>
         </div>
     </section>
 

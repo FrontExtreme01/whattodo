@@ -18,7 +18,7 @@ export default function CardTicket({ data }: any) {
                     <p className="text-sm text-slate-500 mt-1">
                         <i className="at-star-decor text-amber-500 font-bold"></i> <b>{data.stars}</b> ({data.reviews})
                     </p>
-                    {data.price > 0 && (
+                    {data.price && (
                         <p className="text-sm text-slate-900 mt-1 font-bold text-end">
                             {data.i18n.PRICE_FROM} <br /><span className="text-amber-500 text-lg"> ${data.price} USD</span>
                         </p>

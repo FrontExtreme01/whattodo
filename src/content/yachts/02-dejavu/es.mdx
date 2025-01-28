@@ -1,0 +1,109 @@
+---
+slug: 'yacht-rental-cancun-dejavu/es'
+status: 1
+lang: 'es'
+slugGallery: 'dejavu'
+title: 'Renta de Yate Dejavu en Cancún'
+description: ''
+keywords: ''
+price: 0
+stars: '4.6'
+reviews: '840 reseñas'
+image: 
+    src: '/assets/covers/yachts/yacht-dejavu-cover.webp'
+    alt: 'portada Rentar Yate Dejavu en Cancún'
+capacity: 'Max 15 pasajeros'
+size: 'Tamaño: 45 ft'
+highlights: ['Chalecos salvavidas y máscaras de snorkel', 'Música Bluetooth']
+bokun: ''
+calendar: ''
+location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+faqs:
+-   question: '¿Qué está incluido en la renta del yate?'
+    answer: 'La renta incluye un yate completamente equipado con cubiertas espaciosas, asientos cómodos y comodidades como un sistema de sonido, una nevera con hielo y una tripulación profesional para garantizar que tenga una experiencia fluida y agradable.'
+-   question: '¿Cuántas personas pueden abordar el yate?'
+    answer: 'El Deja Vu puede acomodar cómodamente hasta 15 invitados, lo que lo hace perfecto para reuniones íntimas o grupos pequeños que desean disfrutar de una experiencia privada y lujosa en el agua.'
+-   question: '¿Está disponible el yate para eventos especiales o celebraciones?'
+    answer: '¡Absolutamente! El Deja Vu es el lugar perfecto para cumpleaños, aniversarios, eventos corporativos o cualquier ocasión especial. Podemos ayudarlo a organizar el evento según sus necesidades, ofreciendo desde música y decoraciones hasta catering y entretenimiento.'
+-   question: '¿Qué sucede si el clima es malo el día de mi reserva?'
+    answer: 'Si las condiciones climáticas no son seguras para navegar, le ofreceremos reprogramar su reserva o le proporcionaremos un reembolso completo. Su seguridad es nuestra principal prioridad, y lo mantendremos informado de cualquier cambio con anticipación.'
+-   question: '¿Se incluye el transporte a la marina?'
+    answer: 'El transporte hacia y desde la marina no está incluido en el precio del alquiler, pero podemos organizar un transporte privado para usted si lo solicita. Avísenos si necesita ayuda con su transporte, ¡y estaremos encantados de ayudarle!'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import TabPricesYacht from "@components/extras/TabPricesYacht";
+
+export const includes = [
+    '24 cervezas.',
+    '24 aguas.',
+    '24 refrescos y hielo.',
+    'Chalecos salvavidas y máscaras de snorkel.',
+    'Capitán y marinero al servicio de los pasajeros.',
+    'Cuarto privado, área de descanso y baño.',
+    'Altavoces Bluetooth.',
+];
+
+export const notIncludes = [
+    'Tarifa de muelle marino ($10USD por persona)',
+    'Propinas para los miembros de la tripulación.',
+    'Fotos.',
+    'Recuerdos.',
+    'Comida o snacks.',
+    'Transporte terrestre.',
+];
+
+export const shouldKnow = [
+    'Sujeto a disponibilidad',
+    'La actividad de snorkel depende del clima.',
+    'Si el clima no permite participar en la actividad, la actividad podría reprogramarse según disponibilidad.',
+    'La actividad de snorkel no se recomienda para mujeres embarazadas. ',
+    'Actividad de snorkel no recomendada para participantes con problemas cardiacos, cirugías recientes, problemas de espalda o movilidad reducida',
+];
+
+export const shouldBring = [
+    'Toalla',
+    'Traje de baño',
+    'Ropa de cambio',
+    'Sombrero',
+    'Lentes de sol',
+    'Protector solar biodegradable',
+    'Efectivo adicional o forma de pago',
+];
+
+export const infoPrices = [
+    {
+        duration: '4 horas',
+        information: '(sin cruzar a la isla)',
+        price: '$$',
+    },
+    {
+        duration: '6 horas',
+        price: '$$',
+    },
+    {
+        duration: '8 horas',
+        price: '$$',
+    },
+];
+
+export const i18n = {
+    INCLUDES: 'Incluye',
+    NOT_INCLUDES: 'Not Incluye',
+    SHOULD_KNOW: 'Antes de reservar, ten en cuenta lo siguiente:',
+    SHOULD_BRING: 'Lo que debes llevar',
+};
+
+<TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<TagP><em><strong><small>Póngase en contacto con nosotros con anticipación para confirmar la hora de inicio de su actividad</small></strong></em></TagP>
+
+<TagH2>Descripción general</TagH2>
+
+<TagP>  Embárcate en una aventura inolvidable a bordo del Deja Vu, un lujoso yate de 45 pies que zarpa desde Marina Kaybal en Cancún. Perfecto para cualquier ocasión, ya sea una escapada romántica, una celebración con amigos o simplemente un día de relajación. Con amplias cubiertas, impresionantes vistas al mar y comodidades de primer nivel, el Deja Vu garantiza una experiencia premium en las aguas cristalinas del Caribe. Disfruta de un servicio excepcional y un viaje perfecto diseñado para crear recuerdos duraderos. Zarpa con nosotros hoy y disfruta de la mejor experiencia en yate. ¡Reserva tu viaje ahora y deja que comience la aventura!</TagP>
+
+<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />

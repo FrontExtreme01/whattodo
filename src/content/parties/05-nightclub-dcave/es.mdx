@@ -1,0 +1,76 @@
+---
+slug: 'dcave-cancun/es'
+status: 1
+event: 1
+lang: 'es'
+type: 'NIGHTCLUB'
+slugGallery: 'dcave'
+titleSeo: 'Admisión a DCave Cancún'
+title: 'DCave Cancun'
+description: 'DCave Cancún es una discoteca popular ubicada en el corazón de Cancún, Zona Hotelera. Conocida por su atmósfera única de cueva, música de primera.'
+keywords: ''
+price: 20
+stars: '4.5'
+reviews: '1939 reseñas'
+image:
+    src: '/assets/covers/parties/dcave-cancun-nightclub-and-party-zones.webp'
+    alt: 'portada dcave cancun discoteca'
+duration: '4.5 horas'
+consumption: 'Crédito de consumo'
+admission: 'Admisión'
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/745900?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/745900'
+location: 'Blvd. Kukulcan Km 9.5, Zona Hotelera, 77500 Cancún, Q.R.'
+mapFrame: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29771.88374798819!2d-86.747518!3d21.13307!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2898b942b42b%3A0x292e93b60e07978!2sD'Cave!5e0!3m2!1ses!2smx!4v1703946193906!5m2!1ses!2smx
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+
+export const includes = [
+    'Admisión',
+    'Crédito de consumo (solo si se selecciona Golden Pass)',
+];
+
+export const notIncludes = [
+    'Transporte de ida y vuelta al lugar',
+    'Propinas',
+    'Reservación de mesa',
+];
+
+export const information = [
+    'El check-in debe completarse antes de las 10 PM',
+    'Duración 4 horas y 30 minutos',
+    'Se requiere un código de vestimenta estricto (atuendo elegante y de moda)',
+];
+
+export const i18n = {
+    INCLUDES: 'Incluido',
+    NOT_INCLUDES: 'No incluido',
+    INFORMATION: 'Por favor ten en cuenta',
+};
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+
+<AdditionalInfo information={information} i18n={i18n} />
+
+<TagH2>Acerca de DCave Cancún</TagH2>
+
+<TagP><strong>DCave Cancún</strong> es un popular club nocturno ubicado en el corazón de la Zona Hotelera de Cancún. Este club es conocido por su atmósfera única tipo cueva, música de primer nivel y una selección creativa de bebidas, lo que lo convierte en uno de los mejores clubes de Cancún. </TagP>
+
+<TagP>El ambiente de cueva de DCave Cancún, con iluminación tenue y formaciones rocosas naturales, crea el ambiente ideal para una noche de baile y fiesta. El DJ toca una mezcla de música electrónica, house y hip-hop, lo que garantiza que haya algo para que todos bailen.</TagP>
+
+<TagP>Una de las características más destacadas de este club es su creativa <strong>selección de bebidas</strong>. Los bartenders del club son conocidos por sus cócteles únicos y deliciosos que seguramente impresionarán incluso a los paladares más exigentes. </TagP>
+
+<TagP>Para aquellos que buscan una experiencia VIP, DCave Cancún ofrece paquetes exclusivos de servicio de mesa que incluyen áreas de asientos privadas, servicio de botellas y camareros personales. Esta es una gran opción para grupos o para cualquiera que busque llevar su noche al siguiente nivel. </TagP>
+
+<TagP>DCave Cancún aplica un código de vestimenta, así que asegúrese de vestirse para impresionar. Los hombres deben usar camisas con cuello y zapatos de vestir, mientras que las mujeres deben optar por vestidos o pantalones elegantes combinados con tacones. Hay más <a href="/es/nightlife-in-cancun/"><strong>Vida nocturna en Cancún</strong></a>. </TagP>
+
+<TagH3>Ubicación de DCAVE</TagH3>
+
+<TagP>Ubicado en Boulevard Kukulcan Km 9, DCave Cancún es fácilmente accesible en taxi o transporte público. El club es un destino popular entre turistas y lugareños que buscan salir por la noche. </TagP>
+
+<TagP>En conclusión, DCave Cancún es uno de los mejores clubes de Cancún, con su ambiente único, música de primer nivel y una selección creativa de bebidas. Así que, ya seas local o turista, asegúrate de agregar DCave Cancún a tu lista de destinos que debes visitar la próxima vez que estés en Cancún. </TagP>

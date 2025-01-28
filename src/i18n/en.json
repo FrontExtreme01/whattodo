@@ -810,7 +810,9 @@
             "TITLE_LOCATION": "Location",
             "TITLE_MAP_FRAME": "See location on map",
             "SHARE": "Share",
-            "SHARE_LINK": "Share link in social networks"
+            "SHARE_LINK": "Share link in social networks",
+            "TITLE_FAQS": "Frequently Asked Questions",
+            "DESCRIPTION_FAQS": "Here are some common questions about this tour. If you have any other questions, feel free to contact us."
         },
         "FORM_RESERVATION": {
             "TITLE": "Make your reservation",

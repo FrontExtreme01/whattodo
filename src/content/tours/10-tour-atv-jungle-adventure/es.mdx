@@ -68,9 +68,11 @@ testimonials:
     review: 'We were not sure about buying a package to visit this Cancun eco-park, since i am afraid of the heights and dont like bugs, but i sincerily say it was a good choice! The weather was incredible and allow us to swim in a beautiful cenote, zipline, and do the ATVs which i loved since it was my first time riding an atv. The guide made sure i was safe all the time and made us laugh alot. I will for sure be back on my next visit to cancun.'
 ---
 
-import Inclusions from '@components/detail-content/Inclusions.astro';
-import WhatYouShould from '@components/detail-content/WhatYouShould.astro';
-import AtvModePackage from '@components/detail-content/AtvModePackage.astro';
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import AtvModePackage from "@components/detail-content/AtvModePackage.astro";
 
 export const included = [
     'Seguro de ATV incluido',
@@ -130,9 +132,9 @@ export const i18n = {
 
 <p class="text-sm mb-4">*<em><strong>Nota:</strong> El orden de las actividades enumeradas puede variar según los requisitos operativos.</em></p>
 
-<h2 class="text-xl md:text-3xl font-bold text-orange-600 mt-10 mb-4">Sobre el ATV y la tirolesa en Cancún</h2>
+<TagH2>Sobre el ATV y la tirolesa en Cancún</TagH2>
 
-<p class="text-base md:text-lg mb-4">¿Estás listo para un día inolvidable lleno de aventuras? ¡Esta experiencia todo en uno es perfecta tanto para los amantes de la naturaleza como para los amantes de las emociones fuertes! Comienza el día con un cómodo servicio de recogida en el hotel y dirígete directamente a un vibrante parque de ecoaventuras. Siente la adrenalina mientras aceleras un vehículo todoterreno (ATV) y recorres senderos selváticos. A continuación, surca los cielos con tres emocionantes vuelos en tirolina que te permiten elevarte por encima de las frondosas copas de los árboles. Refréscate con estilo con un refrescante baño en un impresionante cenote, un impresionante sumidero natural con aguas cristalinas de color esmeralda. Para rematar, disfruta de una sesión de cata de tequila, donde saborearás los sabores de la emblemática bebida de México. Es un día lleno de acción, diversión y recuerdos que esperan ser creados. ¡No te pierdas esta aventura épica!</p>
+<TagP>¿Estás listo para un día inolvidable lleno de aventuras? ¡Esta experiencia todo en uno es perfecta tanto para los amantes de la naturaleza como para los amantes de las emociones fuertes! Comienza el día con un cómodo servicio de recogida en el hotel y dirígete directamente a un vibrante parque de ecoaventuras. Siente la adrenalina mientras aceleras un vehículo todoterreno (ATV) y recorres senderos selváticos. A continuación, surca los cielos con tres emocionantes vuelos en tirolina que te permiten elevarte por encima de las frondosas copas de los árboles. Refréscate con estilo con un refrescante baño en un impresionante cenote, un impresionante sumidero natural con aguas cristalinas de color esmeralda. Para rematar, disfruta de una sesión de cata de tequila, donde saborearás los sabores de la emblemática bebida de México. Es un día lleno de acción, diversión y recuerdos que esperan ser creados. ¡No te pierdas esta aventura épica!</TagP>
 
 <AtvModePackage i18n={i18n} />
 

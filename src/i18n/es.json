@@ -814,7 +814,9 @@
             "TITLE_LOCATION": "Ubicación",
             "TITLE_MAP_FRAME": "Ver ubicación en el mapa",
             "SHARE": "Compartir",
-            "SHARE_LINK": "Compartir en redes sociales"
+            "SHARE_LINK": "Compartir en redes sociales",
+            "TITLE_FAQS": "Preguntas frecuentes",
+            "DESCRIPTION_FAQS": "Aquí encontrarás las preguntas más frecuentes sobre este tour. Si tienes alguna otra pregunta, no dudes en contactarnos."
         },
         "FORM_RESERVATION": {
             "TITLE": "Realiza tu Reservación",

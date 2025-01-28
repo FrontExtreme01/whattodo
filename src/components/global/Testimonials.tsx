@@ -17,7 +17,7 @@ export default function Testimonials({ testimonials, title, description }: any) 
                 </div>
 
                 <h2 className="mt-16 mb-8 text-2xl md:text-4xl text-orange-500 font-bold">{title}</h2>
-                <p className="text-base md:text-xl text-gray-600 mb-8">{description}</p>
+                <p className="text-base/loose md:text-xl/loose text-gray-600 mb-8">{description}</p>
                 <Swiper
                     className="mySwiper"
                     loop={true}

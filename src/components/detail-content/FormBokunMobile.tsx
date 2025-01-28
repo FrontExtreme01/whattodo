@@ -14,8 +14,8 @@ export default function FormBokunMobile({ data }: any) {
         <>
             <div className="lg:hidden flex w-full justify-center items-center sticky bottom-0 bg-white p-5 mt-5 border border-t-slate-200 z-10">
                 <div className="w-1/2">
-                    <p className="text-slate-900 text-sm font-bold">{data.price > 0 ? data.i18n.PRICE_FROM : data.titleCard}</p>
-                    {data.price > 0 && (
+                    <p className="text-slate-900 text-sm font-bold">{data.price ? data.i18n.PRICE_FROM : data.titleCard}</p>
+                    {data.price && (
                         <p className="text-green-700 font-bold text-base">${data.price} USD <span className="text-slate-400 text-sm">{data.i18n.PER_PERSON}</span></p>
                     )}
                 </div>

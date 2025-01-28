@@ -8,13 +8,13 @@ const toursCollection = defineCollection({
         lang: z.string().optional(),
         home: z.number().optional(),
         combo: z.number().optional(),
+        lastMinute: z.number().optional(),
+        earlyBird: z.number().optional(),
         slugGallery: z.string(),
         titleSeo: z.string().optional(),
         title: z.string(),
         description: z.string(),
         keywords: z.string(),
-        lastMinute: z.number().optional(),
-        earlyBird: z.number().optional(),
         categories: z.array(z.string()).optional(),
         price: z.number(),
         stars: z.string(),
@@ -38,6 +38,10 @@ const toursCollection = defineCollection({
                 src: z.string()
             }).optional(),
         })).optional(),
+        faqs: z.array(z.object({
+            question: z.string(),
+            answer: z.string()
+        })).optional(),
     })
 });
 
@@ -53,7 +57,7 @@ const restaurantsCollection = defineCollection({
         description: z.string(),
         keywords: z.string(),
         featured: z.string(),
-        averageCost: z.string(),
+        averageCost: z.number().optional(),
         stars: z.string(),
         reviews: z.string(),
         image: z.object({
@@ -155,6 +159,10 @@ const yachtsCollection = defineCollection({
             image: z.object({
                 src: z.string()
             }).optional(),
+        })).optional(),
+        faqs: z.array(z.object({
+            question: z.string(),
+            answer: z.string()
         })).optional(),
     })
 });

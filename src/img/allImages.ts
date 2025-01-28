@@ -3,6 +3,7 @@ import logoMain from "@/img/logos/logo-wtd.webp";
 import logoHorizontal from "@/img/logos/logo-horizontal.webp";
 import separador from "@public/icons/separador.webp";
 import IconLastminute from "@/img/extras/icon-lastminute.webp";
+import IconEarlyBird from "@/img/extras/early-bird-icon-discounts.svg"
 // Footer
 import customerSuport from "@/img/extras/customer-support-in-cancun.webp";
 import secureCheckout from "@/img/extras/stripe-security-guarantee.webp";
@@ -22,6 +23,17 @@ import StickerHappyCustomer from "@/img/extras/our-happy-customers.webp";
 import pga1 from "@/img/extras/golf/robert-trent-jones-golf-course-architects.webp";
 import pga2 from "@/img/extras/golf/taylor-made-brand-and-golf-accesories.webp";
 import pga3 from "@/img/extras/golf/pga-riviera-maya-scorecard.webp";
+
+import ElTinto1 from "@/img/extras/golf/nick-price-design-logo.webp";
+import ElTinto2 from "@/img/extras/golf/top-golf-outfits.webp";
+
+import PM1 from "@/img/extras/golf/greg-norman-golf-course-design-in-cancun.webp";
+import PM2 from "@/img/extras/golf/playa-mujeres-golf-club-scorecard.webp";
+
+import MoonPalace1 from "@/img/extras/golf/jack-nicklaus-golf-course-design-logo.webp"
+
+// Extras Nightclubs
+import placesCocoBongo from "@/img/extras/cocoBongo-places.webp";
 
 // Slides Home
 import HomeES1 from "@/img/slides/home/2025-new-year-discounts-in-cancun.webp";
@@ -245,7 +257,14 @@ export {
     review5,
     separador,
     IconLastminute,
+    IconEarlyBird,
     pga1,
     pga2,
-    pga3
+    pga3,
+    ElTinto1,
+    ElTinto2,
+    PM1,
+    PM2,
+    MoonPalace1,
+    placesCocoBongo
 };

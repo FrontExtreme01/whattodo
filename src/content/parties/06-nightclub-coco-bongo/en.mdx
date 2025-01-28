@@ -1,0 +1,81 @@
+---
+slug: 'coco-bongo-cancun-admission/en'
+status: 1
+home: 1
+lang: 'en'
+type: 'NIGHTCLUB'
+slugGallery: 'coco-bongo-nightclub'
+titleSeo: 'Coco Bongo Cancun Admission and Beverages'
+title: 'Coco Bongo Cancun'
+description: 'Rock the party night with admission and beverages included at the best club Coco Bongo Cancun show & disco.'
+keywords: ''
+price: 71
+stars: '4.5'
+reviews: '3,517 reviews'
+image:
+    src: '/assets/covers/parties/coco-bongo-cancun-nightlife.webp'
+    alt: 'cover of Coco Bongo Cancun Nightclub'
+duration: '1 hour'
+consumption: 'Food & Drinks'
+admission: 'Entry or Admission fee'
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/709416?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/709416'
+location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29771.977543160527!2d-86.747128!3d21.132603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2bf1d63b6b99%3A0x6cc32e706b78b7bf!2sCoco%20Bongo!5e0!3m2!1ses!2smx!4v1704728685306!5m2!1ses!2smx'
+---
+
+import { Image } from "astro:assets";
+import { placesCocoBongo } from "@/img/allImages";
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import TagVideo from "@components/global/TagVideo.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import TablePrices from "@components/extras/tables/CocoBongoPrices.astro";
+
+export const includes = [
+    'Entry or admission fee',
+    'Food & drinks',
+];
+
+export const notIncludes = [
+    'Transportation to and from the venue'
+];
+
+export const i18n = {
+    INCLUDES: 'Included',
+    NOT_INCLUDES: 'Not included',
+};
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+
+<TagVideo src="/assets/videos/coco-bongo-nightclub.mp4" lang={frontmatter.lang} />
+
+<TagH2>About Coco Bongo Cancun Tickets</TagH2>
+
+<TagP>Get ready for an unforgettable night at <strong>Coco Bongo Cancun Show & Disco!</strong> Dance the night away with friends in the heart of the Mexican Caribbean's <strong>top nightlife</strong> spot. But before you go, make sure to check the ticket prices to plan your epic night out!</TagP>
+
+<TablePrices lang={frontmatter.lang} />
+
+<TagH3>The best live show</TagH3>
+
+<TagP><strong>Coco Bongo Mexico Cancun</strong> is much more than a simple nightclub, the experience will leave you breathless with a dazzling party enhanced by a spectacular and very complete <strong>show with special effects</strong>. Be amazed by the incredible tributes to pop and rock culture, with <strong>The Mask, 300, The Beatles, Queen</strong>, and many more party themes. </TagP>
+
+<TagH3>Drinks included</TagH3>
+
+<TagP>Drinks and snacks are <strong>already included</strong> throughout the night. <strong>Check the special upgrade</strong> options to access the VIP area and reserved seats. </TagP>
+
+<Image class="mx-auto py-10" src={placesCocoBongo} alt="Coco Bongo Cancun Nightclub places" />
+
+<TagH2>Coco Bongo Age Limit </TagH2>
+
+<TagP>In Mexico, entry to nightclubs and alcohol consumption centers is restricted to people under 18 years of age. So it is possible that they have to <strong>present identification</strong> to verify that they are <strong>over 18 years old</strong> and be able to access this club. Look for more alternatives to nightlife in Cancun. </TagP>
+
+<TagH3>Where is Coco Bongo Cancun </TagH3>
+
+<TagP>It is located right in the heart of the Hotel Zone, where all the <strong>clubs in Cancun</strong> are located. This famous place is a must-do activity in <strong>Cancun’s nightlife</strong>. </TagP>
+
+<TagH3>How to get there</TagH3>
+
+<TagP>It is easily accessible by <strong>car or taxi</strong>, and many hotels offer shuttle services to and from the club. If you’re staying in Cancun, you can also take the local bus known as the <strong>“R1” or “R2” bus</strong>, which runs along <strong>Kukulcan Boulevard</strong> and stops at various points in the Hotel Zone, including Cocobongo. </TagP>

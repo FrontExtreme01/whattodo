@@ -1,0 +1,91 @@
+---
+slug: 'el-tinto-golf-course-in-cancun/es'
+status: 1
+lang: 'es'
+slugGallery: 'el-tinto'
+title: 'Campo de Golf El Tinto Cancún'
+description: 'Experimenta el Campo de Golf El Tinto en Cancún, un diseño de Nick Price. Juega 18 hoyos de excelencia, disfruta y reserva tu tee time ahora!'
+keywords: ''
+price: 131
+stars: '4.5'
+reviews: '876 reseñas'
+image:
+    src: '/assets/covers/golfs/El-Tinto-Golf-Course-in-Cancun.webp'
+    alt: 'portada de Campo de Golf El Tinto en Cancún'
+duration: '4 horas'
+holes: '18 hoyos'
+yards: '7,435 yardas'
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/781987?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/781987'
+location: 'Carr. Federal 307, Chetumal Km 388, Cancún, Q.R.'
+schedule: '7:00 am - 6:00 pm'
+availability: 'Lun a Dom'
+mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d476760.37453542685!2d-86.872868!3d21.005043!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e80efffd56609%3A0x63c8693d7132e2d3!2sEl%20Tinto%20Golf%20Course%20Cancun!5e0!3m2!1ses-419!2sus!4v1703704785607!5m2!1ses-419!2sus'
+---
+
+import { Image } from "astro:assets";
+import { ElTinto1, ElTinto2 } from "@/img/allImages";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagH4 from "@components/global/TagH4.astro";
+import TagP from "@components/global/TagP.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ElTintoPrices from "@components/extras/tables/ElTintoPrices.astro";
+
+export const information = [
+    'Número de Hoyos: 18',
+    'Yardas: 7,435 yardas',
+    'Par: 72',
+    'Diseñador del Campo: Nick Price | Tom Fazio'
+];
+
+export const i18n = {
+    INFORMATION: 'Detalles',
+    TABLE_TITLE: 'Precios del Campo de Golf El Tinto',
+    PER_PERSON: 'por persona',
+    AFTER: 'después',
+};
+
+<AdditionalInfo i18n={i18n} information={information} />
+
+<ElTintoPrices i18n={i18n} />
+
+<TagH2>Experimenta la Excelencia en el Campo de Golf El Tinto en Cancún</TagH2>
+
+<TagP>Descubre el encanto del <strong>campo de golf El Tinto</strong>. Una obra maestra en el Caribe Mexicano. Además, sumérgete en la experiencia de los arquitectos <strong>Tom Fazio y Nick Price</strong> mientras te preparas para este Par 72, belleza de 18 hoyos.</TagP>
+
+<TagH3>Diseño de Clase Mundial y Estilo de Firma</TagH3>
+
+<TagP><strong>El Tinto</strong> lleva con orgullo el <strong>diseño de firma de Nick Price</strong>. Además, un campeón importante conocido por su enfoque meticuloso en el juego. Junto con el <strong>renombrado arquitecto Tom Fazio</strong>, crearon una obra maestra del golf que muestra la belleza del Caribe Mexicano.</TagP>
+
+<Image class="mx-auto py-10" src={ElTinto1} alt="El Tinto Golf Course in Cancun" />
+
+<TagH3>Un desafío te espera: par 72, 18 hoyos</TagH3>
+
+<TagP>Pon a prueba tus habilidades en el campo de golf Par 72 del campo de golf “El Tinto”, que cuenta con 18 hoyos fascinantes. De hecho, está diseñado para satisfacer a jugadores de todos los niveles y cuenta con una variedad de opciones de tee. Con niveles de pendiente que van desde 123 a 138 para hombres y de 122 a 138 para mujeres.</TagP>
+
+<TagH3>Código de vestimenta y lecciones de golf</TagH3>
+
+<TagP>Mejora tu experiencia de golf respetando el código de vestimenta: se requiere ropa de golf adecuada y zapatos con tacos suaves. En resumen, para aquellos que buscan perfeccionar sus habilidades, hay lecciones de golf disponibles, lo que garantiza que aproveches al máximo tu tiempo en este campo excepcional.</TagP>
+
+<Image class="mx-auto py-10" src={ElTinto2} alt="El Tinto Golf Course in Cancun" /> 
+
+<TagH3>Disfrute de la comodidad y la conveniencia</TagH3>
+
+<TagP>Abierto todos los días desde las 6:30 am hasta el atardecer, este <strong>campo de golf en Cancún</strong> le ofrece tiempo suficiente para disfrutar de los impresionantes alrededores y del desafío del campo. Hay alquiler de palos y zapatos disponibles, lo que garantiza que tenga todo lo que necesita para una experiencia de golf perfecta. </TagP>
+
+<TagH3>Déjese mimar en el snack bar y la espectacular casa club de Hole 9 </TagH3>
+
+<TagP>En medio de su juego, tómese un descanso en el snack bar de Hole 9, que sirve deliciosas delicias para mantenerlo con energía. Después, diríjase a la impresionante casa club, donde podrá relajarse, disfrutar del ambiente y compartir historias de sus rondas con otros entusiastas del golf. </TagP>
+
+<TagH3>Perfeccione su swing en el campo de prácticas </TagH3>
+
+<TagP>Afine sus habilidades en el campo de prácticas, que cuenta con un green para putters y un campo de chipping. Tanto si es un principiante que busca mejorar como si es un jugador experimentado que está perfeccionando su técnica, el campo de prácticas ofrece un entorno ideal para practicar. </TagP>
+
+<TagH4>Disfrute del mejor golf en Cancún </TagH4>
+
+<TagP>El campo de golf “El Tinto” es uno de los mejores campos de golf de Cancún y atrae a jugadores de todo el mundo. Sin duda, sumérjase en el encantador Caribe mexicano mientras juega en este extraordinario campo. </TagP>
+
+<TagH4>Reserve su hora de salida hoy mismo </TagH4>
+
+<TagP>Por último, no pierda la oportunidad de experimentar el campo de golf “El Tinto” en Cancún. Reserve su hora de salida ahora y disfrute de una experiencia de golf como ninguna otra. Donde la excelencia, la naturaleza y la experiencia convergen para un juego inolvidable. </TagP>

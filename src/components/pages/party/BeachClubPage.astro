@@ -1,7 +1,7 @@
 ---
 import { getI18N } from "@/i18n";
 import { getSlides } from "@/img/allImages";
-import { getLangFromUrl } from "@/i18n/utils";
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
 import { getPartiesType } from "@/content/functions";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
@@ -10,11 +10,15 @@ import Intro from "@components/global/Intro.astro";
 import Partners from "@components/global/Partners";
 import PartyCard from "@components/cards/PartyCard.astro";
 
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
 const lang = getLangFromUrl(Astro.url);
 const allParties = await getPartiesType("BEACHCLUB", lang);
+const translatePath = useTranslatedPath(lang);
 
 const slides = getSlides("BEACHCLUB", lang);
 
@@ -41,6 +45,24 @@ const seoMetaDatos = {
     <section class="container mx-auto mb-10">
         <div class="flex flex-wrap justify-center">
             {allParties.map((party) => <PartyCard party={party} lang={lang} />)}
+        </div>
+    </section>
+
+    <section class="container mx-auto mb-10">
+        <div class="px-5 py-2 text-justify">
+            <TagH3>{i18n.PARTY_PAGE.BEACHCLUB.EXPERIENCE.TITLE}</TagH3>
+            <TagP>{i18n.PARTY_PAGE.BEACHCLUB.EXPERIENCE.DESCRIPTION}</TagP>
+            
+            <TagH3>{i18n.PARTY_PAGE.BEACHCLUB.ADVENTURE.TITLE}</TagH3>
+            <TagP>{i18n.PARTY_PAGE.BEACHCLUB.ADVENTURE.DESCRIPTION.TEXT_1}</TagP>
+            <TagP>{i18n.PARTY_PAGE.BEACHCLUB.ADVENTURE.DESCRIPTION.TEXT_2}</TagP>
+
+            <p class="text-base/loose md:text-xl/loose mt-10 mb-2 text-violet-700 font-extrabold text-center">{i18n.PARTY_PAGE.BEACHCLUB.BOOK_TICKETS}</p>
+
+            <div class="flex flex-wrap justify-center gap-4 mt-10">
+                <a href={translatePath('/nightlife-in-cancun/')} class="w-fit block px-5 py-3 rounded-xl text-white bg-gradient-to-r font-bold text-xl from-purple-700 to-fuchsia-600 hover:scale-90 hover:shadow-2xl transition-all duration-200">{i18n.PARTY_PAGE.BEACHCLUB.BUTTONS.NIGHTCLUB}</a>
+                <a href={translatePath('/events-in-cancun/')} class="w-fit block px-5 py-3 rounded-xl text-white bg-gradient-to-r font-bold text-xl from-purple-700 to-fuchsia-600 hover:scale-90 hover:shadow-2xl transition-all duration-200">{i18n.PARTY_PAGE.BEACHCLUB.BUTTONS.EVENTS}</a>
+            </div>
         </div>
     </section>
 

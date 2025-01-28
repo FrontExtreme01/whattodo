@@ -68,10 +68,13 @@ testimonials:
     review: 'Decent VIP Lounge Option! The MERA VIP Lounge at Cancun Airport provided a comfortable space to relax before my flight. The buffet had a decent selection of food, and the open bar was a nice perk. However, the lounge could benefit from better organization and more seating options for guests.'
 ---
 
-import Inclusions from '@components/detail-content/Inclusions.astro';
-import AdditionalInfo from '@components/detail-content/AdditionalInfo.astro';
-import TabTerminals from '@components/detail-content/TabTerminals';
-import TabAirlines from '@components/detail-content/TabAirlines';
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import TabTerminals from "@components/detail-content/TabTerminals";
+import TabAirlines from "@components/detail-content/TabAirlines";
 
 export const includes = [
     'Buffet y menú a la carta',
@@ -114,19 +117,19 @@ export const i18n = {
 
 <Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
 
-<h2 class="text-xl md:text-3xl font-bold text-orange-600 mt-10 mb-4">Espere con estilo en el salón VIP del aeropuerto de Cancún</h2>
+<TagH2>Espere con estilo en el salón VIP del aeropuerto de Cancún</TagH2>
 
-<p class="text-base md:text-lg mb-2">Viva la experiencia de viajar como nunca antes en el salón VIP del aeropuerto MERA, su refugio de comodidad y lujo en el bullicioso aeropuerto de Cancún. Dígale adiós al estrés del aeropuerto y entre a nuestro refugio exclusivo, lejos del ajetreo y el bullicio de las terminales.</p>
+<TagP>Viva la experiencia de viajar como nunca antes en el salón VIP del aeropuerto MERA, su refugio de comodidad y lujo en el bullicioso aeropuerto de Cancún. Dígale adiós al estrés del aeropuerto y entre a nuestro refugio exclusivo, lejos del ajetreo y el bullicio de las terminales.</TagP>
 
-<p class="text-base md:text-lg mb-2">Disfrute de cada momento con una deliciosa variedad de opciones tipo bufé y a la carta, cuidadosamente preparadas para deleitar su paladar. Acompáñelo con sus bebidas favoritas de nuestra barra libre bien surtida, lo que le garantizará una relajación total antes del vuelo.</p>
+<TagP>Disfrute de cada momento con una deliciosa variedad de opciones tipo bufé y a la carta, cuidadosamente preparadas para deleitar su paladar. Acompáñelo con sus bebidas favoritas de nuestra barra libre bien surtida, lo que le garantizará una relajación total antes del vuelo.</TagP>
 
-<p class="text-base md:text-lg mb-2">Escápese del caos y relájese con estilo en nuestros lujosos sillones y sofás, donde cada momento está diseñado para su comodidad. Manténgase conectado con WiFi de cortesía, mantenga sus dispositivos cargados en las convenientes estaciones y haga llamadas de último momento con facilidad.</p>
+<TagP>Escápese del caos y relájese con estilo en nuestros lujosos sillones y sofás, donde cada momento está diseñado para su comodidad. Manténgase conectado con WiFi de cortesía, mantenga sus dispositivos cargados en las convenientes estaciones y haga llamadas de último momento con facilidad.</TagP>
 
-<p class="text-base md:text-lg mb-2">Disfrute del lujo que se merece y eleve su experiencia de viaje en el salón VIP del aeropuerto MERA.</p>
+<TagP>Disfrute del lujo que se merece y eleve su experiencia de viaje en el salón VIP del aeropuerto MERA.</TagP>
 
 <AdditionalInfo information={information} i18n={i18n} />
 
-<h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Horario</h3>
+<TagH3>Horario</TagH3>
 <ul class="space-y-4 text-base md:text-lg">
     <li><i class="at-clock text-green-600"></i> <em>Terminal 2 VIP</em> | <strong>5:30 am a 9:30 pm</strong></li>
     <li><i class="at-clock text-green-600"></i> <em>Terminal 3 VIP</em> | <strong>6:30 am a 9:30 pm</strong></li>
@@ -135,22 +138,22 @@ export const i18n = {
     <li><i class="at-clock text-green-600"></i> <em>Duración:</em> 3 horas para salas internacionales. 2 horas para salas nacionales.</li>
 </ul>
 
-<h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Comodidad en cualquier terminal del aeropuerto de Cancún</h3>
+<TagH3>Comodidad en cualquier terminal del aeropuerto de Cancún</TagH3>
 
-<p class="text-base md:text-lg mb-2">La sala de espera de la <strong>Terminal 4 para vuelos internacionales</strong> está equipada con duchas, toallas y cabinas para dormir <strong>(sujeto a disponibilidad)</strong>.</p>
+<TagP>La sala de espera de la <strong>Terminal 4 para vuelos internacionales</strong> está equipada con duchas, toallas y cabinas para dormir <strong>(sujeto a disponibilidad)</strong>.</TagP>
 
 <TabTerminals client:visible i18n={i18n} />
 
 <TabAirlines client:visible i18n={i18n} />
 
-<h3 class="text-lg md:text-2xl font-bold text-green-700 mt-10 mb-4">Disfruta de cada detalle</h3>
+<TagH3>Disfruta de cada detalle</TagH3>
 
-<p class="text-base md:text-lg mb-4">¡Prepárate para llevar tu experiencia en el aeropuerto a nuevas alturas en los salones VIP Mera del aeropuerto de Cancún! Justo en el corazón de la acción, estos salones son tu boleto a un nivel completamente nuevo de relajación y placer.</p>
+<TagP>¡Prepárate para llevar tu experiencia en el aeropuerto a nuevas alturas en los salones VIP Mera del aeropuerto de Cancún! Justo en el corazón de la acción, estos salones son tu boleto a un nivel completamente nuevo de relajación y placer.</TagP>
 
-<p class="text-base md:text-lg mb-4">Ponte cómodo y conectado con nuestro WiFi ultrarrápido, perfecto para ponerte al día con tus redes sociales o ver tus programas favoritos. ¡Y no olvides avisarle al mundo sobre tu tratamiento VIP con un rápido check-in!</p>
+<TagP>Ponte cómodo y conectado con nuestro WiFi ultrarrápido, perfecto para ponerte al día con tus redes sociales o ver tus programas favoritos. ¡Y no olvides avisarle al mundo sobre tu tratamiento VIP con un rápido check-in!</TagP>
 
-<p class="text-base md:text-lg mb-4">Mantén tus dispositivos cargados y listos para cualquier cosa con nuestras convenientes estaciones de carga, sin preocuparte más por la ansiedad por la batería baja. Cuando llegue el momento de reponer fuerzas, prepárese para deleitar su paladar con un festín sin igual.</p>
+<TagP>Mantén tus dispositivos cargados y listos para cualquier cosa con nuestras convenientes estaciones de carga, sin preocuparte más por la ansiedad por la batería baja. Cuando llegue el momento de reponer fuerzas, prepárese para deleitar su paladar con un festín sin igual.</TagP>
 
-<p class="text-base md:text-lg mb-4">Desde deliciosos platos a la carta hasta tentadores bufés, hay algo para satisfacer todos los antojos. Acompáñelo con una selección de bebidas premium de nuestra barra libre, porque cada viaje merece un poco de lujo.</p>
+<TagP>Desde deliciosos platos a la carta hasta tentadores bufés, hay algo para satisfacer todos los antojos. Acompáñelo con una selección de bebidas premium de nuestra barra libre, porque cada viaje merece un poco de lujo.</TagP>
 
-<p class="text-base md:text-lg mb-4">Dígale adiós a las experiencias ordinarias en el aeropuerto y dé la bienvenida al tratamiento VIP que se merece. Únase a nosotros en las salas VIP Mera para vivir momentos inolvidables.</p>
+<TagP>Dígale adiós a las experiencias ordinarias en el aeropuerto y dé la bienvenida al tratamiento VIP que se merece. Únase a nosotros en las salas VIP Mera para vivir momentos inolvidables.</TagP>

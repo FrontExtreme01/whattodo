@@ -1,0 +1,46 @@
+---
+const { i18n } = Astro.props;
+---
+
+<table class="table-auto w-full sm:w-3/4 border-separate border-spacing-2 text-sm sm:text-base my-5">
+    <thead>
+        <tr>
+            <td colspan="4">
+                <h3 class="bg-slate-200 font-bold text-xl text-center p-4">{i18n.TABLE_TITLE}</h3>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="1" class="bg-slate-100 font-bold text-center p-2"></td>
+            <td colspan="1" class="bg-slate-100 font-bold text-center p-2">
+                <h4>Nov.22 - Apr.23</h4>
+            </td>
+            <td colspan="1" class="bg-slate-100 font-bold text-center p-2">
+                <h4>May.23 - Oct.t23</h4>
+            </td>
+            <td colspan="1" class="bg-slate-100 font-bold text-center p-2">
+                <h4>Nov.23 - Apr.24</h4>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">Green <br> Fee:</th>
+            <td class="bg-slate-100 text-center p-2">$ 250 USD</td>
+            <td class="bg-slate-100 text-center p-2">$ 230 USD</td>
+            <td class="bg-slate-100 text-center p-2">$ 250 USD</td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">Twilight fee: <br> <em>({i18n.AFTER} 2:30 pm)</em></th>
+            <td class="bg-slate-100 text-center p-2">$ 170 USD</td>
+            <td class="bg-slate-100 text-center p-2">$ 170 USD</td>
+            <td class="bg-slate-100 text-center p-2">$ 170 USD</td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">Junior Fee: <br> <em>({i18n.AGE_JUNIOR})</em></th>
+            <td class="bg-slate-100 text-center p-2">$ 85 USD</td>
+            <td class="bg-slate-100 text-center p-2">$ 85 USD</td>
+            <td class="bg-slate-100 text-center p-2">$ 85 USD</td>
+        </tr>
+    </tbody>
+</table>
+<p class="text-sm text-red-600 italic my-3">{i18n.CONDITIONS}</p>

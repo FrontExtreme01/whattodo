@@ -1,0 +1,106 @@
+---
+slug: 'yacht-rental-cancun-casanova/en'
+status: 1
+lang: 'en'
+slugGallery: 'casanova'
+title: 'Yacht Rental Cancun Casanova'
+description: ''
+keywords: ''
+price: 932
+stars: '5.0'
+reviews: '963 Reviews'
+image: 
+    src: '/assets/covers/yachts/yacht-casanova-cover.webp'
+    alt: 'cover of yacht casanova'
+capacity: 'Max 15 passengers'
+size: 'Size: 48 ft'
+highlights: ['Life jackets and snorkel masks', 'Bluetooth music']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/949734?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/949734'
+location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+faqs:
+-   question: 'Do I need to bring anything for the trip?'
+    answer: We provide everything you'll need for a luxurious and comfortable experience. However, we recommend bringing sunscreen, a hat, and any personal items you'd like for the day. If you're planning on swimming or snorkeling, feel free to bring swimwear and towels, though these can also be provided.
+-   question: 'What happens if the weather is bad on the day of my rental?'
+    answer: 'Your safety and comfort are our top priority. If the weather conditions are unsafe, we will work with you to reschedule your booking or offer alternative options. We monitor weather forecasts closely to ensure the best experience possible.'
+-   question: 'Are there any age restrictions for passengers on the yacht?'
+    answer: 'There are no strict age restrictions, but for safety reasons, we recommend that young children be accompanied by a responsible adult. The yacht is equipped with safety features, including life vests, to ensure a secure experience for all guests.'
+-   question: 'Do I need boating experience to rent the Casanova yacht?'
+    answer: ' No, you don’t need any boating experience. The yacht comes with a professional crew to handle all aspects of navigation, ensuring a smooth and enjoyable journey for you and your guests.'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import TabPricesYacht from "@components/extras/TabPricesYacht";
+
+export const includes = [
+    '24 beers.',
+    '24 waters.',
+    '24 sodas and ice.',
+    'Life jackets and snorkel masks.',
+    'Captain and sailor at the service of passengers.',
+    'Private Room, rest area and bathroom.',
+    'Bluetooth speakers.',
+];
+
+export const notIncludes = [
+    'Marine dock fee ($10USD per person)',
+    'Tips for crew members.',
+    'Photos.',
+    'Souvenirs.',
+    'Food or snacks.',
+    'Ground transportation.',
+];
+
+export const shouldKnow = [
+    'Subject to availability',
+    'The snorkel activity is weather dependent.',
+    'If weather does not allow to participate on the activity, the activity could be reschedule according to availability.',
+    'Snorkel activity not recommended for pregnant women ',
+    'Snorkel activity not recommended for participants with heart conditions, recent surgeries Back problems or reduce mobility',
+];
+
+export const shouldBring  = [
+    'Towel',
+    'Swimwear',
+    'Change of clothes',
+    'Hat',
+    'Sunglasses',
+    'Biodegrádable sunscreen',
+    'Additional cash or form of payment',
+];
+
+export const infoPrices = [
+    {
+        duration: '4 hours',
+        price: '932',
+    },
+    {
+        duration: '6 hours',
+        price: '1,085',
+    },
+    {
+        duration: '8 hours',
+        price: '1,247',
+    },
+];
+
+export const i18n = {
+    INCLUDES: 'Included',
+    NOT_INCLUDES: 'Not included',
+    SHOULD_KNOW: 'What you should know',
+    SHOULD_BRING: 'What you should bring',
+};
+
+<TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<TagP><em><strong><small>Please contact us in advance to confirm the start time of your activity</small></strong></em></TagP>
+
+<TagH2>Overview </TagH2>
+
+<TagP>Embark on an unforgettable journey aboard the Casanova, a 48-foot luxury yacht, sailing from the beautiful Marina Kaybal in Cancún. Whether you're planning a special celebration, a relaxing escape, or a fun-filled day on the water, the Casanova offers the perfect setting. With its expansive decks, stylish interiors, and exceptional amenities, you'll enjoy every moment in comfort and elegance. Explore the stunning Caribbean coastline, unwind with personalized service, and create unforgettable memories. Reserve your spot today and experience the ultimate in luxury, adventure, and tranquility on the water </TagP>
+
+<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />
