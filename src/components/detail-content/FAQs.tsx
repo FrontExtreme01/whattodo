@@ -9,7 +9,7 @@ export default function FAQs({ FAQS, title, description }: any) {
     };
 
     return (
-        <section className="relative pt-5 pb-20 px-5 md:px-24 container mx-auto text-center">
+        <section className="relative md:pt-3 pb-20 px-5 md:px-24 container mx-auto text-center">
             <h2 className="mt-16 mb-8 text-2xl md:text-4xl text-orange-500 font-bold">{title}</h2>
             <p className="text-base/loose md:text-xl/loose text-gray-600 mb-8">{description}</p>
 

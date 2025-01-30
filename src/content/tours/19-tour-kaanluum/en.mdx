@@ -1,0 +1,78 @@
+---
+slug: 'kaanluum-laggon-and-cenotes/en'
+status: 1
+lang: 'en'
+slugGallery: 'kaanluum'
+title: 'Kaan Luum Lagoon & Cenotes'
+description: Venture our to one of Riviera Maya's hidden gems - Kaan Luum Lagoon, a breathtaking natural oasis adorned with mangroves and inviting crystal-clear turquoise waters
+keywords: ''
+categories: ['WATER']
+price: 130
+stars: '4.5'
+reviews: '1,548 reviews'
+image:
+    src: '/assets/covers/tours/cover-kaan-luum.webp'
+    alt: 'cover Kaan Luum Lagoon & Cenotes'
+highlights: ['Transportation Included']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/876336?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/876336'
+location: 'Kaan Luum Lagoon, Tulum'
+duration: '10 hours'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+
+export const includes = [
+    'Admission to cenotes',
+    'Buffet lunch',
+    'Roundtrip transportation from most Cancun & Riviera Maya hotels',
+    'Vests included in the cenotes.',
+    'A bottle of water during the tour.',
+];
+
+export const notIncludes = [
+    'National Park Fee of 350 pesos per person',
+    'Beverages',
+];
+
+export const shouldKnow = [
+    'Not wheelchair accessible',
+    'Not stroller accessible',
+    'Not suitable for pets',
+    'No public transportation nearby',
+    'Infant seats unavailable',
+    'Not recommended for people with back problems',
+    'Travel time to Kaan Luum is around 2 hours each way. ',
+];
+
+export const shouldBring = [
+    'Comfortable clothes and shoes',
+    'Swimsuit and towel',
+    'Biodegradable sunscreen and repellent',
+    'Extra money',
+    'Sunglasses or a cap.',
+];
+
+export const i18n = {
+    INCLUDES: 'Included',
+    NOT_INCLUDES: 'Not Included',
+    SHOULD_KNOW: 'What you should know',
+    SHOULD_BRING: 'What you should bring',
+};
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+
+<TagH2> About the Kaan Luum Lagoon Day Trip with Cenotes and Mayan Traditions</TagH2>
+
+<TagP> Venture our to one of Riviera Maya's hidden gems - Kaan Luum Lagoon, a breathtaking natural oasis adorned with mangroves and inviting crystal-clear turquoise waters. Explore two fascinating cenotes and witness a demonstration of Maya crafts and traditions.</TagP>
+
+<TagP> The exciting day starts at the Kaan Luum, where you can enjoy swimming in the clear, cool waters of the lagoon. Next, continue to to the Canamayte complex, where a local shaman will greet you with a purifying ceremony.</TagP>
+
+<TagP> Head to Cenote Mariposa for a refreshing swim in its pristine turquoise waters. Afterward, delve into local Mayan traditions with a demonstration featuring authentic honey and cocoa.</TagP>
+
+<TagP> Following this immersive experience, explore the stunning cavern-type cenote, CHEN HA, illuminated by our knowledgeable guide who will point out its highlights. Lifejackets are provided for your safety.</TagP>
+
+<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />

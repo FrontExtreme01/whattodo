@@ -12,7 +12,7 @@ export default function FormBokunMobile({ data }: any) {
 
     return (
         <>
-            <div className="lg:hidden flex w-full justify-center items-center sticky bottom-0 bg-white p-5 mt-5 border border-t-slate-200 z-10">
+            <div className="flex xl:hidden w-full justify-center items-center sticky bottom-0 bg-white p-5 mt-5 border border-t-slate-200 z-10">
                 <div className="w-1/2">
                     <p className="text-slate-900 text-sm font-bold">{data.price ? data.i18n.PRICE_FROM : data.titleCard}</p>
                     {data.price && (

@@ -4,6 +4,8 @@ import logoHorizontal from "@/img/logos/logo-horizontal.webp";
 import separador from "@public/icons/separador.webp";
 import IconLastminute from "@/img/extras/icon-lastminute.webp";
 import IconEarlyBird from "@/img/extras/early-bird-icon-discounts.svg"
+import Stars5 from "@/img/extras/5-stars-opinions.webp";
+import TripAdvisorCenotesAdventuring from "@/img/extras/tripadvisor-recommendatios-for-cenotes-adventuring-cancun.webp";
 // Footer
 import customerSuport from "@/img/extras/customer-support-in-cancun.webp";
 import secureCheckout from "@/img/extras/stripe-security-guarantee.webp";
@@ -23,13 +25,10 @@ import StickerHappyCustomer from "@/img/extras/our-happy-customers.webp";
 import pga1 from "@/img/extras/golf/robert-trent-jones-golf-course-architects.webp";
 import pga2 from "@/img/extras/golf/taylor-made-brand-and-golf-accesories.webp";
 import pga3 from "@/img/extras/golf/pga-riviera-maya-scorecard.webp";
-
 import ElTinto1 from "@/img/extras/golf/nick-price-design-logo.webp";
 import ElTinto2 from "@/img/extras/golf/top-golf-outfits.webp";
-
 import PM1 from "@/img/extras/golf/greg-norman-golf-course-design-in-cancun.webp";
 import PM2 from "@/img/extras/golf/playa-mujeres-golf-club-scorecard.webp";
-
 import MoonPalace1 from "@/img/extras/golf/jack-nicklaus-golf-course-design-logo.webp"
 
 // Extras Nightclubs
@@ -266,5 +265,7 @@ export {
     PM1,
     PM2,
     MoonPalace1,
-    placesCocoBongo
+    placesCocoBongo,
+    Stars5,
+    TripAdvisorCenotesAdventuring
 };

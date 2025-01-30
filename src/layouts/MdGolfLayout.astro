@@ -112,7 +112,7 @@ const seoMetaDatos = {
         </div>
     </section>
     <!-- Testimonials -->
-    {frontmatter.testimonials ? <Testimonials client:visible testimonials={frontmatter.testimonials} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_TESTIMONIAL}/> : "" }
+    {frontmatter.testimonials && (<Testimonials client:visible testimonials={frontmatter.testimonials} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_TESTIMONIAL}/>) }
     <!-- Form Mobile -->
     <FormBokunMobile client:visible data={dataForm} />
 </BaseLayout>

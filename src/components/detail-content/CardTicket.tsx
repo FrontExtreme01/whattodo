@@ -1,3 +1,5 @@
+import EarlyBirdPrices from "./EarlyBirdPrices";
+
 export default function CardTicket({ data }: any) {
     return (
         <>
@@ -5,6 +7,7 @@ export default function CardTicket({ data }: any) {
                 <i className="at-ticket-check"></i> {data.i18n.TITLE}
             </h3>
             <p className="text-base md:text-lg text-slate-700">{data.i18n.DESCRIPTION}</p>
+            {data.earlyBird && <EarlyBirdPrices price={data.price} />}
             {/* Ficha Producto */}
             <div className="relative shadow-sm flex flex-wrap items-center rounded-xl border border-slate-200 my-10 p-2 sm:p-3">
                 <div className="w-4/12">

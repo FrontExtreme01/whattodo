@@ -57,7 +57,7 @@ const seoMetaDatos = {
         <div class="flex flex-wrap">
             <!-- Header -->
             <header class="flex flex-wrap items-center w-full">
-                <h1 class="pr-1 w-9/12 text-2xl md:text-4xl font-bold italic text-green-700 relative">
+                <h1 class="pr-1 w-9/12 text-2xl md:text-4xl font-bold italic text-green-700">
                     {frontmatter.title}
                 </h1>
                 <div class="w-3/12 flex flex-col md:flex-row justify-center items-center gap-3">
@@ -112,9 +112,9 @@ const seoMetaDatos = {
         </div>
     </section>
     <!-- Testimonials -->
-    {frontmatter.testimonials && <Testimonials client:visible testimonials={frontmatter.testimonials} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_TESTIMONIAL}/> }
+    {frontmatter.testimonials && (<Testimonials client:visible testimonials={frontmatter.testimonials} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_TESTIMONIAL}/>) }
     <!-- FAQs -->
-    {frontmatter.faqs && <FAQs client:visible FAQS={frontmatter.faqs} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_FAQS} description={i18n.DETAILS_CONTENT.GENERAL.DESCRIPTION_FAQS}/> }
+    {frontmatter.faqs && (<FAQs client:visible FAQS={frontmatter.faqs} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_FAQS} description={i18n.DETAILS_CONTENT.GENERAL.DESCRIPTION_FAQS}/>) }
     <!-- Form Mobile -->
     <FormBokunMobile client:visible data={dataForm} />
 </BaseLayout>

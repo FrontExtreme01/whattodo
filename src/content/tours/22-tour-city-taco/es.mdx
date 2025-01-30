@@ -1,0 +1,143 @@
+---
+slug: 'city-taco-tour-puerto-morelos/es'
+status: 1
+earlyBird: 1
+lang: 'es'
+slugGallery: 'city-taco'
+title: 'Puerto Morelos City Taco Tour & Degustación de Tequila'
+description: 'Explora un pequeño pueblo de playa con el Tour de Tacos y saborea los diferentes tipos de tacos que se preparan tradicionalmente en el Caribe Mexicano.'
+keywords: ''
+categories: ['FAVORITES', 'CHEAP']
+price: 49
+stars: '5.0'
+reviews: '2,128 reseñas'
+image:
+    src: '/assets/covers/tours/city-and-taco-tour-cancun-puerto-morelos.webp'
+    alt: 'cover Puerto Morelos City Taco Tour & Tequila Tasting'
+highlights: ['Transporte Incluido']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/725897?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/725897'
+location: 'Puerto Morelos, Quintana Roo'
+duration: '4 horas'
+faqs:
+-   question: '¿Qué tipos de tacos probaré durante el tour?'
+    answer: 'El tour presenta tres variedades icónicas de tacos: Carnes Asadas, Pescado y Cochinita Pibil, un platillo tradicional de cerdo asado lento marinado en pasta de achiote y jugos cítricos.'
+-   question: '¿Es la degustación de tequila adecuada para todos los participantes?'
+    answer: 'La degustación de tequila está disponible para participantes mayores de edad. También se ofrecen bebidas no alcohólicas.'
+-   question: '¿Hay opciones vegetarianas disponibles durante el tour de tacos?'
+    answer: 'Sí, hay opciones vegetarianas disponibles. Por favor, infórmanos durante tu reserva para acomodar tus preferencias alimenticias.'
+-   question: '¿Cuál es la duración del tour y cuáles son los horarios disponibles?'
+    answer: 'El tour dura aproximadamente 4 horas (más el tiempo de transporte) con dos horarios disponibles: Mañana (10:00 am a 2:00 pm) y Mediodía (2:00 pm a 6:00 pm).'
+-   question: '¿Habrá un guía durante el tour?'
+    answer: 'Sí, un guía bilingüe conocedor te acompañará, brindando información sobre la historia local, la cultura y el proceso de elaboración de tacos.'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import Timeline from "@components/extras/Timeline.astro";
+
+export const includes = [
+    'Transporte de ida y vuelta',
+    'Tour de Tacos',
+    'Visita al Mercado de Pulgas Mexicano',
+    'Paseo por el pueblo',
+    'Degustación de Tequila',
+    'Guía Bilingüe (Inglés y Español)',
+    'Compras en “Mi Pueblito Market”',
+];
+
+export const notIncludes = [
+    'Fotografías profesionales',
+    'Propinas',
+];
+
+export const information = [
+    'Mañana: 10:00 am a 2:00 pm',
+    'Mediodía: 2:00 pm a 6:00 pm'
+];
+
+export const shouldKnow = [
+    'Accesible para sillas de ruedas',
+    'Por favor, informe con antelación si tiene alguna alergia alimentaria.',
+    'Tenga en cuenta que el tiempo de la experiencia que se muestra no incluye el tiempo de viaje desde su ubicación hasta el sitio de la actividad, por lo que debe planificar en consecuencia, ya que el tiempo de transporte puede variar debido a las condiciones del tráfico y circunstancias imprevistas.',
+];
+
+export const shouldBring = [
+    'Ropa y zapatos cómodos de punta cerrada',
+    'Efectivo adicional o forma de pago',
+    'Protector solar opcional ',
+    'Sombrero',
+    'Anteojos de sol',
+    'Agua',
+];
+
+export const timeline = [
+    {
+        title: 'Pick up en hotel',
+        description: 'Comienza tu aventura con un pick up conveniente desde tu hotel en Cancún o Riviera Maya.',
+        icon: 'bus-front',
+    },
+    {
+        title: 'Check in',
+        description: 'Realiza tu check in y conoce a tu guía que te acompañara en esta experiencia.',
+        icon: 'check-circle',
+    },
+    {
+        title: 'Primera Estación',
+        description: 'Degustación de los clásicos y deliciosos tacos mexicanos de carne asada.',
+        icon: 'taco',
+    },
+    {
+        title: 'Segunda Estación',
+        description: 'Degustación de Tacos de cochinita pibil y visita a Mi pueblito.',
+        icon: 'taco',
+    },
+    {
+        title: 'Tercera Estación',
+        description: 'Degustación de Tacos de pescado fresco.',
+        icon: 'taco',
+    },
+    {
+        title: 'Cuarta Estación',
+        description: 'Degustación de Helado artesanal y visita guíada a puntos importantes de puerto morelos.',
+        icon: 'ice-cream-stick',
+    },
+    {
+        title: 'Desgutación de Tequila',
+        description: '¡Sin embargo, ninguna experiencia culinaria mexicana está completa sin tequila!.',
+        icon: 'bottle-glass',
+    },
+    {
+        title: 'Regreso al hotel',
+        description: 'Tiempo de regreso acorde a tráfico o clima.',
+        icon: 'apartments-building',
+    }
+];
+
+export const i18n = {
+    INCLUDES: 'Incluye',
+    NOT_INCLUDES: 'No Incluye',
+    INFORMATION: 'Horarios disponibles',
+    SHOULD_KNOW: 'Lo que debes saber',
+    SHOULD_BRING: 'Lo que debes llevar',
+};
+
+<AdditionalInfo information={information} i18n={i18n} />
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+
+<TagP><em><small><strong>Tenga en cuenta que el tiempo de experiencia mostrado no incluye el tiempo de viaje desde su ubicación al sitio de actividades, por lo que planifique en consecuencia, ya que el tiempo de transporte puede variar debido a las condiciones del tráfico y las circunstancias imprevistas. </strong></small></em></TagP>
+
+<TagH2>Acerca de City & Taco Tour Puerto Morelos </TagH2>
+
+<TagP> ¡Descubra el vibrante encanto de Puerto Morelos en el <b>City & Taco Tour</b>! Explore este pintoresco pueblo pesquero caribeño, rico en cultura e historia, mientras visita lugares emblemáticos como el faro inclinado, el antiguo muelle y el mercado Mi Pueblito. Deléitese con los auténticos sabores mexicanos con una degustación de tres variedades icónicas de tacos: carnes asadas, pescado y cochinita pibil, elaborados con recetas tradicionales y llenos de sabor. Complete su experiencia con una degustación guiada de tequila por expertos experimentados. Este viaje inolvidable combina delicias culinarias, exploración cultural e impresionantes vistas al mar, lo que lo convierte en una visita obligada para los entusiastas de la comida y los viajes. </TagP>
+
+<TagH2>Que Esperar del Tour</TagH2>
+
+<Timeline timeline={timeline} />
+
+<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />

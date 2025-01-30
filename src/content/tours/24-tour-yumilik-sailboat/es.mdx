@@ -1,0 +1,83 @@
+---
+slug: 'private-cancun-sailboat-cruise/es'
+status: 1
+lang: 'es'
+slugGallery: 'private-sailboat'
+title: 'Crucero privado en velero en Cancún con cervezas y refrescos incluidos'
+description: 'Escápate al paraíso con nuestro exclusivo crucero privado en velero a Isla Mujeres, una joya de isla prístina frente a la costa de Cancún.'
+keywords: ''
+categories: ['WATER']
+price: 547
+stars: '4.5'
+reviews: '2,128 reseñas'
+image:
+    src: '/assets/covers/tours/private-cancun-sailboat.webp'
+    alt: 'Portada Crucero privado en velero en Cancún'
+highlights: ['Cerveza, refrescos y agua', 'Equipo de snorkel', 'Chalecos salvavidas']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/866346?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/866346'
+location: 'Marina Hacienda del Mar'
+duration: '6 horas'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import MapFrame from "@components/detail-content/MapFrame";
+
+export const includes = [
+    'Crucero privado en velero y tripulación',
+    '12 cervezas, aguas y refrescos.',
+    'Equipo de snorkel y chalecos salvavidas',
+];
+
+export const notIncludes = [
+    'Tarifa de muelle de 5 USD por persona a pagar a la llegada',
+    'Comida (el viajero puede llevar comida a bordo)',
+    'Propinas',
+    'Fotos',
+];
+
+export const information = [
+    'Transporte público cercano',
+    'No accesible en silla de ruedas',
+    'No accesible en cochecito',
+    'No apto para mascotas',
+    'Los bebés no deben sentarse en el regazo',
+    'Asientos para bebés no disponibles',
+];
+
+export const i18n = {
+    INCLUDES: 'Incluido',
+    NOT_INCLUDES: 'No incluido',
+    INFORMATION: 'Por favor, ten en cuenta',
+};
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+
+<TagH2>Acerca de Crucero privado en velero en Cancún</TagH2>
+
+<TagP> Escape al paraíso con nuestro exclusivo crucero de botes de navegación privado a Isla Mujeres, una joya de isla virgen justo en la costa de Cancún.Pase a bordo de nuestro buque fino y embarque en un viaje de descubrimiento y relajación en las impresionantes aguas del mar Caribe. </TagP>
+
+<TagP> Mientras navegamos hacia Isla Mujeres, sumergirnos en la belleza de las aguas turquesas y las vistas panorámicas de la costa.Nuestro experimentado capitán y equipo asegurará un viaje suave y agradable, guiándolo a los lugares más apartados y pintorescos de la isla. </TagP>
+
+<TagP> sumergirse en las aguas cristalinas para una aventura de snorkel inolvidable.Descubra la vibrante vida marina que habita en los arrecifes de coral que rodean la isla, y maravillados con el caleidoscopio de colores debajo de la superficie. </TagP>
+
+<TagP> Disfrute de la mejor experiencia con bebidas de cortesía de nuestro bar a bordo, con cerveza y refrescos ilimitados.Para el almuerzo, brindaremos recomendaciones para restaurantes donde puede saborear la cocina mexicana o las delicias de mariscos. </TagP>
+
+<AdditionalInfo information={information} i18n={i18n}/>
+
+<TagH3> Puede comenzar esta experiencia en los siguientes lugares </TagH3>
+
+<TagP> <strong> Marina Hacienda del Mar </strong> </TagP>
+
+<TagP> Carr.A Punta Sam, 77500 Cancún, MX </TagP>
+
+<MapFrame
+    client:visible
+    url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1859.8628241082727!2d-86.80653302669161!3d21.20305493593565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2e674cb12901%3A0xd18c7289600ab941!2sMarina%20Hacienda%20del%20Mar!5e0!3m2!1ses-419!2smx!4v1715090983649!5m2!1ses-419!2smx"
+    titleAct={frontmatter.title}
+    textMap="Ver Ubicación"
+/>

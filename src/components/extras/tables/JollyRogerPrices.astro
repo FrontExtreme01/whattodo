@@ -1,0 +1,27 @@
+---
+const { lang } = Astro.props;
+---
+
+<table class="table-auto w-full border-separate border-spacing-2 text-sm sm:text-base my-5">
+    <thead>
+        <tr>
+            <td colspan="4">
+                <h3 class="bg-orange-500 text-white font-bold text-xl text-center p-4">{lang === "en" ? " Transportation Prices": "Precios de Transportación"}</h3>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">{lang === "en" ? "Cancun Hotels": "Hoteles de Cancún"}</th>
+            <td colspan="1" class="bg-slate-100 text-center p-2"><strong>$ 13 USD</strong> <small>{lang === "en" ? "price per person": "precio por persona"}</small></td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">{lang === "en" ? "Costa Mujeres Hotels": "Hoteles de Costa Mujeres"}</th>
+            <td colspan="1" class="bg-slate-100 text-center p-2"><strong>$ 10 USD</strong> <small>{lang === "en" ? "price per person": "precio por persona"}</small></td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">Rivera Maya</th>
+            <td colspan="1" class="bg-slate-100 text-center p-2"><strong>$ 15 USD</strong> <small>{lang === "en" ? "price per person": "precio por persona"}</small></td>
+        </tr>
+    </tbody>
+</table>

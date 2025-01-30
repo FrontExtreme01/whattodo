@@ -1,0 +1,83 @@
+---
+slug: 'private-cancun-sailboat-cruise/en'
+status: 1
+lang: 'en'
+slugGallery: 'private-sailboat'
+title: 'Private Cancun Sailboat Cruise with Beers and Sodas Included'
+description: 'Escape to paradise with our exclusive private sailing boat cruise to Isla Mujeres, a pristine island gem just off the coast of Cancun.'
+keywords: ''
+categories: ['WATER']
+price: 547
+stars: '4.5'
+reviews: '2,128 reviews'
+image:
+    src: '/assets/covers/tours/private-cancun-sailboat.webp'
+    alt: 'cover Private Cancun Sailboat Cruise'
+highlights: ['Beer, sodas & water', 'Snorkeling gear', 'Lifejackets']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/866346?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/866346'
+location: 'Marina Hacienda del Mar'
+duration: '6 hours'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import MapFrame from "@components/detail-content/MapFrame";
+
+export const includes = [
+    'Private sailing cruise & crew',
+    '12 beers, waters and sodas.',
+    'Snorkeling gear & lifejackets',
+];
+
+export const notIncludes = [
+    'Dock fee of 5 USD per person payable upon arrival',
+    'Food (traveller can bring food on board)',
+    'Tips',
+    'Photos',
+];
+
+export const information = [
+    'Public transportation nearby',
+    'Not wheelchair accessible',
+    'Not stroller accessible',
+    'Not suitable for pets',
+    'Infants must not sit on laps',
+    'Infant seats unavailable',
+];
+
+export const i18n = {
+    INCLUDES: 'Included',
+    NOT_INCLUDES: 'Not included',
+    INFORMATION: 'Please Note',
+};
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+
+<TagH2>About Private Cancun Sailboat Cruise</TagH2>
+
+<TagP>Escape to paradise with our exclusive private sailing boat cruise to Isla Mujeres, a pristine island gem just off the coast of Cancun. Step aboard our fine vessel and embark on a journey of discovery and relaxation in the breathtaking waters of the Caribbean Sea.</TagP>
+
+<TagP>As we set sail towards Isla Mujeres, immerse yourself in the beauty of the turquoise waters and panoramic views of the coastline. Our experienced captain and crew will ensure a smooth and enjoyable voyage, guiding you to the island's most secluded and picturesque spots.</TagP>
+
+<TagP>Dive into the crystal-clear waters for an unforgettable snorkeling adventure. Discover the vibrant marine life that inhabits the coral reefs surrounding the island, and marvel at the kaleidoscope of colors beneath the surface.</TagP>
+
+<TagP>Indulge in the ultimate experience with complimentary drinks from our onboard bar, featuring unlimited beer and sodas. For lunch, we'll provide recommendations for eateries where you can savor Mexican cuisine or seafood delicacies.</TagP>
+
+<AdditionalInfo information={information} i18n={i18n}/>
+
+<TagH3>You can start this experience at the following places</TagH3>
+
+<TagP><strong>Marina Hacienda del Mar</strong></TagP>
+
+<TagP>Carr. a Punta Sam, 77500 Cancún, MX</TagP>
+
+<MapFrame
+    client:visible
+    url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1859.8628241082727!2d-86.80653302669161!3d21.20305493593565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2e674cb12901%3A0xd18c7289600ab941!2sMarina%20Hacienda%20del%20Mar!5e0!3m2!1ses-419!2smx!4v1715090983649!5m2!1ses-419!2smx"
+    titleAct={frontmatter.title}
+    textMap="See Location"
+/>
