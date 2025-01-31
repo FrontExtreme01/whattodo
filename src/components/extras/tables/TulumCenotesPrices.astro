@@ -1,0 +1,27 @@
+---
+const { lang } = Astro.props;
+---
+
+<table class="table-auto w-full border-separate border-spacing-2 text-sm sm:text-base my-5">
+    <thead>
+        <tr>
+            <td colspan="4">
+                <h3 class="bg-orange-500 text-white font-bold text-xl text-center p-4">{lang === "en" ? "Select Your Pick-up:": "Selecciona tu punto de partida:"} </h3>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">{lang === "en" ? "From Tulum": "Desde Tulum"}</th>
+            <td colspan="1" class="bg-slate-100 text-center p-2"><strong>$ 55 USD</strong></td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">{lang === "en" ? "From Playa del Carmen / Riviera Maya": "Desde Playa del Carmen / Riviera Maya"}</th>
+            <td colspan="1" class="bg-slate-100 text-center p-2"><strong>$ 69 USD</strong></td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">{lang === "en" ? "From Cancun / Costa Mujeres": "Desde Cancún / Costa Mujeres"}</th>
+            <td colspan="1" class="bg-slate-100 text-center p-2"><strong>$ 77 USD</strong></td>
+        </tr>
+    </tbody>
+</table>

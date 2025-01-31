@@ -10,6 +10,7 @@ const toursCollection = defineCollection({
         combo: z.number().optional(),
         lastMinute: z.number().optional(),
         earlyBird: z.number().optional(),
+        
         slugGallery: z.string(),
         titleSeo: z.string().optional(),
         title: z.string(),

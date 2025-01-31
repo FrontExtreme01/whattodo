@@ -2,8 +2,8 @@
 import logoMain from "@/img/logos/logo-wtd.webp";
 import logoHorizontal from "@/img/logos/logo-horizontal.webp";
 import separador from "@public/icons/separador.webp";
-import IconLastminute from "@/img/extras/icon-lastminute.webp";
-import IconEarlyBird from "@/img/extras/early-bird-icon-discounts.svg"
+import IconLastminute from "@public/icons/icon-lastminute.svg";
+import IconEarlyBird from "@public/icons/early-bird-icon-discounts.svg"
 import Stars5 from "@/img/extras/5-stars-opinions.webp";
 import TripAdvisorCenotesAdventuring from "@/img/extras/tripadvisor-recommendatios-for-cenotes-adventuring-cancun.webp";
 // Footer

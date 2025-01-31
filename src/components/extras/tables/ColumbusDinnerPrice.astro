@@ -1,0 +1,27 @@
+---
+const { lang } = Astro.props;
+---
+
+<table class="table-auto w-full border-separate border-spacing-2 text-sm sm:text-base my-5">
+    <thead>
+        <tr>
+            <td colspan="4">
+                <h3 class="bg-orange-500 text-white font-bold text-xl text-center p-4">{lang === "en" ? "Menu Reservation:": "Reservación de Menú:"} </h3>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">{lang === "en" ? "Book Steak Menu": "Reservación de menú de carne"}</th>
+            <td colspan="1" class="bg-slate-100 text-center p-2"><strong>$ 100 USD</strong></td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">{lang === "en" ? "Book Lobster Dinner": "Reservación de menú de langosta"}</th>
+            <td colspan="1" class="bg-slate-100 text-center p-2"><strong>$ 120 USD</strong></td>
+        </tr>
+        <tr>
+            <th scope="row" class="bg-slate-200 font-bold text-center p-2">{lang === "en" ? "Book Surf and Turf": "Reservación de menú de surf y turf"}</th>
+            <td colspan="1" class="bg-slate-100 text-center p-2"><strong>$ 120 USD</strong></td>
+        </tr>
+    </tbody>
+</table>

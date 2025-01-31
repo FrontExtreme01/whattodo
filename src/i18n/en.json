@@ -817,6 +817,9 @@
         "FORM_RESERVATION": {
             "TITLE": "Make your reservation",
             "DESCRIPTION": "Complete the form for make your reservation.",
+            "EARLY_BIRD_TITLE": "Book early and get a discount on your reservation!",
+            "EARLY_BIRD_DAYS": "Days",
+            "EARLY_BIRD_PRICE": "Final Price",
             "PRICE_FROM": "Price from",
             "PER_PERSON": "per person",
             "BUTTON_MODAL": "Book now",

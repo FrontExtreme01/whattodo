@@ -19,7 +19,7 @@ const { frontmatter } = Astro.props;
 
 const siteWebURL = new URL(Astro.url.pathname, Astro.site);
 
-const allGalleries = import.meta.glob('@/img/galleries/tours/**/*.webp', { eager: true });
+const allGalleries = import.meta.glob('@/img/galleries/tours/**/*.{webp,jpg}', { eager: true });
 
 const getGalleryImages = (slugGallery) => {
     return Object.entries(allGalleries)
@@ -63,9 +63,6 @@ const seoMetaDatos = {
                     {frontmatter.title}
                 </h1>
                 <div class="w-3/12 flex flex-col md:flex-row justify-center items-center gap-3">
-                    {frontmatter.earlyBird && (
-                        <img class="w-16 md:w-20" src="/assets/icons/early-bird-icon.svg" height="80" width="80" alt="icon early bird" />
-                    ) }
                     <ShareSM client:idle site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} />
                 </div>
                 <ul class="flex flex-wrap gap-2 md:gap-5 w-full my-6 text-sm md:text-lg">
@@ -109,7 +106,7 @@ const seoMetaDatos = {
                 <!-- Early Bird Mobile -->
                 {frontmatter.earlyBird && (
                     <div class="container mx-auto my-6 xl:hidden text-center">
-                        <EarlyBirdPrices client:visible price={frontmatter.price} />
+                        <EarlyBirdPrices client:visible price={frontmatter.price} i18n={i18n.DETAILS_CONTENT.FORM_RESERVATION} />
                     </div>
                 )}
                 <div class="text-justify">

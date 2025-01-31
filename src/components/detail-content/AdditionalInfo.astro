@@ -2,7 +2,7 @@
 const { i18n, information } = Astro.props;
 ---
 
-<div class="text-justify">
+<div class="text-justify mt-5 mb-10">
     <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">{i18n.INFORMATION}</h3>
     <ul class="space-y-4 text-base md:text-lg md:columns-2">
         {information.map((item) => <li><i class="at-info-circle text-green-600"></i> {item}</li>)}

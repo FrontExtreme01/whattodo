@@ -1,0 +1,96 @@
+---
+slug: 'isla-mujeres-catamaran-snorkeling-beachclub/en'
+status: 1
+lang: 'en'
+slugGallery: 'catamaran-snorkeling'
+title: 'Isla Mujeres Day Tour with Catamaran, Snorkeling & Beach Club'
+description: Experience Cancun's most popular & complete water & boat experience on this full-day adventure to enchanting Isla Mujeres. Following the departure from the pier, head out to open waters for a 30-minute snorkeling stop.
+keywords: ''
+categories: ['WATER', 'FAVORITES']
+price: 70
+stars: '5.0'
+reviews: '2,356 reviews'
+image:
+    src: '/assets/covers/tours/caratula-catamaran-jopa-regular.webp'
+    alt: 'cover Isla Mujeres Day Tour with Catamaran, Snorkeling & Beach Club'
+highlights: ['Snorkeling equipment']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/884213?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/884213'
+location: 'Playa Tortugas, Kukulcan Boulevard, Zona Hotelera'
+duration: '7 hours and 30 minutes'
+faqs:
+-   question: 'Is transportation to and from my hotel included in the tour package?'
+    answer: 'No, hotel pickup and drop-off are not included in the tour package.'
+-   question: 'Are there any additional fees not included in the tour price?'
+    answer: 'Yes, a dock and marine park fee of $20 USD per person is due in cash at registration/check-in.'
+-   question: 'What happens if the weather conditions are unfavorable?'
+    answer: 'The tour is weather-dependent and may be canceled if conditions are not suitable. In such cases, rescheduling option will be available'
+-   question: 'What should I bring for the tour?'
+    answer: It's recommended to bring a swimsuit, towel, biodegradable sunscreen, comfortable shoes, and extra cash for souvenirs or additional expenses.
+-   question: 'Is the tour suitable for children?'
+    answer: 'Yes, children can participate; however, they must be at least 8 years old to join the snorkeling activity.'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import Considerations from "@components/detail-content/Considerations.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+
+export const includes = [
+    'Snorkeling at a reef at Bahia Mujeres',
+    'Use of Snorkeling equipment',
+    'National Open bar on board: drinks in moderation before snorkeling for safety',
+    'Buffet lunch and open bar at Playa Club Isla Mujeres, with extra time to enjoy',
+    'Boat transfer to Isla Mujeres downtown, plus free time for shopping and exploring',
+    'Bilingual snorkeling host and guide (English/Spanish)',
+];
+
+export const notIncludes = [
+    'Dock and marine park fees are due in cash at registration/check-in of $20 usd per person',
+    'Hotel pickup & drop-of',
+    'Photographs',
+    'Souvenirs',
+    'Tips or gratifications',
+];
+
+export const considerations = [
+    'You must be 18 or older to enjoy alcoholic beverages from the open bar',
+    'For safety reasons, the snorkeling activity is not recommended for pregnant women',
+    'The snorkeling activity is not suitable for individuals with heart conditions, back problems, or recent surgeries',
+    'Children must be at least 8 yrs old to participate on the snorkel activity',
+    'The snorkeling tour is weather-dependent and may be canceled if conditions are not suitable',
+];
+
+export const information = [
+    'Confirmation will be received at time of booking',
+    'Not wheelchair accessible',
+    'Stroller accessible',
+    'Near public transportation',
+    'Most travelers can participate',
+    'The lunch buffet features vegetarian alternatives (rice, beans and salad bar).',
+    'You must be 18 or older to enjoy alcoholic beverages from the open bar.',
+    'This tour/activity will have a maximum of 30 travelers',
+];
+
+export const i18n = {
+    INCLUDES: 'Included',
+    NOT_INCLUDES: 'Not included',
+    CONSIDERATIONS: 'Considerations',
+    INFORMATION: 'Additional information',
+};
+
+<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+
+<Considerations considerations={considerations} i18n={i18n} />
+
+<TagH2>Overview </TagH2>
+
+<TagP>Embark on a full-day adventure to Isla Mujeres, Cancun's most popular island getaway. Snorkel among vibrant tropical fish, then relax on Playa Norte, one of Mexico's finest beaches. Departing from the pier, begin with a 30-minute snorkeling session in the vibrant marine world surrounded by tropical fish in crystal-clear waters. Continue your journey with a stop at Playa Norte, renowned as one of Mexico and the Caribbean's most exquisite beaches. Anchor at Isla Mujeres' main town, where you can leisurely explore the colorful streets, browse local shops, or unwind on the beach at your own pace. In the afternoon, sail to our beach club for a lavish buffet lunch and enjoy drinks from the open bar. Take a refreshing swim and soak up the sun before heading back to Cancun.</TagP>
+
+<TagH3>Enjoy each detail </TagH3>
+
+<TagP>Experience Cancun's most popular & complete water & boat experience on this full-day adventure to enchanting Isla Mujeres. Following the departure from the pier, head out to open waters for a 30-minute snorkeling stop. Swim across the surface surrounded by colorful, tropical fish in the clear, cool waters. Next, make a brief stop at stunning Playa Norte, one of the finest beaches in Mexico and the Caribbean. As the catamaran anchors in Isla Mujeres' main town, enjoy some free time to explore the colorful streets and shops or relax at the beach. In the afternoon, set sail to our beach club where a sumptuous buffet lunch with open bar is served. Take a refreshing swim and cool off in the sun before returning to Cancun. </TagP>
+
+<AdditionalInfo information={information} i18n={i18n} />
