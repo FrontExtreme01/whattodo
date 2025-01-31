@@ -34,14 +34,14 @@ export const server = {
             );
 
             await resend.emails.send({
-                from: "Things To Do In Madrid <testmadrid@whattodoincancun.jhonnycanul.pro>",
+                from: "What To Do in Cancun <wtdtest@whattodoincancun.jhonnycanul.pro>",
                 to: input.email,
                 subject: subjectUser,
                 html: emailUserHtml,
             });
 
             const { data, error } = await resend.emails.send({
-                from: "Things To Do In Madrid <testmadrid@whattodoincancun.jhonnycanul.pro>",
+                from: "What To Do in Cancun <wtdtest@whattodoincancun.jhonnycanul.pro>",
                 to: "frontend.extreme@gmail.com",
                 subject: subjectAdmin,
                 replyTo: input.email,
@@ -75,7 +75,7 @@ export const server = {
         handler: async (input) => {
 
             const container = await experimental_AstroContainer.create();
-            const subjectAdmin = "Nueva reservación en Things To Do In Madrid";
+            const subjectAdmin = "Nueva reservación en What To Do in Cancun";
             const subjectUser = input.lang === "es" ? "Tu Reservación fue realizada con éxito" : "Your reservation was successfully made";
 
             const emailAdminHtml = await container.renderToString(AdminEmailReservations,
@@ -87,14 +87,14 @@ export const server = {
             );
 
             await resend.emails.send({
-                from: "Things To Do In Madrid <testmadrid@whattodoincancun.jhonnycanul.pro>",
+                from: "What To Do in Cancun <wtdtest@whattodoincancun.jhonnycanul.pro>",
                 to: input.email,
                 subject: subjectUser,
                 html: emailUserHtml,
             });
 
             const { data, error } = await resend.emails.send({
-                from: "Things To Do In Madrid <testmadrid@whattodoincancun.jhonnycanul.pro>",
+                from: "What To Do in Cancun <wtdtest@whattodoincancun.jhonnycanul.pro>",
                 to: "frontend.extreme@gmail.com",
                 subject: subjectAdmin,
                 replyTo: input.email,
