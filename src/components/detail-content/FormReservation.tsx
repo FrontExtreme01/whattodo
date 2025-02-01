@@ -9,7 +9,6 @@ export default function FormReservation({ dataForm }: any) {
 
     const [counterAdults, setCounterAdults] = useState(1);
     const [counterChildren, setCounterChildren] = useState(0);
-    const [priceTotal, setPriceTotal] = useState(dataForm.price);
 
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -24,33 +23,24 @@ export default function FormReservation({ dataForm }: any) {
 
     const translatedPath = useTranslatedPath(dataForm.lang);
 
-    const updatePriceTotal = (adults: number, children: number) => {
-        const newTotal = dataForm.price * (adults + children);
-        setPriceTotal(newTotal);
-    };
-
     const handleIncreaseAdults = () => {
         const newCount = counterAdults + 1;
         setCounterAdults(newCount);
-        updatePriceTotal(newCount, counterChildren);
     };
 
     const handleDecreaseAdults = () => {
         const newCount = counterAdults - 1;
         setCounterAdults(newCount);
-        updatePriceTotal(newCount, counterChildren);
     };
 
     const handleIncreaseChildren = () => {
         const newCount = counterChildren + 1;
         setCounterChildren(newCount);
-        updatePriceTotal(counterAdults, newCount);
     };
 
     const handleDecreaseChildren = () => {
         const newCount = counterChildren - 1;
         setCounterChildren(newCount);
-        updatePriceTotal(counterAdults, newCount);
     };
 
     // Funcion para enviar el formulario
@@ -66,7 +56,6 @@ export default function FormReservation({ dataForm }: any) {
         formData.append('nameReservation', dataForm.titleCard);
         formData.append('dateReservation', value.toString());
         formData.append('imgReservation', dataForm.image.src);
-        formData.append('priceReservation', priceTotal.toString());
 
         // for (let [key, value] of formData.entries()) {
         //     console.log(`${key}: ${value}`);
@@ -101,11 +90,6 @@ export default function FormReservation({ dataForm }: any) {
                         <p className="text-sm md:text-base"> {dataForm.i18n.LABELS.ADULTS}: <span className="text-slate-500 font-bold">{counterAdults}</span></p>
                         <p className="text-sm md:text-base"> {dataForm.i18n.LABELS.CHILDRENS}: <span className="text-slate-500 font-bold">{counterChildren}</span></p>
                     </div>
-                    {priceTotal > 0 && (
-                        <p className="text-sm text-slate-900 mt-1 font-bold text-end">
-                            Total <br /><span className="text-amber-500 text-lg"> ${priceTotal} USD</span>
-                        </p>
-                    )}
                 </div>
             </div>
             {/* Formulario de reserva */}

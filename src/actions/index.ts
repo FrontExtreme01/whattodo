@@ -70,7 +70,6 @@ export const server = {
             nameReservation: z.string(),
             dateReservation: z.string(),
             imgReservation: z.string(),
-            priceReservation: z.string(),
         }),
         handler: async (input) => {
 
@@ -79,11 +78,11 @@ export const server = {
             const subjectUser = input.lang === "es" ? "Tu Reservación fue realizada con éxito" : "Your reservation was successfully made";
 
             const emailAdminHtml = await container.renderToString(AdminEmailReservations,
-                { props: { fullName: input.fullname, phone: input.phone, email: input.email, nameReservation: input.nameReservation, adults: input.adults, childrens: input.childrens, dateReservation: input.dateReservation, imgReservation: input.imgReservation, priceReservation: input.priceReservation, date: new Date().toLocaleString() }, }
+                { props: { fullName: input.fullname, phone: input.phone, email: input.email, nameReservation: input.nameReservation, adults: input.adults, childrens: input.childrens, dateReservation: input.dateReservation, imgReservation: input.imgReservation, date: new Date().toLocaleString() }, }
             );
 
             const emailUserHtml = await container.renderToString(UserEmailReservations,
-                { props: { lang: input.lang, fullName: input.fullname, adults: input.adults, childrens: input.childrens, dateReservation: input.dateReservation, nameReservation: input.nameReservation, imgReservation: input.imgReservation, priceReservation: input.priceReservation }, }
+                { props: { lang: input.lang, fullName: input.fullname, adults: input.adults, childrens: input.childrens, dateReservation: input.dateReservation, nameReservation: input.nameReservation, imgReservation: input.imgReservation }, }
             );
 
             await resend.emails.send({

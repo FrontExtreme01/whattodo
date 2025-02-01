@@ -786,12 +786,13 @@
         "BUTTON": "Go back to home"
     },
     "THANKS_PAGE": {
-        "TITLE": "Thank you for your message",
-        "DESCRIPTION": "We have received your message and will get back to you as soon as possible. If you have any urgent questions or need immediate assistance, please do not hesitate to call us at {NUMBER}. Thank you for choosing What To Do In Cancun!"
+        "TITLE": "Thanks for your reservation",
+        "DESCRIPTION": "We appreciate your choice of What to do in Cancún for your reservation. We have received your reservation request, and one of our representatives will contact you shortly to confirm the reservation.",
+        "DESCRIPTION_INFO": "If you have any questions or need to make any changes to your reservation, please feel free to contact us at reservaciones@whattodoincancun.com or call us at 99-83-00-00-40."
     },
     "ERROR_EMAIL_PAGE": {
         "TITLE": "Oops! Something went wrong",
-        "DESCRIPTION": "We're sorry, but it looks like there was a problem sending your message. Please try again later or contact us directly at {NUMBER}. Thank you for your understanding!"
+        "DESCRIPTION": "We are sorry, but it seems there was a problem making your reservation. Please try again later or contact us directly at 99-83-00-00-40. Thank you for your understanding!"
     },
     "PARTNERS": {
         "TITLE": "Our Partners",

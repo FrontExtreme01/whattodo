@@ -1,21 +1,28 @@
 ---
-const { lang, fullName, adults, childrens, dateReservation, nameReservation, imgReservation, priceReservation } = Astro.props;
+const { lang, fullName, adults, childrens, dateReservation, nameReservation, imgReservation } = Astro.props;
+
+const preloadLogo = 'https://whattodoincancun.com/assets/img/mail/logoMail-WTD.png';
+const preloadBackground = 'https://whattodoincancun.com/assets/img/background/slide-about-us-cancun.webp';
+const routeImg = 'https://whattodocan.netlify.app/'
+const nameWeb = 'What To Do in Cancun';
+const web = 'whattodoincancun.com';
+const year = '2025';
 ---
 
 <!doctype html>
 <html dir="ltr" lang={lang}>
 
 <head>
-    <link rel="preload" as="image" href="https://whattodoincancun.com/assets/img/mail/logoMail-WTD.png" />
-    <link rel="preload" as="image" href="https://whattodoincancun.com/assets/img/background/slide-about-us-cancun.webp" />
-    <link rel="preload" as="image" href=`https://whattodocan.netlify.app/${imgReservation}` />
+    <link rel="preload" as="image" href={preloadLogo} />
+    <link rel="preload" as="image" href={preloadBackground} />
+    <link rel="preload" as="image" href={routeImg + imgReservation} />
     <link rel="preload" as="image" href="https://react-email-demo-hich02t6q-resend.vercel.app/static/yelp-footer.png" />
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
     <meta name="x-apple-disable-message-reformatting" />
     <!--$-->
 </head>
 <div style="display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0;max-width:0">
-    What To Do in Cancun
+    {nameWeb}
     <div>
         ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏
     </div>
@@ -31,7 +38,7 @@ const { lang, fullName, adults, childrens, dateReservation, nameReservation, img
                         <tbody>
                             <tr>
                                 <td>
-                                    <img src="https://whattodoincancun.com/assets/img/mail/logoMail-WTD.png"
+                                    <img src={preloadLogo} alt={nameWeb}
                                         style="display:block;outline:none;border:none;text-decoration:none;height:90px; margin: 0 auto" />
                                 </td>
                             </tr>
@@ -45,7 +52,7 @@ const { lang, fullName, adults, childrens, dateReservation, nameReservation, img
                                     <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
                                         <tbody style="width:100%">
                                             <tr style="width:100%">
-                                                <img src="https://whattodoincancun.com/assets/img/background/slide-about-us-cancun.webp"
+                                                <img src={preloadBackground} alt=""
                                                     style="display:block;outline:none;border:none;text-decoration:none;max-width:100%"
                                                     width="620" />
                                             </tr>
@@ -94,7 +101,7 @@ const { lang, fullName, adults, childrens, dateReservation, nameReservation, img
                                                             <tr style="width:100%">
                                                                 <td data-id="__react-email-column" style="width:64px">
                                                                     <img alt="cover reservation" height="120" style="display:block;outline:none;border:1px solid rgba(128,128,128,0.2);text-decoration:none;margin:0 0 0 20px;border-radius:14px"
-                                                                        src=`https://thingsmadrid.netlify.app/${imgReservation}`
+                                                                        src={routeImg + imgReservation}
                                                                     />
                                                                 </td>
                                                                 <td data-id="__react-email-column" style="padding-left:22px">
@@ -118,35 +125,6 @@ const { lang, fullName, adults, childrens, dateReservation, nameReservation, img
                                     <hr
                                         style="width:100%;border:none;border-top:1px solid #eaeaea;margin:30px 0 0 0"
                                     />
-                                    <!-- Total -->
-                                    {priceReservation && priceReservation != "0" && (
-                                        <table align="right" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
-                                                        >
-                                                            <tbody style="width:100%">
-                                                                <tr style="width:100%">
-                                                                    <td align="right" data-id="__react-email-column" style="display:table-cell">
-                                                                        <p style="font-size:10px;line-height:24px;margin:0;color:rgb(102,102,102);font-weight:600;padding:0px 30px 0px 0px;text-align:right">
-                                                                            TOTAL
-                                                                        </p>
-                                                                    </td>
-                                                                    <td data-id="__react-email-column" style="height:48px;border-left:1px solid;border-color:rgb(238,238,238)"></td>
-                                                                    <td data-id="__react-email-column" style="display:table-cell;width:90px">
-                                                                        <p style="font-size:16px;line-height:24px;margin:0px 20px 0px 0px;font-weight:600;white-space:nowrap;text-align:right">
-                                                                            ${priceReservation}
-                                                                        </p>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    )}
                                 </td>
                             </tr>
                         </tbody>
@@ -164,7 +142,7 @@ const { lang, fullName, adults, childrens, dateReservation, nameReservation, img
                         </tbody>
                     </table>
                     <p style="font-size:12px;line-height:24px;margin:16px 0;text-align:center;color:rgb(0,0,0, 0.7)">
-                        © 2025 | What To Do in Cancun | whattodoincancun.com
+                        © {year} | {nameWeb} | {web}
                     </p>
                 </td>
             </tr>

@@ -1,18 +1,23 @@
 ---
 const { fullName, message, email, phone, date } = Astro.props;
+
+const preloadLogo = 'https://whattodoincancun.com/assets/img/mail/logoMail-WTD.png';
+const preloadBackground = 'https://whattodoincancun.com/assets/img/background/slide-about-us-cancun.webp';
+const nameWeb = 'What To Do in Cancun';
+const web = 'whattodoincancun.com';
+const year = '2025';
 ---
 
 <!doctype html>
 <html dir="ltr" lang="es">
 <head>
-    <link rel="preload" as="image" href="https://whattodoincancun.com/assets/img/mail/logoMail-WTD.png" />
-    <link rel="preload" as="image" href="https://whattodoincancun.com/assets/img/background/slide-about-us-cancun.webp" />
+    <link rel="preload" as="image" href={preloadLogo} />
+    <link rel="preload" as="image" href={preloadBackground} />
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
     <meta name="x-apple-disable-message-reformatting" />
-    <!--$-->
 </head>
 <div style="display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0;max-width:0">
-    What To Do in Cancun
+    {nameWeb}
     <div>
         ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏
     </div>
@@ -26,7 +31,7 @@ const { fullName, message, email, phone, date } = Astro.props;
                         <tbody>
                             <tr>
                                 <td>
-                                    <img src="https://whattodoincancun.com/assets/img/mail/logoMail-WTD.png"
+                                    <img src={preloadLogo} alt={nameWeb}
                                         style="display:block;outline:none;border:none;text-decoration:none;height:90px; margin: 0 auto" />
                                 </td>
                             </tr>
@@ -39,7 +44,7 @@ const { fullName, message, email, phone, date } = Astro.props;
                                     <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
                                         <tbody style="width:100%">
                                             <tr style="width:100%">
-                                                <img src="https://whattodoincancun.com/assets/img/background/slide-about-us-cancun.webp"
+                                                <img src={preloadBackground} alt=""
                                                 style="display:block;outline:none;border:none;text-decoration:none;max-width:100%"
                                                 width="620" />
                                             </tr>
@@ -82,7 +87,7 @@ const { fullName, message, email, phone, date } = Astro.props;
                         </tbody>
                     </table>
                     <p style="font-size:12px;line-height:24px;margin:16px 0;text-align:center;color:rgb(0,0,0, 0.7)">
-                        © 2025 | What To Do in Cancun | whattodoincancun.com
+                        © {year} | {nameWeb} | {web}
                     </p>
                 </td>
             </tr>

@@ -791,11 +791,12 @@
     },
     "THANKS_PAGE": {
         "TITLE": "¡Gracias por tu mensaje!",
-        "DESCRIPTION": "Hemos recibido tu mensaje y nos pondremos en contacto contigo lo antes posible. Si tienes alguna pregunta urgente o necesitas asistencia inmediata, no dudes en llamarnos al {NUMBER}. ¡Gracias por elegir What To Do In Cancun!"
+        "DESCRIPTION": "Apreciamos su elección de What To Do In Cancun por su reserva. Hemos recibido su solicitud de reserva, y uno de nuestros representantes se comunicará con usted en breve para confirmar la reserva.",
+        "DESCRIPTION_INFO": "Si tiene alguna pregunta o necesita hacer algún cambio en su reserva, no dude en contactarnos en reservaciones@whattodoincancun.com o llámenos al 99-83-00-00-40."
     },
     "ERROR_EMAIL_PAGE": {
         "TITLE": "¡Ups! Algo salió mal",
-        "DESCRIPTION": "Lo sentimos, pero parece que hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde o comunícate con nosotros directamente al {NUMBER}. ¡Gracias por tu comprensión!"
+        "DESCRIPTION": "Lo sentimos, pero parece que hubo un problema al realizar tu reservación. Por favor, inténtalo de nuevo más tarde o comunícate con nosotros directamente al 99-83-00-00-40. ¡Gracias por tu comprensión!"
     },
     "PARTNERS": {
         "TITLE": "Nuestros socios",

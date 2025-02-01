@@ -5,7 +5,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 
 export default function SliderBanner({ slides, i18nButton }: any) {
     return (
-        <div className="relative">
+        <div className="hidden md:block relative">
             <div className="next-slide absolute top-1/2 right-[5%] -translate-y-1/2 z-10 p-2.5 sm:p-4 bg-black/40 text-white rounded-full flex items-center justify-center shadow-md cursor-pointer transition duration-500 hover:bg-slate-200">
                 <i className="at-arrow-right"></i>
             </div>

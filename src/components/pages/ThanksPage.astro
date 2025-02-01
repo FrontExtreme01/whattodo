@@ -7,6 +7,11 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 const lang = getLangFromUrl(Astro.url);
 const translatedPath = useTranslatedPath(lang);
+
+const seoMetadata = {
+    title: i18n.THANKS_PAGE.TITLE,
+    description: i18n.THANKS_PAGE.DESCRIPTION,
+};
 ---
 
 <BaseLayout>
@@ -17,6 +22,7 @@ const translatedPath = useTranslatedPath(lang);
                 {i18n.THANKS_PAGE.TITLE}
             </h1>
             <p class="text-xl mt-8 mb-14">{i18n.THANKS_PAGE.DESCRIPTION}</p>
+            <p class="text-xl mt-8 mb-14">{i18n.THANKS_PAGE.DESCRIPTION_INFO}</p>
             <a
                 class="block w-fit mx-auto bg-amber-400 hover:bg-amber-500 text-white font-bold py-5 px-10 rounded-lg focus:outline-none focus:shadow-outline"
                 href={translatedPath("/")}>{i18n.ACCESSIBILITY.GO_TO_HOME}</a>
