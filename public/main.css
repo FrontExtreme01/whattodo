@@ -1,9 +1,7 @@
 /*--------------------------------------------------------------
 # Global Styles
 --------------------------------------------------------------*/
-@import './fonts.css';
 @import url("/node_modules/@vectopus/atlas-icons/style.css");
-
 *,
 *::before,
 *::after {
@@ -53,12 +51,12 @@ p {
 
 .overlayMobile {
     transition: 400ms;
-    left: -50%;
+    left: -50% !important;
     transform: translateX(-50%);
 }
 
 .expandedOverlay {
-    left: 50%;
+    left: 50% !important;
 }
 
 .expanded {

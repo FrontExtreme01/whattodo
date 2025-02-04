@@ -1,6 +1,5 @@
 ---
 import {seoSettings} from "@/utils/seoSettings";
-import '@/styles/main.css';
 export interface Props {
 	namePage?: string;
 	title?: string;
@@ -51,3 +50,15 @@ const ogLocale = Astro.props.language === "es" ? "es_ES" : "en_US";
 <meta property="twitter:image" content={image} />
 
 <link rel="sitemap" href="/sitemap-index.xml" />
+
+<link rel="preload" href="/fonts/Nunito-Bold.ttf" as="font" type="font/ttf" crossorigin/>
+<link rel="preload" href="/fonts/Nunito-ExtraBold.ttf" as="font" type="font/ttf" crossorigin/>
+<link rel="preload" href="/fonts/Nunito-Regular.ttf" as="font" type="font/ttf" crossorigin/>
+<link rel="preload" href="/fonts/Nunito-SemiBold.ttf" as="font" type="font/ttf" crossorigin/>
+
+<link rel="preload" href="/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<link rel="preload" href="/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript>
+	<link rel="stylesheet" href="/main.css" />
+	<link rel="stylesheet" href="/fonts.css" />
+</noscript>
