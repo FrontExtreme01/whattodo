@@ -37,6 +37,8 @@ export default function SliderBanner({ slides, i18nButton }: any) {
                             alt={slide.alt}
                             loading='eager'
                             decoding='async'
+                            srcSet={`${slide.image.src} 240w, ${slide.image.src} 600w, ${slide.image.src} 720w, ${slide.image.src} 840w, ${slide.image.src} 994w `}
+                            sizes={`(max-width: 360px) 240px, (max-width: 640px) 600px, (max-width: 768px) 720px, (max-width: 1024px) 840px,  ${slide.image.width}px`}
                         />
                         {slide.href && (
                             <a href={slide.href} className="absolute bottom-[13%] left-1/2 -translate-x-1/2 bg-orange-600 hover:bg-orange-500 text-white font-bold py-2 md:py-4 px-8 md:px-14 text-sm md:text-xl rounded-lg focus:outline-none focus:shadow-outline transition">
