@@ -56,9 +56,5 @@ const ogLocale = Astro.props.language === "es" ? "es_ES" : "en_US";
 <link rel="preload" href="/fonts/Nunito-Regular.ttf" as="font" type="font/ttf" crossorigin/>
 <link rel="preload" href="/fonts/Nunito-SemiBold.ttf" as="font" type="font/ttf" crossorigin/>
 
-<link rel="preload" href="/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-<link rel="preload" href="/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-<noscript>
-	<link rel="stylesheet" href="/main.css" />
-	<link rel="stylesheet" href="/fonts.css" />
-</noscript>
+<link rel="stylesheet" href="/main.css" />
+<link rel="stylesheet" href="/fonts.css" />
