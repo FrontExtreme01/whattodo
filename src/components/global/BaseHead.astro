@@ -1,6 +1,9 @@
 ---
 import {seoSettings} from "@/utils/seoSettings";
+import "@/styles/main.css";
+import "@/styles/fonts.css";
 import "/node_modules/@vectopus/atlas-icons/style.css";
+import "aos/dist/aos.css";
 export interface Props {
 	namePage?: string;
 	title?: string;
@@ -56,6 +59,3 @@ const ogLocale = Astro.props.language === "es" ? "es_ES" : "en_US";
 <link rel="preload" href="/fonts/Nunito-ExtraBold.ttf" as="font" type="font/ttf" crossorigin/>
 <link rel="preload" href="/fonts/Nunito-Regular.ttf" as="font" type="font/ttf" crossorigin/>
 <link rel="preload" href="/fonts/Nunito-SemiBold.ttf" as="font" type="font/ttf" crossorigin/>
-
-<link rel="stylesheet" href="/main.css" />
-<link rel="stylesheet" href="/fonts.css" />
