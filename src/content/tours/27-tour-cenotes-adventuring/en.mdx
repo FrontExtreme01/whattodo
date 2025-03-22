@@ -1,0 +1,122 @@
+---
+slug: 'cenotes-adventuring-tour/en'
+status: 1
+earlyBird: 1
+lang: 'en'
+slugGallery: 'cenotes-adventuring'
+title: 'Semi-private 3 waterfall Cenotes experience'
+description: 'Cenotes Adventuring takes you into the deep of the Mayan jungle to discover 2 beautiful sinkholes with waterfalls.'
+keywords: ''
+categories: ['ADVENTURE', 'FAVORITES']
+price: 80
+stars: '5.0'
+reviews: '2,456'
+image:
+    src: '/assets/covers/tours/cancun-cenotes-adventuring.webp'
+    alt: 'cover Cenotes Adventuring Tour'
+highlights: ['Transportation Included']
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/705158?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/705158'
+location: 'Ruta de los Cenotes, Puerto Morelos'
+duration: '4 hours'
+transportation: 'Transportation Included'
+frameYoutube: 'https://www.youtube.com/embed/n5JzCl7u7WI?si=qCKGtQddPXRz2zNC'
+faqs:
+-   question: 'What should I bring for the cenote adventure?'
+    answer: It's recommended to bring a swimsuit, towel, biodegradable sunscreen, comfortable water shoes, and a change of clothes.
+-   question: 'Are life jackets provided during the cenote swim?'
+    answer: 'Yes, life jackets are provided to ensure safety while swimming in the cenotes.'
+-   question: 'Are there restrooms and changing areas at the cenotes?'
+    answer: 'Yes, restrooms and changing areas are available at the cenotes for your convenience.'
+-   question: 'Is this tour suitable for children?'
+    answer: 'Yes, children can participate, but they must be always supervised by an adult. Life jackets are provided for their safety.'
+-   question: 'Is food or drinks included in the package?'
+    answer: 'Yes, a light snack and water are provided during the tour. Additional beverages can be purchased.'
+---
+
+import { Image } from "astro:assets";
+import { Stars5, TripAdvisorCenotesAdventuring } from "@/img/allImages";
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Round trip Transportation',
+    'Life jacket',
+    'Specialized and bilingual guides',
+    '3 Exclusive Cenotes',
+    '1 zipline in cenote',
+    'Tequila Tasting (in the Cenote)',
+    'Mayan Snack',
+    'Water',
+];
+
+export const notIncludes = [
+    'Professional photographs',
+    'Gratuities',
+];
+
+export const shouldKnow = [
+    'Wheelchair accessible',
+    'Please inform of any food allergies in advance.',
+    'Please note that the displayed experience time does not include travel time from your location to the activity site, so please plan accordingly as transportation time may vary due to traffic conditions and unforeseen circumstances.',
+];
+
+export const shouldBring = [
+    'Comfortable closed toe shoes and clothes',
+    'Additional cash or form or payment',
+    'Optional sunscreen ',
+    'Hat',
+    'Sunglasses',
+    'Water',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagP>Go private, skip the line, and relax in the heart of the rainforest in the Mexican Caribbean in these beautiful secret private cenotes.</TagP>
+
+    <Image class="mx-auto py-10" src={TripAdvisorCenotesAdventuring} alt="Cenotes Adventuring TripAdvisor" />
+
+    <TagH2>About Cenotes Adventuring</TagH2>
+
+    <TagP>Let nature surprise you on <strong>Cenotes Adveturing</strong> Tour with three <strong>emblematic cenotes</strong> and most importantly, <strong>rarely visited</strong> <em>(no crowds)</em> in an experience almost private. Swim in crystalline waters and snorkel in the deepest parts of the cenote. Both <strong>cenotes</strong> have a <strong>small waterfall</strong> that graces the experience with the sound of falling water.</TagP>
+
+    <TagH3>Jump from the platform</TagH3>
+
+    <TagP>Remember how brave you are by jumping from a small cliff. Check your strength and balance on the paddle board and feel the <strong>Mayan jungle</strong> in each breath. After cooling off in the cenotes, add intensity to this experience on the zipline through the jungle trees and end with a delicious <strong>tequila tasting</strong>. So that you feel the Mexican spirit in your veins.</TagP>
+
+    <TagH3>Cave Cenote</TagH3>
+
+    <TagP>Explore the <strong>small cavern</strong> that forms under the waterfall of one of these <strong>cenotes</strong>, the natural perspective, and sound of the water falling will make your visit something beyond the tangible</TagP>
+
+    <TagH3>Tequila tasting</TagH3>
+
+    <TagP>Taste the Mexican spirit and scream <strong>Viva Mexico!</strong> while you know the <strong>different kinds of tequila</strong> and taste the <strong>flavor of each one</strong>. Feel in your skin why Mexicans are always happy.</TagP>
+
+    <Image class="py-10" src={Stars5} alt="5 stars" />
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+
+    <TagP><small><strong><em>**Please note that the displayed experience time does not include travel time from your location to the activity site, so please plan accordingly as transportation time may vary due to traffic conditions and unforeseen circumstances.**</em></strong></small></TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

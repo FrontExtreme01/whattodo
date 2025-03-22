@@ -8,7 +8,7 @@ description: ''
 keywords: ''
 price: 1318
 stars: '5.0'
-reviews: '765 Reseñas'
+reviews: '765 '
 image: 
     src: '/assets/covers/yachts/yacht-sea-castle-cover.webp'
     alt: 'portada yate Sea Castle'
@@ -17,7 +17,7 @@ size: 'Tamaño: 53 pies'
 highlights: ['Chalecos salvavidas y máscaras de snorkel', 'Música Bluetooth']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/949739?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/949739'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 faqs:
 -   question: '¿Cuántas personas pueden abordar el yate Sea Castle?'
     answer: 'El Sea Castle puede acomodar hasta 20 personas, proporcionando un ambiente íntimo y cómodo para grupos pequeños o familias.'
@@ -29,10 +29,12 @@ faqs:
     answer: 'Si las condiciones climáticas son desfavorables, trabajaremos contigo para reprogramar tu reserva. Tu seguridad y comodidad son nuestra prioridad, y siempre garantizaremos la mejor experiencia.'
 ---
 
+import Accordion from "@components/detail-content/Accordion"
 import TagH2 from "@components/global/TagH2.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 import TabPricesYacht from "@components/extras/TabPricesYacht";
 
 export const includes = [
@@ -87,20 +89,29 @@ export const infoPrices = [
     }
 ]
 
-export const i18n = {
-    INCLUDES: 'Incluye',
-    NOT_INCLUDES: 'No Incluye',
-    SHOULD_KNOW: 'Antes de reservar, ten en cuenta lo siguiente:',
-    SHOULD_BRING: 'Lo que debes llevar',
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
 <TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
-<TagP><em><strong><small>Póngase en contacto con nosotros con anticipación para confirmar la hora de inicio de su actividad</small></strong></em></TagP>
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagP> Embárcate en un viaje inolvidable a bordo del Sea Castle, un impresionante yate de 53 pies que zarpa desde el exclusivo y prestigioso Marina Towers en Cancún. Ya sea que busques una escapada tranquila o una aventura en las aguas cristalinas del Caribe, este yate de lujo es tu elección perfecta. Con un amplio espacio en la cubierta, comodidades modernas y un servicio impecable, tu experiencia será extraordinaria. Sumérgete en las impresionantes vistas, siente la fresca brisa marina y relájate con la máxima comodidad. Perfecto para eventos privados, salidas románticas o un día relajante en el agua, el Sea Castle ofrece una experiencia de crucero de primera. ¡Reserva tu aventura hoy! </TagP>
+</Accordion>
 
-<TagH2>Descripción General</TagH2>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+    
+    <TagP><em><strong><small>Póngase en contacto con nosotros con anticipación para confirmar la hora de inicio de su actividad</small></strong></em></TagP>
+</Accordion>
 
-<TagP> Embárcate en un viaje inolvidable a bordo del Sea Castle, un impresionante yate de 53 pies que zarpa desde el exclusivo y prestigioso Marina Towers en Cancún. Ya sea que busques una escapada tranquila o una aventura en las aguas cristalinas del Caribe, este yate de lujo es tu elección perfecta. Con un amplio espacio en la cubierta, comodidades modernas y un servicio impecable, tu experiencia será extraordinaria. Sumérgete en las impresionantes vistas, siente la fresca brisa marina y relájate con la máxima comodidad. Perfecto para eventos privados, salidas románticas o un día relajante en el agua, el Sea Castle ofrece una experiencia de crucero de primera. ¡Reserva tu aventura hoy! </TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
 
-<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

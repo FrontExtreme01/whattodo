@@ -1,0 +1,95 @@
+---
+slug: 'columbus-romantic-dinner-lobster-in-cancun/es'
+status: 1
+lang: 'es'
+slugGallery: 'columbus'
+titleSeo: 'Enamórate de Columbus con una cena romántica en Cancún'
+title: 'Crucero con cena romántica al atardecer con Columbus en Cancún'
+description: 'Enamórate de nuevo con una cena romántica en Cancún, elige tu cena de langosta o filete con música suave de saxofón a bordo.'
+keywords: ''
+categories: ['COUPLES', 'WATER']
+price: 100
+stars: '4.5'
+reviews: '1,609 '
+image:
+    src: '/assets/covers/tours/romantic-dinner-in-cancun-columbus-tour.webp'
+    alt: 'portada Crucero con cena romántica al atardecer con Columbus en Cancún'
+highlights: ['Cena de 3 tiempos', 'Música en vivo y bebidas', 'Barra libre']
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales, ', 'Parejas & Celebraciones románticas']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/670335?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/670335'
+location: 'Blvd. Kukulcan, 77500 Cancún, Q.R.'
+duration: '2 horas y 30 minutos'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+import ColumbusDinnerPrice from "@components/extras/tables/ColumbusDinnerPrice.astro"
+
+export const includes = [
+    'Comida y bebidas',
+    'Cena de 3 tiempos',
+    'Barra libre',
+    'Música en vivo',
+];
+
+export const notIncludes = [
+    'Recogida y regreso al hotel',
+    'Tarifa de muelle de $US 15 por persona',
+    'Fotos de recuerdo profesionales',
+];
+
+export const shouldKnow = [
+    'Please arrive at least 30 minutes before your scheduled program',
+    'Additional transportation is available from Riviera Maya for an extra fee',
+    'Casual attire is recommended; wear comfortable shoes and consider bringing a sweater',
+    'A fee of MXN $300 per person (ages 14 and up) is required at check-in',
+];
+
+export const shouldBring = [
+    'Efectivo adicional o forma de pago'
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Cena romántica para parejas en Cancún</TagH2>
+
+    <TagP>Enamórate de nuevo con esta encantadora aventura con <strong>Columbus Romantic Dinner</strong> en Cancún. Navegando por la hermosa laguna Nichupte en un elegante <strong>galeón español</strong> y deleita a tu ser querido especial con una experiencia increíblemente romántica y una exquisita cena de 3 tiempos.</TagP>
+
+    <ColumbusDinnerPrice lang={frontmatter.lang} />
+
+    <TagH3>Música íntima en vivo</TagH3>
+
+    <TagP>Después de registrarte, subiremos al espectacular galeón español bajo las suaves y elegantes melodías del <strong>saxofón en vivo</strong>. Pide tu cóctel favorito mientras el galeón se mueve lentamente por las tranquilas aguas de la laguna. La <strong>Laguna Nichupte</strong> es, con mucho, el mejor lugar para ver la impresionante puesta de sol tropical. Los atardeceres son impresionantes en la experiencia de Columbus Romantic Dinner.</TagP>
+
+    <TagH3>Elige filete o langosta</TagH3>
+
+    <TagP>En la cena romántica de Columbus, disfrutarás de una <strong>deliciosa comida de 3 tiempos</strong> con el plato principal de tu elección. Ya sea <strong>filete, langosta o una combinación de ambos</strong>, te encantará cada bocado.</TagP>
+
+    <TagH3>Danza romántica</TagH3>
+
+    <TagP>Invite a su ser querido a bailar en la cubierta del barco para que la experiencia sea aún más romántica.</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

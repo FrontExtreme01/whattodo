@@ -8,7 +8,7 @@ description: 'Experience golfing bliss at Playa Mujeres Golf Club in Cancun. Enj
 keywords: ''
 price: 172
 stars: '4.5'
-reviews: '419 reviews'
+reviews: '419'
 image:
     src: '/assets/covers/golfs/playa-mujeres-golf-club.webp'
     alt: 'cover of Playa Mujeres Golf Club in Cancun'
@@ -29,17 +29,17 @@ import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagH4 from "@components/global/TagH4.astro";
 import TagP from "@components/global/TagP.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 import PlayaMujeresPrices from "@components/extras/tables/PlayaMujeresPrices.astro";
 
-export const information = [
+export const shouldKnow = [
     'Number of Holes: 18',
     'Yardage: 7,218 yards',
     'Par: 72',
     'Course Designer: Greg Norman Golf Course Design.',
 ];
 
-export const i18n = {
+export const titles = {
     INFORMATION: 'Details',
     TABLE_TITLE: 'Playa Mujeres Golf Club Rates',
     CONDITIONS: 'Players under 17 years of age must be accompanied by an adult.',
@@ -47,9 +47,9 @@ export const i18n = {
     AGE_JUNIOR: '17 yrs. and under'
 };
 
-<AdditionalInfo information={information} i18n={i18n} />
+<ShouldKnow shouldKnow={shouldKnow} />
 
-<PlayaMujeresPrices i18n={i18n} />
+<PlayaMujeresPrices i18n={titles} />
 
 <TagH2>A Golfer’s Paradise in Cancun </TagH2>
 

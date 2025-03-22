@@ -1,33 +1,35 @@
 ---
 slug: 'the-city-cancun/es'
 status: 1
-event: 1
 lang: 'es'
 type: 'NIGHTCLUB'
 slugGallery: 'the-city'
-title: 'The City Cancun Nightclub'
+title: 'The City Cancun'
 description: 'The City Cancun Nightclub es uno de los clubes más calientes para salir de fiesta. Lugar perfecto para aquellos que quieren experimentar la vida nocturna en la playa.'
 keywords: ''
 price: 20
 stars: '4.0'
-reviews: '4,877 reseñas'
+reviews: '4,877 '
 image:
     src: '/assets/covers/parties/the-city-cancun.webp'
     alt: 'portada the city cancun nightclub'
 duration: '5 horas'
+music: 'Electrónica'
+dressCode: 'Smart casual, elegante (no trajes de baño o camisas sin mangas)'
 consumption: 'Crédito de consumo'
 admission: 'Boleto de admisión'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/760746?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/760746'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59543.693985190825!2d-86.746721!3d21.133253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c28be2be185db%3A0x58e14cf33b1f844b!2sThe%20City!5e0!3m2!1ses!2smx!4v1704727100752!5m2!1ses!2smx'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 
 export const includes = [
     'Admisión a The City Cancun Nightclub',
@@ -39,38 +41,45 @@ export const notIncludes = [
     'Reservación de mesa',
 ];
 
-export const information = [
+export const shouldKnow = [
     'El check-in debe completarse antes de las 10 PM',
     'La edad mínima para entrar es de 18 años',
     'Duración 5 horas',
 ];
 
-export const i18n = {
-    INCLUDES: 'Incluye',
-    NOT_INCLUDES: 'No incluye',
-    INFORMATION: 'Información Importante'
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Acerca de The City Cancun</TagH2>
+    
+    <TagP><strong>The City Nightclub Cancun</strong> es uno de los clubes más calientes. Ubicado en la Zona Hotelera, es el lugar perfecto para aquellos que quieren experimentar la vida nocturna en Cancún. </TagP>
+    
+    <TagH3>Capacidad del Club</TagH3>
+    
+    <TagP><strong>The City</strong> Club Cancún es uno de los clubes nocturnos más grandes de la zona, con capacidad para <strong>más de 5.000 personas</strong>. El club cuenta con sistemas de iluminación y sonido de primera categoría, así como con <strong>DJ de clase mundial</strong> que mantienen la fiesta durante toda la noche. </TagP>
+    
+    <TagP>The <strong>City Nightclub Cancún</strong> tiene fama de ser uno de los mejores clubes nocturnos de Cancún. Es conocido por su increíble ambiente y sus <strong>fiestas inolvidables</strong>. El club cuenta con varios niveles y pistas de baile, cada uno con su propio ambiente único. </TagP>
+    
+    <TagH2>Fotos de The City Nightclub Cancún </TagH2>
+    
+    <TagP><strong>Las fotos de The City Nightclub Cancún</strong> muestran la impresionante decoración y el impresionante tamaño del club. El club es una visita obligada para cualquiera que ame bailar y pasar un buen rato. No te pierdas la fiesta de tu vida. </TagP>
+    
+    <TagP>Este Club ofrece una variedad de <strong>paquetes VIP</strong> que incluyen servicio de botella, mesas privadas y <strong>acceso VIP</strong> a las mejores áreas del club. También puedes reservar una fiesta o evento privado en el club, con paquetes que incluyen un personal dedicado y un servicio personalizado. </TagP>
+    
+    <TagP>Si estás buscando <strong>discotecas en Cancún</strong>, The City Nightclub Cancún debería estar en el primer lugar de tu lista. Es una de las mejores discotecas de Cancún y atrae a un público divertido y animado. Así que no esperes más, compra tus boletos ahora y prepárate para una noche inolvidable. </TagP>
+    
+    <TagP>Reserva tu paquete VIP ahora y experimenta lo mejor que The City Cancún Club tiene para ofrecer. Disfruta de la mejor experiencia de vida nocturna en Cancún en The City Nightclub Cancún. </TagP>
+</Accordion>
 
-<AdditionalInfo information={information} i18n={i18n} />
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
 
-<TagH2>Acerca de The City Cancun</TagH2>
-
-<TagP><strong>The City Nightclub Cancun</strong> es uno de los clubes más calientes. Ubicado en la Zona Hotelera, es el lugar perfecto para aquellos que quieren experimentar la vida nocturna en Cancún. </TagP>
-
-<TagH3>Capacidad del Club</TagH3>
-
-<TagP><strong>The City</strong> Club Cancún es uno de los clubes nocturnos más grandes de la zona, con capacidad para <strong>más de 5.000 personas</strong>. El club cuenta con sistemas de iluminación y sonido de primera categoría, así como con <strong>DJ de clase mundial</strong> que mantienen la fiesta durante toda la noche. </TagP>
-
-<TagP>The <strong>City Nightclub Cancún</strong> tiene fama de ser uno de los mejores clubes nocturnos de Cancún. Es conocido por su increíble ambiente y sus <strong>fiestas inolvidables</strong>. El club cuenta con varios niveles y pistas de baile, cada uno con su propio ambiente único. </TagP>
-
-<TagH2>Fotos de The City Nightclub Cancún </TagH2>
-
-<TagP><strong>Las fotos de The City Nightclub Cancún</strong> muestran la impresionante decoración y el impresionante tamaño del club. El club es una visita obligada para cualquiera que ame bailar y pasar un buen rato. No te pierdas la fiesta de tu vida. </TagP>
-
-<TagP>Este Club ofrece una variedad de <strong>paquetes VIP</strong> que incluyen servicio de botella, mesas privadas y <strong>acceso VIP</strong> a las mejores áreas del club. También puedes reservar una fiesta o evento privado en el club, con paquetes que incluyen un personal dedicado y un servicio personalizado. </TagP>
-
-<TagP>Si estás buscando <strong>discotecas en Cancún</strong>, The City Nightclub Cancún debería estar en el primer lugar de tu lista. Es una de las mejores discotecas de Cancún y atrae a un público divertido y animado. Así que no esperes más, compra tus boletos ahora y prepárate para una noche inolvidable. </TagP>
-
-<TagP>Reserva tu paquete VIP ahora y experimenta lo mejor que The City Cancún Club tiene para ofrecer. Disfruta de la mejor experiencia de vida nocturna en Cancún en The City Nightclub Cancún. </TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

@@ -11,22 +11,26 @@ description: 'Experimenta las mejores actividades de aventura en Cancún con est
 keywords: ''
 price: 90
 stars: '5.0'
-reviews: '2,387 reseñas'
+reviews: '2,387 '
 image:
     src: '/assets/covers/combos/atv-zipline-cenote-speedboat.webp'
     alt: 'portada combo atv tirolesa cenote lancha rápida'
 highlights: ['Traslado incluido']
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales, ', 'Aventureros']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/885792?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/885792'
 location: 'Cancún, México'
 duration: '2 días'
+transportation: 'Transportación Incluida'
 ---
 
-import TagH2 from "@components/global/TagH2.astro";
+import Accordion from "@components/detail-content/Accordion";    
+ import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 
 export const includes = [
     'Almuerzo',
@@ -42,7 +46,7 @@ export const notIncludes = [
     'Tarifa del parque marino de 20 dólares estadounidenses por persona (Tour de Snorkel y Lancha Rápida en el Arrecife Nizuc)',
 ];
 
-export const infoAditional = [
+export const shouldKnow = [
     'Se recibirá confirmación al momento de la reservación',
     'No es accesible para silla de ruedas',
     'Cerca del transporte público',
@@ -58,16 +62,34 @@ export const infoAditional = [
     'Esta excursión o actividad tendrá un máximo de 20 viajeros',
 ];
 
-export const i18n = {
-    INCLUDES: 'Incluye',
-    NOT_INCLUDES: 'No incluye',
-    INFORMATION: 'Información adicional'
+export const shouldBring = [
+    'Toallas',
+    'Traje de baño',
+    'Bloqueador solar',
+    'Identificacion oficial ID',
+    'Dinero en efectivo',
+    'Cambio adicional de ropa',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagP>Experimente las mejores actividades de aventura de Cancún con este combo económico que incluye paseos en vehículos todo terreno y tirolesa en la jungla, natación en un cenote panorámico, y paseos en lancha rápida y esnórquel en el arrecife Nizuc. El recorrido en vehículos todo terreno por la jungla comienza con una conveniente recogida en su hotel o en un punto de encuentro cercano. Diríjase a la naturaleza y a la densa jungla de Yucatán, justo al lado de la famosa Ruta de los Cenotes. La aventura comienza con un paseo en vehículos todo terreno de 30 minutos por caminos fangosos, polvorientos y llenos de baches. Continúe con un emocionante vuelo en un circuito de 3 tirolesas antes de refrescarse en un exótico cenote en medio de la jungla. Embárquese en una emocionante expedición, conduciendo su lancha rápida a través de la laguna Nichupté y hacia el Caribe. Practique esnórquel en el pintoresco arrecife Nizuc y observe las fascinantes exhibiciones del famoso Museo Subacuático de Arte. </TagP>
+</Accordion>
 
-<TagH2>Descripción General</TagH2>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
 
-<TagP>Experimente las mejores actividades de aventura de Cancún con este combo económico que incluye paseos en vehículos todo terreno y tirolesa en la jungla, natación en un cenote panorámico, y paseos en lancha rápida y esnórquel en el arrecife Nizuc. El recorrido en vehículos todo terreno por la jungla comienza con una conveniente recogida en su hotel o en un punto de encuentro cercano. Diríjase a la naturaleza y a la densa jungla de Yucatán, justo al lado de la famosa Ruta de los Cenotes. La aventura comienza con un paseo en vehículos todo terreno de 30 minutos por caminos fangosos, polvorientos y llenos de baches. Continúe con un emocionante vuelo en un circuito de 3 tirolesas antes de refrescarse en un exótico cenote en medio de la jungla. Embárquese en una emocionante expedición, conduciendo su lancha rápida a través de la laguna Nichupté y hacia el Caribe. Practique esnórquel en el pintoresco arrecife Nizuc y observe las fascinantes exhibiciones del famoso Museo Subacuático de Arte. </TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
 
-<AdditionalInfo information={infoAditional} i18n={i18n} />
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

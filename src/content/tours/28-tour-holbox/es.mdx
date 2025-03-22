@@ -3,31 +3,34 @@ slug: 'shared-guided-tour-visit-of-cancun-and-holbox-island/es'
 status: 1
 lang: 'es'
 slugGallery: 'holbox'
-title: 'Isla Holbox y Ek Balam: Aventura guiada de día completo'
+title: 'Isla Holbox: Aventura guiada de día completo'
 description: 'Ubicada en el extremo norte de Quintana Roo, es ampliamente conocida por ser hogar de una variedad de especies, principalmente aves como los flamencos, además de ser santuario del pez más grande del mundo: el Tiburón Ballena.'
 keywords: ''
-categories: ['RUINS']
+categories: ['ADVENTURE']
 price: 171
 stars: '4.0'
-reviews: '854 Reseñas'
+reviews: '854 '
 image:
     src: '/assets/covers/tours/holbox-tour-from-cancun.webp'
     alt: 'portada Isla Holbox y Ek Balam: Aventura guiada de día completo'
 highlights: ['Transporte Incluido', 'Tiempo libre en Isla Pasión', 'Tiempo libre en Punta Mosquito', 'Tiempo libre en Isla Holbox']
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales, ', 'Aventureros']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/850598?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/850598'
 location: 'Isla Holbox'
 duration: '12 Horas'
+transportation: 'Transporte Incluido'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import Considerations from "@components/detail-content/Considerations.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 
 export const includes = [
     'Viaje redondo en transporte equipado con A/C',
-    'Visita guiada y tiempo libre en Ek Balam',
     'Tiempo libre en Isla Pasión',
     'Tiempo libre en Punta Mosquito (bancos de arena)',
     'Tiempo libre en Isla Holbox',
@@ -42,7 +45,15 @@ export const notIncludes = [
     'Ecotasa $350 mxn por persona',
 ];
 
-export const considerations = [
+export const shouldKnow = [
+    'Traer protector solar biodegradable',
+    'Traer sombrero y lentes de sol',
+    'Traer un cambio de ropa',
+    'Traer tu traje de baño',
+    'Usar ropa y zapatos cómodos',
+];
+
+export const shouldBring = [
     'Calzado cómodo',
     'Lentes de sol y sombrero',
     'Traje de baño y toalla',
@@ -51,30 +62,39 @@ export const considerations = [
     'Dinero extra (para bebidas, souvenirs, carga de cámaras de video y propinas)',
 ];
 
-export const i18n = {
-    INCLUDES: 'Incluye',
-    NOT_INCLUDES: 'No incluye',
-    CONSIDERATIONS: 'Consideraciones',
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagP>Ubicado en el extremo norte de Quintana Roo, es ampliamente conocido por ser hogar de una variedad de especies, principalmente aves como los flamencos, además de ser santuario para el pez más grande del mundo: el tiburón ballena.</TagP>
 
-<strong class="my-5"><small><em>Tenga en cuenta que el tiempo de experiencia mostrado no incluye el tiempo de viaje desde su ubicación al sitio de actividades, por lo que planifique en consecuencia, ya que el tiempo de transporte puede variar debido a las condiciones del tráfico y las circunstancias imprevistas. </em></small></strong>
+    <TagP>Déjanos llevarte en un paseo en bote por las hermosas y tranquilas playas rodeadas de una vista increíble y grandes bancos de arena.</TagP>
 
-<Considerations considerations={considerations} i18n={i18n} />
+    <TagP>Pasea por las pintorescas calles y tómate algunas fotografías en los murales.</TagP>
 
-<TagH2>Descripción general</TagH2>
+    <TagP><strong>Tarifa de Muelle:</strong> $15 USD ó $300 pesos mexicanos por persona (mayores de 3 años)</TagP>
 
-<TagP>Ubicado en el extremo norte de Quintana Roo, es ampliamente conocido por ser hogar de una variedad de especies, principalmente aves como los flamencos, además de ser santuario para el pez más grande del mundo: el tiburón ballena.</TagP>
+    <TagP><strong>DISPONIBILIDAD</strong></TagP>
 
-<TagP>Déjanos llevarte en un paseo en bote por las hermosas y tranquilas playas rodeadas de una vista increíble y grandes bancos de arena.</TagP>
+    <TagP>Cancún - Riviera Maya</TagP>
 
-<TagP>Pasea por las pintorescas calles y tómate algunas fotografías en los murales.</TagP>
+    <TagP><strong>Inglés y Español:</strong> Martes, Jueves y Sábados.</TagP>
+</Accordion>
 
-<TagP><strong>Tarifa de Muelle:</strong> $15 USD ó $300 pesos mexicanos por persona (mayores de 3 años)</TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
 
-<TagP><strong>DISPONIBILIDAD</strong></TagP>
+    <strong class="my-5"><small><em>Tenga en cuenta que el tiempo de experiencia mostrado no incluye el tiempo de viaje desde su ubicación al sitio de actividades, por lo que planifique en consecuencia, ya que el tiempo de transporte puede variar debido a las condiciones del tráfico y las circunstancias imprevistas. </em></small></strong>
+</Accordion>
 
-<TagP>Cancún - Riviera Maya</TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
 
-<TagP><strong>Inglés y Español:</strong> Martes, Jueves y Sábados.</TagP>
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

@@ -6,7 +6,7 @@ import type { collections } from "./config";
 // -----------------------------------
 
 // Todos los Tours
-export async function getAllTours(lang: string) {
+export async function   getAllTours(lang: string) {
     const allTours = await getCollection('tours');
     return allTours.filter((tour) => tour.data.lang === lang && tour.data.status === 1 && !tour.data.combo).map((tour) => {
         const new_slug = tour.slug.split('/')[0];
@@ -32,19 +32,19 @@ export async function getToursByCategory(category: string, lang: string) {
     });
 }
 
+// Tours con Promo de Agencia
+export async function getToursAgency(lang: string) {
+    const toursAgency = await getCollection('tours');
+    return toursAgency.filter((tour) => tour.data.lang === lang && tour.data.status === 1 && tour.data.agencyPromo?.slugAgency ).map((tour) => {
+        const new_slug = tour.slug.split('/')[0];
+        return { ...tour, new_slug };
+    });
+}
+
 // Todos los Combos
 export async function getAllCombos(lang: string) {
     const comboTours = await getCollection('tours');
     return comboTours.filter((combo) => combo.data.lang === lang && combo.data.status === 1 && combo.data.combo === 1).map((combo) => {
-        const new_slug = combo.slug.split('/')[0];
-        return { ...combo, new_slug };
-    });
-}
-
-// Combos destacados
-export async function getCombosHome(lang: string) {
-    const comboHome = await getCollection('tours');
-    return comboHome.filter((combo) => combo.data.lang === lang && combo.data.status === 1 && combo.data.home === 1 && combo.data.combo === 1).map((combo) => {
         const new_slug = combo.slug.split('/')[0];
         return { ...combo, new_slug };
     });
@@ -60,13 +60,13 @@ export async function getPartiesType(type: string, lang: string) {
 };
 
 // Todos los eventos
-export async function getPartiesEvent(lang: string) {
-    const partiesEvent = await getCollection('parties');
-    return partiesEvent.filter((party) => party.data.lang === lang && party.data.status === 1 && party.data.event === 1).map((party) => {
-        const new_slug = party.slug.split('/')[0];
-        return { ...party, new_slug };
-    });
-};
+// export async function getPartiesEvent(lang: string) {
+//     const partiesEvent = await getCollection('parties');
+//     return partiesEvent.filter((party) => party.data.lang === lang && party.data.status === 1 && party.data.event === 1).map((party) => {
+//         const new_slug = party.slug.split('/')[0];
+//         return { ...party, new_slug };
+//     });
+// };
 
 // Todos las ofertas Last Minute || Early Birds
 export async function getTypeDeal(typeDeal: string, lang: string) {
@@ -81,6 +81,14 @@ export async function getTypeDeal(typeDeal: string, lang: string) {
     return combinedEntries.map((entry) => {
         const new_slug = entry.slug.split('/')[0];
         return { ...entry, new_slug };
+    });
+}
+
+// Blog Top 10 Things to Do
+export async function getTopThings(lang: string) {
+    const topThings = await getCollection('topthings');
+    return topThings.filter((top) => top.data.lang === lang).map((top) => {
+        return { ...top };
     });
 }
 
@@ -104,4 +112,20 @@ export async function getCollectionHome(nameCollection: keyof typeof collections
         const new_slug = collHome.slug.split('/')[0];
         return { ...collHome, new_slug };
     });
+}
+
+// -----------------------------------
+// FUNCIONES DE UTILIDAD
+// -----------------------------------
+
+// Truncar textos
+export function truncateText(text: string, limit: number) {
+    if (text.length <= limit) {
+        return { visibleText: text, hiddenText: '' };
+    }
+
+    const visibleText = text.slice(0, limit);
+    const hiddenText = text.slice(limit);
+
+    return { visibleText, hiddenText };
 }

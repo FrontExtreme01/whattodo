@@ -1,0 +1,104 @@
+---
+slug: 'speedboat-cancun-tour/en'
+status: 1
+lang: 'en'
+slugGallery: 'speedboat-musa'
+title: 'Speedboat Cancun and Snorkel in Underwater Museum MUSA'
+description: 'Raise the adrenaline of driving a Speedboat in Cancun and relax by enjoying a snorkeling tour in Punta Nizuc and Underwater Museum MUSA.'
+keywords: ''
+categories: ['WATER', 'CHEAP', 'COUPLES']
+price: 45
+stars: '4.5'
+reviews: '1,459'
+image:
+    src: '/assets/covers/tours/speed-boat-jungle-tour-cancun.webp'
+    alt: 'cover speedboat tour in Cancun'
+highlights: ['Life Jacket', 'Medical Insurance']
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/702035?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/702035'
+location: 'Cancun, Mexico'
+duration: '2 hours'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Bilingual Guide (English and Spanish)',
+    'Life Jacket',
+    'Snorkel Equipment',
+    '1 Bottled Water',
+    'Driving a shared Speedboat 2 people',
+    'Snorkel in the Underwater Museum (MUSA, subject to availability)',
+];
+
+export const notIncludes = [
+    'Hotel pickup and drop-off.',
+    'Food and Beverages.',
+    'Dock fee of $ 20 USD per person.',
+    'Towels, tips, or souvenirs.',
+];
+
+export const shouldKnow = [
+    'Minimum age to participate 3 years old',
+    'The minimum age to drive the boat is 18 years old.',
+    'Pregnant women are not allowed.',
+    'Not suitable for persons with heart problems.',
+    'Not recommended for participants with neck/back problems, or asthma.',
+    'Be sure to bring an official ID per person.',
+    'Children under 3 years old are not allowed.',
+    'Once the activity has started there are no refunds.',
+    'Reckless driving will not be tolerated.',
+];
+
+export const shouldBring = [
+    'Towels.',
+    'Swimsuit.',
+    'Sunblock.',
+    'Official ID.',
+    'Cash.',
+    'Extra change of clothes.',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>About the Speedboat Cancun Tour</TagH2>
+
+    <TagP>Enjoy <strong>two tours in one</strong> after feeling the adrenaline of driving a speed boat, you can amaze yourself with a snorkel tour in the reef of The Meco.</TagP>
+
+    <TagH3>Speedboat in Cancun Tour.</TagH3>
+
+    <TagP>Encourage yourself to drive your own two-passenger motor speedboat through <strong>natural labyrinths</strong> in the Nichupte Lagoon mangrove <em>(Laguna Nichupte in Cancun)</em>. Watch many <strong>birds, fishes, and crocodiles</strong> living free in their natural habitat. Enjoy nature and test your skills driving the speedboat in Cancun.</TagP>
+
+    <TagH3>Snorkel in the Subaquatic Museum (MUSA)</TagH3>
+
+    <TagP>In the beautiful National Park of <strong>Punta Nizuc</strong>, and the <strong>MUSA underwater museum</strong> you will interact with several colorful fish and other <strong>aquatic creatures</strong> of the Mexican Caribbean. This snorkel trip is safe for all the family members. The snorkel equipment is already included.</TagP>
+
+    <TagP>The Speedboat tour is among the most <strong>popular Cancun activities</strong>!</TagP>
+
+    <TagP>Minimum age of 3 years</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

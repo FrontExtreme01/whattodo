@@ -6,18 +6,18 @@ slugGallery: 'dejavu'
 title: 'Renta de Yate Dejavu en Cancún'
 description: ''
 keywords: ''
-price: 0
+price: 932
 stars: '4.6'
-reviews: '840 reseñas'
+reviews: '840 '
 image: 
     src: '/assets/covers/yachts/yacht-dejavu-cover.webp'
     alt: 'portada Rentar Yate Dejavu en Cancún'
 capacity: 'Max 15 pasajeros'
 size: 'Tamaño: 45 ft'
 highlights: ['Chalecos salvavidas y máscaras de snorkel', 'Música Bluetooth']
-bokun: ''
-calendar: ''
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/998166?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/998166'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 faqs:
 -   question: '¿Qué está incluido en la renta del yate?'
     answer: 'La renta incluye un yate completamente equipado con cubiertas espaciosas, asientos cómodos y comodidades como un sistema de sonido, una nevera con hielo y una tripulación profesional para garantizar que tenga una experiencia fluida y agradable.'
@@ -31,10 +31,12 @@ faqs:
     answer: 'El transporte hacia y desde la marina no está incluido en el precio del alquiler, pero podemos organizar un transporte privado para usted si lo solicita. Avísenos si necesita ayuda con su transporte, ¡y estaremos encantados de ayudarle!'
 ---
 
+import Accordion from "@components/detail-content/Accordion"
 import TagH2 from "@components/global/TagH2.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 import TabPricesYacht from "@components/extras/TabPricesYacht";
 
 export const includes = [
@@ -78,32 +80,40 @@ export const infoPrices = [
     {
         duration: '4 horas',
         information: '(sin cruzar a la isla)',
-        price: '$$',
+        price: '932',
     },
     {
         duration: '6 horas',
-        price: '$$',
+        price: '1,013',
     },
     {
         duration: '8 horas',
-        price: '$$',
+        price: '1,166',
     },
 ];
 
-export const i18n = {
-    INCLUDES: 'Incluye',
-    NOT_INCLUDES: 'Not Incluye',
-    SHOULD_KNOW: 'Antes de reservar, ten en cuenta lo siguiente:',
-    SHOULD_BRING: 'Lo que debes llevar',
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
 <TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
-<TagP><em><strong><small>Póngase en contacto con nosotros con anticipación para confirmar la hora de inicio de su actividad</small></strong></em></TagP>
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagP>  Embárcate en una aventura inolvidable a bordo del Deja Vu, un lujoso yate de 45 pies que zarpa desde Marina Kaybal en Cancún. Perfecto para cualquier ocasión, ya sea una escapada romántica, una celebración con amigos o simplemente un día de relajación. Con amplias cubiertas, impresionantes vistas al mar y comodidades de primer nivel, el Deja Vu garantiza una experiencia premium en las aguas cristalinas del Caribe. Disfruta de un servicio excepcional y un viaje perfecto diseñado para crear recuerdos duraderos. Zarpa con nosotros hoy y disfruta de la mejor experiencia en yate. ¡Reserva tu viaje ahora y deja que comience la aventura!</TagP>
+</Accordion>
 
-<TagH2>Descripción general</TagH2>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+    <TagP><em><strong><small>Póngase en contacto con nosotros con anticipación para confirmar la hora de inicio de su actividad</small></strong></em></TagP>
+</Accordion>
 
-<TagP>  Embárcate en una aventura inolvidable a bordo del Deja Vu, un lujoso yate de 45 pies que zarpa desde Marina Kaybal en Cancún. Perfecto para cualquier ocasión, ya sea una escapada romántica, una celebración con amigos o simplemente un día de relajación. Con amplias cubiertas, impresionantes vistas al mar y comodidades de primer nivel, el Deja Vu garantiza una experiencia premium en las aguas cristalinas del Caribe. Disfruta de un servicio excepcional y un viaje perfecto diseñado para crear recuerdos duraderos. Zarpa con nosotros hoy y disfruta de la mejor experiencia en yate. ¡Reserva tu viaje ahora y deja que comience la aventura!</TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
 
-<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

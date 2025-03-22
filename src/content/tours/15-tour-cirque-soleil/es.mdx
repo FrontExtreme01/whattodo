@@ -1,0 +1,92 @@
+---
+slug: 'cirque-du-soleil-joya/es'
+status: 1
+lang: 'es'
+slugGallery: 'joya'
+title: 'Cirque du Soleil JOYÀ - Experiencia de espectáculo'
+description: 'Disfrute de un espectáculo que mezcla acrobacias, una narrativa vibrante y visuales deslumbrantes, todo precedido por un preludio musical cautivador.'
+keywords: ''
+price: 99
+stars: '4.5'
+reviews: '259'
+image:
+    src: '/assets/covers/tours/cirque-du-soleil-cover.webp'
+    alt: 'cover of Cirque du Soleil JOYA'
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales, ', 'Parejas y celebraciones románticas']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/994901?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/994901'
+location: 'Vidanta Riviera Maya'
+duration: '2 horas'
+frameYoutube: 'https://www.youtube.com/watch?v=aw2mfdtXB9s'
+faqs:
+-   question: ¿Cuánto dura JOYÀ?
+    answer: JOYÀ es un espectáculo de 80 minutos más una cena de una hora con preludio musical. Si contrata la experiencia con cena, disfrutará de un total de 2 horas y 20 minutos de entretenimiento.
+-   question: ¿JOYÀ es apto para niños?
+    answer: Sí, toda la familia puede disfrutar de este espectáculo sensorial. Los niños mayores de 3 años necesitan entrada. Tenga en cuenta que el espectáculo dura 80 minutos sin intermedio. La función también incluye música de alta calidad y luces intermitentes, por lo que no se recomienda para niños menores de 3 años.
+-   question: ¿Ofrecen menú vegetariano?
+    answer: Sí, tenemos menú vegetariano y vegano. Si tiene alguna alergia, por favor, informe a su camarero al inicio de su experiencia. También ofrecemos opciones sin gluten.
+---
+
+import { Bulb } from "@/img/allIcons";
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Experiencia de solo espectáculo: Incluye un asiento en una mesa auxiliar o un taburete alto al fondo del teatro, con la opción de comprar bebidas o palomitas en nuestro bar',
+];
+
+export const notIncludes = [
+    'Fotografías',
+    'Recuerdos',
+    'Propinas o gratificaciones',
+];
+
+export const shouldKnow = [
+    'Actualización disponible en el lugar',
+    'Traslados opcionales desde zonas cercanas (costo adicional) disponibles para mayor comodidad',
+    'Los paquetes de cena gourmet incluyen menús vegetarianos, veganos y sin gluten; se recomienda avisar con antelación sobre alergias alimentarias',
+    'La función comienza puntualmente sin intermedio',
+    'No se permiten cámaras ni el uso de flash durante el espectáculo',
+    'Es obligatorio presentar DNI o pasaporte al registrarse',
+    'No se permiten bolsos ni maletas',
+    'Código de vestimenta (no se permiten trajes de baño, ropa deportiva ni camisetas sin mangas)',
+    'No se permiten fotos con flash',
+    'No se permite grabar durante los espectáculos',
+    'Debe ser mayor de 18 años y presentar una identificación con foto válida para consumir alcohol',
+    'Las personas que lleguen tarde serán ubicadas a discreción de la anfitriona, en un horario apropiado que no interrumpa el espectáculo',
+];
+
+export const shouldBring = [
+    'Efectivo adicional o forma de pago',
+    'Comprobante de compra',
+    'DNI o pasaporte',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagP> Disfrute de un espectáculo de 80 minutos con acrobacias impresionantes, una narrativa vibrante y visuales deslumbrantes, todo ello precedido por un preludio musical cautivador. Opte por el paquete de cena gourmet para disfrutar de un viaje sensorial completo de 2 horas y 20 minutos con exquisita gastronomía y champán: una experiencia inmersiva perfecta para todas las edades.</TagP>
+    <TagP><Bulb class="size-5 text-amber-500 inline-block"/> <em><strong>Actualización disponible en el sitio</strong></em></TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

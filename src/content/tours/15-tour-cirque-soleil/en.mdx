@@ -1,0 +1,93 @@
+---
+slug: 'cirque-du-soleil-joya/en'
+status: 1
+lang: 'en'
+slugGallery: 'joya'
+title: 'Cirque du Soleil JOYÀ - Show only experience'
+description: 'Enjoy a show mixing acrobatics, a vibrant narrative, and dazzling visuals, all preceded by a captivating musical prelude.'
+keywords: ''
+price: 99
+stars: '4.5'
+reviews: '259'
+image:
+    src: '/assets/covers/tours/cirque-du-soleil-cover.webp'
+    alt: 'cover of Cirque du Soleil JOYA'
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Couples & Romantic Celebrations']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/994901?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/994901'
+location: 'Vidanta Riviera Maya'
+duration: '2 hours'
+frameYoutube: 'https://www.youtube.com/watch?v=aw2mfdtXB9s'
+faqs:
+-   question: 'How long does JOYÀ last?'
+    answer: JOYÀ is an 80‑minute show plus a one‑hour dinner with a musical prelude. If you purchase the dinner experience, you'll enjoy a total of 2 hours and 20 minutes of entertainment.
+-   question: 'Is JOYÀ appropriate for children?'
+    answer: 'Yes, the whole family can enjoy this sensory-challenging show. Children aged 3 and over require an admission ticket. Please note that the show lasts 80 minutes without an intermission. The performance also features high‑decibel music and flashing lights, so it is not recommended for children under 3 years old.'
+-   question: 'Do you offer a vegetarian menu?'
+    answer: 'Yes, we have a vegetarian and vegan menu. If you have any allergies, please inform your waiter at the beginning of your experience. We also offer gluten‑free options.'
+---
+
+import { Bulb } from "@/img/allIcons";
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Show-Only Experience: Includes a seat at a side table or a high stool at the back of the theater, with the option to purchase drinks or popcorn at our bar',
+];
+
+export const notIncludes = [
+    'Photographs',
+    'Souvenirs',
+    'Tips or gratifications',
+];
+
+export const shouldKnow = [
+    'Upgrade available on site',
+    'Optional transfers from nearby areas (extra cost) are available for added convenience',
+    'Gourmet dinner packages include vegetarian, vegan, and gluten-free menus; advanced notice of food allergies is recommended',
+    'The performance starts promptly with no intermission.',
+    'No cameras or the use of flash photography is allowed during the show.',
+    'ID or Passport is mandatory at the check in process',
+    'No bags or suitcases are allowed ',
+    'Dress code (no bathing suits, sport outfit, or shirts without sleeves)',
+    'No flash photography is allowed ',
+    'No recording during the shows',
+    'You must be 18 years old and present a valid photo ID to consume alcohol.',
+    'Late arrivals will be seated at the discretion of the hostess, at an appropriate time that does not interrupt the show.',
+];
+
+export const shouldBring = [
+    'Additional cash or form of payment',
+    'Purchase voucher',
+    'ID or passport',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Overview</TagH2>
+    <TagP>Enjoy an 80‑minute spectacle of breathtaking acrobatics, vivid storytelling, and dazzling visuals, all introduced by a captivating musical prelude. Upgrade to the gourmet dinner package for a complete 2‑hour and 20‑minute sensory journey featuring exquisite cuisine and champagne—an immersive experience perfect for all ages.</TagP>
+    <TagP><Bulb class="size-5 text-amber-500 inline-block"/> <em><strong>Upgrade available on site</strong></em></TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

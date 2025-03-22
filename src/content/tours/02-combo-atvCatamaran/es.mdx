@@ -10,24 +10,28 @@ description: 'Experimenta dos de las experiencias más vendidas que Cancún tien
 keywords: ''
 price: 100
 stars: '5.0'
-reviews: '1,468 reseñas'
+reviews: '1,468 '
 image:
     src: '/assets/covers/combos/atv-jungle-adventure-catamaran.webp'
     alt: 'portada atv jungle adventure catamaran'
 highlights: ['Tarifa de muelle incluida', 'Recogida ofrecida en ambas actividades']
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales, ', 'Aventureros']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/885793?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/885793'
 location: 'Cancún, México'
 duration: '2 días'
+transportation: 'Transportación Incluida'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 
-export const Includes = [
+export const includes = [
     'Tour ATV Jungle con Tirolesas y Cenote',
     'Snacks en Extreme Adventure Cancún',
     'Recogida en el hotel para el tour en ATV',
@@ -40,13 +44,7 @@ export const notIncludes = [
     '$5 USD por el uso de casillero en Extreme Adventure Park',
 ]
 
-export const i18n = {
-    INCLUDES: 'Incluido',
-    NOT_INCLUDES: 'No incluido',
-    INFORMATION: 'Información adicional'
-};
-
-export const Information = [
+export const shouldKnow = [
     'Recibirás confirmación en el momento de la reserva',
     'No accesible en silla de ruedas',
     'Cerca del transporte público',
@@ -63,25 +61,43 @@ export const Information = [
     'Esta excursión/actividad tendrá un máximo de 30 viajeros',
 ];
 
-<Inclusions 
-    includes={Includes}
-    notIncludes={notIncludes}
-    i18n={i18n}
-/>
+export const shouldBring = [
+    'Traje de baño',
+    'Toalla',
+    'Ropa cómoda',
+    'Zapatos para caminar',
+    'Protector solar',
+    'Repelente de insectos',
+    'Dinero en efectivo',
+];
 
-<TagH2>Descripción general</TagH2>
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
+};
 
-<TagP>Experimenta dos de las experiencias más vendidas que Cancún tiene para ofrecer: una aventura salvaje todoterreno con ATV, tirolesas y cenote en Extreme Adventure Cancún, y una emocionante aventura acuática y de navegación en un catamarán a Isla Mujeres.</TagP>
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagP>Experimenta dos de las experiencias más vendidas que Cancún tiene para ofrecer: una aventura salvaje todoterreno con ATV, tirolesas y cenote en Extreme Adventure Cancún, y una emocionante aventura acuática y de navegación en un catamarán a Isla Mujeres.</TagP>
 
-<AdditionalInfo 
-    information={Information} 
-    i18n={i18n} 
-/>
+    <TagH3>Disfruta cada detalle</TagH3>
 
-<TagH3>Disfruta cada detalle</TagH3>
+    <TagP>¡Embárcate en dos aventuras inolvidables en Cancún con este increíble paquete combinado! </TagP>
 
-<TagP>¡Embárcate en dos aventuras inolvidables en Cancún con este increíble paquete combinado! </TagP>
+    <TagP><strong>Día 1:</strong> Libera tu aventurero interior en un tour en cuatriciclo por la jungla. Corre a través de la jungla maya, vuela por las copas de los árboles en tirolesas y refréscate en un cenote escondido. Esta experiencia llena de adrenalina dura 4 horas, con 2 horas adicionales de transporte desde Cancún. </TagP>
 
-<TagP><strong>Día 1:</strong> Libera tu aventurero interior en un tour en cuatriciclo por la jungla. Corre a través de la jungla maya, vuela por las copas de los árboles en tirolesas y refréscate en un cenote escondido. Esta experiencia llena de adrenalina dura 4 horas, con 2 horas adicionales de transporte desde Cancún. </TagP>
+    <TagP><strong>Día 2:</strong> Zarpa hacia el paraíso en un tour en catamarán a Isla Mujeres. Navega por las aguas cristalinas, practica esnórquel junto a la vibrante vida marina y explora la encantadora isla de Isla Mujeres. Relájate en la famosa playa de Playa Norte, pasea por el centro de la ciudad y saborea un delicioso almuerzo tipo bufé en nuestro exclusivo club de playa. Disfruta de bebidas ilimitadas a bordo del catamarán y en el club de playa. Este combo de aventura de dos días ofrece la combinación perfecta de emoción y relajación, lo que garantiza que crearás recuerdos duraderos de tus vacaciones en Cancún. </TagP>
+</Accordion>
 
-<TagP><strong>Día 2:</strong> Zarpa hacia el paraíso en un tour en catamarán a Isla Mujeres. Navega por las aguas cristalinas, practica esnórquel junto a la vibrante vida marina y explora la encantadora isla de Isla Mujeres. Relájate en la famosa playa de Playa Norte, pasea por el centro de la ciudad y saborea un delicioso almuerzo tipo bufé en nuestro exclusivo club de playa. Disfruta de bebidas ilimitadas a bordo del catamarán y en el club de playa. Este combo de aventura de dos días ofrece la combinación perfecta de emoción y relajación, lo que garantiza que crearás recuerdos duraderos de tus vacaciones en Cancún. </TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

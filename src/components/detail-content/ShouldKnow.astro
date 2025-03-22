@@ -1,0 +1,17 @@
+---
+import { InfoCircle } from "@/img/allIcons"
+const { shouldKnow } = Astro.props;
+---
+
+<div class="text-justify">
+    <ul class="space-y-4 text-sm/relaxed md:text-base/relaxed md:columns-2">
+        {shouldKnow.map((item) => (
+                <li class="inline-block w-full">
+                    <InfoCircle class="text-green-700 mr-1 inline-block" /> {item}
+                </li>
+            ))
+        }
+    </ul>
+</div>
+
+

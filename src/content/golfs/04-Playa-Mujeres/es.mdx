@@ -8,7 +8,7 @@ description: 'Experimenta la dicha de jugar golf en Playa Mujeres Golf Club en C
 keywords: ''
 price: 172
 stars: '4.5'
-reviews: '419 reseñas'
+reviews: '419 '
 image:
     src: '/assets/covers/golfs/playa-mujeres-golf-club.webp'
     alt: 'portada de Playa Mujeres Golf Club en Cancún'
@@ -29,17 +29,17 @@ import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagH4 from "@components/global/TagH4.astro";
 import TagP from "@components/global/TagP.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 import PlayaMujeresPrices from "@components/extras/tables/PlayaMujeresPrices.astro";
 
-export const information = [
+export const shouldKnow = [
     'Número de Hoyos: 18',
     'Yardas: 7,218 yardas',
     'Par: 72',
     'Diseñador del Campo: Greg Norman Golf Course Design.',
 ];
 
-export const i18n = {
+export const titles = {
     INFORMATION: 'Detalles',
     TABLE_TITLE: 'Tarifas de Playa Mujeres Golf Club',
     CONDITIONS: 'Los jugadoras menores de 17 años deben estar acompañados por un adulto.',
@@ -47,9 +47,9 @@ export const i18n = {
     AGE_JUNIOR: '17 años y menores'
 };
 
-<AdditionalInfo information={information} i18n={i18n} />
+<ShouldKnow shouldKnow={shouldKnow} />
 
-<PlayaMujeresPrices i18n={i18n} />
+<PlayaMujeresPrices i18n={titles} />
 
 <TagH2>Un Paraíso para los Golfistas en Cancún </TagH2>
 

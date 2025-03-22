@@ -1,0 +1,105 @@
+---
+slug: 'cancun-glass-boat/es'
+status: 1
+lang: 'es'
+slugGallery: 'glass-boat'
+title: 'Tour en Barco de Cristal en Cancún'
+description: 'Recorre el Mar Caribe descubriendo sus secretos a través del barco de cristal en Cancún, recorriendo la laguna y el océano.'
+keywords: ''
+categories: ['WATER', 'CHEAP']
+price: 35
+stars: '4.0'
+reviews: '4,024 '
+image:
+    src: '/assets/covers/tours/clear-boat-glass-bottom-in-cancun-isla-mujeres-and-cozumel.webp'
+    alt: 'portada barco de cristal'
+highlights: ['Paseo en barco de cristal', 'Chalecos salvavidas']
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/670334?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/670334'
+location: 'Blvd. Kukulcan km 3.5'
+duration: '1 hora y 15 minutos'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+
+export const includes = [
+    'Paseo en barco de cristal',
+    'Chaleco salvavidas',
+    '2 cervezas por adulto y agua embotellada',
+];
+
+export const notIncludes = [
+    'Transporte redondo al muelle (Marina Sunrise)',
+    'Tarifa de muelle $ 5 USD',
+    'Fotografías profesionales',
+    'Propinas',
+];
+
+export const shouldKnow = [
+    'No se permiten bocadillos',
+    'No se permiten bebidas de contenedores de vidrio',
+    'Traiga efectivo extra para sus fotos y consejos profesionales',
+    'No recomendado para personas con movilidad reducida',
+    'No se recomienda para aquellos con problemas de espalda o cardíaca',
+    "No recomendado para las personas que han tenido cirugías recientes",
+    'Trae gafas de sol o sombrero',
+];
+
+export const shouldBring = [
+    'Traje de baño',
+    'Toalla',
+    'Zapatos cómodos',
+    'Un cambio de ropa',
+    'Dinero en efectivo adicional',
+];
+
+export const information = [
+    '10:00 am',
+    '11:30 am',
+    '2:30 pm',
+    '4:00 pm',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
+    INFORMATION: 'Horarios'
+};
+
+<AdditionalInfo information={information} i18n={titles} />
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Acerca del Crucero turístico en barco de cristal</TagH2>
+
+    <TagP> Disfruta de la aventura del <strong> Barco con Fondo de Cristal</strong>, navega por <strong>la Laguna Nichupté y el Mar Caribe</strong> en una embarcación tan transparente, una experiencia única con una increíble visibilidad de 360 ​​grados. Su casco es completamente transparente. Sin embargo, será un emocionante viaje turístico en <strong>Cancún</strong>, donde podrás apreciar los secretos del fondo marino sin bajarte de la embarcación.</TagP>
+
+    <TagH3> Comience la aventura </TagH3>
+
+    <TagP> Luego comience con un viaje corto <strong> alrededor de la laguna </strong>, hogar de muchas aves y cocodrilos <strong> </strong>.Luego, navegue hacia el mar abierto, donde el color del agua cambia a un <strong> impresionante azul turquesa </strong>.Mantenga los ojos bien abiertos para peces tropicales, Starfish, y <strong> Coral colorido </strong>.Con mejor suerte, incluso podrías ver algunos rayos y tortugas marinas. </TagP>
+
+    <TagP> <strong> Los adultos a bordo pueden disfrutar de una cerveza o dos, cortesía del capitán del barco. </strong> </TagP>
+
+    <TagP> <strong> Duración: 1.15 horas </strong> </TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

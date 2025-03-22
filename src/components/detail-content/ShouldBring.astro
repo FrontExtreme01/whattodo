@@ -1,0 +1,17 @@
+---
+import { Bulb } from "@/img/allIcons"
+const { shouldBring } = Astro.props;
+---
+
+<div class="text-justify">
+    <ul class="space-y-4 text-sm/relaxed md:text-base/relaxed md:columns-2">
+        {shouldBring.map((item) => (
+                <li class="inline-block w-full">
+                    <Bulb class="text-amber-500 mr-1 inline-block" /> {item}
+                </li>
+            ))
+        }
+    </ul>
+</div>
+
+

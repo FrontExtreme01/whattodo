@@ -11,22 +11,26 @@ description: Experience Cancun's top adventure activities with this value combo 
 keywords: ''
 price: 90
 stars: '5.0'
-reviews: '2,387 reviews'
+reviews: '2,387'
 image:
     src: '/assets/covers/combos/atv-zipline-cenote-speedboat.webp'
     alt: 'cover combo atv zipline cenote speedboat'
 highlights: ['Pickup offered']
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/885792?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/885792'
 location: 'Cancun, Mexico'
 duration: '2 days'
+transportation: 'Pickup offered'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 
 export const includes = [
     'Lunch',
@@ -42,7 +46,7 @@ export const notIncludes = [
     'Marine park fee of 20 US dollars per person (Nizuc Reef & Speedboat Tour)',
 ];
 
-export const infoAditional = [
+export const shouldKnow = [
     'Confirmation will be received at time of booking',
     'Not wheelchair accessible',
     'Near public transportation',
@@ -58,16 +62,36 @@ export const infoAditional = [
     'This tour/activity will have a maximum of 20 travelers',
 ];
 
-export const i18n = {
-    INCLUDES: 'Included',
-    NOT_INCLUDES: 'Not included',
-    INFORMATION: 'Additional information'
+export const shouldBring = [
+    'Towels',
+    'Swimsuit',
+    'Sunblock',
+    'Official ID',
+    'Cash',
+    'Extra change of clothes',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Overview</TagH2>
 
-<TagH2>Overview</TagH2>
+    <TagP> Experience Cancun's top adventure activities with this value combo featuring ATV riding & ziplining in the jungle, swimming in a scenic cenote, and speedboating & snorkeling at the Nizuc Reef. The ATV Jungle tour starts with a convenient pickup from your hotel or a nearby meeting point. Head out to the wilderness and the dense Yucatan jungle, just off the famous Ruta de los Cenotes. The adventure kicks off with a 30-minute ATV ride through muddy, dusty and bumpy roads. Continue with an exciting flight on a 3-zipline circuit before cooling off in an exotic cenote in the middle of the jungle. Embark on an exciting expedition, steering your speedboat through the Nichupte Lagoon and out to the Caribbean. Snorkel on the scenic Nizuc Reef and get a glimpse of the fascinating exhibits of the famous Underwater Museum of Art. </TagP>
+</Accordion>
 
-<TagP> Experience Cancun's top adventure activities with this value combo featuring ATV riding & ziplining in the jungle, swimming in a scenic cenote, and speedboating & snorkeling at the Nizuc Reef. The ATV Jungle tour starts with a convenient pickup from your hotel or a nearby meeting point. Head out to the wilderness and the dense Yucatan jungle, just off the famous Ruta de los Cenotes. The adventure kicks off with a 30-minute ATV ride through muddy, dusty and bumpy roads. Continue with an exciting flight on a 3-zipline circuit before cooling off in an exotic cenote in the middle of the jungle. Embark on an exciting expedition, steering your speedboat through the Nichupte Lagoon and out to the Caribbean. Snorkel on the scenic Nizuc Reef and get a glimpse of the fascinating exhibits of the famous Underwater Museum of Art. </TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
 
-<AdditionalInfo information={infoAditional} i18n={i18n} />
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

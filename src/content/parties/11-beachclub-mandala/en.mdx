@@ -3,7 +3,6 @@ slug: 'mandala-beach-club-cancun/en'
 status: 1
 lang: 'en'
 home: 1
-event: 1
 type: 'BEACHCLUB'
 slugGallery: 'mandala-beachclub'
 titleSeo: 'Mandala Beach Club Cancun Admission and Beverages'
@@ -12,25 +11,28 @@ description: 'Are you planning a trip to Cancun and looking for the ultimate bea
 keywords: 'Mandala Beach Club Cancun, Mandala Beach Club, Mandala Beach Club Cancun Admission, Mandala Beach Club Cancun Beverages'
 price: 20
 stars: '5.0'
-reviews: '3,896 reviews'
+reviews: '3,896'
 image:
     src: '/assets/covers/parties/mandala-beach-club.webp'
     alt: 'cover mandala beach club'
+video: '/assets/videos/mandala-beach-club.mp4'
 duration: '5 hours'
+music: 'Hip-Hop, electronic, Latin'
+dressCode: 'Casual (bathing suit allowed)'
 consumption: 'Consumption Credits'
 admission: 'Admission Ticket'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/746036?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/746036'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d119087.50365958865!2d-86.747019!3d21.133109!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c289f3595dba3%3A0x155d2283e6f9ad48!2sMandala%20Beach%20Club!5e0!3m2!1ses!2smx!4v1704724829158!5m2!1ses!2smx'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
-import TagVideo from "@components/global/TagVideo.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 
 export const includes = [
     'Admission',
@@ -43,43 +45,48 @@ export const notIncludes = [
     'Lounge chair or cabana/ villa',
 ];
 
-export const information = [
+export const shouldKnow = [
     'Check-in must be completed before 12 PM',
     'Duration 5 hours and 30 minutes',
 ];
 
-export const i18n = {
-    INCLUDES: 'Included',
-    NOT_INCLUDES: 'Not included',
-    INFORMATION: 'Please Note',
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>About Mandala Beach</TagH2>
 
-<TagVideo src="/assets/videos/mandala-beach-club.mp4" lang={frontmatter.lang} />
+    <TagP>Are you planning a trip to Cancun and looking for the ultimate beach club experience? Look no further than Mandala Cancun. Located on Boulevard Kukulcan Km 8.5 in the Hotel Zone of Cancun, the club offers a perfect blend of seaside luxury, tropical atmosphere, and exclusive VIP services.</TagP>
 
-<AdditionalInfo information={information} i18n={i18n} />
+    <TagH3>Where is Mandala Beach Club Cancun located?</TagH3>
 
-<TagH2>About Mandala Beach</TagH2>
+    <TagP>The Club is situated in the heart of Cancun’s Hotel Zone, making it easily accessible to both tourists and locals. You can find it on Boulevard Kukulcan Km 8.5, just a stone’s throw away from some of <strong>Cancun’s most famous hotels and attractions</strong>.</TagP>
 
-<TagP>Are you planning a trip to Cancun and looking for the ultimate beach club experience? Look no further than Mandala Cancun. Located on Boulevard Kukulcan Km 8.5 in the Hotel Zone of Cancun, the club offers a perfect blend of seaside luxury, tropical atmosphere, and exclusive VIP services.</TagP>
+    <TagP>As you enter Mandala Beach, you’ll be welcomed by a lively and energetic atmosphere that sets the tone for a perfect day out in the sun. The club features a spacious beach area with lounge chairs and umbrellas, multiple bars, and plenty of seating areas both indoors and outdoors. Whether you’re looking to relax on the beach or dance the night away under the stars, Mandala has something for everyone.</TagP>
 
-<TagH3>Where is Mandala Beach Club Cancun located?</TagH3>
+    <TagH3>Mandala Beach Bar </TagH3>
 
-<TagP>The Club is situated in the heart of Cancun’s Hotel Zone, making it easily accessible to both tourists and locals. You can find it on Boulevard Kukulcan Km 8.5, just a stone’s throw away from some of <strong>Cancun’s most famous hotels and attractions</strong>.</TagP>
+    <TagP>One of the highlights is the Beach Bar. The bar offers a wide range of cocktails, beer, wine, and other refreshing beverages that are perfect for sipping on while you soak up the sun. Whether you’re in the mood for a classic Margarita or a tropical Pina Colada, the Mandala Beach Bar has got you covered. </TagP>
 
-<TagP>As you enter Mandala Beach, you’ll be welcomed by a lively and energetic atmosphere that sets the tone for a perfect day out in the sun. The club features a spacious beach area with lounge chairs and umbrellas, multiple bars, and plenty of seating areas both indoors and outdoors. Whether you’re looking to relax on the beach or dance the night away under the stars, Mandala has something for everyone.</TagP>
+    <TagH3>Mandala Beach Pool Party</TagH3>
 
-<TagH3>Mandala Beach Bar </TagH3>
+    <TagP>If you’re looking for the ultimate beach club experience, be sure to check out the Pool Party. Held every Saturday, the <strong>Beach Pool Party</strong> is a day-long celebration of music, fun, and sun. The party features live DJs, exclusive VIP areas, bottle service, and much more. </TagP>
 
-<TagP>One of the highlights is the Beach Bar. The bar offers a wide range of cocktails, beer, wine, and other refreshing beverages that are perfect for sipping on while you soak up the sun. Whether you’re in the mood for a classic Margarita or a tropical Pina Colada, the Mandala Beach Bar has got you covered. </TagP>
+    <TagH3>How to get to Mandala Beach </TagH3>
 
-<TagH3>Mandala Beach Pool Party</TagH3>
+    <TagP>The club is easily accessible by taxi or public transportation. If you’re staying at a nearby hotel, it’s just a short walk away. Once you arrive, simply pay the cover cost, grab a drink from the Bar, and get ready for a day of fun in the sun. Check for more alternatives nightlife in Cancun. </TagP>
 
-<TagP>If you’re looking for the ultimate beach club experience, be sure to check out the Pool Party. Held every Saturday, the <strong>Beach Pool Party</strong> is a day-long celebration of music, fun, and sun. The party features live DJs, exclusive VIP areas, bottle service, and much more. </TagP>
+    <TagP>In conclusion, the Club is the perfect destination for anyone looking for the ultimate beach club experience. With its tropical atmosphere, beautiful beach, exclusive VIP services, and <strong>Pool Party</strong>, it’s no wonder why Mandala is one of the best beach clubs in Cancun. So, if you’re planning a trip to Cancun and want to experience the best that the beach club scene has to offer. </TagP>
+</Accordion>
 
-<TagH3>How to get to Mandala Beach </TagH3>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
 
-<TagP>The club is easily accessible by taxi or public transportation. If you’re staying at a nearby hotel, it’s just a short walk away. Once you arrive, simply pay the cover cost, grab a drink from the Bar, and get ready for a day of fun in the sun. Check for more alternatives nightlife in Cancun. </TagP>
-
-<TagP>In conclusion, the Club is the perfect destination for anyone looking for the ultimate beach club experience. With its tropical atmosphere, beautiful beach, exclusive VIP services, and <strong>Pool Party</strong>, it’s no wonder why Mandala is one of the best beach clubs in Cancun. So, if you’re planning a trip to Cancun and want to experience the best that the beach club scene has to offer. </TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

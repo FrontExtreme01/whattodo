@@ -3,7 +3,6 @@ slug: 'mandala-beach-club-cancun/es'
 status: 1
 lang: 'es'
 home: 1
-event: 1
 type: 'BEACHCLUB'
 slugGallery: 'mandala-beachclub'
 titleSeo: 'Mandala Beach Club Cancún Admisión y Bebidas'
@@ -12,25 +11,28 @@ description: '¿Estás planeando un viaje a Cancún y buscas la experiencia defi
 keywords: 'Mandala Beach Club Cancún, Mandala Beach Club, Mandala Beach Club Cancún Admisión, Mandala Beach Club Cancún Bebidas'
 price: 20
 stars: '5.0'
-reviews: '3,896 reseñas'
+reviews: '3,896 '
 image:
     src: '/assets/covers/parties/mandala-beach-club.webp'
     alt: 'portada mandala beach club'
+video: '/assets/videos/mandala-beach-club.mp4'
 duration: '5 horas'
+music: 'Hip-Hop, electrónica, Latina'
+dressCode: 'Casual (traje de baño permitido)'
 consumption: 'Créditos de consumo'
 admission: 'Boleto de admisión'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/746036?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/746036'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d119087.50365958865!2d-86.747019!3d21.133109!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c289f3595dba3%3A0x155d2283e6f9ad48!2sMandala%20Beach%20Club!5e0!3m2!1ses!2smx!4v1704724829158!5m2!1ses!2smx'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
-import TagVideo from "@components/global/TagVideo.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 
 export const includes = [
     'Admisión',
@@ -43,44 +45,48 @@ export const notIncludes = [
     'Sillón o cabaña/villa',
 ];
 
-export const information = [
+export const shouldKnow = [
     'El check-in debe completarse antes de las 12 PM',
     'Duración 5 horas y 30 minutos',
 ];
 
-export const i18n = {
-    INCLUDES: 'Incluido',
-    NOT_INCLUDES: 'No incluido',
-    INFORMATION: 'Por favor ten en cuenta',
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Acerca de Mandala Beach</TagH2>
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+    <TagP>¿Estás planeando un viaje a Cancún y buscas la mejor experiencia en un club de playa? No busques más que Mandala Cancún. Ubicado en el Boulevard Kukulcan Km 8.5 en la Zona Hotelera de Cancún, el club ofrece una combinación perfecta de lujo junto al mar, ambiente tropical y servicios VIP exclusivos.</TagP>
 
-<TagVideo src="/assets/videos/mandala-beach-club.mp4" lang={frontmatter.lang} />
+    <TagH3>¿Dónde se encuentra Mandala Beach Club Cancún?</TagH3>
 
-<AdditionalInfo information={information} i18n={i18n} />
+    <TagP>El Club está situado en el corazón de la Zona Hotelera de Cancún, lo que lo hace de fácil acceso tanto para turistas como para locales. Puedes encontrarlo en el Boulevard Kukulcan Km 8.5, a un tiro de piedra de algunos de los <strong>hoteles y atracciones más famosos de Cancún</strong>.</TagP>
 
-<TagH2>Acerca de Mandala Beach</TagH2>
+    <TagP>Al ingresar a Mandala Beach, serás recibido por un ambiente animado y enérgico que marca el tono para un día perfecto bajo el sol. El club cuenta con una amplia zona de playa con tumbonas y sombrillas, varios bares y numerosas zonas para sentarse tanto en el interior como en el exterior. Tanto si buscas relajarte en la playa como bailar toda la noche bajo las estrellas, Mandala tiene algo para todos.</TagP>
 
-<TagP>¿Estás planeando un viaje a Cancún y buscas la mejor experiencia en un club de playa? No busques más que Mandala Cancún. Ubicado en el Boulevard Kukulcan Km 8.5 en la Zona Hotelera de Cancún, el club ofrece una combinación perfecta de lujo junto al mar, ambiente tropical y servicios VIP exclusivos.</TagP>
+    <TagH3>Mandala Beach Bar </TagH3>
 
-<TagH3>¿Dónde se encuentra Mandala Beach Club Cancún?</TagH3>
+    <TagP>Uno de los puntos destacados es el Beach Bar. El bar ofrece una amplia variedad de cócteles, cerveza, vino y otras bebidas refrescantes que son perfectas para beber mientras tomas sol. Ya sea que te apetezca una margarita clásica o una piña colada tropical, el Mandala Beach Bar tiene lo que buscas. </TagP>
 
-<TagP>El Club está situado en el corazón de la Zona Hotelera de Cancún, lo que lo hace de fácil acceso tanto para turistas como para locales. Puedes encontrarlo en el Boulevard Kukulcan Km 8.5, a un tiro de piedra de algunos de los <strong>hoteles y atracciones más famosos de Cancún</strong>.</TagP>
+    <TagH3>Fiesta en la piscina de Mandala Beach</TagH3>
 
-<TagP>Al ingresar a Mandala Beach, serás recibido por un ambiente animado y enérgico que marca el tono para un día perfecto bajo el sol. El club cuenta con una amplia zona de playa con tumbonas y sombrillas, varios bares y numerosas zonas para sentarse tanto en el interior como en el exterior. Tanto si buscas relajarte en la playa como bailar toda la noche bajo las estrellas, Mandala tiene algo para todos.</TagP>
+    <TagP>Si buscas la mejor experiencia en un club de playa, no dejes de visitar la Pool Party. La <strong>Beach Pool Party</strong>, que se celebra todos los sábados, es una celebración de un día de música, diversión y sol. La fiesta cuenta con DJ en vivo, áreas VIP exclusivas, servicio de botellas y mucho más. </TagP>
 
-<TagH3>Mandala Beach Bar </TagH3>
+    <TagH3>Cómo llegar a Mandala Beach </TagH3>
 
-<TagP>Uno de los puntos destacados es el Beach Bar. El bar ofrece una amplia variedad de cócteles, cerveza, vino y otras bebidas refrescantes que son perfectas para beber mientras tomas sol. Ya sea que te apetezca una margarita clásica o una piña colada tropical, el Mandala Beach Bar tiene lo que buscas. </TagP>
+    <TagP>Se puede llegar fácilmente al club en taxi o en transporte público. Si te alojas en un hotel cercano, está a pocos pasos de distancia. Una vez que llegues, simplemente paga el costo de entrada, toma una bebida del bar y prepárate para un día de diversión bajo el sol. Consulta más alternativas de vida nocturna en Cancún. </TagP>
 
-<TagH3>Fiesta en la piscina de Mandala Beach</TagH3>
+    <TagP>En conclusión, el Club es el destino perfecto para cualquiera que busque la mejor experiencia en un club de playa. Con su ambiente tropical, hermosa playa, servicios VIP exclusivos y <strong>fiesta en la piscina</strong>, no es de extrañar que Mandala sea uno de los mejores clubes de playa en Cancún. Entonces, si estás planeando un viaje a Cancún y quieres experimentar lo mejor que la escena de los clubes de playa tiene para ofrecer. </TagP>
+</Accordion>
 
-<TagP>Si buscas la mejor experiencia en un club de playa, no dejes de visitar la Pool Party. La <strong>Beach Pool Party</strong>, que se celebra todos los sábados, es una celebración de un día de música, diversión y sol. La fiesta cuenta con DJ en vivo, áreas VIP exclusivas, servicio de botellas y mucho más. </TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
 
-<TagH3>Cómo llegar a Mandala Beach </TagH3>
-
-<TagP>Se puede llegar fácilmente al club en taxi o en transporte público. Si te alojas en un hotel cercano, está a pocos pasos de distancia. Una vez que llegues, simplemente paga el costo de entrada, toma una bebida del bar y prepárate para un día de diversión bajo el sol. Consulta más alternativas de vida nocturna en Cancún. </TagP>
-
-<TagP>En conclusión, el Club es el destino perfecto para cualquiera que busque la mejor experiencia en un club de playa. Con su ambiente tropical, hermosa playa, servicios VIP exclusivos y <strong>fiesta en la piscina</strong>, no es de extrañar que Mandala sea uno de los mejores clubes de playa en Cancún. Entonces, si estás planeando un viaje a Cancún y quieres experimentar lo mejor que la escena de los clubes de playa tiene para ofrecer. </TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

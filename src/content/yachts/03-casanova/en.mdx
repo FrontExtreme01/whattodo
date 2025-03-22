@@ -8,7 +8,7 @@ description: ''
 keywords: ''
 price: 932
 stars: '5.0'
-reviews: '963 Reviews'
+reviews: '963'
 image: 
     src: '/assets/covers/yachts/yacht-casanova-cover.webp'
     alt: 'cover of yacht casanova'
@@ -17,7 +17,7 @@ size: 'Size: 48 ft'
 highlights: ['Life jackets and snorkel masks', 'Bluetooth music']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/949734?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/949734'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 faqs:
 -   question: 'Do I need to bring anything for the trip?'
     answer: We provide everything you'll need for a luxurious and comfortable experience. However, we recommend bringing sunscreen, a hat, and any personal items you'd like for the day. If you're planning on swimming or snorkeling, feel free to bring swimwear and towels, though these can also be provided.
@@ -29,10 +29,12 @@ faqs:
     answer: ' No, you don’t need any boating experience. The yacht comes with a professional crew to handle all aspects of navigation, ensuring a smooth and enjoyable journey for you and your guests.'
 ---
 
+import Accordion from "@components/detail-content/Accordion"
 import TagH2 from "@components/global/TagH2.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 import TabPricesYacht from "@components/extras/TabPricesYacht";
 
 export const includes = [
@@ -87,20 +89,30 @@ export const infoPrices = [
     },
 ];
 
-export const i18n = {
-    INCLUDES: 'Included',
-    NOT_INCLUDES: 'Not included',
-    SHOULD_KNOW: 'What you should know',
-    SHOULD_BRING: 'What you should bring',
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
 };
 
 <TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
-<TagP><em><strong><small>Please contact us in advance to confirm the start time of your activity</small></strong></em></TagP>
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Overview </TagH2>
 
-<TagH2>Overview </TagH2>
+    <TagP>Embark on an unforgettable journey aboard the Casanova, a 48-foot luxury yacht, sailing from the beautiful Marina Kaybal in Cancún. Whether you're planning a special celebration, a relaxing escape, or a fun-filled day on the water, the Casanova offers the perfect setting. With its expansive decks, stylish interiors, and exceptional amenities, you'll enjoy every moment in comfort and elegance. Explore the stunning Caribbean coastline, unwind with personalized service, and create unforgettable memories. Reserve your spot today and experience the ultimate in luxury, adventure, and tranquility on the water </TagP>
+</Accordion>
 
-<TagP>Embark on an unforgettable journey aboard the Casanova, a 48-foot luxury yacht, sailing from the beautiful Marina Kaybal in Cancún. Whether you're planning a special celebration, a relaxing escape, or a fun-filled day on the water, the Casanova offers the perfect setting. With its expansive decks, stylish interiors, and exceptional amenities, you'll enjoy every moment in comfort and elegance. Explore the stunning Caribbean coastline, unwind with personalized service, and create unforgettable memories. Reserve your spot today and experience the ultimate in luxury, adventure, and tranquility on the water </TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+    <TagP><em><strong><small>Please contact us in advance to confirm the start time of your activity</small></strong></em></TagP>
+</Accordion>
 
-<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import { getI18N } from "@/i18n";
+import { useTranslatedPath } from "@/i18n/utils";
+import { Star, Clock } from "@/img/allIcons";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const { tour, lang } = Astro.props;
+const translatePath = useTranslatedPath(lang);
+const url = translatePath(`/tour/${tour.new_slug}/`);
+---
+
+<div class="w-full lg:w-6/12 md:p-4 lg:p-2.5 mb-5">
+    <a aria-label={i18n.ACCESSIBILITY.GO_TO_CARD_DETAILS + tour.data.title} href={url}>
+        <div class="flex flex-wrap rounded-xl bg-white shadow-md border-slate-600 h-full">
+            <div class="relative w-2/5 rounded-s-xl">
+                <Image width="400" height="300" loading="lazy" src={tour.data.image.src} class="w-full h-full object-cover rounded-s-xl cursor-pointer duration-200 lg:hover:scale-90" alt={tour.data.image.alt} />
+                {tour.data.lastMinute && (
+                    <span class="absolute z-10 top-0 left-0 py-1 px-2.5 sm:p-2 rounded-tl-xl rounded-br-xl bg-gradient-to-r from-red-600 from-70% to-orange-500 text-white font-bold text-xs shadow-md">
+                        {i18n.CARDS.LAST_MINUTE}
+                    </span>
+                )}
+                {tour.data.earlyBird && (
+                    <span class="absolute z-10 top-0 left-0 py-1 px-2.5 sm:p-2 rounded-tl-xl rounded-br-xl bg-gradient-to-r from-orange-500 from-70% to-amber-500 text-white font-bold text-xs shadow-md">
+                        {i18n.CARDS.EARLY_BIRD}
+                    </span>
+                )}
+            </div>
+            <div class="w-3/5 px-3.5 sm:px-5 py-3 flex flex-col">
+                <h2 class="font-semibold text-sm/tight sm:text-lg/tight mb-3 text-start text-gray-800">{tour.data.title}</h2>
+                <div class="flex flex-wrap items-center gap-3 mb-4 text-sm sm:text-base">
+                    <div class="flex items-center font-semibold">
+                        <Star class="size-5 text-amber-500" /> {tour.data.stars} <span class="ml-2 text-gray-500 font-normal">({tour.data.reviews})</span>
+                    </div>
+                    <div class="flex items-center">
+                        <Clock class="size-5 text-gray-500" stroke-width={1.5} /> {tour.data.duration}
+                    </div>
+                </div>
+                <!-- Price -->
+                <div class="w-full flex flex-wrap mb-5 mt-auto">
+                    {(tour.data.lastMinute || tour.data.combo) && (
+                        <p class="font-bold text-red-600 text-xs sm:text-sm line-through w-full">
+                            <span>{i18n.CARDS.FROM}:</span>
+                            ${(tour.data.price * 1.4).toFixed(0)} USD
+                        </p>
+                    )}
+                    {(tour.data.earlyBird && !tour.data.notCustomEarlyBird) && (
+                        <p class="w-full mb-2 sm:mb-4">
+                            <span class="rounded bg-gradient-to-r from-orange-500 from-70% to-amber-500 text-white font-bold text-xs sm:text-sm p-1 sm:px-2 sm:py-1.5 shadow-md">
+                                {i18n.CARDS.UP_TO_DISCOUNT}
+                            </span>
+                        </p>
+                    )}
+                    <p class="font-bold text-gray-900 text-base sm:text-xl"><span class="text-gray-800 text-sm font-normal">{i18n.CARDS.FROM}</span> ${tour.data.price} USD <span class="text-gray-500 text-xs sm:text-sm font-normal">{i18n.CARDS.PER_PERSON}</span></p>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

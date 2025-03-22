@@ -1,0 +1,98 @@
+---
+slug: 'tulum-cenote-and-sea-turtle-sanctuary-swim/en'
+status: 1
+lang: 'en'
+slugGallery: 'turtle-sanctuary'
+title: 'Tulúm, Cenote Mariposa & Sea Turtle Sanctuary Swim'
+description: Delight in the grandeur of Tulum's archaeological wonders, the serene beauty of a pristine cenote, and the enchanting underwater realm of Akumal's marine life.
+keywords: ''
+categories: ['WATER', 'RUINS']
+price: 141
+stars: '4.3'
+reviews: '2,026'
+image:
+    src: '/assets/covers/tours/cover-akumal-turtles-and-cenote.webp'
+    alt: 'cover Tulum, Cenote Mariposa & Sea Turtle Sanctuary Swim'
+highlights: ['Transportation Included', 'Snorkeling gear']
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/870550?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/870550'
+location: 'Tulum, Quintana Roo'
+duration: '10 hours'
+transportation: 'Transportation Included (Cancun & Puerto Morelos)'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Food and drink',
+    'Admission to Cenote Mariposa',
+    'Use of Snorkelling equipment',
+    'Roundtrip transportation from most hotels in Cancun and Puerto Morelos',
+    'Guided tour of the archaeological zone of Tulum',
+    'Lunch',
+    'Life jackets and lockers included',
+    '2 water bottles per person',
+];
+
+export const notIncludes = [
+    'Nation Park Fee of 700 pesos per person',
+    'Beverages',
+    'Drinks during the meal',
+];
+
+export const shouldKnow = [
+    'Departures from Cancun: Mondays and Fridays',
+    'Departures from Riviera Maya: Tuesdays and Saturdays',
+    'Please bring an additional payment method',
+    'Life jackets are mandatory in the cenote',
+    'Not recommended for individuals with reduced mobility',
+    'Not recommended for those with back or heart issues',
+    'Not recommended for individuals who have had recent surgeries',
+];
+
+export const shouldBring = [
+    'Towel',
+    'Change of clothes',
+    'Additional cash or form of payment',
+    'Sunglasses',
+    'Hat',
+    'Comfortable shoes',
+    'Swim wear or bathing suit',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagP>Embark on a captivating bus excursion to Tulum and Akumal, where nature's marvels and ancient treasures await. Delight in the grandeur of Tulum's archaeological wonders, the serene beauty of a pristine cenote, and the enchanting underwater realm of Akumal's marine life.</TagP>
+
+    <TagH2>About Tulúm with Cenote Mariposa & Sea Turtle Sanctuary Swim</TagH2>
+
+    <TagP>The day starts with a trip to magical ancient Tulum. Guided through this archaeological masterpiece, marvel at its towering temples, formidable walls, and breathtaking vistas overlooking the Caribbean Sea's turquoise expanse. </TagP>
+
+    <TagP> Next, immerse yourself in the refreshing waters of Cenote Mariposa. Afterward, replenish your energy with a sumptuous buffet lunch, featuring an array of local and international delights. </TagP>
+
+    <TagP> Continue your exploration to Akumal, where a rare encounter awaits: swimming alongside majestic sea turtles, gracefully navigating their aquatic domain. Dive into the vibrant underwater tapestry of coral reefs and tropical fish, crafting unforgettable memories. </TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

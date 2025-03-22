@@ -1,0 +1,115 @@
+---
+slug: 'whale-shark-sighting-snorkeling-experience-with-isla-mujeres-visit/es'
+status: 1
+earlyBird: 1
+notCustomEarlyBird: 1
+lang: 'es'
+slugGallery: 'whale-shark'
+title: 'Avistamiento de Tiburón Ballena con Snorkel y Visita a Isla Mujeres'
+description: 'Embárcate en una aventura única en la vida con los majestuosos tiburones ballena, los peces más grandes del mundo. Aprovecha este fenómeno estacional para acercarte lo más posible a las fascinantes criaturas que migran a las costas de Cancún cada verano.'
+keywords: ''
+categories: ['WATER']
+price: 149
+stars: '4.5'
+reviews: '926'
+image:
+    src: '/assets/covers/tours/whale-shark-in-cancun-tour.webp'
+    alt: 'Portada Avistamiento de Tiburón Ballena con Snorkel y Visita a Isla Mujeres'
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales, ', 'Aventureros']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/764355?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/764355'
+location: 'Cancún, Quintana Roo'
+duration: '6 horas'
+transportation: 'Recogida ofrecida (Cancún, Puerto Morelos y Playa del Carmen)'
+frameYoutube: 'https://www.youtube.com/watch?v=3r6opX6OaBM'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Recogida y regreso al hotel en Cancún, Puerto Morelos y Playa del Carmen solamente',
+    'Desayuno',
+    'Desayuno ligero',
+    'Refresco y agua',
+    'Uso de equipos de snorkel',
+    'Lunch (Ceviche y guacamole de camarones o pescado)',
+    '2 remedios contra el mareo: el té de jengibre y las pulseras de presión ',
+    'Guía bilingüe profesional ',
+    'Guías disponibles bajo solicitud (francés, holandés, alemán, portugués, italiano, ruso, polaco)',
+    'Snorkel en el arrecife en Isla Mujeres ',
+    'Tiempo libre para nadar en la impresionante Playa Norte (Playa Norte)',
+    'Comida vegetariana disponible a pedido ',
+];
+
+export const notIncludes = [
+    'Tarifa de muelle de 18 USD por viajero (se paga en efectivo a la llegada',
+    'Fotografías profesionales opcionales (80 USD)',
+    'Recuerdos',
+    'Propinas',
+    'Traje de neopreno disponible para alquilar ',
+];
+
+export const shouldKnow = [
+    'Los bebés deben sentarse en su regazo',
+    'No es accesible para sillas de ruedas',
+    'No es accesible para cochecitos de bebé',
+    'No es adecuado para mascotas',
+    'No hay transporte público cerca',
+    'No hay asientos para bebés disponibles',
+    'No es recomendable para personas con problemas de espalda',
+    'No es recomendable para personas con problemas cardíacos',
+    'Comuníquese con nosotros con anticipación para confirmar la hora y el lugar exactos de recogida',
+];
+
+export const shouldBring = [
+    'Toalla',
+    'Cambio de ropa',
+    'Sandalias o zapatos de agua',
+    'Ropa cómoda',
+    'Protector solar biodegradable',
+    'Bañador',
+    'Gafas de sol',
+    'Tapa',
+    'Cash extra',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2> Una experiencia única en la vida</TagH2>
+
+    <TagP>Embárcate en una aventura única en la vida con los majestuosos tiburones ballena, el pez más grande del mundo. Aprovecha este fenómeno estacional para acercarte lo más posible a las fascinantes criaturas que migran a las costas de Cancún cada verano.</TagP>
+    
+    <TagP>El tour ecológico para grupos pequeños comienza con un cómodo servicio de recogida en el hotel, disponible en la mayoría de los hoteles. Llega a Puerto Juárez y aborda la lancha rápida que te llevará a la zona de Isla Contoy mientras disfrutas de un desayuno ligero.</TagP>
+
+    <TagP>Prepara tu cámara mientras te acercas a los impresionantes tiburones ballena que nadan cerca de la superficie con gracia. Mejor aún, prepara tu chaleco salvavidas y tu esnórquel, y salta a las aguas del Caribe siguiendo a tu guía. Nada tras el impresionante tiburón ballena mientras mantienes una distancia segura, observando cómo el pez gigante se desplaza hacia adelante.</TagP>
+
+    <TagP>Después de dos horas de avistamiento y dos inmersiones, haz una breve parada en la impresionante Playa Norte, una de las mejores playas del Caribe mexicano.</TagP>
+
+    <TagH3>Temporada de Tiburón Ballena en Cancún</TagH3>
+
+    <TagP>La temporada de <strong>Nadar con Tiburón Ballena en Cancún</strong> va de <strong>mayo a septiembre</strong>, y nuestros tours están disponibles durante este período. ¡No te pierdas esta increíble oportunidad de presenciar a estas magníficas criaturas con respeto <strong>en su hábitat natural</strong>!</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

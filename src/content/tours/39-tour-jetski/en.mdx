@@ -1,0 +1,126 @@
+---
+slug: 'jet-ski-rental-cancun/en'
+status: 1
+lang: 'en'
+slugGallery: 'jet-ski'
+titleSeo: 'Jet Ski Rental Cancun A Thrilling Aquatic Adventure'
+title: 'Jet Ski Rental Cancun'
+description: 'Are you ready to elevate your Cancun experience? Dive into the excitement of jet skiing with Jet Ski Rental Cancun, offering the best rentals in the hotel zone.'
+keywords: ''
+categories: ['WATER', 'COUPLES']
+price: 81
+stars: '4.0'
+reviews: '1,234'
+image:
+    src: '/assets/covers/tours/cancun-jet-ski-rental-tour.webp'
+    alt: 'cover jet ski rental tour in Cancun'
+highlights: ['Shared or Single Jet Ski', 'Life Jacket']
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers, ', 'Couples & Romantic Celebrations']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/805342?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/805342'
+location: 'km 10.3 Blvd. Kukulcan, 77500 Cancún, Q.R.'
+duration: '45 minutes'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Bilingual Instructors (English and Spanish)',
+    'Gas',
+    'Shared or Single Jet Ski Rental (max 2 pax)',
+    'lifejacket',
+    '1 bottled water per person',
+];
+
+export const notIncludes = [
+    'Hotel pickup and drop-off',
+    'Food and Beverages',
+    'Dock fee of $ 20 USD per person',
+    'Towels, tips, or souvenirs',
+    'Photo and video services',
+];
+
+export const shouldKnow = [
+    'Minimum age to drive: 16 years old (accompanied by a responsible adult over the age of 18)',
+    'The minimum age to board: is 10 years old(accompanied by a responsible adult)',
+    'Pregnant women are not allowed',
+    'Not suitable for persons with heart problems',
+    'Not recommended for participants with neck/back problems, or asthma',
+    'Cell phones & electronic devices are not allowed during the activity',
+    'Please arrive 30 minutes before your scheduled reservation',
+    'Be sure to bring an official ID per person',
+    'Children under 10 years old are not allowed',
+    'Once the activity has started, there are no refunds',
+    'Children ages 10+ must be accompanied by a paying adult',
+    'People who are not doing the Mangrove Jet Ski activity will have to wait in the waiting area and are not allowed on the dock',
+];
+
+export const shouldBring = [
+    'Towels',
+    'Swimsuit',
+    'Sunblock',
+    'Official ID',
+    'Cash',
+    'Extra change of clothes',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagP>Are you ready to elevate your Cancun experience? Dive into the excitement of jet skiing with <strong>Jet Ski Rental Cancun</strong>, offering the best rentals in the hotel zone. Whether you’re an adrenaline junkie or a first-timer, our professional <strong>Jet Ski Safety Instructors</strong> will guide you through a safe and exhilarating ride.</TagP>
+    
+    <TagH2>Jet Skiing: A Watersport for Everyone </TagH2>
+    
+    <TagH3>Learn and Ride with Confidence</TagH3>
+    
+    <TagP><strong>Jet Ski Cancun</strong> provides a safe and easy introduction to <strong>jet skiing</strong>. Our experienced instructors will teach you how to maneuver, make turns, and control your speed. You’ll be cruising the waves in no time!</TagP>
+    
+    <TagH3>Adrenaline Thrills and Easy Learning</TagH3>
+    
+    <TagP>Water skiing is one of the fastest and most enjoyable <strong>watersports in cancun</strong>. Suitable for both men and women aged 18 to 60, it offers an adrenaline rush combined with ease of learning. Experience the thrill of speeding over the water in the stunning Cancun surroundings.</TagP>
+    
+    <TagH2>Jet Ski Rental Details</TagH2>
+    
+    <TagH3>The Ultimate Jet Skiing Experience</TagH3>
+    
+    <TagP>Our <strong>jet ski rental</strong> takes place in a designated area on the <strong>Nichupté Lagoon</strong> side of the <strong>Cancun Hotel Zone</strong>. You’ll have the freedom to explore the waters in a secure environment. With each jet ski accommodating <strong>2 people</strong>, it’s the perfect activity for couples or friends.</TagP>
+    
+    <TagH3>Flexible Schedules and Durations</TagH3>
+    
+    <TagP><strong>Jet Ski Cancun</strong> operates from <strong>10:00 am to 5:00 pm</strong>, with the last rental at 5:00 pm. Choose between 30 or 60-minute durations to suit your preference and schedule.</TagP>
+    
+    <TagH3>Weight and Age Restrictions</TagH3>
+    
+    <TagP>The maximum weight capacity is 450 lbs (220 kg) per jet ski.</TagP>
+    
+    <TagP>The maximum weight per person is 110 kgs (220 lbs).</TagP>
+    
+    <TagP>You must be at least 16 years old and present a valid photo ID to ride the jet ski, accompanied by an adult.</TagP>
+    
+    <TagH3>Activity Location</TagH3>
+    
+    <TagP>Boulevard Kukulcán Km. 14.610, Hotel Zone <em>(in front of J.W. Marriot Hotel/Hard Rock Hotel and next to Freds’s Restaurant)</em>.</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

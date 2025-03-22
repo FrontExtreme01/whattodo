@@ -1,0 +1,119 @@
+---
+slug: 'pirate-show-jolly-roger-cancun/en'
+status: 1
+lastMinute: 1
+home: 1
+lang: 'en'
+slugGallery: 'jolly-roger'
+title: Pirate Show Jolly Roger Cancun
+description: Step aboard the legendary Pirate Show Jolly Roger Cancun and immerse yourself in an unforgettable pirate adventure like no other! Blackbeard's Hidden Legacy takes you on a journey full of mystery, excitement, and fun, perfect for all ages.
+keywords: ''
+categories: ['WATER', 'FAVORITES']
+price: 70
+stars: '4.5'
+reviews: '3,256'
+image:
+    src: '/assets/covers/tours/pirate-ship-cancun-jolly-roger.webp'
+    alt: 'cover Pirate Show Jolly Roger Cancun - The Blackbeards Legend'
+highlights: ['Pirata Show', 'Dinner', 'Open Bar']
+recommendedFor: ['Families, ', 'Groups & Special Events']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/670337?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/670337'
+location: 'Terminal Marítima de Punta Sam'
+duration: '3 hours and 30 minutes'
+transportation: 'Optional Transportation (with additional cost)'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+import TransportationPrices from "@components/extras/tables/JollyRogerPrices.astro";
+
+export const includes = [
+    'Access to Jolly Roger pirate ship',
+    'Live pirate show on board',
+    'Grilled chicken dinner with pasta or vegetables',
+    'Open bar (sodas and cocktails)',
+    'Scenic cruise on Cancun´s coast line',
+    'Interaction with pirates',
+];
+
+export const notIncludes = [
+    'Federal maritime dock fee of $20 usd per person',
+    'Ground transportation (can be added with an additional cost)',
+    'Photos',
+    'Souvenirs',
+];
+
+export const shouldKnow = [
+    'Suitable for all ages; however, minors must be accompanied by an adult.',
+    'Vegetarian options available upon request; other special dietary needs must be informed in advance',
+    'Tour may be rescheduled or canceled in case of adverse weather conditions for safety reasons.',
+    'Guests must arrive 30 minutes before departure time. Late arrivals may result in forfeiting the reservation',
+    'Open bar is for adults aged 18+ with valid ID. The crew reserves the right to limit alcohol consumption for safety reasons.',
+    'Guests with mobility issues or requiring special assistance should contact us prior to booking to ensure accommodations',
+];
+
+export const shouldBring = [
+    'Additional cash or form of payment'
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Blackbeard's Hidden Legacy </TagH2>
+
+    <TagP>Step aboard the legendary Jolly Roger and immerse yourself in an unforgettable pirate adventure like no other! Blackbeard's Hidden Legacy takes you on a journey full of mystery, excitement, and fun, perfect for all ages. </TagP>
+
+    <TagH3>What to Expect:</TagH3>
+
+    <TagP>Your evening begins as you board the impressive pirate ship, greeted by a lively crew ready to set sail on a thrilling journey through the Caribbean Sea. Once onboard, the adventure unfolds:</TagP>
+
+    <TagH3>Pirate Show</TagH3>
+
+    <TagP>Experience an action-packed live performance with sword fights, acrobatics, and an engaging storyline as the pirates search for Blackbeard's legendary treasure.</TagP>
+
+    <TagH3>Delicious Dinner</TagH3>
+
+    <TagP>Savor a mouthwatering grilled chicken dish, served with your choice of garlic pasta or sautéed vegetables. Vegetarian options are available to suit your preferences.</TagP>
+
+    <TagH3>Open Bar</TagH3>
+
+    <TagP>Enjoy unlimited soft drinks or signature cocktails from our open bar while soaking in the stunning views of the sea and Cancun’s coastline.</TagP>
+
+    <TagH3>Interactive Fun:</TagH3>
+
+    <TagP>Join in the pirate games, take photos with the crew, or simply relax and enjoy the festive atmosphere as the story of Blackbeard unfolds.</TagP>
+
+    <TagH3>Duration:</TagH3>
+
+    <TagP>Approximately 4.5 hours of non-stop fun and excitement. (kindly note transportation time is not considered on the total duration of the experience)</TagP>
+
+    <TagH3>Reserve Your Spot:</TagH3>
+
+    <TagP>Spots are limited, so don’t miss your chance to live the pirate life! Book now and uncover the secrets of Blackbeard’s Hidden Legacy aboard the Jolly Roger Cancun</TagP>
+
+    <TagP>This unique experience combines dining, entertainment, and adventure for a night you’ll never forget. Whether you’re traveling with family, friends, or as a couple, Blackbeard's Hidden Legacy is the perfect way to create lasting memories in Cancun.</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+    <TransportationPrices lang={frontmatter.lang} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

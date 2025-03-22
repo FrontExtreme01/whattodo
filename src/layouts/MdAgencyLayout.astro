@@ -1,0 +1,180 @@
+---
+import { getI18N } from "@/i18n";
+import { YouTube } from 'astro-embed';
+import { Star, MapPin, Clock, Language, UserStar, BusStop } from "@/img/allIcons";
+
+import BaseLayout from "./BaseLayout.astro";
+import GalleryDesktop from "@components/detail-content/GalleryDesktop";
+import GalleryMobile from "@components/detail-content/GalleryMobile";
+import QuestionPolicy from "@components/detail-content/QuestionPolicy.astro";
+import FAQs from "@components/detail-content/FAQs";
+import Testimonials from "@components/global/Testimonials";
+import MenuLinks from "@components/detail-content/MenuLinks";
+import FormAgencyDesktop from "@/components/detail-content/FormAgencyDesktop";
+import FormAgencyMobile from "@/components/detail-content/FormAgencyMobile";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const { frontmatter } = Astro.props;
+
+const siteWebURL = new URL(Astro.url.pathname, Astro.site);
+
+const allGalleries = import.meta.glob('@/img/galleries/tours/**/*.{webp,jpg}', { eager: true });
+
+const getGalleryImages = (slugGallery) => {
+    return Object.entries(allGalleries)
+    .filter(([path]) => path.includes(`tours/${slugGallery}/`))
+    .map(([, module]) => (module as { default: string }).default);
+};
+
+const gallery = getGalleryImages(frontmatter.slugGallery);
+
+const accessibility = {
+    altImg: `${i18n.ACCESSIBILITY.ALT_IMG} ${frontmatter.title}`,
+    ariaLabelGallery: i18n.ACCESSIBILITY.OPEN_GALLERY,
+};
+
+const menuLinks = [
+    {show: true, id: "whatToExpect", title: i18n.DETAILS_CONTENT.MENU_LINKS.WHAT_TO_EXPECT },
+    {show: true, id: "whatsIncluded", title: i18n.DETAILS_CONTENT.MENU_LINKS.WHATS_INCLUDED },
+    {show: true, id: "whatYouShouldKnow", title: i18n.DETAILS_CONTENT.MENU_LINKS.SHOULD_KNOW },
+    {show: frontmatter.notShouldBring ? false : true, id: "whatYouShouldBring", title: i18n.DETAILS_CONTENT.MENU_LINKS.SHOULD_BRING },
+    {show: frontmatter.faqs ? true : false, id: "faqs", title: i18n.DETAILS_CONTENT.MENU_LINKS.FAQS },
+    {show: frontmatter.testimonials ? true : false, id: "reviews", title: i18n.DETAILS_CONTENT.MENU_LINKS.REVIEWS },
+];
+
+const dataForm = {
+    i18n: i18n.DETAILS_CONTENT.FORM_RESERVATION,
+    agencyLogo: frontmatter.agencyPromo?.logo,
+    agencyName: frontmatter.agencyPromo?.agencyName,
+    agencyCalendar: frontmatter.agencyPromo?.calendar,
+    price: frontmatter.price,
+    titleCard: frontmatter.title,
+    reviews: frontmatter.reviews,
+    stars: frontmatter.stars,
+    image: frontmatter.image,
+    location: frontmatter.location,
+    urlCalendar: frontmatter.calendar,
+};
+
+const seoMetaDatos = {
+    title: frontmatter.titleSeo || frontmatter.title,
+    description: frontmatter.description,
+    image: frontmatter.image.src,
+    keywords: frontmatter.keywords,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    <!-- Gallery -->
+    <section class="mx-auto px-5 md:px-20 py-6 lg:py-10">
+        {gallery.length > 0 && (
+            <GalleryDesktop client:visible site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} images={gallery} accessibility={accessibility}>
+                {frontmatter.frameYoutube && (
+                    <YouTube class="w-full h-full max-w-full rounded-lg" id={frontmatter.frameYoutube} posterQuality="high" />
+                )}
+            </GalleryDesktop>
+
+            <GalleryMobile client:visible site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} images={gallery} accessibility={accessibility}>
+                {frontmatter.frameYoutube && (
+                    <YouTube class="w-full h-full max-w-full rounded-lg" id={frontmatter.frameYoutube} posterQuality="high" />
+                )}
+            </GalleryMobile>
+        )}
+    </section>
+    <!-- Content -->
+    <section class="mx-auto px-5 md:px-20">
+        <div class="flex flex-wrap mb-10">
+            <!-- Content -->
+            <div class="w-full xl:w-8/12 lg:pr-14">
+                <!-- MenuLinks -->
+                <div class="mb-5">
+                    <MenuLinks client:visible menuLinks={menuLinks} />
+                </div>
+                <!-- Header Title -->
+                <header>
+                <!-- Brand Agency -->
+                    <span class="w-fit py-1 sm:py-2 px-5 rounded-tl-xl rounded-br-xl bg-gradient-to-r from-green-700 from-70% to-emerald-500 text-white font-bold text-xs sm:text-sm shadow-md">
+                        {frontmatter.agencyPromo.agencyName}
+                    </span>
+                    <h1 class="font-bold text-xl md:text-3xl w-full mt-5 mb-3">{frontmatter.title}</h1>
+                    <ul class="flex flex-wrap gap-3 md:gap-5 w-full text-sm sm:text-lg">
+                        <li class="flex items-center">
+                            <Star class="text-amber-500 size-5 mr-1" />
+                            <p class="font-bold"> {frontmatter.stars} 
+                                <span class="text-gray-500 font-thin"> ({frontmatter.reviews})</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a class="flex items-center" href="#location">
+                                <MapPin class="text-gray-600 size-5 mr-1" />
+                                <p>{frontmatter.location}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <!-- Information General -->
+                <div class="my-10">
+                    <h2 class="font-bold text-lg sm:text-xl mb-5">{i18n.DETAILS_CONTENT.GENERAL.INFORMATION_GENERAL}</h2>
+                    <ul class="columns-2 space-y-8 text-sm sm:text-base">
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <Clock class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.DURATION}</p>
+                                <p>{frontmatter.duration}</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <UserStar class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.RECOMMENDED_FOR}</p>
+                                <p>
+                                    {frontmatter.recommendedFor.map((item) => (
+                                        <span class="w-fit">{item}</span>
+                                    ))}
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <Language class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.OFFERED_IN}</p>
+                                <p>{i18n.DETAILS_CONTENT.GENERAL.OFFERED_LANG}</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <BusStop class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.TRANSPORTATION}</p>
+                                <p>{frontmatter.transportation ? frontmatter.transportation : i18n.DETAILS_CONTENT.GENERAL.NOT_TRANSPORTATION}</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Slot -->
+                <div class="text-justify">
+                    <slot />
+                </div>
+                <!-- FAQs -->
+                {frontmatter.faqs && (<FAQs client:visible FAQS={frontmatter.faqs} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_FAQS}/>) }
+                <QuestionPolicy i18n={i18n.DETAILS_CONTENT.QUESTION_POLICY} />
+            </div>
+            <!-- FormSidebar -->
+            <FormAgencyDesktop client:visible data={dataForm} />
+        </div>
+    </section>
+    <!-- Testimonials -->
+    {frontmatter.testimonials && (<Testimonials client:visible testimonials={frontmatter.testimonials} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_TESTIMONIAL}/>) }
+    <!-- Form Mobile -->
+    <FormAgencyMobile client:visible data={dataForm} />
+</BaseLayout>

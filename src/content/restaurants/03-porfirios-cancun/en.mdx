@@ -7,20 +7,34 @@ status: 1
 title: 'Porfirios Cancun Restaurant'
 description: 'Porfirios Cancun Restaurant is the perfect choice for those seeking Mexican cuisine for high-end dining. The best place for dine near you.'
 keywords: 'porfirios cancun, porfirios restaurant, porfirios cancun restaurant, porfirios cancun menu, porfirios cancun prices, porfirios cancun reviews, porfirios cancun dress code, porfirios cancun location, porfirios cancun schedule, porfirios cancun availability, porfirios cancun map, porfirios cancun reservations'
-featured: ''
 stars: '4.5'
-reviews: '2,876 reviews'
+reviews: '2,876'
 image:
     src: '/assets/covers/restaurants/porfirios-cancun-restaurant.webp'
     alt: 'cover of Porfirios Cancun Restaurant'
 highlights: ['Ambient Music']
+recommendedFor: ['Families, ', 'Groups & Special Events']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/994794?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/994794'
 location: 'Blvd. Kukulcan Km 14.2, Zona Hotelera'
-cuisine: 'Mexican, Contemporary, Regional American (Southwest)'
+cuisine: 'Mexican, Regional American (Southwest)'
 dressCode: 'Formal'
-schedule: '1:00 pm to 1:00 am'
-availability: 'Every day'
-mapFrame: 'https://www.google.com/maps/embed?pb=!4v1704817177555!6m8!1m7!1sCAoSLEFGMVFpcE1FRHBmZFA3emNuV1RwTXdhN0k4bHI1a0NmaWVMaUpKV1R6Ul8z!2m2!1d21.09228482453572!2d-86.77112018375254!3f300!4f0!5f0.5970117501821992'
-testimonials: []
+hours:
+-   day: 'Sunday'
+    open: '1:00 pm to 1:00 am' 
+-   day: 'Monday'
+    open: '1:00 pm to 1:00 am'
+-   day: 'Tuesday'
+    open: '1:00 pm to 1:00 am'
+-   day: 'Wednesday'
+    open: '1:00 pm to 1:00 am'
+-   day: 'Thursday'
+    open: '1:00 pm to 1:00 am'
+-   day: 'Friday'
+    open: '1:00 pm to 1:00 am'
+-   day: 'Saturday'
+    open: '1:00 pm to 1:00 am'
+mapFrame: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59560.093104228516!2d-86.771144!3d21.092391!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c284608f9450d%3A0x64a796cd07c9aa72!2sPorfirio's%20Canc%C3%BAn%20%7C%20Restaurante%20de%20comida%20mexicana!5e0!3m2!1ses!2smx!4v1736276537011!5m2!1ses!2smx
 ---
 
 import TagH2 from "@components/global/TagH2.astro";
@@ -62,7 +76,7 @@ import MapFrame from '@components/detail-content/MapFrame'
 
 <MapFrame 
     client:visible 
-    url="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59560.093104228516!2d-86.771144!3d21.092391!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c284608f9450d%3A0x64a796cd07c9aa72!2sPorfirio&#39;s%20Canc%C3%BAn%20%7C%20Restaurante%20de%20comida%20mexicana!5e0!3m2!1ses!2smx!4v1736276537011!5m2!1ses!2smx" 
+    url="https://www.google.com/maps/embed?pb=!4v1704817177555!6m8!1m7!1sCAoSLEFGMVFpcE1FRHBmZFA3emNuV1RwTXdhN0k4bHI1a0NmaWVMaUpKV1R6Ul8z!2m2!1d21.09228482453572!2d-86.77112018375254!3f300!4f0!5f0.5970117501821992" 
     titleAct={frontmatter.title}
     textMap="See the restaurant on the map" 
 />

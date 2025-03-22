@@ -1,15 +1,16 @@
 ---
 import { getI18N } from "@/i18n";
+import { Star, MapPin, IconBestSeller, Speedboat, Users } from "@/img/allIcons";
 
 import BaseLayout from "./BaseLayout.astro";
-import ShareSM from "@components/detail-content/ShareSM";
-import Testimonials from "@components/global/Testimonials";
+import GalleryDesktop from "@components/detail-content/GalleryDesktop";
+import GalleryMobile from "@components/detail-content/GalleryMobile";
 import QuestionPolicy from "@components/detail-content/QuestionPolicy.astro";
-import FormBokunMobile from "@components/detail-content/FormBokunMobile";
 import FormBokunDesktop from "@components/detail-content/FormBokunDesktop";
-import ButtonsContact from "@components/detail-content/ButtonsContact.astro";
-import SliderGallery from "@components/detail-content/SliderGallery";
+import FormBokunMobile from "@components/detail-content/FormBokunMobile";
 import FAQs from "@components/detail-content/FAQs";
+import Testimonials from "@components/global/Testimonials";
+import MenuLinks from "@components/detail-content/MenuLinks";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -17,7 +18,6 @@ const i18n = getI18N({ currentLocale });
 const { frontmatter } = Astro.props;
 
 const siteWebURL = new URL(Astro.url.pathname, Astro.site);
-
 const allGalleries = import.meta.glob('@/img/galleries/yachts/**/*.webp', { eager: true });
 
 const getGalleryImages = (slugGallery) => {
@@ -32,6 +32,15 @@ const accessibility = {
     altImg: `${i18n.ACCESSIBILITY.ALT_IMG} ${frontmatter.title}`,
     ariaLabelGallery: i18n.ACCESSIBILITY.OPEN_GALLERY,
 };
+
+const menuLinks = [
+    {show: true, id: "whatToExpect", title: i18n.DETAILS_CONTENT.MENU_LINKS.WHAT_TO_EXPECT },
+    {show: true, id: "whatsIncluded", title: i18n.DETAILS_CONTENT.MENU_LINKS.WHATS_INCLUDED },
+    {show: true, id: "whatYouShouldKnow", title: i18n.DETAILS_CONTENT.MENU_LINKS.SHOULD_KNOW },
+    {show: true, id: "whatYouShouldBring", title: i18n.DETAILS_CONTENT.MENU_LINKS.SHOULD_BRING },
+    {show: frontmatter.faqs ? true : false, id: "faqs", title: i18n.DETAILS_CONTENT.MENU_LINKS.FAQS },
+    {show: frontmatter.testimonials ? true : false, id: "reviews", title: i18n.DETAILS_CONTENT.MENU_LINKS.REVIEWS },
+];
 
 const dataForm = {
     i18n: i18n.DETAILS_CONTENT.FORM_RESERVATION,
@@ -53,58 +62,74 @@ const seoMetaDatos = {
 ---
 
 <BaseLayout seo={seoMetaDatos}>
-    <section class="mx-6 md:mx-20 lg:mx-24 mt-12 mb-14">
-        <div class="flex flex-wrap">
-            <!-- Header -->
-            <header class="flex flex-wrap items-center w-full">
-                <h1 class="pr-1 w-9/12 text-2xl md:text-4xl font-bold italic text-green-700">
-                    {frontmatter.title}
-                </h1>
-                <div class="w-3/12 flex flex-col md:flex-row justify-center items-center gap-3">
-                    <img class="w-16 md:w-20" src="/assets/icons/best-seller-icon.svg" height="80" width="80" alt="icon best seller">
-                    <ShareSM client:idle site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} />
-                </div>
-                <ul class="flex flex-wrap gap-2 md:gap-5 w-full my-6 text-sm md:text-lg">
-                    <li>
-                        <i class="at-star text-amber-500"></i>
-                        <span class="font-bold"> {frontmatter.stars}
-                            <span class="text-slate-600 font-thin"> ({frontmatter.reviews})</span>
-                        </span>
-                    </li>
-                    <li>
-                        <i class="at-pin-destination text-green-700"></i>
-                        <span>{frontmatter.location}</span>
-                    </li>
-                </ul>
-            </header>
+    <!-- Gallery -->
+    <section class="mx-auto px-5 md:px-20 py-6 lg:py-10">
+        {gallery.length > 0 && (
+            <GalleryDesktop client:visible site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} images={gallery} accessibility={accessibility} />
+
+            <GalleryMobile client:visible site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} images={gallery} accessibility={accessibility} />
+        )}
+    </section>
+    <!-- Content -->
+    <section class="mx-auto px-5 md:px-20">
+        <div class="flex flex-wrap mb-10">
             <!-- Content -->
-            <div class="w-full lg:w-8/12 md:pr-14">
-                <SliderGallery client:load images={gallery} accessibility={accessibility}/> 
-                <!-- Hightlight -->
-                <div class="flex flex-wrap w-full gap-5 lg:gap-10 my-6 justify-center text-sm md:text-lg text-center">
-                    <div class="text-slate-800 rounded-2xl">
-                        <i class="at-ship-cruise bg-slate-100 p-3 rounded-full"></i>
-                        <span>{frontmatter.size}</span>
-                    </div>
-                    <div class="text-slate-800 rounded-2xl">
-                        <i class="at-accounts-group-people bg-slate-100 p-3 rounded-full"></i>
-                        <span>{frontmatter.capacity}</span>
-                    </div>
-                    {frontmatter.highlights.map((item) =>(
-                        <div class="text-slate-800 rounded-2xl">
-                            <i class="at-check-circle bg-slate-100 p-3 rounded-full"></i>
-                            <span>{item}</span>
-                        </div>
-                    ))}
+            <div class="w-full xl:w-8/12 lg:pr-14">
+                <!-- MenuLinks -->
+                <div class="mb-5">
+                    <MenuLinks client:visible menuLinks={menuLinks} />
                 </div>
-
-                <ButtonsContact i18n={i18n.ACCESSIBILITY} />
-
+                <!-- Header Title -->
+                <header>
+                    <h1 class="flex items-center justify-between font-bold text-xl md:text-3xl w-full mt-5 mb-3">
+                        {frontmatter.title} 
+                        <IconBestSeller class="size-14 md:size-20" />
+                    </h1>
+                    <ul class="flex flex-wrap items-center gap-3 md:gap-5 w-full text-sm sm:text-lg">
+                        <li class="flex items-center">
+                            <Star class="text-amber-500 size-5 mr-1" />
+                            <p class="font-bold"> {frontmatter.stars} 
+                                <span class="text-gray-500 font-thin"> ({frontmatter.reviews})</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a class="flex items-center" href="#location">
+                                <MapPin class="text-gray-600 size-5 mr-1" />
+                                <p>{frontmatter.location}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <!-- Information General -->
+                <div class="my-10">
+                    <h2 class="font-bold text-lg sm:text-xl mb-5">{i18n.DETAILS_CONTENT.GENERAL.INFORMATION_GENERAL}</h2>
+                    <ul class="columns-2 space-y-8 text-sm sm:text-base">
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <Speedboat class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.FEET_SIZE_YACHT}</p>
+                                <p>{frontmatter.size}</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <Users class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.MAX_CAPACITY}</p>
+                                <p>{frontmatter.capacity}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Slot -->
                 <div class="text-justify">
                     <slot />
                 </div>
-
-                <hr class="h-0.5 bg-slate-200 my-10">
+                <!-- FAQs -->
+                {frontmatter.faqs && (<FAQs client:visible FAQS={frontmatter.faqs} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_FAQS}/>) }
                 <QuestionPolicy i18n={i18n.DETAILS_CONTENT.QUESTION_POLICY} />
             </div>
             <!-- FormSidebar -->
@@ -113,8 +138,6 @@ const seoMetaDatos = {
     </section>
     <!-- Testimonials -->
     {frontmatter.testimonials && (<Testimonials client:visible testimonials={frontmatter.testimonials} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_TESTIMONIAL}/>) }
-    <!-- FAQs -->
-    {frontmatter.faqs && (<FAQs client:visible FAQS={frontmatter.faqs} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_FAQS} description={i18n.DETAILS_CONTENT.GENERAL.DESCRIPTION_FAQS}/>) }
     <!-- Form Mobile -->
     <FormBokunMobile client:visible data={dataForm} />
 </BaseLayout>

@@ -1,0 +1,29 @@
+---
+export const prerender = true;
+
+import MdAgencyLayout from "@/layouts/MdAgencyLayout.astro";
+import { getToursAgency } from "@/content/functions";
+
+export async function getStaticPaths() {
+    const toursEntries = await getToursAgency("es");
+
+    const paths = toursEntries.map((entry) => {
+        return {
+            params: {
+                agency: entry.data.agencyPromo?.slugAgency,
+                lang: entry?.data.lang || "es",
+                slug: entry.new_slug,
+            },
+            props: entry,
+        };
+    });
+
+    return paths;
+}
+const entry = Astro.props;
+const { Content } = await entry.render();
+---
+
+<MdAgencyLayout frontmatter={entry.data}>
+    <Content />
+</MdAgencyLayout>

@@ -1,0 +1,135 @@
+---
+slug: 'bubble-bbq-boat-lagoon-cruise/es'
+status: 1
+lang: 'es'
+slugGallery: 'bubble-bbq'
+title: 'Bubble BBQ Boat Lagoon Cruise'
+description: 'Descubre la majestuosidad de la Laguna Nichupté en un emocionante recorrido de una hora y media a través de sus cautivadores canales de manglares. En Bubble BBQ Boats.'
+keywords: ''
+categories: ['WATER', 'CHEAP', 'COUPLES']
+price: 35
+stars: '4.5'
+reviews: '1,602 '
+image:
+    src: '/assets/covers/tours/cover-bubble-bbq.webp'
+    alt: 'cover Bubble BBQ Boat Lagoon Cruise'
+highlights: ['Altavoces Bluetooth', 'Equipos de seguridad']
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales, ', 'Parejas y celebraciones románticas']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/850596?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/850596'
+location: 'Cancún, Laguna Nichupté'
+duration: '1 hora y 30 minutos'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+import TabsBubble from "@components/extras/TabsBubble";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+
+export const includesShared = [
+    'Navegación por 90 minutos en Bubble Boat',
+    'Enfriador',
+    'Altavoces Bluetooth',
+    'Equipos de seguridad',
+    'Miembro de la tripulación',
+];
+
+export const notIncludesShared = [
+    'Uso de parrilla a bordo',
+    'Comida y bebidas',
+    'Tarifa federal de muelle marítimo de $5 usd por persona',
+];
+
+export const shouldKnowShared = [
+    'Esta experiencia depende del clima y puede ser cancelada debido a condiciones climáticas severas y desfavorables.',
+    'Se recomienda reservar con anticipación para asegurar su fecha y hora preferidas.',
+    'Llegue al menos 15-20 minutos antes de la salida para permitir tiempo para el check-in y el embarque.',
+    'No olvide protector solar, sombreros y gafas de sol para protegerse del sol.',
+    'Informa al equipo con anticipación sobre cualquier solicitud especial, como decoraciones para cumpleaños o celebraciones.',
+];
+
+export const detailShared = [
+    'Duración: 90 minutos',
+    'Máximo 8 personas por bote',
+    'Siéntase libre de traer sus propias bebidas a bordo',
+];
+
+export const includesPrivate = [
+    'Navegación por 5 hrs en Bubble BBQ Boat',
+    'Parrilla a bordo para usar',
+    'Utensilios de cocina (vasos, platos y cubiertos)',
+    'Bolsa de hielo',
+    'Nevera',
+    'Altavoces Bluetooth',
+    'Equipos de seguridad',
+    'Tripulante',
+];
+
+export const notIncludesPrivate = [
+    'Alimentos y bebidas',
+    'Tarifa federal de muelle marítimo de $5 USD por persona',
+];
+
+export const shouldKnowPrivate = [
+    'Las actividades pueden verse afectadas por el clima',
+    'Se recomienda reservar con anticipación para asegurar la fecha y hora preferidas.',
+    'Llega al menos 15-20 minutos antes de la salida para tener tiempo para el check-in y el embarque.',
+    'Informa al equipo con anticipación sobre cualquier solicitud especial, como decoraciones para Cumpleaños o celebraciones.',
+    'No olvides el protector solar, los sombreros y las gafas de sol para protegerte del sol.',
+];
+
+export const detailPrivate = [
+    'Duración: 3 horas',
+    'Máximo 8 personas por embarcación',
+    'El tour está restringido únicamente al lado de la laguna. ',
+    'Siéntete libre de traer tu propia comida y bebida a bordo. ',
+];
+
+export const information = [
+    '11:00 am',
+    '1:00 pm',
+    '3:00 pm',
+    '5:00 pm',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: 'Consideraciones',
+    INFORMATION: 'Horarios disponible todos los días',
+};
+
+<AdditionalInfo information={information} i18n={titles} />
+<div id="whatToExpect">
+    <TagP>Embárcate en un divertido y relajante crucero de 90 minutos por los impresionantes canales de manglares de la laguna Nichupté a bordo de un exclusivo barco con barbacoa y burbujas. ¡Disfruta de una experiencia única que combina aventura y comodidad mientras flotas por el paraíso en tu propia burbuja flotante!</TagP>
+</div>
+
+<TabsBubble client:visible lang={frontmatter.lang}>
+    <Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded" slot="sharedBoat">
+        <Inclusions includes={includesShared} notIncludes={notIncludesShared} />
+    </Accordion>
+
+    <Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow" slot="sharedBoat">
+        <ShouldKnow shouldKnow={shouldKnowShared} />
+    </Accordion>
+
+    <Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring" slot="sharedBoat">
+        <ShouldBring shouldBring={detailShared} />
+    </Accordion>
+
+    <Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded" slot="privateBoat">
+        <Inclusions includes={includesPrivate} notIncludes={notIncludesPrivate} />
+    </Accordion>
+
+    <Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow" slot="privateBoat">
+        <ShouldKnow shouldKnow={shouldKnowPrivate} />
+    </Accordion>
+
+    <Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring" slot="privateBoat">
+        <ShouldBring shouldBring={detailPrivate} />
+    </Accordion>
+</TabsBubble>

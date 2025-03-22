@@ -9,96 +9,104 @@ description: 'The Coco bongo Beach Party is one of the hottest attractions of th
 keywords: 'cocobongo, beach party, cancun, spring break, party, beachclub, party, beach cancun'
 price: 50
 stars: '4.5'
-reviews: '3,987 reviews'
+reviews: '3,987'
 image:
     src: '/assets/covers/parties/coco-bongo-beach-party-in-cancun.webp'
     alt: 'cover coco bongo beach party in cancun'
 duration: '5 hours'
+music: 'Hip-Hop, electronic, Latin'
+dressCode: 'Casual (bathing suit allowed)'
 consumption: 'National drinks'
 admission: 'Access to the beach party'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/753803?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/753803'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14885.988771580263!2d-86.747128!3d21.132603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2bf1d63b6b99%3A0x6cc32e706b78b7bf!2sCoco%20Bongo!5e0!3m2!1ses!2smx!4v1704726266557!5m2!1ses!2smx'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 
-export const information = [
+export const includesRegular = [
+    'Access to the beach party',
+    'Happenings',
+    'National drinks',
+];
+
+export const includesBottlePack = [
+    'Access to the beach party',
+    'Happenings',
+    '1 Bottle to choose from the special menu',
+    '5 sodas or 2 pitchers of juice',
+    'Place assigned upon arrival',
+];
+
+export const includesPremium = [
+    'Access to the beach party',
+    'Happenings',
+    'Premium drinks',
+];
+
+export const notIncludes = [
+    'Transportation to and from the venue',
+    'Gratuities',
+    'Table reservation',
+];
+
+export const shouldKnow = [
     'Check-in must be completed at 1 PM',
     'Duration 5 hours',
     'Minimum age 18 years old'
 ];
 
-export const i18n = {
-    INFORMATION: 'Please Note'
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
 };
 
-<div class="flex flex-wrap text-justify">
-    <div class="w-full md:w-1/2 md:pr-3">
-        <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Regular Access Includes:</h3>
-        <ul class="space-y-4 text-base md:text-lg">
-            <li><i class="at-check-circle text-green-600"></i> Access to the beach party</li>
-            <li><i class="at-check-circle text-green-600"></i> Happenings</li>
-            <li><i class="at-check-circle text-green-600"></i> National drinks</li>
-        </ul>
-    </div>
-    <div class="w-full md:w-1/2 md:pr-3">
-        <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Bottle Pack Includes:</h3>
-        <ul class="space-y-4 text-base md:text-lg">
-            <li><i class="at-check-circle text-green-600"></i> Access to the beach party</li>
-            <li><i class="at-check-circle text-green-600"></i> Happenings</li>
-            <li><i class="at-check-circle text-green-600"></i> 1 Bottle to choose from the special menu</li>
-            <li><i class="at-check-circle text-green-600"></i> 5 sodas or 2 pitchers of juice</li>
-            <li><i class="at-check-circle text-green-600"></i> Place assigned upon arrival</li>
-        </ul>
-    </div>
-    <div class="w-full md:w-1/2 md:pr-3">
-        <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Premium Access Includes:</h3>
-        <ul class="space-y-4 text-base md:text-lg">
-            <li><i class="at-check-circle text-green-600"></i> Access to the beach party</li>
-            <li><i class="at-check-circle text-green-600"></i> Happenings</li>
-            <li><i class="at-check-circle text-green-600"></i> Premium drinks</li>
-        </ul>
-    </div>
-    <div class="w-full md:w-1/2 md:pl-3">
-        <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4"> Not Included:</h3>
-        <ul class="space-y-4 text-base md:text-lg">
-            <li><i class="at-xmark-circle text-red-600"></i> Transportation to and from the venue</li>
-            <li><i class="at-xmark-circle text-red-600"></i> Gratuities</li>
-            <li><i class="at-xmark-circle text-red-600"></i> Table reservation</li>
-        </ul>
-    </div>
-</div>
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>About Coco Bongo Beach Party</TagH2>
 
-<TagH2>About Coco Bongo Beach Party</TagH2>
+    <TagP>Are you ready to party like never before? Then get your tickets to Coco <strong>Bongo Beach Cancun</strong>, the ultimate beach party experience. With its stunning view of the Caribbean Sea, white sand, and endless entertainment, Coco Bongo Cancun Beach Party is the place to be for an unforgettable night out.</TagP>
 
-<TagP>Are you ready to party like never before? Then get your tickets to Coco <strong>Bongo Beach Cancun</strong>, the ultimate beach party experience. With its stunning view of the Caribbean Sea, white sand, and endless entertainment, Coco Bongo Cancun Beach Party is the place to be for an unforgettable night out.</TagP>
+    <TagH3>Experience the Ultimate Beach Party at Coco Bongo Cancun</TagH3>
 
-<TagH3>Experience the Ultimate Beach Party at Coco Bongo Cancun</TagH3>
+    <TagP>Coco Bongo Cancun Beach Party is the ultimate destination for anyone looking for an electrifying night out. From the impressive technology and acrobatic shows to the endless flow of drinks, the entertainment is non-stop.</TagP>
 
-<TagP>Coco Bongo Cancun Beach Party is the ultimate destination for anyone looking for an electrifying night out. From the impressive technology and acrobatic shows to the endless flow of drinks, the entertainment is non-stop.</TagP>
+    <TagH3>Mandala Beach Cover</TagH3>
 
-<TagH3>Mandala Beach Cover</TagH3>
+    <TagP>The cover cost at the Club varies depending on the day of the week, time of year, and any special events or holidays. Typically, cover cost ranges from $30 to $60 USD per person, including club access and a limited open bar for the day. <strong>General Acces $20 USD – Midweek Access $40 USD</strong></TagP>
 
-<TagP>The cover cost at the Club varies depending on the day of the week, time of year, and any special events or holidays. Typically, cover cost ranges from $30 to $60 USD per person, including club access and a limited open bar for the day. <strong>General Acces $20 USD – Midweek Access $40 USD</strong></TagP>
+    <TagH2>Capture the Moment with Coco Bongo Beach Party Photos</TagH2>
 
-<TagH2>Capture the Moment with Coco Bongo Beach Party Photos</TagH2>
+    <TagP>With so much excitement happening at this Beach Party, you’ll definitely want to capture every moment. Make sure to bring your camera and take plenty of photos to remember your experience.</TagP>
 
-<TagP>With so much excitement happening at this Beach Party, you’ll definitely want to capture every moment. Make sure to bring your camera and take plenty of photos to remember your experience.</TagP>
+    <TagH3>Join the Fun at the Beach in Cancun</TagH3>
 
-<TagH3>Join the Fun at the Beach in Cancun</TagH3>
+    <TagP>This Party in Cancun is the perfect place to let loose and have some fun. Whether you’re there with a group of friends or solo, you’re guaranteed to have an unforgettable time.</TagP>
 
-<TagP>This Party in Cancun is the perfect place to let loose and have some fun. Whether you’re there with a group of friends or solo, you’re guaranteed to have an unforgettable time.</TagP>
+    <TagH3>Book Your Tickets Now</TagH3>
 
-<TagH3>Book Your Tickets Now</TagH3>
+    <TagP>Don’t miss out on the experience of a lifetime at the Party. Book your tickets now and get ready to dance the night away while enjoying the stunning beach views and amazing entertainment. </TagP>
 
-<TagP>Don’t miss out on the experience of a lifetime at the Party. Book your tickets now and get ready to dance the night away while enjoying the stunning beach views and amazing entertainment. </TagP>
+    <TagP>So, what are you waiting for? Book your tickets now and get ready to experience the ultimate beach party at Coco Bongo Cancun Beach Party. With its impressive show, drinks, food, and stunning views, this is a party you won’t want to miss! </TagP>
+</Accordion>
 
-<TagP>So, what are you waiting for? Book your tickets now and get ready to experience the ultimate beach party at Coco Bongo Cancun Beach Party. With its impressive show, drinks, food, and stunning views, this is a party you won’t want to miss! </TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <TagH3>Pack Regular</TagH3>
+    <Inclusions includes={includesRegular} notIncludes={notIncludes} />
+    <TagH3>Pack Bottle</TagH3>
+    <Inclusions includes={includesBottlePack} notIncludes={notIncludes} />
+    <TagH3>Pack Premium</TagH3>
+    <Inclusions includes={includesPremium} notIncludes={notIncludes} />
+</Accordion>
 
-
-<AdditionalInfo information={information} i18n={i18n} />
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

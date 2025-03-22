@@ -1,8 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import { getI18N } from "@/i18n";
 import { useTranslatedPath } from "@/i18n/utils";
-import { Image } from "astro:assets";
-import { IconLastminute, IconEarlyBird } from "@/img/allImages";
+import { Star, Clock, MapPin } from "@/img/allIcons";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -12,67 +12,46 @@ const translatePath = useTranslatedPath(lang);
 const url = translatePath(`/party/${party.new_slug}/`);
 ---
 
-<div class="w-full sm:w-6/12 lg:w-4/12 xl:w-3/12 px-5 py-1 sm:py-5">
-    <div class="relative flex flex-wrap sm:flex-col rounded-lg bg-white shadow-lg border-slate-600 h-full">
-        <h3 class="mt-7 px-3 sm:hidden block w-full font-extrabold text-lg text-justify text-purple-700">{party.data.title}</h3>
-        <div class="relative p-2.5 w-4/6 sm:w-full">
-            <span class="absolute z-10 top-4 left-4 md:top-5 md:left-5 px-2.5 py-1 rounded-md text-sm bg-white font-bold shadow-lg">
-                <i class="at-star text-sm text-amber-500"></i>{party.data.stars}
-            </span>
-            <a aria-label={i18n.ACCESSIBILITY.GO_TO_TOUR_DETAILS} href={url}>
-                <img width="650" height="450" loading="lazy" src={party.data.image.src} class="w-full h-full object-cover rounded-md cursor-pointer duration-200 hover:scale-110" alt={party.data.image.alt}>
-            </a>
-            {party.data.lastMinute && (
-                <span class="absolute z-10 top-3 right-3 sm:top-0 sm:-right-2">
-                    <Image src={IconLastminute} alt="icon last minute" class="w-14 sm:w-20" />
-                </span>
-            )}
-            {party.data.earlyBird && (
-                <span class="absolute z-10 top-3 right-3 sm:top-0 sm:-right-2">
-                    <Image src={IconEarlyBird} alt="icon early birds" class="w-14 sm:w-20" />
-                </span>
-            )}
-        </div>
-
-        <div class="py-3 px-1.5 sm:px-5 sm:py-1 text-justify w-2/6 sm:w-full">
-            <h3 class="hidden sm:block font-bold text-base sm:text-lg mb-4 text-center text-purple-700">{party.data.title}</h3>
-            {party.data.lastMinute && (
-                <p class="block sm:hidden font-extrabold text-red-500 text-sm line-through">
-                    ${(party.data.price * 1.4).toFixed(0)} USD
-                </p>
-            )}
-            <p class="block sm:hidden font-extrabold text-purple-700 text-xl">
-                <span class="text-gray-800 text-xs">{i18n.TOUR_PAGE.CARD.FROM}:</span><br> ${party.data.price} USD
-            </p>
-
-            <ul class="flex flex-col gap-2 sm:px-5 my-4 text-xs sm:text-sm text-start">
-                <li class="flex items-center gap-2 text-slate-600">
-                    <i class="at-clock text-purple-700"></i>{party.data.duration}
-                </li>
-                <li class="hidden sm:flex items-center gap-2 text-slate-600">
-                    <i class="at-star-ticket-coupon text-purple-700"></i>{party.data.admission}
-                </li>
-                <li class="flex items-center gap-2 text-slate-600">
-                    <i class="at-martini-straw-lime text-purple-700"></i>{party.data.consumption}
-                </li>
-                <li class="hidden sm:flex items-center gap-2 text-slate-600">
-                    <i class="at-language-translation text-purple-700"></i><b>{i18n.DETAILS_CONTENT.GENERAL.OFFERED_IN}:</b> {i18n.DETAILS_CONTENT.GENERAL.OFFERED_LANG}
-                </li>
-            </ul>
-        </div>
-        
-        <div class="w-full flex flex-wrap justify-evenly mb-5 lg:px-5 gap-y-3 mt-auto">
-            <div class="hidden sm:block w-full text-center my-2">
+<div class="snap-start shrink-0 w-3/4 sm:w-6/12 lg:w-4/12 xl:w-3/12 sm:p-2 md:p-4 lg:p-2.5 mb-5">
+    <a aria-label={i18n.ACCESSIBILITY.GO_TO_CARD_DETAILS + party.data.title} href={url}>
+        <div class="flex flex-wrap flex-col rounded-xl bg-white shadow-md border-slate-600 h-full">
+            <!-- Image -->
+            <div class="relative w-full">
+                <Image width="400" height="300" loading="lazy" src={party.data.image.src} class="w-full h-full object-cover rounded-t-xl cursor-pointer duration-200 lg:hover:scale-90" alt={party.data.image.alt} />
                 {party.data.lastMinute && (
-                    <p class="font-bold text-red-600 text-xs sm:text-sm line-through mb-2">
-                        <span>{i18n.TOUR_PAGE.CARD.FROM}:</span>
+                    <span class="absolute z-10 top-0 left-0 p-2 rounded-tl-xl rounded-br-xl bg-gradient-to-r from-red-600 from-70% to-orange-500 text-white font-bold text-xs sm:text-sm shadow-md">
+                        {i18n.CARDS.LAST_MINUTE}
+                    </span>
+                )}
+                <span class="absolute z-10 top-2 right-2 size-7 sm:size-10 rounded-full bg-white font-bold text-xs sm:text-sm shadow-md grid place-items-center">
+                    18+
+                </span>
+            </div>
+            <!-- Score Star & Duration -->
+            <div class="py-6 px-5">
+                <h3 class="font-semibold text-base/tight sm:text-lg/tight mb-3 text-start text-gray-800">{party.data.title}</h3>
+                <div class="flex flex-wrap items-center gap-3 mb-4 text-sm sm:text-base">
+                    <div class="flex items-center font-semibold">
+                        <Star class="size-5 text-amber-500" /> {party.data.stars} <span class="ml-2 text-gray-500 font-normal">({party.data.reviews})</span>
+                    </div>
+                    <div class="flex items-center">
+                        <Clock class="size-5 text-gray-500" stroke-width={1.5} /> {party.data.duration}
+                    </div>
+                    <div class="flex items-center w-full">
+                        <MapPin class="size-6 text-gray-500" stroke-width={1.5} /> {party.data.location}
+                    </div>
+                </div>
+            </div>
+            <!-- Price -->
+            <div class="w-full flex flex-wrap px-5 mb-5 mt-auto">
+                {party.data.lastMinute && (
+                    <p class="font-bold text-red-600 text-xs sm:text-sm line-through w-full">
+                        <span>{i18n.CARDS.FROM}:</span>
                         ${(party.data.price * 1.4).toFixed(0)} USD
                     </p>
                 )}
-                <p class="font-extrabold text-purple-700 text-lg sm:text-xl"><span class="text-gray-800 text-sm">{i18n.TOUR_PAGE.CARD.FROM}:</span> ${party.data.price} USD</p>
+                <p class="font-bold text-green-700 text-lg sm:text-xl"><span class="text-gray-800 text-sm">{i18n.CARDS.FROM}:</span> ${party.data.price} USD <span class="text-gray-600 text-base font-normal">{i18n.CARDS.PER_PERSON}</span></p>
             </div>
-            {party.data.bokun != '' && <a aria-label="" href={party.data.bokun} class="text-sm sm:text-base w-auto text-center bg-purple-700 hover:bg-purple-500 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline" target="_blank">{i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}</a>}
-            <a aria-label={i18n.ACCESSIBILITY.GO_TO_TOUR_DETAILS} href={url} class="text-sm sm:text-base w-auto text-center bg-slate-200 hover:bg-slate-100 text-black font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline">{i18n.TOUR_PAGE.CARD.BUTTON_MORE}</a>
         </div>
-    </div>
+    </a>
 </div>

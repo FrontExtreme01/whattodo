@@ -1,13 +1,14 @@
 ---
 import { getI18N } from "@/i18n";
-import { getSlides } from "@/img/allImages";
+import { getSlides } from "@/img/allSlides";
 import { getLangFromUrl } from "@/i18n/utils";
 import { getAllCombos } from "@/content/functions";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import SliderBanner from "@components/global/SliderBanner";
+import SliderDesktop from "@/components/global/SliderDesktop";
+import SliderMobile from "@/components/global/SliderMobile";
+import TourCardHorizontal from "@components/cards/TourCardHorizontal.astro";
 import Intro from "@components/global/Intro.astro";
-import TourCard from "@components/cards/TourCard.astro";
 import Partners from "@components/global/Partners";
 
 const { currentLocale } = Astro;
@@ -16,33 +17,32 @@ const i18n = getI18N({ currentLocale });
 const lang = getLangFromUrl(Astro.url);
 const allCombos = await getAllCombos(lang);
 
-const slides = getSlides("COMBOS", lang);
+const slidesDesktop = getSlides("COMBOS", "DESKTOP", lang);
+const slidesMobile = getSlides("COMBOS", "MOBILE", lang);
 
 const seoMetaDatos = {
     title: i18n.SEO.COMBOS_PAGE.TITLE,
     description: i18n.SEO.COMBOS_PAGE.DESCRIPTION,
     keywords: i18n.SEO.COMBOS_PAGE.KEYWORDS,
-    image: slides[0].image.src,
+    image: slidesDesktop[0].image.src,
 };
 ---
 
 <BaseLayout seo={seoMetaDatos}>
-    <SliderBanner
-        client:load
-        slides={slides}
-        i18nButton={i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
-    />
+    <SliderDesktop client:visible slides={slidesDesktop} lang={lang} />
+    <SliderMobile client:visible slides={slidesMobile} lang={lang} />
+
     <Intro
         title={i18n.COMBOS_PAGE.TITLE}
         description={i18n.COMBOS_PAGE.DESCRIPTION}
     />
 
-    <section class="container mx-auto mb-10">
-        <div class="flex flex-wrap justify-center">
-            {allCombos.map((combo) => <TourCard tour={combo} lang={lang} />)}
+    <section class="container mx-auto px-5 md:px-20 py-6">
+        <div class="flex flex-wrap">
+            {allCombos.map((combo) => <TourCardHorizontal tour={combo} lang={lang} />)}
         </div>
     </section>
-    
+
     <Partners
         client:visible
         title={i18n.PARTNERS.TITLE}

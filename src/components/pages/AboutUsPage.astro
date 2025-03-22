@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getI18N } from "@/i18n";
 import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
+import { UserStar, HandGestureAccount, HandGestureDiamond, StarBadgeAward } from "@/img/allIcons"
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -18,7 +19,7 @@ const seoMetaDatos = {
 <BaseLayout seo={seoMetaDatos}>
     <section class="pt-10 sm:pt-20">
         <div class="container mx-auto px-10 md:px-20 md:pb-24">
-            <h1 class="text-2xl sm:text-4xl font-extrabold text-black">
+            <h1 class="text-2xl sm:text-4xl font-bold text-black">
                 {i18n.ABOUT_PAGE.TITLE}
             </h1>
             <p class="text-base md:text-lg text-slate-500 mt-5">
@@ -34,22 +35,6 @@ const seoMetaDatos = {
             </svg>
         </div>
         <div class="container mx-auto">
-            <div class="flex flex-wrap mx-10 sm:mx-0 md:mx-10 mb-5 text-justify">
-                <!-- Our Vision -->
-                <div class="w-full sm:w-1/2">
-                    <div class="flex flex-col justify-center h-full sm:px-10">
-                        <h2 class="text-center sm:text-start w-full text-2xl sm:text-4xl font-extrabold mb-10 text-white">
-                            {i18n.ABOUT_PAGE.OUR_VISION.TITLE}
-                        </h2>
-                        <p class="leading-8 text-white text-base md:text-lg">
-                            {i18n.ABOUT_PAGE.OUR_VISION.DESCRIPTION}
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full sm:w-1/2">
-                    <img src="/assets/backgrounds/slide-about-us-cancun.webp" alt={i18n.ABOUT_PAGE.TITLE} class="w-full h-full object-cover rounded-xl shadow-xl md:mt-0 mt-10" />
-                </div>
-            </div>
             <div class="flex flex-wrap mx-10 mt-20 text-justify">
                 <!-- Model Business -->
                 <div class="order-2 md:order-1 w-full sm:w-1/2">
@@ -57,10 +42,16 @@ const seoMetaDatos = {
                 </div>
                 <div class="order-1 md:order-2 w-full sm:w-1/2">
                     <div class="flex flex-col justify-center h-full sm:px-10">
-                        <h2 class="text-center sm:text-start w-full text-2xl sm:text-4xl font-extrabold mb-10 text-white">
+                        <h2 class="text-center sm:text-start w-full text-2xl sm:text-4xl font-bold mb-10 text-white">
+                            {i18n.ABOUT_PAGE.OUR_VISION.TITLE}
+                        </h2>
+                        <p class=" text-white text-base/loose md:text-lg/loose mb-10">
+                            {i18n.ABOUT_PAGE.OUR_VISION.DESCRIPTION}
+                        </p>
+                        <h2 class="text-center sm:text-start w-full text-2xl sm:text-4xl font-bold mb-10 text-white">
                             {i18n.ABOUT_PAGE.OUR_BUSINESS_MODEL.TITLE}
                         </h2>
-                        <p class="leading-8 text-white text-base md:text-lg">
+                        <p class=" text-white text-base/loose md:text-lg/loose">
                             {i18n.ABOUT_PAGE.OUR_BUSINESS_MODEL.DESCRIPTION}
                         </p>
                     </div>
@@ -73,13 +64,13 @@ const seoMetaDatos = {
     <section class="bg-slate-200/65 py-10 md:py-20">
         <div class="container mx-auto">
             <div class="flex flex-wrap mx-10 text-justify">
-                <h2 class="text-center sm:text-start w-full text-2xl sm:text-4xl font-extrabold mb-5 md:mb-10 text-black">
+                <h2 class="text-center sm:text-start w-full text-2xl sm:text-4xl font-bold mb-5 md:mb-10 text-black">
                     {i18n.ABOUT_PAGE.WHY_CHOSE_US.TITLE}
                 </h2>
                 <div class="w-full sm:w-1/2 lg:w-1/4">
                     <div class="p-5 flex flex-col items-start">
-                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl text-green-500">
-                            <i class="at-group-people-star"></i>
+                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl">
+                            <UserStar color="#16a34a " />
                         </div>
                         <div class="my-5">
                             <h3 class="text-xl sm:text-2xl font-bold mb-3 text-black">
@@ -94,8 +85,8 @@ const seoMetaDatos = {
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/4">
                     <div class="p-5 flex flex-col items-start">
-                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl text-green-500">
-                            <i class="at-hands-gesture-diamond"></i>
+                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl">
+                            <HandGestureAccount color="#16a34a " />
                         </div>
                         <div class="my-5">
                             <h3 class="text-xl sm:text-2xl font-bold mb-3 text-black">
@@ -110,8 +101,8 @@ const seoMetaDatos = {
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/4">
                     <div class="p-5 flex flex-col items-start">
-                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl text-green-500">
-                            <i class="at-hand-gesture-account"></i>
+                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl">
+                            <HandGestureDiamond color="#16a34a " />
                         </div>
                         <div class="my-5">
                             <h3 class="text-xl sm:text-2xl font-bold mb-3 text-black">
@@ -126,8 +117,8 @@ const seoMetaDatos = {
                 </div>
                 <div class="w-full sm:w-1/2 lg:w-1/4">
                     <div class="p-5 flex flex-col items-start">
-                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl text-green-500">
-                            <i class="at-star-badge-award"></i>
+                        <div class="p-4 sm:p-6 bg-white rounded-2xl shadow-sm flex items-center justify-center text-2xl sm:text-4xl">
+                            <StarBadgeAward color="#16a34a " />
                         </div>
                         <div class="my-5">
                             <h3 class="text-xl sm:text-2xl font-bold mb-3 text-black">

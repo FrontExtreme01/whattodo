@@ -1,0 +1,72 @@
+---
+slug: 'sonora-grill/en'
+lang: 'en'
+slugGallery: 'sonora-grill'
+status: 1
+title: 'Sonora Grill'
+description: ''
+keywords: ''
+stars: '4.5'
+reviews: '1,633'
+image:
+    src: '/assets/covers/restaurants/sonora-grill-restaurant-cancun.webp'
+    alt: 'cover of Sonora Grill'
+highlights: ['Ambient Music']
+recommendedFor: ['Families, ', 'Groups & Special Events']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/975240?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/975240'
+location: 'Blvd. Kukulcan Km 12, La Isla, Zona Hotelera'
+cuisine: 'Steakhouse, Mexican, Artisan'
+dressCode: 'Smart Casual'
+menuPDF: '/pdf/en/sonora-grill.pdf'
+hours: 
+-   day: 'Sunday'
+    open: '1:00 pm to 12:00 am'
+-   day: 'Monday'
+    open: '1:00 pm to 1:00 am'
+-   day: 'Tuesday'
+    open: '1:00 pm to 1:00 am'
+-   day: 'Wednesday'
+    open: '1:00 pm to 1:00 am'
+-   day: 'Thursday'
+    open: '1:00 pm to 1:00 am'
+-   day: 'Friday'
+    open: '1:00 pm to 2:00 am'
+-   day: 'Saturday'
+    open: '1:00 pm to 2:00 am'
+mapFrame: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.987385115125!2d-86.7639195!3d21.113069100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c29251795543b%3A0x6f5264e9bb208b40!2sSonora%20Grill%20La%20Isla%20Canc%C3%BAn!5e0!3m2!1en!2smx!4v1738860089638!5m2!1en!2smx'
+---
+
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+
+export const shouldKnow = [
+    'Premium cuts: Rib eye USDA Prime, Llin center USDA Prime & Tomahawk USDA Prime.',
+    'Slow-cooked ribs for 12 hours, served with gravy sauce and handmade tortillas.',
+    'Shrimp Aguachile, Mandarin Salad, and Mango Ceviche',
+    'Deserts: Tres leches and Mexican home made churros ',
+];
+
+export const considerations = [
+    'ID or Passport is mandatory at the check in process',
+    'Dress code (no bathing suits, sport outfit, or shirts without sleeves)',
+    'Bring additional form of payment or cash ',
+    'Season deals or promotions are subject to availability',
+];
+
+export const titles = {
+    INFORMATION: 'Most Popular Dishes',
+    CONSIDERATIONS: 'Important guidelines',
+};
+
+<TagH2>Overview of Sonora Grill</TagH2>
+
+<TagP>Sonora Grill is a contemporary Mexican steakhouse renowned for its high-quality cuts of meat, signature mixology, and sophisticated ambiance. Each visit promises a unique culinary experience, where the passion for grilling blends with exceptional flavors. </TagP>
+
+<TagH3>{titles.INFORMATION}</TagH3>
+<ShouldKnow shouldKnow={shouldKnow} />
+
+<TagH3>{titles.CONSIDERATIONS}</TagH3>
+<ShouldKnow shouldKnow={considerations} />

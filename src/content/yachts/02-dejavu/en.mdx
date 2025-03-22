@@ -6,18 +6,18 @@ slugGallery: 'dejavu'
 title: 'Dejavu Yacht Rental Cancun'
 description: ''
 keywords: ''
-price: 0
+price: 932
 stars: '4.6'
-reviews: '840 reviews'
+reviews: '840'
 image: 
     src: '/assets/covers/yachts/yacht-dejavu-cover.webp'
     alt: 'cover Dejavu Yacht Rental Cancun'
 capacity: 'Max 15 passengers'
 size: 'Size: 45 ft'
 highlights: ['Life jackets and snorkel masks', 'Bluetooth music']
-bokun: ''
-calendar: ''
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/998166?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/998166'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 faqs:
 -   question: 'What is included in the yacht rental?'
     answer: 'The rental includes a fully equipped yacht with spacious decks, comfortable seating, and amenities like a sound system, a cooler with ice, and a professional crew to ensure you have a smooth and enjoyable experience.'
@@ -31,10 +31,12 @@ faqs:
     answer: 'Transportation to and from the marina is not included in the rental price, but we can arrange private transportation for you upon request. Let us know if you need assistance with your transport, and we’ll be happy to help.'
 ---
 
+import Accordion from "@components/detail-content/Accordion"
 import TagH2 from "@components/global/TagH2.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 import TabPricesYacht from "@components/extras/TabPricesYacht";
 
 export const includes = [
@@ -78,32 +80,42 @@ export const infoPrices = [
     {
         duration: '4 hours',
         information: '(without crossing to the island)',
-        price: '$$',
+        price: '932',
     },
     {
         duration: '6 hours',
-        price: '$$',
+        price: '1,013',
     },
     {
         duration: '8 hours',
-        price: '$$',
+        price: '1,166',
     },
 ];
 
-export const i18n = {
-    INCLUDES: 'Included',
-    NOT_INCLUDES: 'Not included',
-    SHOULD_KNOW: 'What you should know',
-    SHOULD_BRING: 'What you should bring',
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
 };
 
 <TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
-<TagP><em><strong><small>Please contact us in advance to confirm the start time of your activity</small></strong></em></TagP>
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Overview</TagH2>
 
-<TagH2>Overview</TagH2>
+    <TagP>Embark on an unforgettable adventure aboard the Deja Vu, a luxurious 45-foot yacht that departs from Marina Kaybal in Cancún. Perfect for any occasion, whether it's a romantic escape, a celebration with friends, or simply a day of relaxation. With spacious decks, stunning ocean views, and top-tier amenities, the Deja Vu guarantees a premium experience on the crystal-clear waters of the Caribbean. Enjoy exceptional service and a seamless journey tailored to create lasting memories. Set sail with us today and indulge in the ultimate yachting experience. Book your trip now and let the adventure begin!</TagP>
+</Accordion>
 
-<TagP>Embark on an unforgettable adventure aboard the Deja Vu, a luxurious 45-foot yacht that departs from Marina Kaybal in Cancún. Perfect for any occasion, whether it's a romantic escape, a celebration with friends, or simply a day of relaxation. With spacious decks, stunning ocean views, and top-tier amenities, the Deja Vu guarantees a premium experience on the crystal-clear waters of the Caribbean. Enjoy exceptional service and a seamless journey tailored to create lasting memories. Set sail with us today and indulge in the ultimate yachting experience. Book your trip now and let the adventure begin!</TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+    <TagP><em><strong><small>Please contact us in advance to confirm the start time of your activity</small></strong></em></TagP>
+</Accordion>
 
-<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

@@ -1,0 +1,24 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg
+  id="Capa_1"
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  width="24"
+  height="24"
+>
+  <path d="M0,0h24v24H0V0Z" stroke="none" fill="none"></path>
+  <g>
+    <rect x="8.2" y="6.7" width="7.6" height="1.9"></rect>
+    <rect x="10.1" y="4.8" width="3.8" height="1.9"></rect>
+    <rect x="7.5" y="8.6" width="9" height="2.9"></rect>
+    <rect x="5.2" y="11.4" width="13.5" height="2.7"></rect>
+    <rect x="3.5" y="14.2" width="17.1" height="2.8"></rect>
+    <rect x="1.8" y="16.9" width="20.5" height="3.2"></rect>
+  </g>
+</svg>

@@ -9,23 +9,27 @@ description: 'Embárcate en un viaje inolvidable con el Tour Madness, donde te e
 keywords: 'discoteca, madness, tour, bebidas, paquete, vida nocturna de cancun'
 price: 100
 stars: '4.5'
-reviews: '4,349 reseñas'
+reviews: '4,349 '
 image:
     src: '/assets/covers/parties/cover-MadnessTour.webp'
     alt: 'portada madness tour'
 duration: '6 horas'
+music: 'Hip-Hop, Latino, Pop, Rock, Electrónica'
+dressCode: 'Smart casual (no trajes de baño o camisas sin mangas)'
 consumption: '15 tickets de bebida'
 admission: 'Entrada VIP a 3 discotecas'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/850597?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/850597'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29771.86446650854!2d-86.746938!3d21.133166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2898a0a9e54b%3A0xb293c2f5881121d0!2sMandala%20Nightclub!5e0!3m2!1ses!2smx!4v1704732310770!5m2!1ses!2smx'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 
 export const includes = [
     'Entrada VIP a 3 discotecas',
@@ -38,17 +42,35 @@ export const notIncludes = [
     'Transporte de ida y vuelta al punto de encuentro',
 ];
 
-export const i18n = {
-    INCLUDES: 'Incluye',
-    NOT_INCLUDES: 'No Incluye',
+export const shouldKnow = [
+    'Transporte público cercano',
+    'No accesible para sillas de ruedas',
+    'No accesible para cochecitos',
+    'No apto para mascotas',
+    'Debes tener 18 años o más para participar.',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Sobre Tour Madness & Entrada a Discoteca</TagH2>
 
-<TagH2>Sobre Tour Madness & Entrada a Discoteca</TagH2>
+    <TagP>Embárcate en un viaje inolvidable con el Tour Madness, donde te espera el latido pulsante de la vida nocturna de Cancún. Únete a nosotros mientras recorremos tres de los destinos de fiesta más importantes de la ciudad, sumergiéndote en una atmósfera electrizante de alegría y emoción. Di adiós a la molestia de planificar y hola a una experiencia de fiesta sin problemas, donde el tratamiento VIP no es solo un lujo sino una garantía.</TagP>
 
-<TagP>Embárcate en un viaje inolvidable con el Tour Madness, donde te espera el latido pulsante de la vida nocturna de Cancún. Únete a nosotros mientras recorremos tres de los destinos de fiesta más importantes de la ciudad, sumergiéndote en una atmósfera electrizante de alegría y emoción. Di adiós a la molestia de planificar y hola a una experiencia de fiesta sin problemas, donde el tratamiento VIP no es solo un lujo sino una garantía.</TagP>
+    <TagP>Nuestros expertos anfitriones de fiestas te guiarán, asegurando que cada momento esté lleno de emoción y disfrute. Desde el momento en que entras en cada lugar, serás recibido con entradas VIP gratuitas, que te otorgan acceso exclusivo a los lugares más populares de la ciudad. Saborea tus bebidas favoritas mientras bailas toda la noche, rodeado de entusiastas de la fiesta y los ritmos pulsantes de la vibrante escena nocturna de Cancún.</TagP>
 
-<TagP>Nuestros expertos anfitriones de fiestas te guiarán, asegurando que cada momento esté lleno de emoción y disfrute. Desde el momento en que entras en cada lugar, serás recibido con entradas VIP gratuitas, que te otorgan acceso exclusivo a los lugares más populares de la ciudad. Saborea tus bebidas favoritas mientras bailas toda la noche, rodeado de entusiastas de la fiesta y los ritmos pulsantes de la vibrante escena nocturna de Cancún.</TagP>
+    <TagP>Suelta, haz recuerdos y abraza la locura que te espera en este emocionante viaje a través del patio de recreo nocturno de Cancún.</TagP>
+</Accordion>
 
-<TagP>Suelta, haz recuerdos y abraza la locura que te espera en este emocionante viaje a través del patio de recreo nocturno de Cancún.</TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

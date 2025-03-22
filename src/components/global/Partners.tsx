@@ -22,7 +22,7 @@ import part17 from '@/img/partners/17-city-and-taco-tour-cancun-and-puerto-morel
 import part18 from '@/img/partners/18-cenotes-adventure-logo.webp';
 import part19 from '@/img/partners/19-what-to-do-in-mexico-city-logo.webp';
 import part20 from '@/img/partners/20-things-to-do-in-madrid-partner-logo.webp';
-import part21 from '@/img/partners/21-jopa-nauticos.webp';
+import part21 from '@/img/partners/21-jopa-nauticos.svg';
 import part22 from '@/img/partners/22-senor-frogs.webp';
 import part23 from '@/img/partners/23-epic-yachts.webp';
 
@@ -55,11 +55,9 @@ const partners = [
 export default function Partners({ title, description }: any) {
 
     return (
-        <div className="bg-[url('/assets/backgrounds/fondo-testimonials.webp')] bg-no-repeat bg-contain bg-center py-8 md:py-20 px-5 md:px-24 container mx-auto text-center" data-aos="zoom-in" data-aos-delay="500">
-            <h2 className="my-8 md:my-16 text-2xl md:text-4xl text-orange-500 font-bold">{title}</h2>
-            <p className="text-base md:text-xl mb-8">
-                {description}
-            </p>
+        <section className="bg-[url('/assets/backgrounds/fondo-testimonials.webp')] bg-no-repeat bg-contain bg-center py-8 md:py-20 px-5 md:px-24 container mx-auto text-center">
+            <h2 className="my-8 md:my-16 text-2xl md:text-4xl text-gray-800 font-bold">{title}</h2>
+            {description && <p className="text-base md:text-xl mb-8">{description}</p>}
             <Swiper
                 loop={true}
                 autoplay={{
@@ -81,7 +79,7 @@ export default function Partners({ title, description }: any) {
                     },
                     992: {
                         slidesPerView: 6,
-                        spaceBetween: 120
+                        spaceBetween: 100
                     }
                 }}
                 modules={[Autoplay]}
@@ -93,6 +91,6 @@ export default function Partners({ title, description }: any) {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        </section>
     );
 }

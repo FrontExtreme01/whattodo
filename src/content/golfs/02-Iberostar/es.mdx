@@ -8,7 +8,7 @@ description: 'Vive la experiencia de jugar golf en Iberostar Cancún Golf, un ca
 keywords: ''
 price: 161
 stars: '5.0'
-reviews: '1,234 reseñas'
+reviews: '1,234 '
 image:
     src: '/assets/covers/golfs/iberostar-cancun-golf.webp'
     alt: 'portada de Iberostar Cancún Golf'
@@ -17,7 +17,7 @@ holes: '18 hoyos'
 yards: '6,704 yardas'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/782388?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/782388'
-location: 'Blvd Kukulcan, Km. 17, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd Kukulcan, Km. 17, Zona Hotelera'
 schedule: '6:00 am - 7:00 pm'
 availability: 'Lun a Dom'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d476571.79371957784!2d-86.780642!3d21.063988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c29d3580af9a1%3A0xeb14d07226417a00!2sIberostar%20Golf%20Club%20Canc%C3%BAn!5e0!3m2!1ses-419!2sus!4v1703702598343!5m2!1ses-419!2sus'
@@ -27,10 +27,10 @@ import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagH4 from "@components/global/TagH4.astro";
 import TagP from "@components/global/TagP.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 import IberostarPrices from "@components/extras/tables/IberostarPrices.astro";
 
-export const information = [
+export const shouldKnow = [
     'Número de Hoyos: 18',
     'Yardas: 6,704 yardas',
     'Par: 72',
@@ -38,7 +38,7 @@ export const information = [
     'Horarios de Salida: Cada 10 minutos'
 ];
 
-export const i18n = {
+export const titles = {
     INFORMATION: 'Detalles',
     TABLE_TITLE: 'Información del Campo de Golf Iberostar Cancún',
     PER_PERSON: 'por persona',
@@ -47,9 +47,9 @@ export const i18n = {
     ACCOMPANIED: 'Acompañado por un adulto',
 };
 
-<AdditionalInfo information={information} i18n={i18n} />
+<ShouldKnow shouldKnow={shouldKnow} />
 
-<IberostarPrices i18n={i18n} />
+<IberostarPrices i18n={titles} />
 
 <TagH2>El Edén del Golfista en Medio de la Naturaleza en Playa Paraíso </TagH2>
 
@@ -81,4 +81,4 @@ export const i18n = {
 
 <TagP>No pierda la oportunidad de experimentar el paraíso del golf en Iberostar Cancún Golf. Reserve su hora de salida ahora y disfrute de una experiencia de golf como ninguna otra, rodeado de maravillas naturales. </TagP>
 
-<TagP>>Iberostar Cancún Golf Club te da la bienvenida a un santuario de golf, donde la naturaleza y el golf se unen para brindarte una experiencia inolvidable. Disfruta cada momento en este extraordinario campo, diseñado por P.B. Dye. Reserva tu hora de salida ahora y disfruta de la magia del golf entre exuberantes selvas y cautivantes ruinas. </TagP>
+<TagP>Iberostar Cancún Golf Club te da la bienvenida a un santuario de golf, donde la naturaleza y el golf se unen para brindarte una experiencia inolvidable. Disfruta cada momento en este extraordinario campo, diseñado por P.B. Dye. Reserva tu hora de salida ahora y disfruta de la magia del golf entre exuberantes selvas y cautivantes ruinas. </TagP>

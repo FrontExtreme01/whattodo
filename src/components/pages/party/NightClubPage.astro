@@ -1,66 +1,58 @@
 ---
 import { getI18N } from "@/i18n";
-import { getSlides } from "@/img/allImages";
-import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
+import { getSlides } from "@/img/allSlides";
+import { getLangFromUrl } from "@/i18n/utils";
 import { getPartiesType } from "@/content/functions";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import SliderBanner from "@components/global/SliderBanner";
+import SliderDesktop from "@/components/global/SliderDesktop";
+import SliderMobile from "@/components/global/SliderMobile";
 import Intro from "@components/global/Intro.astro";
 import Partners from "@components/global/Partners";
-import PartyCard from "@components/cards/PartyCard.astro";
-import TagP from "@components/global/TagP.astro";
+import PartyCardHorizontal from "@components/cards/PartyCardHorizontal.astro";
+import Events from "@components/extras/Events";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
 const lang = getLangFromUrl(Astro.url);
 const allParties = await getPartiesType("NIGHTCLUB", lang);
-const translatePath = useTranslatedPath(lang);
 
-const slides = getSlides("NIGHTCLUB", lang);
+const slidesDesktop = getSlides("NIGHTCLUB", "DESKTOP", lang);
+const slidesMobile = getSlides("NIGHTCLUB", "MOBILE", lang);
 
 const seoMetaDatos = {
     title: i18n.SEO.PARTY_PAGE.NIGHTCLUB.TITLE,
     description: i18n.SEO.PARTY_PAGE.NIGHTCLUB.DESCRIPTION,
     keywords: i18n.SEO.PARTY_PAGE.NIGHTCLUB.KEYWORDS,
+    image: slidesDesktop[0].image.src,
 };
 ---
 
 <BaseLayout seo={seoMetaDatos}>
-    
-    <SliderBanner
-        client:load
-        slides={slides}
-        i18nButton={i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
-    />
+    <SliderDesktop client:load slides={slidesDesktop} lang={lang} />
+    <SliderMobile client:load slides={slidesMobile} lang={lang} />
 
     <Intro
         title={i18n.PARTY_PAGE.NIGHTCLUB.TITLE}
         description={i18n.PARTY_PAGE.NIGHTCLUB.DESCRIPTION}
     />
 
-    <section class="container mx-auto mb-10">
-        <div class="flex flex-wrap justify-center">
-            {allParties.map((party) => <PartyCard party={party} lang={lang} />)}
+    <Events client:visible lang={lang} />
+
+    <section class="container mx-auto px-5 md:px-20 py-6">
+        <div class="flex flex-wrap">
+            {
+                allParties.map((party) => (
+                    <PartyCardHorizontal party={party} lang={lang} />
+                ))
+            }
         </div>
     </section>
 
-    <section class="container mx-auto mb-10">
-        <div class="px-5 py-2 text-justify">
-            {Object.values(i18n.PARTY_PAGE.NIGHTCLUB.INFORMATION).map((item) => (
-                <TagP>{item}</TagP>
-            ))}
-            <p class="text-base/loose md:text-xl/loose mt-10 mb-2 text-violet-700 font-extrabold text-center">
-                {i18n.PARTY_PAGE.NIGHTCLUB.BOOK_TICKETS}
-            </p>
-
-            <div class="flex flex-wrap justify-center gap-4 mt-10">
-                <a href={translatePath('/beachclub-in-cancun/')} class="w-fit block px-5 py-3 rounded-xl text-white bg-gradient-to-r font-bold text-xl from-purple-700 to-fuchsia-600 hover:scale-90 hover:shadow-2xl transition-all duration-200">{i18n.PARTY_PAGE.NIGHTCLUB.BUTTONS.BEACHCLUB}</a>
-                <a href={translatePath('/events-in-cancun/')} class="w-fit block px-5 py-3 rounded-xl text-white bg-gradient-to-r font-bold text-xl from-purple-700 to-fuchsia-600 hover:scale-90 hover:shadow-2xl transition-all duration-200">{i18n.PARTY_PAGE.NIGHTCLUB.BUTTONS.EVENTS}</a>
-            </div>
-        </div>
-    </section>
-
-    <Partners client:visible title={i18n.PARTNERS.TITLE} description={i18n.PARTNERS.DESCRIPTION} />
+    <Partners
+        client:visible
+        title={i18n.PARTNERS.TITLE}
+        description={i18n.PARTNERS.DESCRIPTION}
+    />
 </BaseLayout>

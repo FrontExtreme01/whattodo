@@ -6,7 +6,7 @@ const { considerations, i18n } = Astro.props;
     <div class="w-full">
         <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">{i18n.CONSIDERATIONS}</h3>
         <ul class="space-y-4 text-base md:text-lg">
-            {considerations.map((item) => <li><i class="at-star-lightbulb text-amber-500"></i> {item}</li>)}
+            {considerations.map((item) => <li> {item}</li>)}
         </ul>
     </div>
 </div>

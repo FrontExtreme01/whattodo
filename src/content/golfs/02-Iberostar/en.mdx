@@ -8,7 +8,7 @@ description: 'Experience golfing bliss at Iberostar Cancun Golf, a P.B. Dye desi
 keywords: ''
 price: 161
 stars: '5.0'
-reviews: '1,234 reviews'
+reviews: '1,234'
 image:
     src: '/assets/covers/golfs/iberostar-cancun-golf.webp'
     alt: 'cover of Iberostar Cancun Golf'
@@ -17,7 +17,7 @@ holes: '18 holes'
 yards: '6,704 yards'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/782388?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/782388'
-location: 'Blvd Kukulcan, Km. 17, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd Kukulcan, Km. 17, Zona Hotelera'
 schedule: '6:00 am - 7:00 pm'
 availability: 'Mon to Sun'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d476571.79371957784!2d-86.780642!3d21.063988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c29d3580af9a1%3A0xeb14d07226417a00!2sIberostar%20Golf%20Club%20Canc%C3%BAn!5e0!3m2!1ses-419!2sus!4v1703702598343!5m2!1ses-419!2sus'
@@ -27,10 +27,10 @@ import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagH4 from "@components/global/TagH4.astro";
 import TagP from "@components/global/TagP.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 import IberostarPrices from "@components/extras/tables/IberostarPrices.astro";
 
-export const information = [
+export const shouldKnow = [
     'Number of Holes: 18',
     'Yardage: 6,704 yards',
     'Par: 72',
@@ -38,7 +38,7 @@ export const information = [
     'Tee Times: Every 10 minutes'
 ];
 
-export const i18n = {
+export const titles = {
     INFORMATION: 'Details',
     TABLE_TITLE: 'Iberostar Cancun Golf Course Information',
     PER_PERSON: 'per person',
@@ -47,9 +47,9 @@ export const i18n = {
     ACCOMPANIED: 'Accompanied by an adult',
 };
 
-<AdditionalInfo information={information} i18n={i18n} />
+<ShouldKnow shouldKnow={shouldKnow} />
 
-<IberostarPrices i18n={i18n} />
+<IberostarPrices i18n={titles} />
 
 <TagH2>The Golfer’s Eden Amidst Nature in Playa Paraiso </TagH2>
 
@@ -81,4 +81,4 @@ export const i18n = {
 
 <TagP>Don’t miss the chance to experience golfing paradise at Iberostar Cancun Golf. Book your tee time now and savor a golfing journey like no other, surrounded by natural wonders. </TagP>
 
-<TagP>>Iberostar Cancun Golf Club welcomes you to a golfing sanctuary, where nature and golf unite for an unforgettable experience. Enjoy every moment on this remarkable course, designed by P.B. Dye. Book your tee time now and embrace the magic of golf amidst lush jungles and captivating ruins. </TagP>
+<TagP>Iberostar Cancun Golf Club welcomes you to a golfing sanctuary, where nature and golf unite for an unforgettable experience. Enjoy every moment on this remarkable course, designed by P.B. Dye. Book your tee time now and embrace the magic of golf amidst lush jungles and captivating ruins. </TagP>

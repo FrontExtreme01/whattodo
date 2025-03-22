@@ -8,26 +8,29 @@ slugSeo: 'Abolengo Cancun Night Club Admission'
 title: 'Abolengo Bartina Cancun'
 description: 'Abolengo Cancun is a trendy and upscale nightclub located in the heart of the Hotel Zone. A blend of modern and traditional Mexican decor.'
 keywords: ''
-price: 20
+price: 40
 stars: '4.0'
-reviews: '3,916 reviews'
+reviews: '3,916'
 image:
     src: '/assets/covers/parties/abolengo-cover.webp'
     alt: 'cover of Abolengo Cancun'
 duration: '6 hours'
+music: 'Pop, rock, latin, electronic'
+dressCode: 'Smart casual, elegant (no bathing suits or shirts without sleeves)'
 consumption: 'Consumption credit'
 admission: 'Admission ticket'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/746043?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/746043'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29771.814655632596!2d-86.746523!3d21.133414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c29c8e022f8cf%3A0x317e02417e298b81!2sAbolengo!5e0!3m2!1ses!2smx!4v1704723152526!5m2!1ses!2smx'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 
 export const includes = [
     'Admission',
@@ -39,53 +42,60 @@ export const notIncludes = [
     'Gratuities'
 ];
 
-export const Information = [
+export const shouldKnow = [
     'Check-in must be completed before 9 PM.',
     'Duration: 6 hours',
 ];
 
-export const i18n = {
-    INCLUDES: 'Included',
-    NOT_INCLUDES: 'Not included',
-    INFORMATION: 'Please note',
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>About Abolengo Cancun </TagH2>
 
-<AdditionalInfo information={Information} i18n={i18n} />
+    <TagP><strong>Abolengo Cancun</strong> is a trendy and upscale nightclub located in the heart of the Hotel Zone. Known for its unique blend of modern and <strong>traditional Mexican decor</strong>, Abolengo is a popular destination for those looking for a <strong>stylish and exclusive nightclub</strong> experience. </TagP>
 
-<TagH2>About Abolengo Cancun </TagH2>
+    <TagH3>Abolengo Cancun Location </TagH3>
 
-<TagP><strong>Abolengo Cancun</strong> is a trendy and upscale nightclub located in the heart of the Hotel Zone. Known for its unique blend of modern and <strong>traditional Mexican decor</strong>, Abolengo is a popular destination for those looking for a <strong>stylish and exclusive nightclub</strong> experience. </TagP>
+    <TagP>The location is one of its biggest draws, situated in the heart of the <strong>Hotel Zone</strong>, making it easily accessible to tourists and locals alike. It’s just a short walk or taxi ride away from many of Cancun’s most popular hotels and attractions. </TagP>
 
-<TagH3>Abolengo Cancun Location </TagH3>
+    <TagP>One of the standout features of Abolengo is its menu, which includes a wide variety of <strong>Mexican snacks and cocktails</strong>. From traditional favorites like <strong>tacos and guacamole</strong> to more modern creations like ceviche and craft cocktails, the menu is sure to please any palate. </TagP>
 
-<TagP>The location is one of its biggest draws, situated in the heart of the <strong>Hotel Zone</strong>, making it easily accessible to tourists and locals alike. It’s just a short walk or taxi ride away from many of Cancun’s most popular hotels and attractions. </TagP>
+    <TagH2>Bachelorette Party in Abolengo </TagH2>
 
-<TagP>One of the standout features of Abolengo is its menu, which includes a wide variety of <strong>Mexican snacks and cocktails</strong>. From traditional favorites like <strong>tacos and guacamole</strong> to more modern creations like ceviche and craft cocktails, the menu is sure to please any palate. </TagP>
+    <TagP>In addition to its delicious menu, Abolengo Cancun is also a popular spot for bachelorette parties and other special events. The club offers VIP sections and bottle service, allowing guests to enjoy an exclusive and luxurious experience. </TagP>
 
-<TagH2>Bachelorette Party in Abolengo </TagH2>
+    <TagH3>Cancun Nightlife </TagH3>
 
-<TagP>In addition to its delicious menu, Abolengo Cancun is also a popular spot for bachelorette parties and other special events. The club offers VIP sections and bottle service, allowing guests to enjoy an exclusive and luxurious experience. </TagP>
+    <TagP>When it comes to nightlife in Cancun, Abolengo is a top choice for those looking for a high-energy atmosphere and excellent service. The club features multiple levels, including a rooftop terrace with stunning views of the surrounding area. </TagP>
 
-<TagH3>Cancun Nightlife </TagH3>
+    <TagP>If you’re planning a trip to Cancun and looking for a memorable nightlife experience, be sure to check out this club. With its unique decor, delicious menu, and exclusive VIP sections, it’s a top choice for those looking for an unforgettable night out in this beautiful Mexican city. Abolengo Dress code: Dress casually </TagP>
 
-<TagP>When it comes to nightlife in Cancun, Abolengo is a top choice for those looking for a high-energy atmosphere and excellent service. The club features multiple levels, including a rooftop terrace with stunning views of the surrounding area. </TagP>
+    <TagH3>Where is Abolengo </TagH3>
 
-<TagP>If you’re planning a trip to Cancun and looking for a memorable nightlife experience, be sure to check out this club. With its unique decor, delicious menu, and exclusive VIP sections, it’s a top choice for those looking for an unforgettable night out in this beautiful Mexican city. Abolengo Dress code: Dress casually </TagP>
+    <TagP>Abolengo Cancun is located in the Hotel Zone of Cancun, Mexico. The specific address is Boulevard Kukulcan Km 9.5, Zona Hotelera, 77500 Cancún, Q.R., Mexico. It’s situated in the heart of the Hotel Zone, making it easily accessible to tourists and locals alike. The club is just a short walk or taxi ride away from many of Cancun’s most popular hotels and attractions </TagP>
 
-<TagH3>Where is Abolengo </TagH3>
+    <TagH3>How to get Abolengo </TagH3>
 
-<TagP>Abolengo Cancun is located in the Hotel Zone of Cancun, Mexico. The specific address is Boulevard Kukulcan Km 9.5, Zona Hotelera, 77500 Cancún, Q.R., Mexico. It’s situated in the heart of the Hotel Zone, making it easily accessible to tourists and locals alike. The club is just a short walk or taxi ride away from many of Cancun’s most popular hotels and attractions </TagP>
+    <TagP>There are several ways to get to Abolengo Cancun, depending on your location and preference: </TagP>
 
-<TagH3>How to get Abolengo </TagH3>
+    <TagP><strong>Taxi:</strong> One of the easiest ways to get to Abolengo is by taxi. Taxis are readily available in Cancun, and most drivers are familiar with the location of the club. Simply tell the driver the address, Boulevard Kukulcan Km 9.5, Zona Hotelera, and they will take you directly to the club. </TagP>
 
-<TagP>There are several ways to get to Abolengo Cancun, depending on your location and preference: </TagP>
+    <TagP><strong>Public transportation:</strong> If you prefer to use public transportation, there are several buses that run along the Hotel Zone of Cancun. The R1 and R2 buses are the most popular and run frequently throughout the day and night. You can board the bus at any of the designated stops along the Hotel Zone and get off at the stop closest to Abolengo. </TagP>
 
-<TagP><strong>Taxi:</strong> One of the easiest ways to get to Abolengo is by taxi. Taxis are readily available in Cancun, and most drivers are familiar with the location of the club. Simply tell the driver the address, Boulevard Kukulcan Km 9.5, Zona Hotelera, and they will take you directly to the club. </TagP>
+    <TagP><strong>Private transportation:</strong> Another option is to hire private transportation, such as a car service or private shuttle. These services can be arranged in advance through your hotel or a local tour company. They will pick you up from your location and take you directly to this party center. </TagP>
 
-<TagP><strong>Public transportation:</strong> If you prefer to use public transportation, there are several buses that run along the Hotel Zone of Cancun. The R1 and R2 buses are the most popular and run frequently throughout the day and night. You can board the bus at any of the designated stops along the Hotel Zone and get off at the stop closest to Abolengo. </TagP>
+    <TagP>No matter which method of transportation you choose, be sure to plan ahead and allow enough time to arrive at the club. Abolengo Cancun is a popular destination, especially on weekends, so it’s a good idea to arrive early to avoid long lines and wait times. </TagP>
+</Accordion>
 
-<TagP><strong>Private transportation:</strong> Another option is to hire private transportation, such as a car service or private shuttle. These services can be arranged in advance through your hotel or a local tour company. They will pick you up from your location and take you directly to this party center. </TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
 
-<TagP>No matter which method of transportation you choose, be sure to plan ahead and allow enough time to arrive at the club. Abolengo Cancun is a popular destination, especially on weekends, so it’s a good idea to arrive early to avoid long lines and wait times. </TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

@@ -7,23 +7,36 @@ status: 1
 title: 'Restaurante Señor Frogs Cancún: El Mejor Lugar para Fiestas'
 description: 'Vive la atmósfera animada en el Restaurante Señor Frogs Cancún con una experiencia de cena divertida probando la cocina mexicana y americana, bebidas y entretenimiento.'
 keywords: 'restaurante senor frogs cancun, senor frogs cancun, senor frogs mexico, restaurante senor frogs, menu senor frogs cancun, precios senor frogs cancun, opiniones senor frogs cancun, ubicacion senor frogs cancun, codigo de vestimenta senor frogs cancun, horario senor frogs cancun, disponibilidad senor frogs cancun, mapa senor frogs cancun, testimonios senor frogs cancun'
-featured: ''
 averageCost: 26
 stars: '5.0'
-reviews: '2,013 reseñas'
+reviews: '2,013 '
 image:
     src: '/assets/covers/restaurants/senor-frogs-restaurant-cancun.webp'
     alt: 'portada senor frogs restaurant cancun'
 highlights: ['Música Ambiental']
+recommendedFor: ['Familias, ', 'Grupos & Eventos Especiales']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/911208?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/911208'
 location: 'Blvd. Kukulcan, Zona Hotelera, Cancún'
 cuisine: 'Mezcla de Mexicana y Americana'
 dressCode: 'Casual'
-schedule: '11:00 am - 2:00 am'
-availability: 'Todos los días'
+hours: 
+-   day: 'Domingo'
+    open: '12:00 pm a 2:00 am'
+-   day: 'Lunes'
+    open: '12:00 pm a 2:00 am'
+-   day: 'Martes'
+    open: '12:00 pm a 2:00 am'
+-   day: 'Miércoles'
+    open: '12:00 pm a 2:00 am'
+-   day: 'Jueves'
+    open: '12:00 pm a 2:00 am'
+-   day: 'Viernes'
+    open: '12:00 pm a 2:00 am'
+-   day: 'Sábado'
+    open: '12:00 pm a 2:00 am'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7442.999256248303!2d-86.74750400000002!3d21.132506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c29cd09568e9d%3A0xce44164b215f740d!2zU2XDsW9yIEZyb2cncyB8IENhbmPDum4!5e0!3m2!1es!2smx!4v1725992845465!5m2!1es!2smx'
-testimonials: []
+
 ---
 
 import TagH2 from "@components/global/TagH2.astro";
@@ -36,7 +49,7 @@ import TagP from "@components/global/TagP.astro";
 
 <div class="shadow-md flex flex-wrap rounded-xl bg-white p-4 mt-10 mb-4">
     <div class="w-full md:w-4/12 relative">
-        <span class="absolute top-0 -left-8 -rotate-[30deg] bg-red-500 text-white text-base font-bold px-2 py-1 rounded-xl">Desde $26 USD</span>
+        <span class="absolute top-0 -left-4 -rotate-[30deg] bg-red-500 text-white text-base font-bold px-2 py-1 rounded-xl">Desde $26 USD</span>
         <img src={frontmatter.image.src} alt={frontmatter.image.alt} class="rounded-md w-full h-auto" />
     </div>
     <div class="w-full md:w-8/12 md:pl-5 md:pt-0 pt-5 md:text-start text-center">
@@ -44,20 +57,20 @@ import TagP from "@components/global/TagP.astro";
         <p class="text-base md:text-lg mb-2 font-bold">Incluye</p>
         <div class="flex gap-2 justify-center md:justify-normal flex-wrap mb-5 text-base">
             <div class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
-                <i class="at-check-circle text-green-700"></i><span>Una bebida, a elegir</span>
+                <span>Una bebida, a elegir</span>
             </div>
             <div class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
-                <i class="at-check-circle text-green-700"></i><span>Una entrada, a elegir</span>
+                <span>Una entrada, a elegir</span>
             </div>
             <div class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
-                <i class="at-check-circle text-green-700"></i><span>Un plato fuerte, a elegir</span>
+                <span>Un plato fuerte, a elegir</span>
             </div>
             <div class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
-                <i class="at-check-circle text-green-700"></i><span>Cover VIP</span>
+                <span>Cover VIP</span>
             </div>
         </div>
         <p class="text-base md:text-lg mb-2 font-bold">Disponible en</p>
-        <p><i class="at-location text-green-700"></i> Cancún</p>
+        <p>Cancún</p>
     </div>
 </div>
 

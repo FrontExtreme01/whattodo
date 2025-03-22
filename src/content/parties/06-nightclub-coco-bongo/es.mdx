@@ -11,27 +11,31 @@ description: 'Rockea la noche con la entrada y bebidas incluidas en la mejor dis
 keywords: ''
 price: 71
 stars: '4.5'
-reviews: '3,517 reseñas'
+reviews: '3,517 '
 image:
     src: '/assets/covers/parties/coco-bongo-cancun-nightlife.webp'
     alt: 'portada de Coco Bongo Cancún Discoteca'
+video: '/assets/videos/coco-bongo-nightclub.mp4'
 duration: '1 hora'
+music: 'Shows en vivo, Latino, Pop, Rock, Hip-Hop, Electrónica'
+dressCode: 'Smart casual, elegante (no trajes de baño o camisas sin mangas)'
 consumption: 'Comida y Bebidas'
 admission: 'Entrada o tarifa de admisión'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/709416?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/709416'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29771.977543160527!2d-86.747128!3d21.132603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2bf1d63b6b99%3A0x6cc32e706b78b7bf!2sCoco%20Bongo!5e0!3m2!1ses!2smx!4v1704728685306!5m2!1ses!2smx'
 ---
 
 import { Image } from "astro:assets";
 import { placesCocoBongo } from "@/img/allImages";
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
-import TagVideo from "@components/global/TagVideo.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 import TablePrices from "@components/extras/tables/CocoBongoPrices.astro";
 
 export const includes = [
@@ -43,39 +47,55 @@ export const notIncludes = [
     'Transporte de ida y vuelta al lugar'
 ];
 
-export const i18n = {
-    INCLUDES: 'Incluido',
-    NOT_INCLUDES: 'No incluido',
+export const shouldKnow = [
+    'Transporte público cercano',
+    'Bebidas ilimitadas incluidas con la mayoría de las opciones de boletos',
+    'Elige entre la entrada general o paquetes VIP para beneficios exclusivos como mejores asientos y acceso más rápido.',
+    'Es obligatorio presentar una identificación para acceder',
+    'Debes tener 18 años o más para participar',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Acerca de las Entradas de Coco Bongo Cancún</TagH2>
 
-<TagVideo src="/assets/videos/coco-bongo-nightclub.mp4" lang={frontmatter.lang} />
+    <TagP>¡Prepárate para una noche inolvidable en <strong>Coco Bongo Cancún Show & Disco!</strong> Baila toda la noche con amigos en el corazón del <strong>mejor lugar de vida nocturna</strong> del Caribe mexicano. Pero antes de ir, asegúrate de revisar los precios de los boletos para planificar tu épica noche fuera.</TagP>
 
-<TagH2>Acerca de las Entradas de Coco Bongo Cancún</TagH2>
+    <TablePrices lang={frontmatter.lang} />
 
-<TagP>¡Prepárate para una noche inolvidable en <strong>Coco Bongo Cancún Show & Disco!</strong> Baila toda la noche con amigos en el corazón del <strong>mejor lugar de vida nocturna</strong> del Caribe mexicano. Pero antes de ir, asegúrate de revisar los precios de los boletos para planificar tu épica noche fuera.</TagP>
+    <TagH3>El mejor espectáculo en vivo</TagH3>
 
-<TablePrices lang={frontmatter.lang} />
+    <TagP><strong>Coco Bongo México Cancún</strong> es mucho más que una simple discoteca, la experiencia te dejará sin aliento con una fiesta deslumbrante realzada por un espectáculo espectacular y muy completo con <strong>efectos especiales</strong>. Déjate sorprender por los increíbles homenajes a la cultura pop y rock, con <strong>The Mask, 300, The Beatles, Queen</strong>, y muchos más temas de fiesta. </TagP>
 
-<TagH3>El mejor espectáculo en vivo</TagH3>
+    <TagH3>Bebidas incluidas</TagH3>
 
-<TagP><strong>Coco Bongo México Cancún</strong> es mucho más que una simple discoteca, la experiencia te dejará sin aliento con una fiesta deslumbrante realzada por un espectáculo espectacular y muy completo con <strong>efectos especiales</strong>. Déjate sorprender por los increíbles homenajes a la cultura pop y rock, con <strong>The Mask, 300, The Beatles, Queen</strong>, y muchos más temas de fiesta. </TagP>
+    <TagP>Las bebidas y snacks <strong>ya están incluidos</strong> durante toda la noche. <strong>Consulta las opciones de upgrade especial</strong> para acceder al área VIP y asientos reservados. </TagP>
 
-<TagH3>Bebidas incluidas</TagH3>
+    <Image src={placesCocoBongo} alt="zona de lugares en coco bongo nightclub" />
 
-<TagP>Las bebidas y snacks <strong>ya están incluidos</strong> durante toda la noche. <strong>Consulta las opciones de upgrade especial</strong> para acceder al área VIP y asientos reservados. </TagP>
+    <TagH2>Límite de edad Coco Bongo </TagH2>
 
-<Image src={placesCocoBongo} alt="zona de lugares en coco bongo nightclub" />
+    <TagP>En México, la entrada a discotecas y centros de consumo de alcohol está restringida a menores de 18 años. Por lo que es posible que tengan que presentar una identificación para comprobar que son mayores de 18 años y poder acceder a este club. Busca más alternativas de vida nocturna en Cancún. </TagP>
 
-<TagH2>Límite de edad Coco Bongo </TagH2>
+    <TagH3>¿Dónde está Coco Bongo Cancún?</TagH3>
 
-<TagP>En México, la entrada a discotecas y centros de consumo de alcohol está restringida a menores de 18 años. Por lo que es posible que tengan que presentar una identificación para comprobar que son mayores de 18 años y poder acceder a este club. Busca más alternativas de vida nocturna en Cancún. </TagP>
+    <TagP>Se encuentra justo en el corazón de la Zona Hotelera, donde se encuentran todos los <strong>clubs de Cancún</strong>. Este famoso lugar es una actividad obligada en la <strong>vida nocturna de Cancún</strong>.</TagP>
 
-<TagH3>¿Dónde está Coco Bongo Cancún?</TagH3>
+    <TagH3>¿Cómo llegar?</TagH3>
 
-<TagP>Se encuentra justo en el corazón de la Zona Hotelera, donde se encuentran todos los <strong>clubs de Cancún</strong>. Este famoso lugar es una actividad obligada en la <strong>vida nocturna de Cancún</strong>.</TagP>
+    <TagP>Es de fácil acceso en <strong>automóvil o taxi</strong>, y muchos hoteles ofrecen servicios de transporte desde y hacia el club. Si te alojas en Cancún, también puedes tomar el autobús local conocido como <strong>autobús R1» o «R2»</strong>, que recorre el <strong>Bulevar Kukulcán</strong> y hace parada en varios puntos de la Zona Hotelera, incluido Cocobongo. </TagP>
+</Accordion>
 
-<TagH3>¿Cómo llegar?</TagH3>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
 
-<TagP>Es de fácil acceso en <strong>automóvil o taxi</strong>, y muchos hoteles ofrecen servicios de transporte desde y hacia el club. Si te alojas en Cancún, también puedes tomar el autobús local conocido como <strong>autobús R1» o «R2»</strong>, que recorre el <strong>Bulevar Kukulcán</strong> y hace parada en varios puntos de la Zona Hotelera, incluido Cocobongo. </TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

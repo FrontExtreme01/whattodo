@@ -72,23 +72,30 @@ export default function FormReservation({ dataForm }: any) {
 
     return (
         <>
-            <h3 className="text-2xl font-semibold mb-5">
-                <i className="at-ticket-check"></i> {dataForm.i18n.TITLE}
-            </h3>
-            <p className="text-base md:text-lg text-slate-700">{dataForm.i18n.DESCRIPTION}</p>
             {/* Ficha Producto */}
-            <div className="shadow-sm flex flex-wrap items-center rounded-xl border border-slate-200 my-10 p-2 sm:p-3">
-                <div className="w-4/12">
-                    <img src={dataForm.image.src} alt={dataForm.image.alt} className="w-full h-24 md:h-32 md:w-full rounded-2xl object-cover" loading="lazy" />
-                </div>
-                <div className="w-8/12 pl-2">
-                    <p className="font-bold text-base">{dataForm.titleCard}</p>
-                    <p className="text-sm text-slate-500 mt-1">
-                        <i className="at-star-decor text-amber-500 font-bold"></i> <b>{dataForm.stars}</b> ({dataForm.reviews})
-                    </p>
-                    <div className="flex flex-wrap space-x-4 items-center mt-2">
-                        <p className="text-sm md:text-base"> {dataForm.i18n.LABELS.ADULTS}: <span className="text-slate-500 font-bold">{counterAdults}</span></p>
-                        <p className="text-sm md:text-base"> {dataForm.i18n.LABELS.CHILDRENS}: <span className="text-slate-500 font-bold">{counterChildren}</span></p>
+            <div className="rounded-lg border border-gray-200 mb-5 overflow-hidden">
+                <div className="flex flex-wrap">
+                    <div className="w-4/12">
+                        <img className="w-full h-full object-cover" src={dataForm.image.src} alt={dataForm.image.alt} />
+                    </div>
+                    <div className="w-8/12 p-5">
+                        <p className="font-bold text-sm sm:text-base w-full mb-3">{dataForm.titleCard}</p>
+                        <ul className="flex flex-wrap gap-3 md:gap-5 w-full text-xs sm:text-sm">
+                            <li className="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="icon icon-tabler icons-tabler-filled icon-tabler-star size-5 text-amber-500 mr-1"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" /></svg>
+                                <p className="font-bold"> {dataForm.stars}
+                                    <span className="text-gray-500 font-thin"> ({dataForm.reviews})</span>
+                                </p>
+                            </li>
+                            <li className="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-map-pin text-gray-600 size-5 mr-1"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg>
+                                <p>{dataForm.location}</p>
+                            </li>
+                        </ul>
+                        <div className="flex flex-wrap space-x-4 items-center mt-2">
+                            <p className="text-sm md:text-base"> {dataForm.i18n.LABELS.ADULTS}: <span className="font-semibold">{counterAdults}</span></p>
+                            <p className="text-sm md:text-base"> {dataForm.i18n.LABELS.CHILDRENS}: <span className="font-semibold">{counterChildren}</span></p>
+                        </div>
                     </div>
                 </div>
             </div>

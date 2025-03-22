@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { iconFeeCancellation, iconLocalExperts, iconSupport, iconTripAdvisorOpinion } from '@/img/allImages';
 
 export default function ContadorDiscount({ i18n, targetDate }: any) {
-    
+
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
 
     useEffect(() => {
@@ -27,7 +28,7 @@ export default function ContadorDiscount({ i18n, targetDate }: any) {
     return (
         <section className="bg-gray-100 py-14 bg-[url('/assets/backgrounds/background-contador-movil.webp')] sm:bg-[url('/assets/backgrounds/background-contador.webp')] bg-cover bg-center bg-no-repeat">
             <div className="container mx-auto px-4">
-                <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-white">{i18n.TITLE}</h1>
+                <p className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-white">{i18n.TITLE}</p>
                 {/* Contador */}
                 <div className="flex justify-center items-center gap-5 mt-10">
                     <div className="flex flex-col items-center p-2 sm:p-5 bg-white/15 shadow-sm border-t-[6px] border-orange-600">
@@ -50,16 +51,16 @@ export default function ContadorDiscount({ i18n, targetDate }: any) {
                 {/* Info */}
                 <ul className="flex flex-wrap justify-center mt-5 text-white font-bold text-base sm:text-lg">
                     <li className="flex items-center w-1/2 lg:w-1/4 p-2 sm:p-5">
-                        <img src="/assets/icons/fee-cancellation-tours.png" alt="" className="w-14 sm:w-20" /> {i18n.FREE_CANCELLATION}
+                        <img src={iconFeeCancellation.src} alt="" className="w-14 sm:w-20" /> {i18n.FREE_CANCELLATION}
                     </li>
                     <li className="flex items-center w-1/2 lg:w-1/4 p-2 sm:p-5">
-                        <img src="/assets/icons/real-cancun-experts-tours-and-activities.png" alt="" className="w-14 sm:w-20" /> {i18n.LOCAL_EXPERTS}
+                        <img src={iconLocalExperts.src} alt="" className="w-14 sm:w-20" /> {i18n.LOCAL_EXPERTS}
                     </li>
                     <li className="flex items-center w-1/2 lg:w-1/4 p-2 sm:p-5">
-                        <img src="/assets/icons/support-ononline.png" alt="" className="w-14 sm:w-20" /> {i18n.SUPPORT}
+                        <img src={iconSupport.src} alt="" className="w-14 sm:w-20" /> {i18n.SUPPORT}
                     </li>
                     <li className="flex items-center w-1/2 lg:w-1/4 p-2 sm:p-5">
-                        <img src="/assets/icons/tripadvisor-opinions-and-reviews.png" alt="" className="w-14 sm:w-20" /> {i18n.TRIPADVISOR}
+                        <img src={iconTripAdvisorOpinion.src} alt="" className="w-14 sm:w-20" /> {i18n.TRIPADVISOR}
                     </li>
                 </ul>
             </div>

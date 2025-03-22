@@ -9,7 +9,7 @@ description: 'Explora PGA Riviera Maya, un impresionante campo de golf en medio 
 keywords: 'golf, PGA Riviera Maya, Riviera Maya, campo de golf, experiencia de golf'
 price: 108
 stars: '5.0'
-reviews: '1,234 reseñas'
+reviews: '1,234 '
 image:
     src: '/assets/covers/golfs/pga-riviera-maya-rates.webp'
     alt: 'portada de PGA Riviera Maya'
@@ -43,7 +43,7 @@ export const detailsInfo = [
     'Diseñador del Campo: Robert Trent Jones.',
 ];
 
-export const i18n = {
+export const titles = {
     INFORMATION: 'Detalles',
     HOLES: 'Hoyos',
     TABLE_TITLE: 'Tarifas de PGA Riviera Maya',
@@ -54,9 +54,9 @@ export const i18n = {
     PRICES_CONDITIONS: 'Precios expresados en dólares estadounidenses (USD). Los jugadores menores de 17 años deben estar acompañados por un adulto.'
 };
 
-<PgaPrices i18n={i18n} />
+<PgaPrices i18n={titles} />
 
-<AdditionalInfo information={detailsInfo} i18n={i18n} />
+<AdditionalInfo information={detailsInfo} i18n={titles} />
 
 <TagH2>El Paraíso del Golf en Riviera Maya</TagH2>
 

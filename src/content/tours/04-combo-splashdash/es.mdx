@@ -11,22 +11,27 @@ description: 'Este Combo de tours acuáticos en Cancún e Isla Mujeres te garant
 keywords: ''
 price: 81
 stars: '4.5'
-reviews: '1,238 reseñas'
+reviews: '1,238 '
 image:
     src: '/assets/covers/combos/speedboat-and-catamaran-full-day-adventure.webp'
     alt: 'portada combo lancha rápida y catamarán'
 highlights: ['Lancha rápida compartida', 'Transportación incluida']
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales, ', 'Aventureros']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/742963?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/742963'
 location: 'Cancún, México'
 duration: '10 horas'
+transportation: 'Transportación Incluida'
 ---
 
+import { Check, Close, } from "@/img/allIcons";
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 
 export const includes = [
     'Uso de equipo de snorkel',
@@ -41,56 +46,77 @@ export const notIncludes = [
     'Propinas',
 ];
 
-export const information = [
+export const shouldKnow = [
     'Edad mínima de 10 años',
     'Se debe pagar un impuesto de muelle de USD 15 por persona en la actividad de Catamarán Isla Mujeres',
     'El transporte está sujeto a disponibilidad y espacio',
     'La zona de transporte solo cubre la zona hotelera de Cancún. Si te encuentras en otra área fuera de la zona hotelera de Cancún, tendrás que llegar al punto de encuentro por tu cuenta',
 ];
 
-export const i18n = {
-    INCLUDES: 'Incluye',
-    NOT_INCLUDES: 'No incluye',
-    INFORMATION: 'Notas importantes'
+export const shouldBring = [
+    'Ropa cómoda',
+    'Traje de baño',
+    'Toalla',
+    'Protector solar biodegradable',
+    'Sombrero',
+    'Gafas de sol',
+    'Cash extra',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Tour en lancha rápida por la jungla en Cancún</TagH2>
+    <TagH3>Horario de 8:00 am – 10:30 am <em>(los horarios son aproximados y pueden variar)</em> </TagH3>
 
-<div class="flex flex-wrap text-justify">
-    <div class="w-full md:pr-3">
-        <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Isla Mujeres Incluye</h3>
-        <ul class="space-y-4 text-base md:text-lg">
-            <li><i class="at-check-circle text-green-600"></i> Comida y bebidas </li>
-            <li><i class="at-check-circle text-green-600"></i> Almuerzo buffet en el Beach Club <em> (Dolphinarium) </em></li>
-            <li><i class="at-check-circle text-green-600"></i> Barra libre</li>
-            <li><i class="at-check-circle text-green-600"></i> Uso de equipos de snorkel</li>
-        </ul>
+    <TagP>La aventura de los <strong>Combo tours acuáticos en Cancún</strong> comienza con un paseo en lancha rápida por la hermosa <strong>Laguna Nichupté</strong>, donde tendremos contacto con diferentes <strong>especies de aves, peces y cocodrilos</strong>, la velocidad irá aumentando al igual que la emoción y adrenalina, para finalizar visitaremos un arrecife en la zona de <strong>“El Meco”</strong> donde podremos visitar <strong>esculturas submarinas</strong> a baja profundidad y un sinfín de <strong>criaturas marinas</strong> a nuestro alrededor.</TagP>
+
+    <TagH3>Doble diversión en un solo día</TagH3>
+
+    <TagP>Aprovecha este combo de tours acuáticos en Cancún y llena tu día de diversión con las actividades acuáticas más populares en Cancún e Isla Mujeres.</TagP>
+
+    <TagH2>Caminata al Muelle de Playa Langosta</TagH2>
+    <TagH3>11:15 am <em>(los horarios son aproximados y pueden variar)</em>.</TagH3>
+
+    <TagP>Al finalizar el tour en lancha rápida en Cancún, deberás dirigirte por tu cuenta al muelle de Playa Langosta. Inicia la caminata con una vista panorámica de la zona hotelera de Cancún. Verás el pequeño monumento del Arco de Labná, una imitación de un verdadero arco de piedra maya en Yucatán. Además, pasarás cerca de la gigantesca bandera mexicana. Por último, las esculturas de FONATUR que se supone que estarán bajo el mar para realizar tours de snorkel.</TagP>
+
+    <TagP>Llegar y registrarse para el tour en catamarán te tomará aproximadamente 15 minutos. ¡Continúan los <strong>combo tours acuáticos en Cancún</strong>! </TagP>
+
+    <TagH2>Tour en catamarán y snorkel en Isla Mujeres</TagH2>
+    <TagH3>Itinerario de 11:30 a. m. a 7:00 p. m. <em>(los horarios son aproximados y pueden variar)</em></TagH3>
+
+    <TagP>Una vez a bordo del Catamarán de los <strong>combo tours acuáticos en Cancún</strong>, la música, fiesta y <strong>barra libre a bordo</strong> te animarán, además de conmoverte con los <strong>colores del Mar Caribe Mexicano</strong>. Visitaremos un hermoso arrecife en <strong>Punta Sam</strong> donde volverás a maravillarte con las <strong>diferentes especies de peces exóticos</strong>, tortugas y mantarrayas del Caribe Mexicano.</TagP>
+
+    <TagP>Pasea por el pequeño pueblo de <strong>Isla Mujeres</strong>, siente sus colores, su gente y su cultura, así como los múltiples escenarios naturales que robarán tu atención.</TagP>
+
+    <TagP>Nuestro anfitrión te brindará una deliciosa <strong>comida buffet en el delfinario de Isla Mujeres</strong>. Al final, volverás a abordar el catamarán para regresar a Cancún.</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+
+    <div class="flex flex-wrap text-justify">
+        <div class="w-full md:pr-3">
+            <h3 class="text-lg md:text-xl font-bold text-green-700 mt-10 mb-4">Isla Mujeres Incluye</h3>
+            <ul class="space-y-4 text-base md:text-lg">
+                <li class="flex items-center"><Check class="text-green-700 mr-1" /> Comida y bebidas </li>
+                <li class="flex items-center"><Check class="text-green-700 mr-1" /> Almuerzo buffet en el Beach Club <em> (Dolphinarium) </em></li>
+                <li class="flex items-center"><Check class="text-green-700 mr-1" /> Barra libre</li>
+                <li class="flex items-center"><Check class="text-green-700 mr-1" />Uso de equipos de snorkel</li>
+            </ul>
+        </div>
     </div>
-</div>
+</Accordion>
 
-<TagH2>Tour en lancha rápida por la jungla en Cancún</TagH2>
-<TagH3>Horario de 8:00 am – 10:30 am <em>(los horarios son aproximados y pueden variar)</em> </TagH3>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
 
-<TagP>La aventura de los <strong>Combo tours acuáticos en Cancún</strong> comienza con un paseo en lancha rápida por la hermosa <strong>Laguna Nichupté</strong>, donde tendremos contacto con diferentes <strong>especies de aves, peces y cocodrilos</strong>, la velocidad irá aumentando al igual que la emoción y adrenalina, para finalizar visitaremos un arrecife en la zona de <strong>“El Meco”</strong> donde podremos visitar <strong>esculturas submarinas</strong> a baja profundidad y un sinfín de <strong>criaturas marinas</strong> a nuestro alrededor.</TagP>
-
-<TagH3>Doble diversión en un solo día</TagH3>
-
-<TagP>Aprovecha este combo de tours acuáticos en Cancún y llena tu día de diversión con las actividades acuáticas más populares en Cancún e Isla Mujeres.</TagP>
-
-<TagH2>Caminata al Muelle de Playa Langosta</TagH2>
-<TagH3>11:15 am <em>(los horarios son aproximados y pueden variar)</em>.</TagH3>
-
-<TagP>Al finalizar el tour en lancha rápida en Cancún, deberás dirigirte por tu cuenta al muelle de Playa Langosta. Inicia la caminata con una vista panorámica de la zona hotelera de Cancún. Verás el pequeño monumento del Arco de Labná, una imitación de un verdadero arco de piedra maya en Yucatán. Además, pasarás cerca de la gigantesca bandera mexicana. Por último, las esculturas de FONATUR que se supone que estarán bajo el mar para realizar tours de snorkel.</TagP>
-
-<TagP>Llegar y registrarse para el tour en catamarán te tomará aproximadamente 15 minutos. ¡Continúan los <strong>combo tours acuáticos en Cancún</strong>! </TagP>
-
-<TagH2>Tour en catamarán y snorkel en Isla Mujeres</TagH2>
-<TagH3>Itinerario de 11:30 a. m. a 7:00 p. m. <em>(los horarios son aproximados y pueden variar)</em></TagH3>
-
-<TagP>Una vez a bordo del Catamarán de los <strong>combo tours acuáticos en Cancún</strong>, la música, fiesta y <strong>barra libre a bordo</strong> te animarán, además de conmoverte con los <strong>colores del Mar Caribe Mexicano</strong>. Visitaremos un hermoso arrecife en <strong>Punta Sam</strong> donde volverás a maravillarte con las <strong>diferentes especies de peces exóticos</strong>, tortugas y mantarrayas del Caribe Mexicano.</TagP>
-
-<TagP>Pasea por el pequeño pueblo de <strong>Isla Mujeres</strong>, siente sus colores, su gente y su cultura, así como los múltiples escenarios naturales que robarán tu atención.</TagP>
-
-<TagP>Nuestro anfitrión te brindará una deliciosa <strong>comida buffet en el delfinario de Isla Mujeres</strong>. Al final, volverás a abordar el catamarán para regresar a Cancún.</TagP>
-
-<AdditionalInfo information={information} i18n={i18n} />
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

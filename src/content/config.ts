@@ -10,7 +10,14 @@ const toursCollection = defineCollection({
         combo: z.number().optional(),
         lastMinute: z.number().optional(),
         earlyBird: z.number().optional(),
-        
+        notCustomEarlyBird: z.number().optional(),
+        agencyPromo: z.object({
+            slugAgency: z.string(),
+            logo: z.string(),
+            agencyName: z.string(),
+            calendar: z.string().url()
+        }).optional(),
+        notShouldBring: z.number().optional(),
         slugGallery: z.string(),
         titleSeo: z.string().optional(),
         title: z.string(),
@@ -24,11 +31,14 @@ const toursCollection = defineCollection({
             src: z.string(),
             alt: z.string()
         }),
-        highlights: z.array(z.string()),
-        bokun: z.string(),
-        calendar: z.string(),
+        highlights: z.array(z.string()).optional(),
+        recommendedFor: z.array(z.string()).optional(),
+        bokun: z.string().url().optional(),
+        calendar: z.string().url().optional(),
         location: z.string(),
         duration: z.string(),
+        transportation: z.string().optional(),
+        frameYoutube: z.string().url().optional(),
         testimonials: z.array(z.object({
             user: z.string(),
             stars: z.string(),
@@ -57,7 +67,6 @@ const restaurantsCollection = defineCollection({
         title: z.string(),
         description: z.string(),
         keywords: z.string(),
-        featured: z.string(),
         averageCost: z.number().optional(),
         stars: z.string(),
         reviews: z.string(),
@@ -66,13 +75,17 @@ const restaurantsCollection = defineCollection({
             alt: z.string()
         }),
         highlights: z.array(z.string()),
+        recommendedFor: z.array(z.string()).optional(),
         bokun: z.string().optional(),
         calendar: z.string().optional(),
         location: z.string(),
         cuisine: z.string(),
         dressCode: z.string(),
-        schedule: z.string(),
-        availability: z.string(),
+        menuPDF: z.string().optional(),
+        hours: z.array(z.object({
+            day: z.string(),
+            open: z.string(),
+        })).optional(),
         mapFrame: z.string(),
         testimonials: z.array(z.object({
             user: z.string(),
@@ -174,7 +187,6 @@ const partiesCollection = defineCollection({
         status: z.number(),
         lang: z.string().optional(),
         home: z.number().optional(),
-        event: z.number().optional(),
         type: z.enum(['NIGHTCLUB', 'BEACHCLUB']),
         slugGallery: z.string(),
         titleSeo: z.string().optional(),
@@ -190,7 +202,10 @@ const partiesCollection = defineCollection({
             src: z.string(),
             alt: z.string()
         }),
+        video: z.string().optional(),
         duration: z.string(),
+        music: z.string().optional(),
+        dressCode: z.string().optional(),
         consumption: z.string(),
         admission: z.string(),
         bokun: z.string().optional(),
@@ -210,10 +225,36 @@ const partiesCollection = defineCollection({
     })
 });
 
+const topThingsCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+        status: z.number().optional(),
+        home: z.number().optional(),
+        lang: z.string().optional(),
+        title: z.string(),
+        description: z.string(),
+        recommend: z.string(),
+        price: z.number().optional(),
+        duration: z.string(),
+        image: z.object({
+            src: z.string(),
+            alt: z.string()
+        }),
+        url: z.string().optional(),
+        highlights: z.array(z.object({
+            title: z.string(),
+            description: z.string()
+        })).optional(),
+        includes: z.array(z.string()).optional(),
+        notIncludes: z.array(z.string()).optional(),
+    })
+});
+
 export const collections = {
     tours: toursCollection,
     restaurants: restaurantsCollection,
     golfs: golfsCollection,
     yachts: yachtsCollection,
-    parties: partiesCollection
+    parties: partiesCollection,
+    topthings: topThingsCollection
 };

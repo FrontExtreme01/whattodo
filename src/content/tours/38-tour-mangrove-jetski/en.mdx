@@ -1,0 +1,108 @@
+---
+slug: 'mangrove-jet-ski-tour-in-cancun/en'
+status: 1
+lang: 'en'
+slugGallery: 'mangrove-jetski'
+titleSeo: 'Cancun Mangrove Jet Ski Tour Amazing Experience'
+title: 'Mangrove Jet Ski Tour in Cancun'
+description: 'Connect with nature on this exciting Mangrove Jet Ski Tour in Cancun. Ride through the Nichupté Lagoon and its canals'
+keywords: ''
+categories: ['WATER', 'COUPLES']
+price: 192
+stars: '4.0'
+reviews: '739'
+image:
+    src: '/assets/covers/tours/mangrove-jet-ski-tour-in-cancun.webp'
+    alt: 'cover mangrove jet ski tour in cancun'
+highlights: ['Shared or Single Jet Ski', 'Life Jacket']
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers, ', 'Couples & Romantic Celebrations']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/827009?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/827009'
+location: 'km 10.3 Blvd. Kukulcan, 77500 Cancún, Q.R.'
+duration: '1 hour'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Bilingual Instructors (English and Spanish)',
+    'Gas',
+    'Shared or Single Jet Ski',
+    'lifejacket',
+    'Tour through the mangrove jungle canals',
+    '1 bottled water per person',
+    'Swim in a natural pool (subject to weather conditions)',
+];
+
+export const notIncludes = [
+    'Hotel pickup and drop-off',
+    'Food and Beverages',
+    'Dock fee of $ 20 USD per person',
+    'Towels, tips, or souvenirs',
+    'Photo and video services',
+];
+
+export const shouldKnow = [
+    'Please arrive 30 minutes before your scheduled reservation',
+    'Be sure to bring an official ID per person',
+    'Children under 10 years old are not allowed',
+    'Once the activity has started, there are no refunds',
+    'Children ages 10+ must be accompanied by a paying adult',
+    'People who are not doing the <strong>Mangrove Jet Ski</strong> activity will have to wait in the waiting area and are not allowed on the dock',
+    'Minimum age to drive: 16 years old (accompanied by a responsible adult over the age of 18)',
+    'The minimum age to board: is 10 years old (accompanied by a responsible adult)',
+    'Pregnant women are not allowed',
+    'Not suitable for persons with heart problems',
+    'Not recommended for participants with neck/back problems, or asthma',
+    'Cell phones & electronic devices are not allowed during the activity',
+];
+
+export const shouldBring = [
+    'Towels',
+    'Swimsuit',
+    'Sunblock',
+    'Official ID',
+    'Cash',
+    'Extra change of clothes',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>About the Jet Ski Tour</TagH2>
+
+    <TagP>Connect with nature on this exciting <strong>Mangrove Jet Ski Tour in Cancun</strong>. Ride through the Nichupté Lagoon and its canals, where you can see different types of tropical birds, fish, and even some crocodiles. Feel the speed surrounded by nature on this guided tour with all the necessary safety measures to give you emotions and family memories.</TagP>
+
+    <TagP>The Speedboat Mangorve tour is among the most <strong>popular Cancun activities!</strong></TagP>
+
+    <TagH3>Swim in a natural pool</TagH3>
+
+    <TagP>This tour includes a stop in Plaza la Isla to swim in a natural pool if the weather conditions are good.</TagP>
+
+    <TagH3>Activity Location</TagH3>
+
+    <TagP>Boulevard Kukulcán Km. 14.610, Hotel Zone <em>(in front of J.W. Marriot Hotel/Hard Rock Hotel and next to Freds’s Restaurant)</em>.</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

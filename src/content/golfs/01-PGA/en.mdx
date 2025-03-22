@@ -9,7 +9,7 @@ description: 'Discover golfing bliss at PGA Riviera Maya, a Robert Trent Jones I
 keywords: 'golf, PGA Riviera Maya, Riviera Maya, golf course, golfing experience'
 price: 108
 stars: '5.0'
-reviews: '1,234 reviews'
+reviews: '1,234'
 image:
     src: '/assets/covers/golfs/pga-riviera-maya-rates.webp'
     alt: 'cover of PGA Riviera Maya'
@@ -43,7 +43,7 @@ export const detailsInfo = [
     'Course Designer: Robert Trent Jones.',
 ];
 
-export const i18n = {
+export const titles = {
     INFORMATION: 'Details',
     HOLES: 'Holes',
     TABLE_TITLE: 'PGA Riviera Maya Rates',
@@ -54,9 +54,9 @@ export const i18n = {
     PRICES_CONDITIONS: 'Prices expressed in US dollars (USD). Players under 17 years of age must be accompanied by an adult.'
 };
 
-<PgaPrices i18n={i18n} />   
+<PgaPrices i18n={titles} />   
 
-<AdditionalInfo information={detailsInfo} i18n={i18n} />
+<AdditionalInfo information={detailsInfo} i18n={titles} />
 
 <TagH2>The Golfer’s Paradise in Riviera Maya</TagH2>
 

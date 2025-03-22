@@ -7,23 +7,35 @@ status: 1
 title: 'Senor Frogs Restaurant Cancun: The Ultimate Party Spot'
 description: 'Experience the lively atmosphere at Senor Frogs Restaurant Cancun with fun dining tasting Mexican & American cuisine, drinks, and entertainment!'
 keywords: 'senor frogs restaurant cancun, senor frogs cancun, senor frogs mexico, senor frogs restaurant, senor frogs cancun menu, senor frogs cancun prices, senor frogs cancun reviews, senor frogs cancun location, senor frogs cancun dress code, senor frogs cancun schedule, senor frogs cancun availability, senor frogs cancun map, senor frogs cancun testimonials'
-featured: ''
 averageCost: 26
 stars: '5.0'
-reviews: '2,013 reviews'
+reviews: '2,013'
 image:
     src: '/assets/covers/restaurants/senor-frogs-restaurant-cancun.webp'
     alt: 'cover senor frogs restaurant cancun'
 highlights: ['Ambient Music']
+recommendedFor: ['Families, ', 'Groups & Special Events']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/911208?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/911208'
 location: 'Blvd. Kukulcan, Zona Hotelera, Cancún'
 cuisine: 'Mix of Mexican and American'
 dressCode: 'Casual'
-schedule: '11:00 am - 2:00 am'
-availability: 'Every day'
+hours: 
+-   day: 'Sunday'
+    open: '12:00 pm to 2:00 am'
+-   day: 'Monday'
+    open: '12:00 pm to 2:00 am'
+-   day: 'Tuesday'
+    open: '12:00 pm to 2:00 am'
+-   day: 'Wednesday'
+    open: '12:00 pm to 2:00 am'
+-   day: 'Thursday' 
+    open: '12:00 pm to 2:00 am'
+-   day: 'Friday'   
+    open: '12:00 pm to 2:00 am'
+-   day: 'Saturday'
+    open: '12:00 pm to 2:00 am'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7442.999256248303!2d-86.74750400000002!3d21.132506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c29cd09568e9d%3A0xce44164b215f740d!2zU2XDsW9yIEZyb2cncyB8IENhbmPDum4!5e0!3m2!1ses!2smx!4v1725992845465!5m2!1ses!2smx'
-testimonials: []
 ---
 
 import TagH2 from "@components/global/TagH2.astro";
@@ -39,7 +51,7 @@ culinary experience</TagP>
 
 <div class="shadow-md flex flex-wrap rounded-xl bg-white p-4 mt-10 mb-4">
     <div class="w-full md:w-4/12 relative">
-        <span class="absolute top-0 -left-8 -rotate-[30deg] bg-red-500 text-white text-base font-bold px-2 py-1 rounded-xl">From $26 USD</span>
+        <span class="absolute top-0 -left-4 -rotate-[30deg] bg-red-500 text-white text-base font-bold px-2 py-1 rounded-xl">From $26 USD</span>
         <img src={frontmatter.image.src} alt={frontmatter.image.alt} class="rounded-md w-full h-auto" />
     </div>
     <div class="w-full md:w-8/12 md:pl-5 md:pt-0 pt-5 md:text-start text-center">
@@ -47,20 +59,20 @@ culinary experience</TagP>
         <p class="text-base md:text-lg mb-2 font-bold">Includes</p>
         <div class="flex gap-2 justify-center md:justify-normal flex-wrap mb-5 text-base">
             <div class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
-                <i class="at-check-circle text-green-700"></i><span>One drink, of your choice</span>
+                <span>One drink, of your choice</span>
             </div>
             <div class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
-                <i class="at-check-circle text-green-700"></i><span>One starter, of your choice</span>
+                <span>One starter, of your choice</span>
             </div>
             <div class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
-                <i class="at-check-circle text-green-700"></i><span>One main dish, of your choice</span>
+                <span>One main dish, of your choice</span>
             </div>
             <div class="flex items-center gap-2 border rounded-lg py-1 px-3 bg-white text-slate-600 hover:text-white hover:bg-orange-500 transition duration-200">
-                <i class="at-check-circle text-green-700"></i><span>Cover VIP</span>
+                <span>Cover VIP</span>
             </div>
         </div>
         <p class="text-base md:text-lg mb-2 font-bold">Available at</p>
-        <p><i class="at-location text-green-700"></i> Cancún</p>
+        <p>Cancún</p>
     </div>
 </div>
 

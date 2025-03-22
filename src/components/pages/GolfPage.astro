@@ -9,9 +9,8 @@ const lang = getLangFromUrl(Astro.url);
 const allGolf = await getCollectionByName("golfs", lang);
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Hero from "@components/extras/Hero.astro";
 import Intro from "@components/global/Intro.astro";
-import GolfCard from "@components/cards/GolfCard.astro";
+import GolfCardHorizontal from "@components/cards/GolfCardHorizontal.astro";
 
 const seoMetaDatos = {
     title: i18n.SEO.GOLF_PAGE.TITLE,
@@ -21,19 +20,16 @@ const seoMetaDatos = {
 ---
 
 <BaseLayout seo={seoMetaDatos}>
-    <Hero
-        image="/assets/backgrounds/moon-palace-cancun-golf-course-par-tee-time.webp"
-        title={i18n.GOLF_PAGE.TITLE_BANNER}
-    />  
-
     <Intro
         title={i18n.GOLF_PAGE.TITLE}
         description={i18n.GOLF_PAGE.DESCRIPTION}
     />
 
-    <section class="container mx-auto mb-10">
-        <div class="flex flex-wrap justify-center">
-            {allGolf.map((golf) => <GolfCard golf={golf} lang={lang} />)}
+    <section class="container mx-auto px-5 md:px-20 py-6">
+        <div class="flex flex-wrap">
+            {allGolf.map((golf) => (
+                <GolfCardHorizontal golf={golf} lang={lang} />
+            ))}
         </div>
     </section>
 </BaseLayout>

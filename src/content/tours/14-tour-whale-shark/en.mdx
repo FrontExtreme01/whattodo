@@ -1,0 +1,115 @@
+---
+slug: 'whale-shark-sighting-snorkeling-experience-with-isla-mujeres-visit/en'
+status: 1
+earlyBird: 1
+notCustomEarlyBird: 1
+lang: 'en'
+slugGallery: 'whale-shark'
+title: 'Cancun Whale Shark Tour with Snorkel and Transportation'
+description: 'Embark on a once-in-a-lifetime adventure featuring the majestic whale sharks, world’s biggest fish. Take advantage of this seasonal phenomenon to get as close as possible to the fascinating creatures that migrate to the Cancun coasts every summer.'
+keywords: ''
+categories: ['WATER']
+price: 149
+stars: '4.5'
+reviews: '926'
+image:
+    src: '/assets/covers/tours/whale-shark-in-cancun-tour.webp'
+    alt: 'cover Cancun Whale Shark Tour with Snorkel and Transportation'
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/764355?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/764355'
+location: 'Cancun, Quintana Roo'
+duration: '6 hours'
+transportation: 'Pickup Offered (Cancun, Puerto Morelos & Playa del Carmen)'
+frameYoutube: 'https://www.youtube.com/watch?v=3r6opX6OaBM'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Hotel pickup and drop-off in Cancun, Puerto Morelos & Playa del Carmen only',
+    'Breakfast',
+    'Light breakfast',
+    'Sodas and water',
+    'Use of Snorkeling equipment',
+    'Lunch (Shrimp or Fish ceviche & Guacamole)',
+    '2 remedies against motion sickness: ginger tea and pressure bracelets',
+    'Professional bilingual guide',
+    'Available Guides under request (French, Dutch, German, Portuguese, Italian, Russian, Polish)',
+    'Snorkel on the reef in Isla Mujeres',
+    'Free swimming time at stunning North beach (Playa norte)',
+    'Vegetarian meal available on demand',
+];
+
+export const notIncludes = [
+    'Dock fee of 18 USD per traveler (payable in cash upon arrival',
+    'Optional professional photographs (80 USD)',
+    'Souvenirs',
+    'Tips',
+    'Neoprene suit available for rent ',
+];
+
+export const shouldKnow = [
+    'Infants must sit on your lap',
+    'Not wheelchair accessible',
+    'Not stroller accessible',
+    'Not suitable for pets',
+    'No public transportation nearby',
+    'Infant seats unavailable',
+    'Not recommended for people with back problems',
+    'Not recommended for people with heart conditions',
+    'Please contact us in advance to confirm your exact pickup time and location',
+];
+
+export const shouldBring = [
+    'Towel',
+    'Change of clothes',
+    'Sandals or water shoes ',
+    'Comfortable clothes',
+    'Biodegradable sunscreen',
+    'Bathing suit',
+    'Sunglasses',
+    'Cap',
+    'Extra cash',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>A Once-in-a-Lifetime Experience</TagH2>
+
+    <TagP>Embark on a once-in-a-lifetime adventure featuring the majestic whale sharks, world’s biggest fish. Take advantage of this seasonal phenomenon to get as close as possible to the fascinating creatures that migrate to the Cancun coasts every summer.</TagP>
+
+    <TagP>The eco-friendly, small-group tour starts with a convenient hotel pickup available from most hotels. Arrive at Puerto Juarez and board the speedboat that will take you to the area of Isla Contoy while enjoying a light breakfast.</TagP>
+
+    <TagP>Get your camera ready as you approach the impressive whale sharks swimming near the surface gracefully. Better yet, prepare your life jacket and snorkel, and jump into the Caribbean waters following your guide. Swim after the stunning whale shark while maintaining safe distance, observing as the giant fish drifts forward.</TagP>
+
+    <TagP>After two hours of sighting and two immersions, make a brief stop at stunning Playa Norte, one of the best beaches in the Mexican Caribbean.</TagP>
+
+    <TagH3>Whale Shark Season in Cancun</TagH3>
+
+    <TagP>The season of the <strong>Whale Shark Swimming in Cancun</strong> runs from <strong>May to September</strong>, and our tours are available throughout this period. Don't miss out on this incredible opportunity to witness these magnificent creatures respectfully <strong>in their natural habitat</strong>!</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

@@ -1,0 +1,110 @@
+---
+slug: 'tulum-and-cenote-day-trip/es'
+status: 1
+lang: 'es'
+slugGallery: 'tulum-cenote'
+titleSeo: 'Excursión de un día a Tulum y Cenote'
+title: 'Excursión a Tulum y Cenote'
+description: 'Descubre el fantástico tesoro de la cultura maya con la excursión a Tulum y Cenote, explora todos los secretos y nada en un hermoso cenote.'
+keywords: ''
+categories: ['RUINS', 'COUPLES']
+price: 49
+stars: '4.5'
+reviews: '2,783 '
+image:
+    src: '/assets/covers/tours/best-tour-in-tulum-and-cenotes-whato-do-in-cancun.webp'
+    alt: 'portada de la excursión a Tulum y Cenote'
+highlights: ['Admisión a Tulum', 'Transporte incluido']
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales, ', 'Aventureros']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/670339?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/670339'
+location: 'Tulum, Quintana Roo'
+duration: '8 horas'
+transportation: 'Transporte incluido'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+import TulumCenotesPrices from "@components/extras/tables/TulumCenotesPrices.astro";
+import MapFrame from "@components/detail-content/MapFrame";
+
+export const includes = [
+    'Transporte de ida y vuelta (consulte la disponibilidad en su hotel).',
+    'Admisión a Tulum',
+    'Guía bilingüe',
+];
+
+export const notIncludes = [
+    'Propinas',
+    'Tarifa de conservación del cenote ($ 19 usd por persona)',
+    'Comidas y bebidas',
+];
+
+export const shouldKnow = [
+    'Los bebés deben sentarse en su regazo',
+    'No accesible en silla de ruedas',
+    'No accesible en cochecito',
+    'No apto para mascotas',
+    'No hay transporte público cerca',
+    'Asientos para bebés no disponibles',
+    'No recomendado para personas con problemas de espalda',
+    'Trae una toalla, protector solar biodegradable, traje de baño y un cambio de ropa extra, y algo de efectivo.',
+];
+
+export const shouldBring = [
+    'Ropa cómoda',
+    'Traje de baño',
+    'Toalla',
+    'Protector solar biodegradable',
+    'Cambio adicional de ropa',
+    'Dinero en efectivo',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
+};
+
+<TulumCenotesPrices lang={frontmatter.lang} />
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Acerca de la Excursión a Tulum y Cenote</TagH2>
+
+    <TagP>Descubre las <strong>ruinas mayas</strong> con la <strong>excursión a Tulum y Cenote</strong>, en una pintoresca ciudad antigua encaramada en acantilados con vistas al <strong>mar Caribe turquesa</strong>. Además, complementarás tu aventura con un emocionante baño en el exótico <strong>cenote Xunaan-Ha</strong>, escondido en lo profundo de la jungla del <strong>Caribe mexicano</strong>.</TagP>
+
+    <TagH3>Ruinas Mayas de Tulum</TagH3>
+
+    <TagP>Además, la <strong>Zona Arqueológica de Tulum</strong> es uno de los principales lugares de interés histórico en México. Realizaremos un recorrido completo a pie con tu experto <strong>guía bilingüe</strong>, adentrándonos en la historia y tradiciones de la <strong>civilización maya</strong>. Además, tendrás tiempo libre para tomar algunas fotos únicas y podrás descender al acantilado de la <strong>playa exclusiva</strong> para un baño en el Caribe.</TagP>
+
+    <TagH3>Nadar en Cenote</TagH3>
+
+    <TagP>La siguiente parada es el pintoresco <strong>Cenote Xunaan-Ha</strong>, un sumidero verde en medio de la jungla. Tómate tu tiempo para <strong>jugar, saltar de los acantilados o tirarte en tirolesa</strong> y nadar en sus frescas aguas. Los selfies épicos no pueden faltar.</TagP>
+
+    <MapFrame
+        client:visible
+        url="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1189362.1246283113!2d-87.429421!3d20.21495!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4fd17d16293265%3A0xff68d6fca492c963!2sTulum!5e1!3m2!1ses!2smx!4v1703787415707!5m2!1ses!2smx"
+        titleAct={frontmatter.title}
+        textMap="Ver Ubicación"
+    />
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+
+    <TagP><small><strong><em>Tenga en cuenta que el tiempo de experiencia mostrado no incluye el tiempo de viaje desde su ubicación hasta el sitio de la actividad, así que planifique en consecuencia, ya que el tiempo de transporte puede variar debido a las condiciones del tráfico y circunstancias imprevistas.</em></strong></small></TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

@@ -1,18 +1,21 @@
 ---
 import { getI18N } from "@/i18n";
 import { getLangFromUrl } from "@/i18n/utils";
+import { Star, MapPin, UserStar, CuisineTools, CreditCard, Tie } from "@/img/allIcons";
 
 import BaseLayout from "./BaseLayout.astro";
-import ShareSM from "@components/detail-content/ShareSM";
-import MapFrame from "@components/detail-content/MapFrame";
-import Testimonials from "@components/global/Testimonials";
+import GalleryDesktop from "@components/detail-content/GalleryDesktop";
+import GalleryMobile from "@components/detail-content/GalleryMobile";
 import QuestionPolicy from "@components/detail-content/QuestionPolicy.astro";
-import FormBokunMobile from "@components/detail-content/FormBokunMobile";
 import FormBokunDesktop from "@components/detail-content/FormBokunDesktop";
-import FormBookingDesktop from "@components/detail-content/FormBookingDesktop";
-import FormBookingMobile from "@components/detail-content/FormBookingMobile";
-import ButtonsContact from "@components/detail-content/ButtonsContact.astro";
-import SliderGallery from "@components/detail-content/SliderGallery";
+import FormBokunMobile from "@components/detail-content/FormBokunMobile";
+import FormResendDesktop from "@components/detail-content/FormResendDesktop";
+import FormResendMobile from "@components/detail-content/FormResendMobile";
+import Testimonials from "@components/global/Testimonials";
+import MenuLinks from "@components/detail-content/MenuLinks";
+import MapFrame from "@components/detail-content/MapFrame";
+import Accordion from "@components/detail-content/Accordion";
+import MenuPDF from "@components/detail-content/MenuPDF";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -36,6 +39,14 @@ const accessibility = {
     ariaLabelGallery: i18n.ACCESSIBILITY.OPEN_GALLERY,
 };
 
+const menuLinks = [
+    {show: true, id: "whatToExpect", title: i18n.DETAILS_CONTENT.MENU_LINKS.WHAT_TO_EXPECT },
+    {show: frontmatter.hours ? true : false, id: "hours", title: i18n.DETAILS_CONTENT.MENU_LINKS.HOURS },
+    {show: frontmatter.menuPDF ? true : false, id: "menu", title: i18n.DETAILS_CONTENT.MENU_LINKS.MENU },
+    {show: true, id: "location", title: i18n.DETAILS_CONTENT.MENU_LINKS.LOCATION },
+    {show: frontmatter.testimonials ? true : false, id: "reviews", title: i18n.DETAILS_CONTENT.MENU_LINKS.REVIEWS },
+];
+
 const dataForm = {
     i18n: i18n.DETAILS_CONTENT.FORM_RESERVATION,
     lang: lang,
@@ -57,71 +68,123 @@ const seoMetaDatos = {
 ---
 
 <BaseLayout seo={seoMetaDatos}>
-    <section class="mx-7 md:mx-20 lg:mx-24 mt-12 mb-14">
-        <div class="flex flex-wrap">
-            <!-- Header -->
-            <header class="flex flex-wrap w-full">
-                <h1 class="w-10/12 text-2xl md:text-4xl font-bold italic text-green-700">
-                    {frontmatter.title}
-                </h1>
-                <div class="w-2/12 flex justify-center items-center">
-                    <ShareSM client:idle site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} />
+    <!-- Gallery -->
+    <section class="mx-auto px-5 md:px-20 py-6 lg:py-10">
+        {gallery.length > 0 && (
+            <GalleryDesktop client:visible site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} images={gallery} accessibility={accessibility} />
+            <GalleryMobile client:visible site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} images={gallery} accessibility={accessibility} />
+        )}
+    </section>
+    <!-- Content -->
+    <section class="mx-auto px-5 md:px-20">
+        <div class="flex flex-wrap mb-10">
+            <div class="w-full xl:w-8/12 lg:pr-14">
+                <!-- MenuLinks -->
+                <div class="mb-5">
+                    <MenuLinks client:visible menuLinks={menuLinks} />
                 </div>
-                <ul class="flex flex-wrap gap-2 md:gap-5 w-full my-6 text-sm md:text-lg">
-                    <li>
-                        <i class="at-star text-amber-500"></i>
-                        <span class="font-bold"> {frontmatter.stars} 
-                            <span class="text-slate-600 font-thin"> ({frontmatter.reviews})</span>
-                        </span>
-                    </li>
-                    <li>
-                        <i class="at-pin-destination text-green-700"></i>
-                        <span>{frontmatter.location}</span>
-                    </li>
-                </ul>
-            </header>
-            <!-- Content -->
-            <div class="w-full lg:w-8/12 md:pr-14">
-                <SliderGallery client:load images={gallery} accessibility={accessibility}/> 
+                <!-- Header Title -->
+                <header>
+                    <h1 class="font-bold text-xl md:text-3xl w-full mt-5 mb-3">{frontmatter.title}</h1>
+                    <ul class="flex flex-wrap gap-3 md:gap-5 w-full text-sm sm:text-lg">
+                        <li class="flex items-center">
+                            <Star class="text-amber-500 size-5 mr-1" />
+                            <p class="font-bold"> {frontmatter.stars} 
+                                <span class="text-gray-500 font-thin"> ({frontmatter.reviews})</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a class="flex items-center" href="#location">
+                                <MapPin class="text-gray-600 size-5 mr-1" />
+                                <p>{frontmatter.location}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <!-- Information General -->
+                <div class="my-10">
+                    <h2 class="font-bold text-lg sm:text-xl mb-5">{i18n.DETAILS_CONTENT.GENERAL.INFORMATION_GENERAL}</h2>
+                    <ul class="columns-2 space-y-8 text-sm sm:text-base">
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <CuisineTools class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.CUISINE}</p>
+                                <p>{frontmatter.cuisine}</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <CreditCard class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.PAYMENT_OPTION}</p>
+                                <p>Amex, Mastercard, Visa</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <Tie class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.DRESS_CODE}</p>
+                                <p>{frontmatter.dressCode}</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <UserStar class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.RECOMMENDED_FOR}</p>
+                                <p>
+                                    {frontmatter.recommendedFor.map((item) => (
+                                        <span class="w-fit">{item}</span>
+                                    ))}
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Slot -->
+                <Accordion client:visible title={i18n.DETAILS_CONTENT.MENU_LINKS.WHAT_TO_EXPECT} idHash="whatToExpect">
+                    <div class="text-justify">
+                        <slot />
+                    </div>
+                </Accordion>
+                <!-- Hours -->
+                {frontmatter.hours && (
+                    <Accordion client:visible title={i18n.DETAILS_CONTENT.MENU_LINKS.HOURS} idHash="hours">
+                        <ul class="md:w-3/4 xl:w-1/2 text-justify sm:text-base/loose md:text-lg/loose space-y-5 sm:space-y-3">
+                            {frontmatter.hours.map((hour) => (
+                                <li class="flex flex-wrap items-center">
+                                    <span class="mr-auto font-bold">{hour.day}</span>
+                                    <p>{hour.open}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </Accordion>
+                )}
+                <!-- Menu -->
+                {frontmatter.menuPDF && (
+                    <Accordion client:visible title={i18n.DETAILS_CONTENT.MENU_LINKS.MENU} idHash="menu">
+                        <MenuPDF client:visible srcPDF={frontmatter.menuPDF} title={i18n.DETAILS_CONTENT.GENERAL.OPEN_MENU} />
+                    </Accordion>  
+                )}
+                <!-- Map -->
+                <Accordion client:visible title={i18n.DETAILS_CONTENT.MENU_LINKS.LOCATION} idHash="location">
+                    <MapFrame client:visible url={frontmatter.mapFrame} titleAct={frontmatter.title} textMap={i18n.DETAILS_CONTENT.GENERAL.TITLE_MAP_FRAME} />
+                </Accordion>
                 
-                <div class="flex flex-wrap w-full gap-5 lg:gap-10 my-6 justify-center text-sm md:text-lg text-center">
-                    <div class="text-slate-800 rounded-2xl">
-                        <i class="at-restaurant bg-slate-100 p-3 rounded-full"></i>
-                        <span>{frontmatter.cuisine}</span>
-                    </div>
-                    <div class="text-slate-800 rounded-2xl">
-                        <i class="at-tie bg-slate-100 p-3 rounded-full"></i>
-                        <span>{frontmatter.dressCode}</span>
-                    </div>
-                    <div class="text-slate-800 rounded-2xl">
-                        <i class="at-credit-card bg-slate-100 p-3 rounded-full"></i>
-                        <span class="uppercase">Amex, Mastercard, Visa</span>
-                    </div>
-                    {frontmatter.highlights.map((item) =>(
-                        <div class="text-slate-800 rounded-2xl">
-                            <i class="at-check-circle bg-slate-100 p-3 rounded-full"></i>
-                            <span>{item}</span>
-                        </div>
-                    ))}
-                </div>
-
-                <ButtonsContact i18n={i18n.ACCESSIBILITY} />
-                <div class="text-justify">
-                    <slot />
-                </div>
-
-                <h2 class="text-xl md:text-3xl font-bold text-orange-600 mt-10 mb-4">{i18n.DETAILS_CONTENT.GENERAL.TITLE_LOCATION}</h2>
-                <MapFrame client:visible url={frontmatter.mapFrame} titleAct={frontmatter.title} textMap={i18n.DETAILS_CONTENT.GENERAL.TITLE_MAP_FRAME} />
-
-                <hr class="h-0.5 bg-slate-200 my-10">
                 <QuestionPolicy i18n={i18n.DETAILS_CONTENT.QUESTION_POLICY} />
             </div>
             <!-- FormSidebar -->
-            {frontmatter.calendar ? <FormBokunDesktop client:visible data={dataForm} /> :  <FormBookingDesktop client:visible data={dataForm} />}
+            {frontmatter.calendar ? <FormBokunDesktop client:visible data={dataForm} /> :  <FormResendDesktop client:visible data={dataForm} />}
         </div>
     </section>
     <!-- Testimonials -->
     {frontmatter.testimonials && (<Testimonials client:visible testimonials={frontmatter.testimonials} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_TESTIMONIAL}/>)}
     <!-- Form Mobile -->
-    {frontmatter.calendar ? <FormBokunMobile client:visible data={dataForm} /> :  <FormBookingMobile client:visible data={dataForm} />}
+    {frontmatter.calendar ? <FormBokunMobile client:visible data={dataForm} /> :  <FormResendMobile client:visible data={dataForm} />}
 </BaseLayout>

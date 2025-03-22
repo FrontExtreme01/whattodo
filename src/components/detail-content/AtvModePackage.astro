@@ -1,19 +1,16 @@
 ---
-import { Image } from "astro:assets";
-
-import AtvSingle from "@/img/extras/book-with-single-atv-ride-mode.webp";
-import AtvShared from "@/img/extras/book-with-shared-atv-ride-mode.webp";
-
-const { i18n } = Astro.props;
+import TagP from "@components/global/TagP.astro";
+import TagH3 from "../global/TagH3.astro";
+const { i18n, lang } = Astro.props;
 ---
 
-<div class="columns-1 sm:columns-2 space-y-10 sm:gap-10 my-14">
-    <div class="relative">
-        <span class="absolute top-0 -left-5 -rotate-[30deg] bg-amber-500 text-white text-base font-bold px-2 py-1 rounded-xl">{i18n.SINGLE_PACK}</span>
-        <Image class="w-full shadow-md rounded-lg" src={AtvSingle} alt="ATV Mode Single Package" />
+<div class="flex flex-wrap justify-evenly">
+    <div>
+        <TagH3>{lang === "en" ? "Single Pack" : "Paquete Individual"}</TagH3>
+        <TagP>{i18n.SINGLE_PACK}</TagP>
     </div>
-    <div class="relative">
-        <span class="absolute top-0 -left-5 -rotate-[30deg] bg-amber-500 text-white text-base font-bold px-2 py-1 rounded-xl">{i18n.SHARED_PACK}</span>
-        <Image class="w-full shadow-md rounded-lg" src={AtvShared} alt="ATV Mode Shared Package" />
+    <div>
+        <TagH3>{lang === "en" ? "Shared Pack" : "Paquete Compartido"}</TagH3>
+        <TagP>{i18n.SHARED_PACK}</TagP>
     </div>
 </div>

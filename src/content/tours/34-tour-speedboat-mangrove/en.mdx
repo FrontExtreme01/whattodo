@@ -1,0 +1,101 @@
+---
+slug: 'speedboat-mangrove-jungle-tour-cancun/en'
+status: 1
+lang: 'en'
+slugGallery: 'speedboat-mangrove'
+titleSeo: 'Speedboat Mangrove Jungle Tour Cancun Experience'
+title: 'Speedboat Mangrove Jungle Tour Cancun'
+description: 'Drive your SpeedBoat through the Nichupté lagoon in Cancun and its beautiful mangrove, and connect with nature on this exciting tour.'
+keywords: ''
+categories: ['WATER', 'CHEAP', 'COUPLES']
+price: 45
+stars: '4.0'
+reviews: '2,409'
+image:
+    src: '/assets/covers/tours/speedboat-mangrove-jungle-tour-cancun.webp'
+    alt: 'cover speedboat mangrove jungle tour cancun'
+highlights: ['Life Jacket', 'Medical Insurance']
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/802329?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/802329'
+location: 'Cancun, Mexico'
+duration: '1 hour and 30 minutes'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Life Jacket',
+    '1 Bottled Water',
+    'Driving a shared Speedboat 2 people',
+    'Medical Insurance',
+    'Bilingual Guide (English and Spanish)',
+];
+
+export const notIncludes = [
+    'Hotel pickup and drop-off',
+    'Food and Beverages',
+    'Dock fee of $ 20 USD per person',
+    'Towels, tips, or souvenirs',
+    'Photo and video services',
+];
+
+export const shouldKnow = [
+    'Minimum age to participate 3 years old',
+    'The minimum age to drive the boat is 18 years old',
+    'Pregnant women are not allowed',
+    'Not suitable for persons with heart problems',
+    'Not recommended for participants with neck/back problems, or asthma',
+    'Be sure to bring an official ID per person',
+    'Children under 3 years old are not allowed',
+    'Once the activity has started there are no refunds',
+    'Reckless driving will not be tolerated',
+];
+
+export const shouldBring = [
+    'Towels',
+    'Swimsuit',
+    'Sunblock',
+    'Official ID',
+    'Cash',
+    'Extra change of clothes',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'Whats included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>About the Speedboat Mangrove Tour</TagH2>
+
+    <TagP>Enjoy the ride in a speedboat mangrove tour feeling the adrenaline of the lagoon, be in touch with nature and amazing landscapes.</TagP>
+
+    <TagH3>Mangrove Jungle Tour in Cancun Tour</TagH3>
+
+    <TagP>Encourage yourself to drive your own two-passenger motor speedboat through <strong>natural labyrinths</strong> in the Nichupte Lagoon mangrove <em>(Laguna Nichupte in Cancun)</em>. Watch many <strong>birds, fishes, and crocodiles</strong> living free in their natural habitat. Enjoy nature and test your skills driving the speedboat in Cancun.</TagP>
+
+    <TagP>The Speedboat Mangorve tour is among the most <strong>popular Cancun activities</strong>!</TagP>
+
+    <TagP>Minimum age of 3 years</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

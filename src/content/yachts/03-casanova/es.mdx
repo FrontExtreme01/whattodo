@@ -8,7 +8,7 @@ description: ''
 keywords: ''
 price: 932
 stars: '5.0'
-reviews: '963 Reseñas'
+reviews: '963 '
 image: 
     src: '/assets/covers/yachts/yacht-casanova-cover.webp'
     alt: 'portada de yate casanova'
@@ -17,7 +17,7 @@ size: 'Tamaño: 48 pies'
 highlights: ['Chalecos salvavidas y máscaras de snorkel', 'Música Bluetooth']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/949734?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/949734'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 faqs:
 -   question: '¿Necesito llevar algo para el viaje?'
     answer: 'Proporcionamos todo lo que necesitarás para una experiencia lujosa y cómoda. Sin embargo, recomendamos traer protector solar, un sombrero y cualquier artículo personal que desees para el día. Si planeas nadar o hacer snorkel, siéntete libre de traer trajes de baño y toallas, aunque estos también pueden ser proporcionados.'
@@ -29,10 +29,12 @@ faqs:
     answer: 'No, no necesitas experiencia en navegación. El yate viene con una tripulación profesional para manejar todos los aspectos de la navegación, asegurando un viaje suave y agradable para ti y tus invitados.'
 ---
 
+import Accordion from "@components/detail-content/Accordion"
 import TagH2 from "@components/global/TagH2.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import WhatYouShould from "@components/detail-content/WhatYouShould.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 import TabPricesYacht from "@components/extras/TabPricesYacht";
 
 export const includes = [
@@ -87,20 +89,28 @@ export const infoPrices = [
     },
 ];
 
-export const i18n = {
-    INCLUDES: 'Incluye',
-    NOT_INCLUDES: 'No incluye',
-    SHOULD_KNOW: 'Antes de reservar, ten en cuenta lo siguiente:',
-    SHOULD_BRING: 'Lo que debes llevar',
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
 <TabPricesYacht client:visible infoPrices={infoPrices} lang={frontmatter.lang} />
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
-<TagP><em><strong><small>Póngase en contacto con nosotros con anticipación para confirmar la hora de inicio de su actividad</small></strong></em></TagP>
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagP>Embárcate en un viaje inolvidable a bordo del Casanova, un yate de lujo de 48 pies que zarpa desde la hermosa Marina Kaybal en Cancún. Ya sea que estés planeando una celebración especial, una escapada relajante o un día lleno de diversión en el agua, el Casanova ofrece el entorno perfecto. Con sus amplias cubiertas, elegantes interiores y comodidades excepcionales, disfrutarás cada momento con comodidad y elegancia. Explora la impresionante costa caribeña, relájate con un servicio personalizado y crea recuerdos inolvidables. Reserva tu lugar hoy y experimenta lo último en lujo, aventura y tranquilidad en el agua. </TagP>
+</Accordion>
 
-<TagH2>Descripción General</TagH2>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+    <TagP><em><strong><small>Póngase en contacto con nosotros con anticipación para confirmar la hora de inicio de su actividad</small></strong></em></TagP>
+</Accordion>
 
-<TagP>Embárcate en un viaje inolvidable a bordo del Casanova, un yate de lujo de 48 pies que zarpa desde la hermosa Marina Kaybal en Cancún. Ya sea que estés planeando una celebración especial, una escapada relajante o un día lleno de diversión en el agua, el Casanova ofrece el entorno perfecto. Con sus amplias cubiertas, elegantes interiores y comodidades excepcionales, disfrutarás cada momento con comodidad y elegancia. Explora la impresionante costa caribeña, relájate con un servicio personalizado y crea recuerdos inolvidables. Reserva tu lugar hoy y experimenta lo último en lujo, aventura y tranquilidad en el agua. </TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
 
-<WhatYouShould shouldKnow={shouldKnow} shouldBring={shouldBring} i18n={i18n} />
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

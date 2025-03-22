@@ -9,95 +9,104 @@ description: 'La Fiesta en la Playa de Coco Bongo es una de las atracciones más
 keywords: 'cocobongo, fiesta en la playa, cancun, vacaciones de primavera, fiesta, beachclub, fiesta, playa cancun'
 price: 50
 stars: '4.5'
-reviews: '3,987 reseñas'
+reviews: '3,987 '
 image:
     src: '/assets/covers/parties/coco-bongo-beach-party-in-cancun.webp'
     alt: 'portada coco bongo beach party en cancun'
 duration: '5 horas'
+music: 'Hip-Hop, electrónica, Latina'
+dressCode: 'Casual (traje de baño permitido)'
 consumption: 'Bebidas nacionales'
 admission: 'Acceso a la fiesta en la playa'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/753803?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/753803'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14885.988771580263!2d-86.747128!3d21.132603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2bf1d63b6b99%3A0x6cc32e706b78b7bf!2sCoco%20Bongo!5e0!3m2!1ses!2smx!4v1704726266557!5m2!1ses!2smx'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 
-export const information = [
+export const includesRegular = [
+    'Acceso a la fiesta en la playa',
+    'Happenings',
+    'Bebidas nacionales',
+];
+
+export const includesBottlePack = [
+    'Acceso a la fiesta en la playa',
+    'Happenings',
+    '1 Botella a elegir del menú especial',
+    '5 refrescos o 2 jarras de jugo',
+    'Lugar asignado al llegar',
+];
+
+export const includesPremium = [
+    'Acceso a la fiesta en la playa',
+    'Eventos',
+    'Bebidas premium',
+];
+
+export const notIncludes = [
+    'Transporte desde y hacia el lugar del evento',
+    'Propinas',
+    'Reserva de mesa',
+];
+
+export const shouldKnow = [
     'El check-in debe completarse a la 1 PM',
     'Duración 5 horas',
     'Edad mínima 18 años'
 ];
 
-export const i18n = {
-    INFORMATION: 'Por favor toma en cuenta'
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
-<div class="flex flex-wrap text-justify">
-    <div class="w-full md:w-1/2 md:pr-3">
-        <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Acceso Regular Incluye:</h3>
-        <ul class="space-y-4 text-base md:text-lg">
-            <li><i class="at-check-circle text-green-600"></i> Acceso a la fiesta en la playa</li>
-            <li><i class="at-check-circle text-green-600"></i> Happenings</li>
-            <li><i class="at-check-circle text-green-600"></i> Bebidas nacionales</li>
-        </ul>
-    </div>
-    <div class="w-full md:w-1/2 md:pr-3">
-        <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Paquete de Botella Incluye:</h3>
-        <ul class="space-y-4 text-base md:text-lg">
-            <li><i class="at-check-circle text-green-600"></i> Acceso a la fiesta en la playa</li>
-            <li><i class="at-check-circle text-green-600"></i> Happenings</li>
-            <li><i class="at-check-circle text-green-600"></i> 1 Botella a elegir del menú especial</li>
-            <li><i class="at-check-circle text-green-600"></i> 5 refrescos o 2 jarras de jugo</li>
-            <li><i class="at-check-circle text-green-600"></i> Lugar asignado al llegar</li>
-        </ul>
-    </div>
-    <div class="w-full md:w-1/2 md:pr-3">
-        <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Acceso Premium Incluye:</h3>
-        <ul class="space-y-4 text-base md:text-lg">
-            <li><i class="at-check-circle text-green-600"></i> Acceso a la fiesta en la playa</li>
-            <li><i class="at-check-circle text-green-600"></i> Eventos</li>
-            <li><i class="at-check-circle text-green-600"></i> Bebidas premium</li>
-        </ul>
-    </div>
-    <div class="w-full md:w-1/2 md:pl-3">
-        <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4"> No incluye:</h3>
-        <ul class="space-y-4 text-base md:text-lg">
-            <li><i class="at-xmark-circle text-red-600"></i> Transporte desde y hacia el lugar del evento</li>
-            <li><i class="at-xmark-circle text-red-600"></i> Propinas</li>
-            <li><i class="at-xmark-circle text-red-600"></i> Reserva de mesa</li>
-        </ul>
-    </div>
-</div>
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Acerca de Coco Bongo Beach Party</TagH2>
+    
+    <TagP>¿Estás listo para festejar como nunca antes? Entonces compra tus boletos para Coco <strong>Bongo Beach Cancún</strong>, la mejor experiencia de fiesta en la playa. Con su impresionante vista del mar Caribe, arena blanca y entretenimiento sin fin, Coco Bongo Cancún Beach Party es el lugar ideal para una noche inolvidable.</TagP>
+    
+    <TagH3>Vive la mejor fiesta en la playa en Coco Bongo Cancún</TagH3>
+    
+    <TagP>Coco Bongo Cancún Beach Party es el destino ideal para cualquiera que busque una noche electrizante. Desde la impresionante tecnología y los espectáculos acrobáticos hasta el flujo interminable de bebidas, el entretenimiento es ininterrumpido.</TagP>
+    
+    <TagH3>Entrada al Mandala Beach</TagH3>
+    
+    <TagP>El costo de la entrada al Club varía según el día de la semana, la época del año y cualquier evento especial o feriado. Por lo general, el costo de la entrada varía entre $30 y $60 USD por persona, incluido el acceso al club y una barra libre limitada durante el día. <strong>Entrada general $20 USD – Acceso entre semana $40 USD</strong></TagP>
+    
+    <TagH2>Captura el momento con fotos de la fiesta en la playa de Coco Bongo</TagH2>
+    
+    <TagP>Con tanta emoción en esta fiesta en la playa, definitivamente querrás capturar cada momento. Asegúrate de traer tu cámara y tomar muchas fotos para recordar tu experiencia.</TagP>
+    
+    <TagH3>Únete a la diversión en la playa de Cancún</TagH3>
+    
+    <TagP>Esta fiesta en Cancún es el lugar perfecto para soltarse y divertirse. Ya sea que estés allí con un grupo de amigos o solo, te garantizamos que pasarás un momento inolvidable.</TagP>
+    
+    <TagH3>Reserva tus entradas ahora</TagH3>
+    
+    <TagP>No te pierdas la experiencia de tu vida en la fiesta. Reserva tus entradas ahora y prepárate para bailar toda la noche mientras disfrutas de las impresionantes vistas de la playa y el increíble entretenimiento. </TagP>
+    
+    <TagP>Entonces, ¿qué estás esperando? Reserva tus entradas ahora y prepárate para vivir la mejor fiesta en la playa en Coco Bongo Cancún Beach Party. Con su impresionante espectáculo, bebidas, comida y vistas impresionantes, ¡esta es una fiesta que no querrás perderte! </TagP>
+</Accordion>
 
-<TagH2>Acerca de Coco Bongo Beach Party</TagH2>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <TagH3>Paquete Regular</TagH3>
+    <Inclusions includes={includesRegular} notIncludes={notIncludes} />
+    <TagH3>Paquete Botella</TagH3>
+    <Inclusions includes={includesBottlePack} notIncludes={notIncludes} />
+    <TagH3>Paquete Premium</TagH3>
+    <Inclusions includes={includesPremium} notIncludes={notIncludes} />
+</Accordion>
 
-<TagP>¿Estás listo para festejar como nunca antes? Entonces compra tus boletos para Coco <strong>Bongo Beach Cancún</strong>, la mejor experiencia de fiesta en la playa. Con su impresionante vista del mar Caribe, arena blanca y entretenimiento sin fin, Coco Bongo Cancún Beach Party es el lugar ideal para una noche inolvidable.</TagP>
-
-<TagH3>Vive la mejor fiesta en la playa en Coco Bongo Cancún</TagH3>
-
-<TagP>Coco Bongo Cancún Beach Party es el destino ideal para cualquiera que busque una noche electrizante. Desde la impresionante tecnología y los espectáculos acrobáticos hasta el flujo interminable de bebidas, el entretenimiento es ininterrumpido.</TagP>
-
-<TagH3>Entrada al Mandala Beach</TagH3>
-
-<TagP>El costo de la entrada al Club varía según el día de la semana, la época del año y cualquier evento especial o feriado. Por lo general, el costo de la entrada varía entre $30 y $60 USD por persona, incluido el acceso al club y una barra libre limitada durante el día. <strong>Entrada general $20 USD – Acceso entre semana $40 USD</strong></TagP>
-
-<TagH2>Captura el momento con fotos de la fiesta en la playa de Coco Bongo</TagH2>
-
-<TagP>Con tanta emoción en esta fiesta en la playa, definitivamente querrás capturar cada momento. Asegúrate de traer tu cámara y tomar muchas fotos para recordar tu experiencia.</TagP>
-
-<TagH3>Únete a la diversión en la playa de Cancún</TagH3>
-
-<TagP>Esta fiesta en Cancún es el lugar perfecto para soltarse y divertirse. Ya sea que estés allí con un grupo de amigos o solo, te garantizamos que pasarás un momento inolvidable.</TagP>
-
-<TagH3>Reserva tus entradas ahora</TagH3>
-
-<TagP>No te pierdas la experiencia de tu vida en la fiesta. Reserva tus entradas ahora y prepárate para bailar toda la noche mientras disfrutas de las impresionantes vistas de la playa y el increíble entretenimiento. </TagP>
-
-<TagP>Entonces, ¿qué estás esperando? Reserva tus entradas ahora y prepárate para vivir la mejor fiesta en la playa en Coco Bongo Cancún Beach Party. Con su impresionante espectáculo, bebidas, comida y vistas impresionantes, ¡esta es una fiesta que no querrás perderte! </TagP>
-
-<AdditionalInfo information={information} i18n={i18n} />
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

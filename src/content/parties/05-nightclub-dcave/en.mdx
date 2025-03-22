@@ -1,21 +1,22 @@
 ---
 slug: 'dcave-cancun/en'
 status: 1
-event: 1
 lang: 'en'
 type: 'NIGHTCLUB'
 slugGallery: 'dcave'
 titleSeo: 'DCave Cancun Night Club Admission'
-title: 'DCave Cancun Night Club'
+title: 'DCave Cancun'
 description: 'DCave Cancun is a popular nightclub located in the heart of Cancun, Hotel Zone. Known for its unique cave-like atmosphere, top-notch music.'
 keywords: ''
-price: 20
+price: 40
 stars: '4.5'
-reviews: '1939 reviews'
+reviews: '1939'
 image:
     src: '/assets/covers/parties/dcave-cancun-nightclub-and-party-zones.webp'
     alt: 'cover dcave cancun night club'
 duration: '4.5 hours'
+music: 'Latin music, Pop'
+dressCode: 'Smart casual, elegant (no bathing suits or shirts without sleeves)'
 consumption: 'Consumption credit'
 admission: 'Admission'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/745900?partialView=1'
@@ -24,11 +25,12 @@ location: 'Blvd. Kukulcan Km 9.5, Zona Hotelera, 77500 Cancún, Q.R.'
 mapFrame: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29771.88374798819!2d-86.747518!3d21.13307!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2898b942b42b%3A0x292e93b60e07978!2sD'Cave!5e0!3m2!1ses!2smx!4v1703946193906!5m2!1ses!2smx
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 
 export const includes = [
     'Admission',
@@ -41,36 +43,43 @@ export const notIncludes = [
     'Table reservation',
 ];
 
-export const information = [
+export const shouldKnow = [
     'Check-in must be completed before 10 PM',
     'Duration 4 hours and 30 minutes',
     'Strict dress code is required (upscale fashionable attire)',
 ];
 
-export const i18n = {
-    INCLUDES: 'Included',
-    NOT_INCLUDES: 'Not included',
-    INFORMATION: 'Please note',
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>About DCave Cancun </TagH2>
 
-<AdditionalInfo information={information} i18n={i18n} />
+    <TagP><strong>DCave Cancun</strong> is a popular nightclub located in the heart of Cancun’s Hotel Zone. This club is known for its unique cave-like atmosphere, top-notch music, and creative drink selection, making it one of the best clubs in Cancun. </TagP>
 
-<TagH2>About DCave Cancun </TagH2>
+    <TagP> DCave Cancun’s <strong>cave-like atmosphere</strong>, complete with dim lighting and natural rock formations, sets the mood for a night of dancing and partying. <strong>The DJ plays a mix of electronic, house, and hip-hop music</strong>, ensuring that there’s something for everyone to dance to. </TagP>
 
-<TagP><strong>DCave Cancun</strong> is a popular nightclub located in the heart of Cancun’s Hotel Zone. This club is known for its unique cave-like atmosphere, top-notch music, and creative drink selection, making it one of the best clubs in Cancun. </TagP>
+    <TagP>One of the standout features of this club is its creative <strong>drink selection</strong>. The club’s bartenders are known for their unique and delicious cocktails that are sure to impress even the most discerning palate. </TagP>
 
-<TagP> DCave Cancun’s <strong>cave-like atmosphere</strong>, complete with dim lighting and natural rock formations, sets the mood for a night of dancing and partying. <strong>The DJ plays a mix of electronic, house, and hip-hop music</strong>, ensuring that there’s something for everyone to dance to. </TagP>
+    <TagP>For those looking for a VIP experience, DCave Cancun offers exclusive table service packages that include private seating areas, bottle service, and personal waitstaff. This is a great option for groups or anyone looking to take their night out to the next level. </TagP>
 
-<TagP>One of the standout features of this club is its creative <strong>drink selection</strong>. The club’s bartenders are known for their unique and delicious cocktails that are sure to impress even the most discerning palate. </TagP>
+    <TagP>DCave Cancun enforces a dress code, so be sure to dress to impress. Men should wear collared shirts and dress shoes, while women should opt for dresses or nice pants paired with heels. There are more <a href="/nightlife-in-cancun/"><strong>Nightlife in Cancun</strong></a>. </TagP>
 
-<TagP>For those looking for a VIP experience, DCave Cancun offers exclusive table service packages that include private seating areas, bottle service, and personal waitstaff. This is a great option for groups or anyone looking to take their night out to the next level. </TagP>
+    <TagH3>DCAVE Location </TagH3>
 
-<TagP>DCave Cancun enforces a dress code, so be sure to dress to impress. Men should wear collared shirts and dress shoes, while women should opt for dresses or nice pants paired with heels. There are more <a href="/nightlife-in-cancun/"><strong>Nightlife in Cancun</strong></a>. </TagP>
+    <TagP>Located on Boulevard Kukulcan Km 9, DCave Cancun is easily accessible by taxi or public transportation. The club is a popular destination for tourists and locals looking for a night out on the town.</TagP>
 
-<TagH3>DCAVE Location </TagH3>
+    <TagP>In conclusion, DCave Cancun is one of the best clubs in Cancun, with its unique atmosphere, top-notch music, and creative drink selection. So, whether you’re a local or a tourist, be sure to add DCave Cancun to your list of must-visit destinations the next time you’re in Cancun. </TagP>
+</Accordion>
 
-<TagP>Located on Boulevard Kukulcan Km 9, DCave Cancun is easily accessible by taxi or public transportation. The club is a popular destination for tourists and locals looking for a night out on the town.</TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
 
-<TagP>In conclusion, DCave Cancun is one of the best clubs in Cancun, with its unique atmosphere, top-notch music, and creative drink selection. So, whether you’re a local or a tourist, be sure to add DCave Cancun to your list of must-visit destinations the next time you’re in Cancun. </TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

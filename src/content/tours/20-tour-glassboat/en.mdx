@@ -1,0 +1,105 @@
+---
+slug: 'cancun-glass-boat/en'
+status: 1
+lang: 'en'
+slugGallery: 'glass-boat'
+title: 'Cancun Glass Boat Sightseeing Cruise'
+description: 'Tour the Caribbean Sea, discovering its secrets through the Cancun glass boat, touring the lagoon and the ocean.'
+keywords: ''
+categories: ['WATER', 'CHEAP']
+price: 35
+stars: '4.0'
+reviews: '4,024'
+image:
+    src: '/assets/covers/tours/clear-boat-glass-bottom-in-cancun-isla-mujeres-and-cozumel.webp'
+    alt: 'cover glass boat'
+highlights: ['Glass boat cruise', 'Life jackets']
+recommendedFor: ['Families, ', 'Groups & Special Events']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/670334?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/670334'
+location: 'Blvd. Kukulcan km 3.5'
+duration: '1 hour and 15 minutes'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+
+export const includes = [
+    'Glass boat cruise',
+    'Life jacket',
+    '2 beers per adult & bottled water',
+];
+
+export const notIncludes = [
+    'Round Transportation to the Dock (Marina Sunrise)',
+    'Dock fee $ 5 USD',
+    'Professional photographs',
+    'Gratuities',
+];
+
+export const shouldKnow = [
+    'No snacks allowed',
+    'No glass container beverages allowed',
+    'Bring extra cash for your professional photos and tips',
+    'Not recommended for individuals with reduced mobility',
+    'Not recommended for those with back or heart issues',
+    'Not recommended for individuals who have had recent surgeries',
+    'Bring sunglasses or hat',
+];
+
+export const shouldBring = [
+    'Swimsuit',
+    'Towel',
+    'Comfortable shoes',
+    'A change of clothes',
+    'Additional Cash',
+];
+
+export const information = [
+    '10:00 am',
+    '11:30 am',
+    '2:30 pm',
+    '4:00 pm',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+    INFORMATION: 'Schedules',
+};
+
+<AdditionalInfo information={information} i18n={titles} />
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>About the Glass Boat Tour</TagH2>
+
+    <TagP>Enjoy the adventure of the <strong>Glass Bottom Boat</strong>, sail through the Nichupté Lagoon and the <strong>Caribbean Sea</strong> in such a transparent boat, a unique experience with incredible 360-degree visibility. Its hull is completely transparent. However, it will be an exciting <strong>tourist trip in Cancun</strong>, where you will be able to appreciate the secrets of the seabed without getting off the boat.</TagP>
+
+    <TagH3>Begin the adventure</TagH3>
+
+    <TagP>Then start with a short drive <strong>around the lagoon</strong>, home to many <strong>birds and crocodiles</strong>. Next, sail out to the open sea, where the color of the water changes to a <strong>stunning turquoise blue</strong>. Keep your eyes peeled for tropical fish, starfish, and <strong>colorful coral</strong>. With better luck, you might even see some rays and sea turtles.</TagP>
+
+    <TagP><strong>Adults on board can enjoy a beer or two, courtesy of the ship’s captain.</strong></TagP>
+
+    <TagP><strong>Duration: 1.15 Hours</strong></TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

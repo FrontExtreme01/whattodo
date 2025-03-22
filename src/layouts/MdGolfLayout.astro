@@ -1,14 +1,16 @@
 ---
 import { getI18N } from "@/i18n";
+import { Star, MapPin, Golf, Route } from "@/img/allIcons";
 
 import BaseLayout from "./BaseLayout.astro";
-import ShareSM from "@components/detail-content/ShareSM";
-import Testimonials from "@components/global/Testimonials";
+import GalleryDesktop from "@components/detail-content/GalleryDesktop";
+import GalleryMobile from "@components/detail-content/GalleryMobile";
 import QuestionPolicy from "@components/detail-content/QuestionPolicy.astro";
-import FormBokunMobile from "@components/detail-content/FormBokunMobile";
 import FormBokunDesktop from "@components/detail-content/FormBokunDesktop";
-import ButtonsContact from "@components/detail-content/ButtonsContact.astro";
-import SliderGallery from "@components/detail-content/SliderGallery";
+import FormBokunMobile from "@components/detail-content/FormBokunMobile";
+import Testimonials from "@components/global/Testimonials";
+import MenuLinks from "@components/detail-content/MenuLinks";
+import Accordion from "@components/detail-content/Accordion";
 import MapFrame from "@components/detail-content/MapFrame";
 
 const { currentLocale } = Astro;
@@ -33,6 +35,12 @@ const accessibility = {
     ariaLabelGallery: i18n.ACCESSIBILITY.OPEN_GALLERY,
 };
 
+const menuLinks = [
+    {show: true, id: "whatToExpect", title: i18n.DETAILS_CONTENT.MENU_LINKS.WHAT_TO_EXPECT },
+    {show: true, id: "location", title: i18n.DETAILS_CONTENT.MENU_LINKS.LOCATION },
+    {show: frontmatter.testimonials ? true : false, id: "reviews", title: i18n.DETAILS_CONTENT.MENU_LINKS.REVIEWS },
+];
+
 const dataForm = {
     i18n: i18n.DETAILS_CONTENT.FORM_RESERVATION,
     price: frontmatter.price,
@@ -53,58 +61,74 @@ const seoMetaDatos = {
 ---
 
 <BaseLayout seo={seoMetaDatos}>
-    <section class="mx-6 md:mx-20 lg:mx-24 mt-12 mb-14">
-        <div class="flex flex-wrap">
-            <!-- Header -->
-            <header class="flex flex-wrap w-full">
-                <h1 class="w-10/12 text-2xl md:text-4xl font-bold italic text-green-700">
-                    {frontmatter.title}
-                </h1>
-                <div class="w-2/12 flex justify-center items-center">
-                    <ShareSM client:idle site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} />
+    <!-- Gallery -->
+    <section class="mx-auto px-5 md:px-20 py-6 lg:py-10">
+        {gallery.length > 0 && (
+            <GalleryDesktop client:visible site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} images={gallery} accessibility={accessibility} />
+            <GalleryMobile client:visible site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} images={gallery} accessibility={accessibility} />
+        )}
+    </section>
+    <!-- Content -->
+    <section class="mx-auto px-5 md:px-20">
+        <div class="flex flex-wrap mb-10">
+            <div class="w-full xl:w-8/12 lg:pr-14">
+                <!-- MenuLinks -->
+                <div class="mb-5">
+                    <MenuLinks client:visible menuLinks={menuLinks} />
                 </div>
-                <ul class="flex flex-wrap gap-2 md:gap-5 w-full my-6 text-sm md:text-lg">
-                    <li>
-                        <i class="at-star text-amber-500"></i>
-                        <span class="font-bold"> {frontmatter.stars} 
-                            <span class="text-slate-600 font-thin"> ({frontmatter.reviews})</span>
-                        </span>
-                    </li>
-                    <li>
-                        <i class="at-pin-destination text-green-700"></i>
-                        <span>{frontmatter.location}</span>
-                    </li>
-                </ul>
-            </header>
-            <!-- Content -->
-            <div class="w-full lg:w-8/12 md:pr-14">
-                <SliderGallery client:load images={gallery} accessibility={accessibility}/> 
-                <!-- Hightlight -->
-                <div class="flex flex-wrap w-full gap-5 lg:gap-10 my-6 justify-center text-sm md:text-lg text-center">
-                    <div class="text-slate-800 rounded-2xl">
-                        <i class="at-clock-time bg-slate-100 p-3 rounded-full"></i>
-                        <span>{frontmatter.duration}</span>
-                    </div>
-                    <div class="text-slate-800 rounded-2xl">
-                        <i class="at-boxing-ball bg-slate-100 p-3 rounded-full"></i>
-                        <span>{frontmatter.holes}</span>
-                    </div>
-                    <div class="text-slate-800 rounded-2xl">
-                        <i class="at-destination-route bg-slate-100 p-3 rounded-full"></i>
-                        <span>{frontmatter.yards}</span>
-                    </div>
+                <!-- Header Title -->
+                <header>
+                    <h1 class="font-bold text-xl md:text-3xl w-full mt-5 mb-3">{frontmatter.title}</h1>
+                    <ul class="flex flex-wrap gap-3 md:gap-5 w-full text-sm sm:text-lg">
+                        <li class="flex items-center">
+                            <Star class="text-amber-500 size-5 mr-1" />
+                            <p class="font-bold"> {frontmatter.stars} 
+                                <span class="text-gray-500 font-thin"> ({frontmatter.reviews})</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a class="flex items-center" href="#location">
+                                <MapPin class="text-gray-600 size-5 mr-1" />
+                                <p>{frontmatter.location}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <!-- Information General -->
+                <div class="my-10">
+                    <h2 class="font-bold text-lg sm:text-xl mb-5">{i18n.DETAILS_CONTENT.GENERAL.INFORMATION_GENERAL}</h2>
+                    <ul class="columns-2 space-y-8 text-sm sm:text-base">
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <Golf class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.HOLES_GOLF}</p>
+                                <p>{frontmatter.holes}</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <Route class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.YARDS_GOLF}</p>
+                                <p>{frontmatter.yards}</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-
-                <ButtonsContact i18n={i18n.ACCESSIBILITY} />
-
+                <!-- Slot -->
+                <Accordion client:visible title={i18n.DETAILS_CONTENT.MENU_LINKS.WHAT_TO_EXPECT} idHash="whatToExpect">
                 <div class="text-justify">
                     <slot />
                 </div>
+                </Accordion>
+                <!-- Map -->
+                <Accordion client:visible title={i18n.DETAILS_CONTENT.MENU_LINKS.LOCATION} idHash="location">
+                    <MapFrame client:visible url={frontmatter.mapFrame} titleAct={frontmatter.title} textMap={i18n.DETAILS_CONTENT.GENERAL.TITLE_MAP_FRAME} />
+                </Accordion>
 
-                <h2 class="text-xl md:text-3xl font-bold text-orange-600 mt-10 mb-4">{i18n.DETAILS_CONTENT.GENERAL.TITLE_LOCATION}</h2>
-                <MapFrame client:visible url={frontmatter.mapFrame} titleAct={frontmatter.title} textMap={i18n.DETAILS_CONTENT.GENERAL.TITLE_MAP_FRAME} />
-
-                <hr class="h-0.5 bg-slate-200 my-10">
                 <QuestionPolicy i18n={i18n.DETAILS_CONTENT.QUESTION_POLICY} />
             </div>
             <!-- FormSidebar -->

@@ -2,16 +2,18 @@
 import { getI18N } from "@/i18n";
 import { getLangFromUrl } from "@/i18n/utils";
 import { getTypeDeal } from "@/content/functions";
-import { getSlides, review1, review2, review3, review4, review5 } from "@/img/allImages"
+import { Review1, Review2, Review3, Review4, Review5 } from "@/img/allImages"
+import { getSlides } from "@/img/allSlides";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import SliderBanner from "@components/global/SliderBanner";
+import SliderDesktop from "@/components/global/SliderDesktop";
+import SliderMobile from "@/components/global/SliderMobile";
 import ContadorDiscount from "@components/extras/ContadorDiscount";
 import Intro from "@components/global/Intro.astro";
-import TourCard from "@components/cards/TourCard.astro";
+import TourCardHorizontal from "@components/cards/TourCardHorizontal.astro";
+import PartyCardHorizontal from "@components/cards/PartyCardHorizontal.astro";
 import Testimonials from "@components/global/Testimonials";
 import Partners from "@components/global/Partners";
-import PartyCard from "@components/cards/PartyCard.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -19,31 +21,29 @@ const i18n = getI18N({ currentLocale });
 const lang = getLangFromUrl(Astro.url);
 const allDiscounts = await getTypeDeal("lastMinute", lang);
 
-const slides = getSlides("HOME", lang);
+const slidesDesktop = getSlides("HOME", "DESKTOP",lang);
+const slidesMobile = getSlides("HOME", "MOBILE",lang);
 
 const testimonials = [
-    {image: review1, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.REVIEW },
-    {image: review2, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.REVIEW },
-    {image: review3, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.REVIEW },
-    {image: review4, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.REVIEW },
-    {image: review5, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.REVIEW },
+    {image: Review1, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_1.REVIEW },
+    {image: Review2, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_2.REVIEW },
+    {image: Review3, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_3.REVIEW },
+    {image: Review4, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_4.REVIEW },
+    {image: Review5, user: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.USER, stars: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.STARS, date: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.DATE, title: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.TITLE, review: i18n.HOME_PAGE.TESTIMONIALS.TESTIMONIAL_5.REVIEW },
 ]
 
 const seoMetaDatos = {
     title: i18n.SEO.LAST_MINUTE_PAGE.TITLE,
     description: i18n.SEO.LAST_MINUTE_PAGE.DESCRIPTION,
-    image: slides[0].image.src,
+    image: slidesDesktop[0].image.src,
 };
 
-const targetDate = "2024-12-23";
+const targetDate = "2025-03-24";
 ---
 
 <BaseLayout seo={seoMetaDatos}>
-    <SliderBanner
-        client:load
-        slides={slides}
-        i18nButton={i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
-    />
+    <SliderDesktop client:visible slides={slidesDesktop} lang={lang} />
+    <SliderMobile client:visible slides={slidesMobile} lang={lang} />
 
     <ContadorDiscount client:visible i18n={i18n.LAST_MINUTE_PAGE.SECTION_TIMER} targetDate={targetDate} />
 
@@ -52,13 +52,13 @@ const targetDate = "2024-12-23";
         description={i18n.LAST_MINUTE_PAGE.DESCRIPTION}
     />
 
-    <section class="container mx-auto mb-10">
-        <div class="flex flex-wrap justify-center">
+    <section class="container mx-auto px-5 md:px-20 py-6">
+        <div class="flex flex-wrap">
             {allDiscounts.map((entry) => {
                 if (entry.collection === 'tours') {
-                    return <TourCard tour={entry} lang={lang} />;
+                    return <TourCardHorizontal tour={entry} lang={lang} />;
                 } else if (entry.collection === 'parties') {
-                    return <PartyCard party={entry} lang={lang} />;
+                    return <PartyCardHorizontal party={entry} lang={lang} />;
                 }
             })}
         </div>

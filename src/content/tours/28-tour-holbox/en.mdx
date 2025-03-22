@@ -3,31 +3,34 @@ slug: 'shared-guided-tour-visit-of-cancun-and-holbox-island/en'
 status: 1
 lang: 'en'
 slugGallery: 'holbox'
-title: 'Holbox Island & Ek Balam: Full-Day Guided Adventure'
+title: 'Holbox Island: Full-Day Guided Adventure'
 description: 'Located in the far north of Quintana Roo, it is widely known for being home to a variety of species, mainly birds such as flamingos, in addition to being sanctuary for the world’s largest fish: the Whale Shark.'
 keywords: ''
-categories: ['RUINS']
+categories: ['ADVENTURE']
 price: 171
 stars: '4.0'
-reviews: '854 Reviews'
+reviews: '854'
 image:
     src: '/assets/covers/tours/holbox-tour-from-cancun.webp'
     alt: 'cover Holbox Island Ek Balam: Full-Day Guided Adventure'
 highlights: ['Transportation Included', 'Free time in Isla Pasion', 'Free time in Punta Mosquito', 'Free time in Holbox Island']
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/850598?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/850598'
 location: 'Holbox Island'
 duration: '12 Hours'
+transportation: 'Transportation Included'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import Considerations from "@components/detail-content/Considerations.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 
 export const includes = [
     'Round trip in A/C equipped transportation',
-    'Guided visit and free time in Ek Balam',
     'Free time in Isla Pasion',
     'Free time in Punta Mosquito (sandbanks)',
     'Free time in Holbox Island',
@@ -42,7 +45,15 @@ export const notIncludes = [
     'Ecotax $350 mxn per person',
 ];
 
-export const considerations = [
+export const shouldKnow = [
+    'Bring biodegradable sunscreen',
+    'Bring hat and sunglasses',
+    'Bring a change of clothes ',
+    'Bring your swim wear or bathing suit',
+    'Wear comfortable clothes and shoes',
+];
+
+export const shouldBring = [
     'Comfortable footwear',
     'Sunglasses and sun hat',
     'Swimsuit and towel',
@@ -51,30 +62,41 @@ export const considerations = [
     'Extra cash (for drinks, souvenirs, video cameras charge, and tips)',
 ];
 
-export const i18n = {
-    INCLUDES: 'Included',
-    NOT_INCLUDES: 'Not included',
-    CONSIDERATIONS: 'Considerations',
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Overview</TagH2>
 
-<strong class="my-5"><small><em>Please note that the displayed experience time does not include travel time from your location to the activity site, so please plan accordingly as transportation time may vary due to traffic conditions and unforeseen circumstances </em></small></strong>
+    <TagP>Located in the far north of Quintana Roo, it is widely known for being home to a variety of species, mainly birds such as flamingos, in addition to being sanctuary for the world’s largest fish: the Whale Shark.</TagP>
 
-<Considerations considerations={considerations} i18n={i18n} />
+    <TagP>Let us take you in a boat ride through the beautiful calm beaches surrounded by an amazing view and great sandbanks.</TagP>
 
-<TagH2>Overview</TagH2>
+    <TagP>SWander around the picturesque streets and take some pictures at the murals.</TagP>
 
-<TagP>Located in the far north of Quintana Roo, it is widely known for being home to a variety of species, mainly birds such as flamingos, in addition to being sanctuary for the world’s largest fish: the Whale Shark.</TagP>
+    <TagP><strong>Dock Fee:</strong> $15 USD or $300 Mexican pesos per person (3 years old and above)</TagP>
 
-<TagP>Let us take you in a boat ride through the beautiful calm beaches surrounded by an amazing view and great sandbanks.</TagP>
+    <TagP><strong>AVAILABILITY</strong></TagP>
 
-<TagP>SWander around the picturesque streets and take some pictures at the murals.</TagP>
+    <TagP>Cancún - Riviera Maya</TagP>
 
-<TagP><strong>Dock Fee:</strong> $15 USD or $300 Mexican pesos per person (3 years old and above)</TagP>
+    <TagP><strong>English and Spanish:</strong> Tuesday, Thursday and Saturday.</TagP>
+</Accordion>
 
-<TagP><strong>AVAILABILITY</strong></TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
 
-<TagP>Cancún - Riviera Maya</TagP>
+    <strong class="my-5"><small><em>Please note that the displayed experience time does not include travel time from your location to the activity site, so please plan accordingly as transportation time may vary due to traffic conditions and unforeseen circumstances </em></small></strong>
+</Accordion>
 
-<TagP><strong>English and Spanish:</strong> Tuesday, Thursday and Saturday.</TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

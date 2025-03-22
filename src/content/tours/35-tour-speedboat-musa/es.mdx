@@ -1,0 +1,104 @@
+---
+slug: 'speedboat-cancun-tour/es'
+status: 1
+lang: 'es'
+slugGallery: 'speedboat-musa'
+title: 'Speedboat Cancún y Snorkel en Museo Subacuático MUSA'
+description: 'Sube la adrenalina de manejar un Speedboat en Cancún y relájate disfrutando de un tour de snorkel en Punta Nizuc y Museo Subacuático MUSA.'
+keywords: ''
+categories: ['WATER', 'CHEAP', 'COUPLES']
+price: 45
+stars: '4.5'
+reviews: '1,459 '
+image:
+    src: '/assets/covers/tours/speed-boat-jungle-tour-cancun.webp'
+    alt: 'cover speedboat tour in Cancun'
+highlights: ['Chaleco Salvavidas', 'Seguro Médico']
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales, ', 'Aventureros']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/702035?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/702035'
+location: 'Cancún, México'
+duration: '2 horas'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagH3 from "@components/global/TagH3.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Guía Bilingüe (Inglés y Español)',
+    'Chaleco Salvavidas',
+    'Equipo de Snorkel',
+    '1 Botella de Agua',
+    'Manejar un Speedboat compartido 2 personas',
+    'Snorkel en el Museo Subacuático (MUSA, sujeto a disponibilidad)',
+];
+
+export const notIncludes = [
+    'Recogida y regreso al hotel.',
+    'Comida y Bebidas.',
+    'Tarifa de muelle de $ 20 USD por persona.',
+    'Toallas, propinas o souvenirs.',
+];
+
+export const shouldKnow = [
+    'Edad mínima para participar 3 años.',
+    'La edad mínima para conducir el bote es de 18 años.',
+    'No se permiten mujeres embarazadas.',
+    'No apto para personas con problemas cardíacos.',
+    'No recomendado para participantes con problemas de cuello/espalda, o asma.',
+    'Asegúrate de llevar una identificación oficial por persona.',
+    'No se permiten niños menores de 3 años.',
+    'Una vez que la actividad haya comenzado no hay reembolsos.',
+    'No se tolerará la conducción imprudente.',
+];
+
+export const shouldBring = [
+    'Toallas',
+    'Traje de baño',
+    'Protector solar',
+    'Documento de identidad oficial',
+    'Efectivo',
+    'Cambio de ropa adicional',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Acerca del Tour en Lancha Rápida Cancún</TagH2>
+
+    <TagP>Disfruta de <strong>dos tours en uno</strong> después de sentir la adrenalina de manejar una lancha rápida, podrás sorprenderte con un tour de snorkel en el arrecife de El Meco.</TagP>
+
+    <TagH3>Tour en lancha rápida en Cancún.</TagH3>
+
+    <TagP>Anímate a conducir tu propia lancha rápida con capacidad para dos pasajeros a través de <strong>laberintos naturales</strong> en el manglar de la Laguna Nichupté <em>(Laguna Nichupté en Cancún)</em>. Observa muchas <strong>aves, peces y cocodrilos</strong> viviendo libres en su hábitat natural. Disfruta de la naturaleza y prueba tus habilidades al volante de la lancha rápida en Cancún. </TagP>
+
+    <TagH3>Haz snorkel en el Museo Subacuático (MUSA)</TagH3>
+
+    <TagP>En el hermoso Parque Nacional de <strong>Punta Nizuc</strong> y el <strong>museo subacuático MUSA</strong> interactuarás con varios peces de colores y otras <strong>criaturas acuáticas</strong> del Caribe mexicano. Este viaje de snorkel es seguro para todos los miembros de la familia. El equipo de snorkel ya está incluido.</TagP>
+
+    <TagP>¡El tour en lancha rápida es una de las <strong>actividades más populares en Cancún</strong>!</TagP>
+
+    <TagP>Edad mínima de 3 años</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

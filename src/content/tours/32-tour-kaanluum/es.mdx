@@ -1,0 +1,92 @@
+---
+slug: 'kaanluum-laggon-and-cenotes/es'
+status: 1
+lang: 'es'
+slugGallery: 'kaanluum'
+title: 'Laguna Kaan Luum y Cenotes'
+description: 'Descubre uno de los tesoros escondidos de la Riviera Maya: la Laguna Kaan Luum, un oasis natural impresionante adornado con manglares y aguas turquesa cristalinas'
+keywords: ''
+categories: ['WATER']
+price: 130
+stars: '4.5'
+reviews: '1,548 '
+image:
+    src: '/assets/covers/tours/cover-kaan-luum.webp'
+    alt: 'portada Laguna Kaan Luum y Cenotes'
+highlights: ['Transporte Incluido']
+recommendedFor: ['Familias, ', 'Grupos y eventos especiales, ', 'Aventureros']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/876336?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/876336'
+location: 'Laguna Kaan Luum, Tulum'
+duration: '10 horas'
+transportation: 'Transporte Incluido'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Admisión a cenotes',
+    'Almuerzo buffet',
+    'Transporte redondo desde la mayoría de los hoteles de Cancún y la Riviera Maya',
+    'Chalecos incluidos en los cenotes.',
+    'Una botella de agua durante el recorrido.',
+];
+
+export const notIncludes = [
+    'Tarifa del Parque Nacional de 350 pesos por persona',
+    'Bebidas',
+];
+
+export const shouldKnow = [
+    'No accesible en silla de ruedas',
+    'No accesible en cochecito',
+    'No apto para mascotas',
+    'No hay transporte público cercano',
+    'Asientos para bebés no disponibles',
+    'No recomendado para personas con problemas de espalda',
+    'El tiempo de viaje a Kaan Luum es de aproximadamente 2 horas en cada sentido. ',
+];
+
+export const shouldBring = [
+    'Ropa y zapatos cómodos',
+    'Traje de baño y toalla',
+    'Protector solar y repelente biodegradables',
+    'Dinero extra',
+    'Gafas de sol o gorra.',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Acerca de la excursión de un día a la laguna Kaan Luum con cenotes y tradiciones mayas</TagH2>
+
+    <TagP> Aventúrate a una de las joyas ocultas de la Riviera Maya: la laguna Kaan Luum, un impresionante oasis natural adornado con manglares y atractivas aguas turquesas cristalinas. Explora dos fascinantes cenotes y presencia una demostración de artesanías y tradiciones mayas.                                </TagP>
+
+    <TagP> El emocionante día comienza en Kaan Luum, donde puedes disfrutar nadando en las aguas claras y frescas de la laguna. Luego, continúa hasta el complejo Canamayte, donde un chamán local te recibirá con una ceremonia purificadora.</TagP>
+
+    <TagP>Dirígete al cenote Mariposa para un refrescante baño en sus prístinas aguas turquesas. Después, profundiza en las tradiciones mayas locales con una demostración de miel y cacao auténticos.</TagP>
+
+    <TagP> Después de esta experiencia inmersiva, explora el impresionante cenote tipo caverna, CHEN HA, iluminado por nuestro guía experto que te señalará los puntos más destacados. Se proporcionan chalecos salvavidas para tu seguridad.</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

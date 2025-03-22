@@ -1,11 +1,15 @@
-export const languages: Record<string, { code: string; name: string; }> = {
+import { iconFlagMEX, iconFlagUSA } from "@/img/allIcons";
+
+export const languages: Record<string, { code: string; name: string; flag: typeof iconFlagUSA }> = {
     es: {
         code: 'es',
-        name: 'Español'
+        name: 'Español',
+        flag: iconFlagMEX
     },
     en: {
         code: 'en',
-        name: 'English'
+        name: 'English',
+        flag: iconFlagUSA
     }
 };
 
@@ -23,7 +27,6 @@ export const ui = {
         'nav.tours.water': 'Actividades acuáticas',
         'nav.tours.ruins': 'Ruinas mayas',
         'nav.funParty': 'Diversión y fiesta',
-        'nav.funParty.events': 'Eventos en Cancún',
         'nav.funParty.nightClubs': 'Discotecas en Cancún',
         'nav.funParty.beachClub': 'Clubs de playa en Cancún',
         'nav.golf': 'Golf',
@@ -38,6 +41,14 @@ export const ui = {
         'nav.terms': 'Términos de servicio',
         'nav.privacy': 'Política de privacidad',
         'text.new': 'Nuevo',
+        'text.deals': 'Ofertas Early Birds',
+        'text.restaurants': 'Restaurantes en Cancún',
+        'text.transportation': 'Transporte al Aeropuerto',
+        'text.golf': 'Campos de golf',
+        'text.yachts': 'Yates en Cancún',
+        'footer.company': 'Compañía',
+        'footer.policy': 'Políticas',
+        'footer.daysOperation': 'Lunes a Domingo',
         'footer.copyrigth': 'Derechos de autor WhatToDoInCancun.com Todos los derechos reservados.',
         'footer.design': 'Diseñado por What To Do In Cancun',
     },
@@ -51,7 +62,6 @@ export const ui = {
         'nav.tours.water': 'Water Activities',
         'nav.tours.ruins': 'Mayan Ruins',
         'nav.funParty': 'Fun & Party',
-        'nav.funParty.events': 'Events in Cancun',
         'nav.funParty.nightClubs': 'NightClubs in Cancun',
         'nav.funParty.beachClub': 'BeachClubs in Cancun',
         'nav.golf': 'Golf',
@@ -66,6 +76,14 @@ export const ui = {
         'nav.terms': 'Terms of services',
         'nav.privacy': 'Privacy policy',
         'text.new': 'New',
+        'text.deals': 'Early Birds Deals',
+        'text.restaurants': 'Restaurants in Cancun',
+        'text.transportation': 'Transportation Airport',
+        'text.golf': 'Golf Courses',
+        'text.yachts': 'Yachts in Cancun',
+        'footer.company': 'Company',
+        'footer.policy': 'Policy',
+        'footer.daysOperation': 'Monday to Sunday',
         'footer.copyrigth': 'Copyright WhatToDoInCancun.com All Rights Reserved.',
         'footer.design': 'Design by What To Do In Cancun',
     },

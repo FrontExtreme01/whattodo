@@ -10,22 +10,26 @@ description: 'Experience two great, fun-packed experiences Cancun has to offer�
 keywords: ''
 price: 90
 stars: '4.6'
-reviews: '890 reviews'
+reviews: '890'
 image:
     src: '/assets/covers/combos/ATV-Jungle-ClearBoat-combo-tours-in-cancun.webp'
     alt: 'cover ATV Jungle Adventure + Glass boat cruise'
 highlights: ['Pickup offered']
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/677580?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/677580'
 location: 'Cancun, Mexico'
 duration: '2 days'
+transportation: 'Pickup offered'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 
 export const includes = [
     'ATV Jungle Tour with Ziplines & Cenote',
@@ -41,7 +45,7 @@ export const notIncludes = [
     '$5 USD dock fee per person (boat cruise)',
 ];
 
-export const information = [
+export const shouldKnow = [
     'Confirmation will be received at time of booking',
     'Not wheelchair accessible',
     'Near public transportation',
@@ -55,24 +59,43 @@ export const information = [
     'This tour/activity will have a maximum of 10 travelers',
 ];
 
-export const i18n = {
-    INCLUDES: 'Included',
-    NOT_INCLUDES: 'Not included',
-    INFORMATION: 'Additional information',
-}
+export const shouldBring = [
+    'Comfortable clothes',
+    'Swimsuit',
+    'Towel',
+    'Biodegradable sunscreen',
+    'Hat',
+];
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
 
-<TagH2>Overview</TagH2>
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Overview</TagH2>
 
-<TagP>Experience two great, fun-packed experiences Cancun has to offer—a wild off-road adventure with ATV, ziplines & cenote at Extreme Adventure Cancun, and a unique sightseeing cruise in a fully transparent glass boat.</TagP>
+    <TagP>Experience two great, fun-packed experiences Cancun has to offer—a wild off-road adventure with ATV, ziplines & cenote at Extreme Adventure Cancun, and a unique sightseeing cruise in a fully transparent glass boat.</TagP>
 
-<TagP><strong>Day 1:</strong> Unleash your inner thrill-seeker on a wild ATV Jungle Tour. Race through the Mayan jungle, soar through the treetops on ziplines, and refresh yourself in a hidden cenote. This adrenaline-pumping experience lasts 4 hours, with an additional 2 hours for transportation from Cancun.</TagP>
+    <TagP><strong>Day 1:</strong> Unleash your inner thrill-seeker on a wild ATV Jungle Tour. Race through the Mayan jungle, soar through the treetops on ziplines, and refresh yourself in a hidden cenote. This adrenaline-pumping experience lasts 4 hours, with an additional 2 hours for transportation from Cancun.</TagP>
 
-<TagP><strong>Day 2:</strong> Cruise the scenic Nichupte Lagoon and the Caribbean Sea in a unique glass boat with an incredible 360 visibility. With its completely transparent hull, the one-of-a-kind vessel takes you on en exciting sightseeing journey in Cancun. This two-day adventure combo offers the perfect blend of excitement and relaxation, ensuring you create lasting memories of your Cancun vacation. </TagP>
+    <TagP><strong>Day 2:</strong> Cruise the scenic Nichupte Lagoon and the Caribbean Sea in a unique glass boat with an incredible 360 visibility. With its completely transparent hull, the one-of-a-kind vessel takes you on en exciting sightseeing journey in Cancun. This two-day adventure combo offers the perfect blend of excitement and relaxation, ensuring you create lasting memories of your Cancun vacation. </TagP>
 
-<AdditionalInfo information={information} i18n={i18n} />
+    <TagH3>Enjoy each detail</TagH3>
 
-<TagH3>Enjoy each detail</TagH3>
+    <TagP> Experience two great, fun-packed experiences Cancun has to offer—a wild off-road adventure with ATV, ziplines & cenote at Extreme Adventure Cancun, and a unique sightseeing cruise in a fully transparent glass boat. The ATV Jungle Tour with Ziplines & Cenote lasts 4 hours excluding transportation time (around 2 hours in total from Cancun). Upon arrival at the park, embark on a thrilling 30-minute ATV ride through the Maya jungle. Next, fly across the tree tops on the 3-zipline circuit before cooling off in an authentic, exotic cenote in the heart of the jungle. On your second tour date, cruise the scenic Nichupte Lagoon and the Caribbean Sea in a unique glass boat with an incredible 360 visibility. With its completely transparent hull, the one-of-a-kind vessel takes you on en exciting sightseeing journey in Cancun. </TagP>
+</Accordion>
 
-<TagP> Experience two great, fun-packed experiences Cancun has to offer—a wild off-road adventure with ATV, ziplines & cenote at Extreme Adventure Cancun, and a unique sightseeing cruise in a fully transparent glass boat. The ATV Jungle Tour with Ziplines & Cenote lasts 4 hours excluding transportation time (around 2 hours in total from Cancun). Upon arrival at the park, embark on a thrilling 30-minute ATV ride through the Maya jungle. Next, fly across the tree tops on the 3-zipline circuit before cooling off in an authentic, exotic cenote in the heart of the jungle. On your second tour date, cruise the scenic Nichupte Lagoon and the Caribbean Sea in a unique glass boat with an incredible 360 visibility. With its completely transparent hull, the one-of-a-kind vessel takes you on en exciting sightseeing journey in Cancun. </TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

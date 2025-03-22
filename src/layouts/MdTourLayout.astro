@@ -1,16 +1,17 @@
 ---
 import { getI18N } from "@/i18n";
+import { YouTube } from 'astro-embed';
+import { Star, MapPin, Clock, Language, UserStar, BusStop } from "@/img/allIcons";
 
 import BaseLayout from "./BaseLayout.astro";
-import ShareSM from "@components/detail-content/ShareSM";
-import Testimonials from "@components/global/Testimonials";
+import GalleryDesktop from "@components/detail-content/GalleryDesktop";
+import GalleryMobile from "@components/detail-content/GalleryMobile";
 import QuestionPolicy from "@components/detail-content/QuestionPolicy.astro";
-import FormBokunMobile from "@components/detail-content/FormBokunMobile";
 import FormBokunDesktop from "@components/detail-content/FormBokunDesktop";
-import ButtonsContact from "@components/detail-content/ButtonsContact.astro";
-import SliderGallery from "@components/detail-content/SliderGallery";
-import FAQs from "@/components/detail-content/FAQs";
-import EarlyBirdPrices from "@components/detail-content/EarlyBirdPrices";
+import FormBokunMobile from "@components/detail-content/FormBokunMobile";
+import FAQs from "@components/detail-content/FAQs";
+import Testimonials from "@components/global/Testimonials";
+import MenuLinks from "@components/detail-content/MenuLinks";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -34,9 +35,20 @@ const accessibility = {
     ariaLabelGallery: i18n.ACCESSIBILITY.OPEN_GALLERY,
 };
 
+const menuLinks = [
+    {show: true, id: "whatToExpect", title: i18n.DETAILS_CONTENT.MENU_LINKS.WHAT_TO_EXPECT },
+    {show: true, id: "whatsIncluded", title: i18n.DETAILS_CONTENT.MENU_LINKS.WHATS_INCLUDED },
+    {show: true, id: "whatYouShouldKnow", title: i18n.DETAILS_CONTENT.MENU_LINKS.SHOULD_KNOW },
+    {show: frontmatter.notShouldBring ? false : true, id: "whatYouShouldBring", title: i18n.DETAILS_CONTENT.MENU_LINKS.SHOULD_BRING },
+    {show: frontmatter.faqs ? true : false, id: "faqs", title: i18n.DETAILS_CONTENT.MENU_LINKS.FAQS },
+    {show: frontmatter.testimonials ? true : false, id: "reviews", title: i18n.DETAILS_CONTENT.MENU_LINKS.REVIEWS },
+];
+
 const dataForm = {
     i18n: i18n.DETAILS_CONTENT.FORM_RESERVATION,
     earlyBird: frontmatter.earlyBird,
+    notCustomEarlyBird: frontmatter.notCustomEarlyBird,
+    lastMinute: frontmatter.lastMinute,
     price: frontmatter.price,
     titleCard: frontmatter.title,
     reviews: frontmatter.reviews,
@@ -55,65 +67,112 @@ const seoMetaDatos = {
 ---
 
 <BaseLayout seo={seoMetaDatos}>
-    <section class="mx-6 md:mx-20 lg:mx-24 mt-12 mb-14">
-        <div class="flex flex-wrap">
-            <!-- Header -->
-            <header class="flex flex-wrap w-full">
-                <h1 class="pr-1 w-9/12 text-2xl md:text-4xl font-bold italic text-green-700">
-                    {frontmatter.title}
-                </h1>
-                <div class="w-3/12 flex flex-col md:flex-row justify-center items-center gap-3">
-                    <ShareSM client:idle site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} />
-                </div>
-                <ul class="flex flex-wrap gap-2 md:gap-5 w-full my-6 text-sm md:text-lg">
-                    <li>
-                        <i class="at-star text-amber-500"></i>
-                        <span class="font-bold"> {frontmatter.stars} 
-                            <span class="text-slate-600 font-thin"> ({frontmatter.reviews})</span>
-                        </span>
-                    </li>
-                    <li>
-                        <i class="at-pin-destination text-green-700"></i>
-                        <span>{frontmatter.location}</span>
-                    </li>
-                </ul>
-            </header>
+    <!-- Gallery -->
+    <section class="mx-auto px-5 md:px-20 py-6 lg:py-10">
+        {gallery.length > 0 && (
+            <GalleryDesktop client:visible site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} images={gallery} accessibility={accessibility}>
+                {frontmatter.frameYoutube && (
+                    <YouTube class="w-full h-full max-w-full rounded-lg" id={frontmatter.frameYoutube} posterQuality="high" />
+                )}
+            </GalleryDesktop>
+
+            <GalleryMobile client:visible site={siteWebURL} i18n={i18n.DETAILS_CONTENT.GENERAL} images={gallery} accessibility={accessibility}>
+                {frontmatter.frameYoutube && (
+                    <YouTube class="w-full h-full max-w-full rounded-lg" id={frontmatter.frameYoutube} posterQuality="high" />
+                )}
+            </GalleryMobile>
+        )}
+    </section>
+    <!-- Content -->
+    <section class="mx-auto px-5 md:px-20">
+        <div class="flex flex-wrap mb-10">
             <!-- Content -->
             <div class="w-full xl:w-8/12 lg:pr-14">
-                <SliderGallery client:load images={gallery} accessibility={accessibility}/> 
-                <!-- Hightlight -->
-                <div class="flex flex-wrap w-full gap-5 lg:gap-10 my-6 justify-center text-sm md:text-lg text-center">
-                    <div class="text-slate-800 rounded-2xl">
-                        <i class="at-clock-time bg-slate-100 p-3 rounded-full"></i>
-                        <span>{frontmatter.duration}</span>
-                    </div>
-                    <div class="text-slate-800 rounded-2xl">
-                        <i class="at-exclamation-mobile bg-slate-100 p-3 rounded-full"></i>
-                        <span>{i18n.DETAILS_CONTENT.GENERAL.TICKET_MOBILE}</span>
-                    </div>
-                    <div class="text-slate-800 rounded-2xl">
-                        <i class="at-language-translation bg-slate-100 p-3 rounded-full"></i>
-                        <span><b>{i18n.DETAILS_CONTENT.GENERAL.OFFERED_IN}</b> {i18n.DETAILS_CONTENT.GENERAL.OFFERED_LANG}</span>
-                    </div>
-                    {frontmatter.highlights.map((item) =>(
-                        <div class="text-slate-800 rounded-2xl">
-                            <i class="at-check-circle bg-slate-100 p-3 rounded-full"></i>
-                            <span>{item}</span>
-                        </div>
-                    ))}
+                <!-- MenuLinks -->
+                <div class="mb-5">
+                    <MenuLinks client:visible menuLinks={menuLinks} />
                 </div>
-                <ButtonsContact i18n={i18n.ACCESSIBILITY} />
-                <!-- Early Bird Mobile -->
-                {frontmatter.earlyBird && (
-                    <div class="container mx-auto my-6 xl:hidden text-center">
-                        <EarlyBirdPrices client:visible price={frontmatter.price} i18n={i18n.DETAILS_CONTENT.FORM_RESERVATION} />
-                    </div>
-                )}
+                <!-- Header Title -->
+                <header>
+                    {frontmatter.lastMinute && (
+                        <span class="w-fit py-1 sm:py-2 px-5 rounded-tl-xl rounded-br-xl bg-gradient-to-r from-red-600 from-70% to-orange-500 text-white font-bold text-xs sm:text-sm shadow-md">
+                            {i18n.CARDS.LAST_MINUTE}
+                        </span>
+                    )}
+                    {frontmatter.earlyBird && (
+                        <span class="w-fit py-1 sm:py-2 px-5 rounded-tl-xl rounded-br-xl bg-gradient-to-r from-orange-500 from-70% to-amber-500 text-white font-bold text-xs sm:text-sm shadow-md">
+                            {i18n.CARDS.EARLY_BIRD}
+                        </span>
+                    )}
+                    <h1 class="font-bold text-xl md:text-3xl w-full mt-5 mb-3">{frontmatter.title}</h1>
+                    <ul class="flex flex-wrap gap-3 md:gap-5 w-full text-sm sm:text-lg">
+                        <li class="flex items-center">
+                            <Star class="text-amber-500 size-5 mr-1" />
+                            <p class="font-bold"> {frontmatter.stars} 
+                                <span class="text-gray-500 font-thin"> ({frontmatter.reviews})</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a class="flex items-center" href="#location">
+                                <MapPin class="text-gray-600 size-5 mr-1" />
+                                <p>{frontmatter.location}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <!-- Information General -->
+                <div class="my-10">
+                    <h2 class="font-bold text-lg sm:text-xl mb-5">{i18n.DETAILS_CONTENT.GENERAL.INFORMATION_GENERAL}</h2>
+                    <ul class="columns-2 space-y-8 text-sm sm:text-base">
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <Clock class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.DURATION}</p>
+                                <p>{frontmatter.duration}</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <UserStar class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.RECOMMENDED_FOR}</p>
+                                <p>
+                                    {frontmatter.recommendedFor.map((item) => (
+                                        <span class="w-fit">{item}</span>
+                                    ))}
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <Language class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.OFFERED_IN}</p>
+                                <p>{i18n.DETAILS_CONTENT.GENERAL.OFFERED_LANG}</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-1/6 lg:w-1/12 mr-2">
+                                <BusStop class="size-7" stroke-width={1} />
+                            </div>
+                            <div class="flex flex-col justify-start w-5/6 lg:w-11/12">
+                                <p class="font-bold">{i18n.DETAILS_CONTENT.GENERAL.TRANSPORTATION}</p>
+                                <p>{frontmatter.transportation ? frontmatter.transportation : i18n.DETAILS_CONTENT.GENERAL.NOT_TRANSPORTATION}</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Slot -->
                 <div class="text-justify">
                     <slot />
                 </div>
-
-                <hr class="h-0.5 bg-slate-200 my-10">
+                <!-- FAQs -->
+                {frontmatter.faqs && (<FAQs client:visible FAQS={frontmatter.faqs} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_FAQS}/>) }
                 <QuestionPolicy i18n={i18n.DETAILS_CONTENT.QUESTION_POLICY} />
             </div>
             <!-- FormSidebar -->
@@ -122,8 +181,6 @@ const seoMetaDatos = {
     </section>
     <!-- Testimonials -->
     {frontmatter.testimonials && (<Testimonials client:visible testimonials={frontmatter.testimonials} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_TESTIMONIAL}/>) }
-    <!-- FAQs -->
-    {frontmatter.faqs && (<FAQs client:visible FAQS={frontmatter.faqs} title={i18n.DETAILS_CONTENT.GENERAL.TITLE_FAQS} description={i18n.DETAILS_CONTENT.GENERAL.DESCRIPTION_FAQS}/>) }
     <!-- Form Mobile -->
     <FormBokunMobile client:visible data={dataForm} />
 </BaseLayout>

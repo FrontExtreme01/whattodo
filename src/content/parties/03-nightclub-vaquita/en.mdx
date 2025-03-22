@@ -5,28 +5,31 @@ home: 1
 lang: 'en'
 type: 'NIGHTCLUB'
 slugGallery: 'la-vaquita'
-title: 'La Vaquita Cancun NightClub'
+title: 'La Vaquita Cancun'
 description: 'La Vaquita is a popular nightclub and a top destination for those seeking a fun and affordable night out in Cancun.'
 keywords: ''
-price: 20
+price: 40
 stars: '5.0'
-reviews: '892 reviews'
+reviews: '892'
 image:
     src: '/assets/covers/parties/la-vaquita-cancun-nightclub-party-center.webp'
     alt: 'cover la vaquita cancun nightclub party center'
 duration: '6 hours'
+music: 'Hip-Hop, Rap, Reggaeton'
+dressCode: 'Smart casual (no bathing suits or shirts without sleeves)'
 consumption: 'Consumption credit'
 admission: 'Admission'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/745897?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/745897'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59543.71366846618!2d-86.747303!3d21.133204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2898bfa149cb%3A0xb6ebef3afef3096d!2sLa%20Vaquita%20Canc%C3%BAn!5e0!3m2!1ses!2smx!4v1704731510272!5m2!1ses!2smx'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 
 export const includes = [
     'Admission',
@@ -39,33 +42,40 @@ export const notIncludes = [
     'Table Reservation',
 ];
 
-export const information = [
+export const shouldKnow = [
     'Check-in must be completed before 10:30 PM',
     'Duration: 6 hours',
 ];
 
-export const i18n = {
-    INCLUDES: 'Included',
-    NOT_INCLUDES: 'Not included',
-    INFORMATION: 'Please note',
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>About La Vaquita Cancun</TagH2>
 
-<AdditionalInfo information={information} i18n={i18n} />
+    <TagP><strong>La Vaquita</strong> is a popular nightclub located in Cancun’s Hotel Zone. This lively club is a top destination for those seeking a fun and affordable night out in Cancun. </TagP>
 
-<TagH2>About La Vaquita Cancun</TagH2>
+    <TagP>One of the standout features of La Vaquita is its affordable drink prices. This club is known for its reasonably priced cocktails, shots, and beer, making it an excellent choice for those on a budget. </TagP>
 
-<TagP><strong>La Vaquita</strong> is a popular nightclub located in Cancun’s Hotel Zone. This lively club is a top destination for those seeking a fun and affordable night out in Cancun. </TagP>
+    <TagP>La Vaquita is also a great spot for groups, offering table service packages that include private seating areas, bottle service, and personal waitstaff. These packages make it easy to enjoy a VIP experience without breaking the bank. </TagP>
 
-<TagP>One of the standout features of La Vaquita is its affordable drink prices. This club is known for its reasonably priced cocktails, shots, and beer, making it an excellent choice for those on a budget. </TagP>
+    <TagP>Inside, La Vaquita features a large dance floor, multiple bars, and plenty of seating areas to relax and socialize. The club’s music selection ranges from reggaeton and hip-hop to pop and electronic, ensuring that there’s something for everyone to dance to. </TagP>
 
-<TagP>La Vaquita is also a great spot for groups, offering table service packages that include private seating areas, bottle service, and personal waitstaff. These packages make it easy to enjoy a VIP experience without breaking the bank. </TagP>
+    <TagP>La Vaquita enforces a <strong>dress code</strong>, so it’s important to dress appropriately. Men should wear collared shirts and dress shoes, while women should opt for dresses or nice pants paired with heels. Look for more <strong>nightlife in Cancun</strong> options </TagP>
 
-<TagP>Inside, La Vaquita features a large dance floor, multiple bars, and plenty of seating areas to relax and socialize. The club’s music selection ranges from reggaeton and hip-hop to pop and electronic, ensuring that there’s something for everyone to dance to. </TagP>
+    <TagP>For those looking to get a sense of the club’s atmosphere before going, there are plenty of La Vaquita Cancun photos available online. These photos showcase the club’s lively atmosphere, complete with a giant cow statue and colorful decor. </TagP>
 
-<TagP>La Vaquita enforces a <strong>dress code</strong>, so it’s important to dress appropriately. Men should wear collared shirts and dress shoes, while women should opt for dresses or nice pants paired with heels. Look for more <strong>nightlife in Cancun</strong> options </TagP>
+    <TagP>Overall, La Vaquita is a fun and affordable nightclub that’s worth checking out while in Cancun. With its affordable drink prices, table service packages, and lively atmosphere, it’s no wonder why it’s such a popular destination among both locals and tourists. </TagP>
+</Accordion>
 
-<TagP>For those looking to get a sense of the club’s atmosphere before going, there are plenty of La Vaquita Cancun photos available online. These photos showcase the club’s lively atmosphere, complete with a giant cow statue and colorful decor. </TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
 
-<TagP>Overall, La Vaquita is a fun and affordable nightclub that’s worth checking out while in Cancun. With its affordable drink prices, table service packages, and lively atmosphere, it’s no wonder why it’s such a popular destination among both locals and tourists. </TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

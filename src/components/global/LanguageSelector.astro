@@ -1,6 +1,7 @@
 ---
 import { languages } from "@/i18n/ui";
 import {useTranslatedPath, getLangFromUrl} from "@/i18n/utils";
+import { ArrowDown } from "@/img/allIcons";
 
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
@@ -15,23 +16,25 @@ const currentPath = Astro.url.pathname.replace(new RegExp(`^/${lang}`), '');
 ---
 
 <div class="relative inline-block text-lef order-0 xl:order-1">
-    <div class="group text-black rounded-3xl text-xs font-semibold bg-white hover:bg-orange-500 hover:text-white transition-all shadow-sm border border-black/10">
+    <div class="group text-black rounded-3xl text-xs font-bold bg-white hover:bg-green-700 hover:text-white transition-all">
         <button
             type="button"
             class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
             aria-expanded="true"
             aria-haspopup="true"
+            aria-label="Change language"
         >
-            <i class="at-language-translation"></i>
-            {currentLocaleData.code}
+            <currentLocaleData.flag class="w-6 h-6" />
+            <span class="hidden sm:block uppercase">{currentLocaleData.code}</span>
+            <ArrowDown class="w-5 h-5 group-hover:rotate-180 transition-all duration-200" />
         </button>
         <ul class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full">
             {
                 otherLocales.map((locale) => (
                     <li class="py-[2px]">
-                        <a class="rounded-3xl text-black bg-white hover:bg-orange-600 hover:text-white whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2 shadow-sm border border-black/10"
+                        <a class="uppercase rounded-3xl text-black bg-white hover:bg-green-600 hover:text-white whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2 shadow-sm border border-black/10"
                             href={translatePath(currentPath, locale.code)}>
-                            <i class="at-language-translation"></i> {locale.code}
+                            <locale.flag class="w-5 h-5" /> {locale.code}
                         </a>
                     </li>
                 ))

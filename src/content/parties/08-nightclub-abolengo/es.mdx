@@ -8,26 +8,29 @@ slugSeo: 'Abolengo Cancún Club Nocturno Admisión'
 title: 'Abolengo Bartina Cancún'
 description: 'Abolengo Cancún es un club nocturno moderno y exclusivo ubicado en el corazón de la zona del hotel.Una mezcla de decoración mexicana moderna y tradicional.'
 keywords: ''
-price: 20
+price: 40
 stars: '4.0'
-reviews: '3,916 reseñas'
+reviews: '3,916 '
 image:
     src: '/assets/covers/parties/abolengo-cover.webp'
     alt: 'portada de Abolengo Cancun'
 duration: '6 horas'
+music: 'Pop, rock, latina, electrónica'
+dressCode: 'Smart casual, elegante (no trajes de baño o camisas sin mangas)'
 consumption: 'Crédito de consumo'
 admission: 'Boleto de admisión'
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/746043?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/746043'
-location: 'Blvd. Kukulcan, Zona Hotelera, Cancún, Q.R.'
+location: 'Blvd. Kukulcan, Zona Hotelera'
 mapFrame: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29771.814655632596!2d-86.746523!3d21.133414!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c29c8e022f8cf%3A0x317e02417e298b81!2sAbolengo!5e0!3m2!1ses!2smx!4v1704723152526!5m2!1ses!2smx'
 ---
 
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
 
 export const includes = [
     'Admisión',
@@ -39,53 +42,60 @@ export const notIncludes = [
     'Propinas'
 ];
 
-export const Information = [
+export const shouldKnow = [
     'El check-in debe completarse antes de las 9 PM.',
     'Duración: 6 horas',
 ];
 
-export const i18n = {
-    INCLUDES: 'Incluido',
-    NOT_INCLUDES: 'No incluido',
-    INFORMATION: 'Por favor, ten en cuenta',
+export const titles = {
+    WHAT_TO_EXPECT: 'Descripción general',
+    WHATS_INCLUDED: '¿Qué esta incluido?',
+    SHOULD_KNOW: '¿Qué debes saber?',
+    SHOULD_BRING: '¿Qué debes traer?',
 };
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Acerca de Abolengo Cancún </TagH2>
 
-<AdditionalInfo information={Information} i18n={i18n} />
+    <TagP><strong>Abolengo Cancún</strong> es un club nocturno moderno y exclusivo ubicado en el corazón de la zona del hotel. Conocido por su mezcla única de decoración <strong>mexicana moderna y tradicional</strong>, Abolengo es un destino popular para aquellos que buscan una experiencia de <strong>club nocturno elegante y exclusiva</strong>. </TagP>
 
-<TagH2>Acerca de Abolengo Cancún </TagH2>
+    <TagH3>Ubicación de Abolengo Cancún</TagH3>
 
-<TagP><strong>Abolengo Cancún</strong> es un club nocturno moderno y exclusivo ubicado en el corazón de la zona del hotel. Conocido por su mezcla única de decoración <strong>mexicana moderna y tradicional</strong>, Abolengo es un destino popular para aquellos que buscan una experiencia de <strong>club nocturno elegante y exclusiva</strong>. </TagP>
+    <TagP>La ubicación es uno de sus mayores atractivos, ya que se encuentra en el corazón de la <strong>Zona Hotelera</strong>, lo que lo hace de fácil acceso tanto para turistas como para locales. Se encuentra a pocos pasos o en taxi de muchos de los hoteles y atracciones más populares de Cancún. </TagP>
 
-<TagH3>Ubicación de Abolengo Cancún</TagH3>
+    <TagP>Una de las características más destacadas de Abolengo es su menú, que incluye una amplia variedad de <strong>bocadillos y cócteles mexicanos</strong>. Desde los favoritos tradicionales como los <strong>tacos y el guacamole</strong> hasta creaciones más modernas como el ceviche y los cócteles artesanales, el menú seguramente complacerá a cualquier paladar. </TagP>
 
-<TagP>La ubicación es uno de sus mayores atractivos, ya que se encuentra en el corazón de la <strong>Zona Hotelera</strong>, lo que lo hace de fácil acceso tanto para turistas como para locales. Se encuentra a pocos pasos o en taxi de muchos de los hoteles y atracciones más populares de Cancún. </TagP>
+    <TagH2>Despedida de soltera en Abolengo </TagH2>
 
-<TagP>Una de las características más destacadas de Abolengo es su menú, que incluye una amplia variedad de <strong>bocadillos y cócteles mexicanos</strong>. Desde los favoritos tradicionales como los <strong>tacos y el guacamole</strong> hasta creaciones más modernas como el ceviche y los cócteles artesanales, el menú seguramente complacerá a cualquier paladar. </TagP>
+    <TagP>Además de su delicioso menú, Abolengo Cancún también es un lugar popular para despedidas de soltera y otros eventos especiales. El club ofrece secciones VIP y servicio de botellas, lo que permite a los huéspedes disfrutar de una experiencia exclusiva y lujosa. </TagP>
 
-<TagH2>Despedida de soltera en Abolengo </TagH2>
+    <TagH3>Vida nocturna en Cancún </TagH3>
 
-<TagP>Además de su delicioso menú, Abolengo Cancún también es un lugar popular para despedidas de soltera y otros eventos especiales. El club ofrece secciones VIP y servicio de botellas, lo que permite a los huéspedes disfrutar de una experiencia exclusiva y lujosa. </TagP>
+    <TagP>Cuando se trata de vida nocturna en Cancún, Abolengo es una excelente opción para quienes buscan un ambiente lleno de energía y un servicio excelente. El club cuenta con varios niveles, incluida una terraza en la azotea con impresionantes vistas de los alrededores. </TagP>
 
-<TagH3>Vida nocturna en Cancún </TagH3>
+    <TagP>Si estás planeando un viaje a Cancún y buscas una experiencia nocturna memorable, asegúrate de visitar este club. Con su decoración única, su delicioso menú y sus exclusivas secciones VIP, es una excelente opción para quienes buscan una noche inolvidable en esta hermosa ciudad mexicana. Código de vestimenta de Abolengo: vestir de manera informal </TagP>
 
-<TagP>Cuando se trata de vida nocturna en Cancún, Abolengo es una excelente opción para quienes buscan un ambiente lleno de energía y un servicio excelente. El club cuenta con varios niveles, incluida una terraza en la azotea con impresionantes vistas de los alrededores. </TagP>
+    <TagH3>Dónde está Abolengo </TagH3>
 
-<TagP>Si estás planeando un viaje a Cancún y buscas una experiencia nocturna memorable, asegúrate de visitar este club. Con su decoración única, su delicioso menú y sus exclusivas secciones VIP, es una excelente opción para quienes buscan una noche inolvidable en esta hermosa ciudad mexicana. Código de vestimenta de Abolengo: vestir de manera informal </TagP>
+    <TagP>Abolengo Cancún se encuentra en la Zona Hotelera de Cancún, México. La dirección específica es Boulevard Kukulcan Km 9.5, Zona Hotelera, 77500 Cancún, Q.R., México. Está situado en el corazón de la Zona Hotelera, por lo que es de fácil acceso tanto para turistas como para locales. El club está a un corto paseo o en taxi de muchos de los hoteles y atracciones más populares de Cancún. </TagP>
 
-<TagH3>Dónde está Abolengo </TagH3>
+    <TagH3>Cómo llegar a Abolengo </TagH3>
 
-<TagP>Abolengo Cancún se encuentra en la Zona Hotelera de Cancún, México. La dirección específica es Boulevard Kukulcan Km 9.5, Zona Hotelera, 77500 Cancún, Q.R., México. Está situado en el corazón de la Zona Hotelera, por lo que es de fácil acceso tanto para turistas como para locales. El club está a un corto paseo o en taxi de muchos de los hoteles y atracciones más populares de Cancún. </TagP>
+    <TagP>Existen varias formas de llegar a Abolengo Cancún, dependiendo de tu ubicación y preferencia: </TagP>
 
-<TagH3>Cómo llegar a Abolengo </TagH3>
+    <TagP><strong>Taxi:</strong> Una de las formas más fáciles de llegar a Abolengo es en taxi. Hay taxis disponibles en Cancún y la mayoría de los conductores conocen la ubicación del club. Simplemente dile al conductor la dirección, Boulevard Kukulcan Km 9.5, Zona Hotelera, y te llevarán directamente al club. </TagP>
 
-<TagP>Existen varias formas de llegar a Abolengo Cancún, dependiendo de tu ubicación y preferencia: </TagP>
+    <TagP><strong>Transporte público:</strong> Si prefieres usar el transporte público, hay varios autobuses que recorren la Zona Hotelera de Cancún. Los autobuses R1 y R2 son los más populares y funcionan con frecuencia durante el día y la noche. Puedes abordar el autobús en cualquiera de las paradas designadas a lo largo de la Zona Hotelera y bajarte en la parada más cercana a Abolengo. </TagP>
 
-<TagP><strong>Taxi:</strong> Una de las formas más fáciles de llegar a Abolengo es en taxi. Hay taxis disponibles en Cancún y la mayoría de los conductores conocen la ubicación del club. Simplemente dile al conductor la dirección, Boulevard Kukulcan Km 9.5, Zona Hotelera, y te llevarán directamente al club. </TagP>
+    <TagP><strong>Transporte privado:</strong> Otra opción es contratar transporte privado, como un servicio de automóvil o un servicio de transporte privado. Estos servicios se pueden organizar con anticipación a través de su hotel o una empresa de viajes local. Lo recogerán en su ubicación y lo llevarán directamente a este centro de fiesta. </TagP>
 
-<TagP><strong>Transporte público:</strong> Si prefieres usar el transporte público, hay varios autobuses que recorren la Zona Hotelera de Cancún. Los autobuses R1 y R2 son los más populares y funcionan con frecuencia durante el día y la noche. Puedes abordar el autobús en cualquiera de las paradas designadas a lo largo de la Zona Hotelera y bajarte en la parada más cercana a Abolengo. </TagP>
+    <TagP>Sin importar el método de transporte que elija, asegúrese de planificar con anticipación y dejar suficiente tiempo para llegar al club. Abolengo Cancún es un destino popular, especialmente los fines de semana, por lo que es una buena idea llegar temprano para evitar largas filas y tiempos de espera. </TagP>
+</Accordion>
 
-<TagP><strong>Transporte privado:</strong> Otra opción es contratar transporte privado, como un servicio de automóvil o un servicio de transporte privado. Estos servicios se pueden organizar con anticipación a través de su hotel o una empresa de viajes local. Lo recogerán en su ubicación y lo llevarán directamente a este centro de fiesta. </TagP>
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+</Accordion>
 
-<TagP>Sin importar el método de transporte que elija, asegúrese de planificar con anticipación y dejar suficiente tiempo para llegar al club. Abolengo Cancún es un destino popular, especialmente los fines de semana, por lo que es una buena idea llegar temprano para evitar largas filas y tiempos de espera. </TagP>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>

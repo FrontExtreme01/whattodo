@@ -1,13 +1,14 @@
 ---
 import { getI18N } from "@/i18n";
-import { getSlides } from "@/img/allImages";
+import { getSlides } from "@/img/allSlides";
 import { getLangFromUrl } from "@/i18n/utils";
 import { getToursByCategory } from "@/content/functions";
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import SliderBanner from "@components/global/SliderBanner";
+import SliderDesktop from "@/components/global/SliderDesktop";
+import SliderMobile from "@/components/global/SliderMobile";
 import Intro from "@components/global/Intro.astro";
-import TourCard from "@components/cards/TourCard.astro";
+import TourCardHorizontal from "@components/cards/TourCardHorizontal.astro";
 
 const { category } = Astro.props;
 
@@ -17,7 +18,8 @@ const i18n = getI18N({ currentLocale });
 const lang = getLangFromUrl(Astro.url);
 const allTours = await getToursByCategory(category, lang);
 
-const slides = getSlides(category, lang);
+const slidesDesktop = getSlides(category, "DESKTOP", lang);
+const slidesMobile = getSlides(category, "MOBILE", lang);
 
 const seoMetaDatos = {
     title: i18n.SEO.TOUR_PAGE.CATEGORY_TOURS[category].TITLE,
@@ -27,11 +29,15 @@ const seoMetaDatos = {
 ---
 
 <BaseLayout seo={seoMetaDatos}>
-    
-    <SliderBanner
-        client:load
-        slides={slides}
-        i18nButton={i18n.TOUR_PAGE.CARD.BUTTON_BOOK_NOW}
+    <SliderDesktop
+        client:visible
+        slides={slidesDesktop}
+        lang={lang}
+    />
+    <SliderMobile
+        client:visible
+        slides={slidesMobile}
+        lang={lang}
     />
 
     <Intro
@@ -39,9 +45,9 @@ const seoMetaDatos = {
         description={i18n.TOUR_PAGE.CATEGORY_TOURS[category].DESCRIPTION}
     />
 
-    <section class="container mx-auto mb-10">
-        <div class="flex flex-wrap justify-center">
-            {allTours.map((tour) => <TourCard tour={tour} lang={lang} />)}
+    <section class="container mx-auto px-5 md:px-20 py-6">
+        <div class="flex flex-wrap">
+            {allTours.map((tour) => <TourCardHorizontal tour={tour} lang={lang} />)}
         </div>
     </section>
 </BaseLayout>

@@ -11,22 +11,27 @@ description: 'This Combo Aquatic tours in Cancun and Isla Mujeres guarantees you
 keywords: ''
 price: 81
 stars: '4.5'
-reviews: '1,238 reviews'
+reviews: '1,238'
 image:
     src: '/assets/covers/combos/speedboat-and-catamaran-full-day-adventure.webp'
     alt: 'cover combo speedboat and catamaran'
 highlights: ['Shared speed boat', 'Transportation Included']
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers']
 bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/742963?partialView=1'
 calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/742963'
 location: 'Cancun, Mexico'
 duration: '10 hours'
+transportation: 'Pickup offered'
 ---
 
+import { Check, Close, } from "@/img/allIcons";
+import Accordion from "@components/detail-content/Accordion";
 import TagH2 from "@components/global/TagH2.astro";
 import TagH3 from "@components/global/TagH3.astro";
 import TagP from "@components/global/TagP.astro";
 import Inclusions from "@components/detail-content/Inclusions.astro";
-import AdditionalInfo from "@components/detail-content/AdditionalInfo.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
 
 export const includes = [
     'Use of Snorkelling equipment',
@@ -41,56 +46,77 @@ export const notIncludes = [
     'Gratuities',
 ];
 
-export const information = [
+export const shouldKnow = [
     'Minimum age of 10 years old',
     'A dock tax of USD 15 per person must be paid in the Isla Mujeres Catamaran activity',
     'Transportation is subject to availability and space',
     'The transportation zone only covers the Cancun hotel zone. If you are in another area outside of the Cancun hotel zone, you will have to get to the meeting point on your own',
 ];
 
-export const i18n = {
-    INCLUDES: 'Included',
-    NOT_INCLUDES: 'Not included',
-    INFORMATION: 'Important Notes'
-}
+export const shouldBring = [
+    'Comfortable clothes',
+    'Swimsuit',
+    'Towel',
+    'Biodegradable sunscreen',
+    'Hat',
+    'Sunglasses',
+    'Extra cash',
+];
 
-<Inclusions includes={includes} notIncludes={notIncludes} i18n={i18n} />
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
 
-<div class="flex flex-wrap text-justify">
-    <div class="w-full md:pr-3">
-        <h3 class="text-lg md:text-2xl font-bold text-orange-600 mt-10 mb-4">Isla Mujeres Includes</h3>
-        <ul class="space-y-4 text-base md:text-lg">
-            <li><i class="at-check-circle text-green-600"></i> Food & drinks</li>
-            <li><i class="at-check-circle text-green-600"></i> Buffet lunch at the beach club <em>(Dolphinarium)</em></li>
-            <li><i class="at-check-circle text-green-600"></i> Open bar</li>
-            <li><i class="at-check-circle text-green-600"></i> Use of Snorkelling equipment</li>
-        </ul>
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Cancun speed boat jungle tour</TagH2>
+    <TagH3>Schedule from 8:00 am – 10:30 am <em>(times are approximated and may vary)</em> </TagH3>
+
+    <TagP>The <strong>Combo aquatic tours in Cancun</strong> adventure begins with a <strong>speedboat ride</strong> through the beautiful <strong>Nichupté Lagoon</strong>. Where we will have contact with different <strong>species of birds, fish, and crocodiles</strong>. The speed will increase as well as the emotion and adrenaline. In the end, we will visit a reef in the area of <strong>“El Meco”</strong> where we can visit <strong>underwater sculptures</strong> at low depths and endless <strong>marine creatures</strong> around us.</TagP>
+
+    <TagH3>Double fun in one day</TagH3>
+
+    <TagP>Take advantage of this <strong>combo aquatic tours in Cancun</strong> and fill your day with fun with the most popular water <strong>activities in Cancun and Isla Mujeres</strong>.</TagP>
+
+    <TagH2>Walk to the Dock in Playa Langosta</TagH2>
+    <TagH3>11:15 am <em>(times are approximated and may vary)</em>.</TagH3>
+
+    <TagP>At the end of the <strong>Cancun speedboat tour</strong>, you must go on your own to the <strong>Playa Langosta dock</strong>. Start walking with a panoramic view of the <strong>hotel zone of Cancun</strong>. You will see the <strong>small monument of “Arco de Labná”</strong> an imitation of a real Mayan stone arch in Yucatan. In addition, you will pass near the <strong>giant Mexican flag</strong>. Lastly, the FONATUR sculptures that were meant to be under the sea for snorkeling tours.</TagP>
+
+    <TagP>It should take <strong>approximately 15 minutes to arrive</strong> and register for the catamaran tour. The <strong>Combo aquatic tours in Cancun</strong> continue! </TagP>
+
+    <TagH2>Isla Mujeres Catamaran & Snorkel Tour</TagH2>
+    <TagH3>Itinerary from 11:30 a.m. – 7:00 p.m <em>(times are approximated and may vary)</em></TagH3>
+
+    <TagP>Once on board the Catamaran of the <strong>combo aquatic tours in Cancun</strong>. The music, party, and <strong>open bar on board</strong> will cheer you up, as well as be moved by the <strong>colors of the Mexican Caribbean Sea</strong>. We will visit a beautiful reef in <strong>Punta Sam</strong> where you will once again marvel at the <strong>different species of exotic fish</strong>, turtles, and manta rays from the Mexican Caribbean.</TagP>
+
+    <TagP>Stroll through the small town of <strong>Isla Mujeres</strong>. Feel its colors, its people, and its culture, as well as the multiple natural settings that will steal your attention.</TagP>
+
+    <TagP>Our host will provide you with a delicious <strong>buffet meal at the Isla Mujeres dolphinarium</strong>. In the end, you will re-board the catamaran to return to Cancun.</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} notIncludes={notIncludes} />
+
+    <div class="flex flex-wrap text-justify">
+        <div class="w-full md:pr-3">
+            <h3 class="text-lg md:text-xl font-bold text-green-700 mt-10 mb-4">Isla Mujeres Includes</h3>
+            <ul class="space-y-4 text-base md:text-lg">
+                <li class="flex items-center"><Check class="text-green-700 mr-1" /> Food & drinks</li>
+                <li class="flex items-center"><Check class="text-green-700 mr-1" /> Buffet lunch at the beach club <em>(Dolphinarium)</em></li>
+                <li class="flex items-center"><Check class="text-green-700 mr-1" /> Open bar</li>
+                <li class="flex items-center"><Check class="text-green-700 mr-1" /> Use of Snorkelling equipment</li>
+            </ul>
+        </div>
     </div>
-</div>
+</Accordion>
 
-<TagH2>Cancun speed boat jungle tour</TagH2>
-<TagH3>Schedule from 8:00 am – 10:30 am <em>(times are approximated and may vary)</em> </TagH3>
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
 
-<TagP>The <strong>Combo aquatic tours in Cancun</strong> adventure begins with a <strong>speedboat ride</strong> through the beautiful <strong>Nichupté Lagoon</strong>. Where we will have contact with different <strong>species of birds, fish, and crocodiles</strong>. The speed will increase as well as the emotion and adrenaline. In the end, we will visit a reef in the area of <strong>“El Meco”</strong> where we can visit <strong>underwater sculptures</strong> at low depths and endless <strong>marine creatures</strong> around us.</TagP>
-
-<TagH3>Double fun in one day</TagH3>
-
-<TagP>Take advantage of this <strong>combo aquatic tours in Cancun</strong> and fill your day with fun with the most popular water <strong>activities in Cancun and Isla Mujeres</strong>.</TagP>
-
-<TagH2>Walk to the Dock in Playa Langosta</TagH2>
-<TagH3>11:15 am <em>(times are approximated and may vary)</em>.</TagH3>
-
-<TagP>At the end of the <strong>Cancun speedboat tour</strong>, you must go on your own to the <strong>Playa Langosta dock</strong>. Start walking with a panoramic view of the <strong>hotel zone of Cancun</strong>. You will see the <strong>small monument of “Arco de Labná”</strong> an imitation of a real Mayan stone arch in Yucatan. In addition, you will pass near the <strong>giant Mexican flag</strong>. Lastly, the FONATUR sculptures that were meant to be under the sea for snorkeling tours.</TagP>
-
-<TagP>It should take <strong>approximately 15 minutes to arrive</strong> and register for the catamaran tour. The <strong>Combo aquatic tours in Cancun</strong> continue! </TagP>
-
-<TagH2>Isla Mujeres Catamaran & Snorkel Tour</TagH2>
-<TagH3>Itinerary from 11:30 a.m. – 7:00 p.m <em>(times are approximated and may vary)</em></TagH3>
-
-<TagP>Once on board the Catamaran of the <strong>combo aquatic tours in Cancun</strong>. The music, party, and <strong>open bar on board</strong> will cheer you up, as well as be moved by the <strong>colors of the Mexican Caribbean Sea</strong>. We will visit a beautiful reef in <strong>Punta Sam</strong> where you will once again marvel at the <strong>different species of exotic fish</strong>, turtles, and manta rays from the Mexican Caribbean.</TagP>
-
-<TagP>Stroll through the small town of <strong>Isla Mujeres</strong>. Feel its colors, its people, and its culture, as well as the multiple natural settings that will steal your attention.</TagP>
-
-<TagP>Our host will provide you with a delicious <strong>buffet meal at the Isla Mujeres dolphinarium</strong>. In the end, you will re-board the catamaran to return to Cancun.</TagP>
-
-<AdditionalInfo information={information} i18n={i18n} />
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

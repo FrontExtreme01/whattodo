@@ -1,0 +1,97 @@
+---
+slug: 'ek-balam-maya-site-and-valladolid-day-tour/en'
+status: 1
+lang: 'en'
+slugGallery: 'ek-balam'
+title: 'Ek Balam Maya Traditions'
+description: Discover the expansive archeological marvel of Ek Balam, home to one of Mesoamerica's grandest structures.
+keywords: ''
+categories: ['RUINS']
+price: 191
+stars: '4.5'
+reviews: '1,346'
+image:
+    src: '/assets/covers/tours/ek-balam-from-cancun.webp'
+    alt: 'cover Ek Balam Maya Site and Valladolid Day Tour'
+highlights: ['Transportation Included', 'Life jackets at the cenote', 'Regional buffet lunch']
+recommendedFor: ['Families, ', 'Groups & Special Events, ', 'Adventurers']
+bokun: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience/848479?partialView=1'
+calendar: 'https://widgets.bokun.io/online-sales/8b31caec-8877-411a-85ad-682828170619/experience-calendar/848479'
+location: 'Ek Balam, Valladolid'
+duration: '12 hours'
+transportation: 'Transportation Included'
+---
+
+import Accordion from "@components/detail-content/Accordion";
+import TagH2 from "@components/global/TagH2.astro";
+import TagP from "@components/global/TagP.astro";
+import Inclusions from "@components/detail-content/Inclusions.astro";
+import ShouldKnow from "@components/detail-content/ShouldKnow.astro";
+import ShouldBring from "@components/detail-content/ShouldBring.astro";
+
+export const includes = [
+    'Round trip in A/C equipped transportation',
+    'Guided visit and free time in Ek Balam',
+    'About 50 minutes of swimming in the cenote Chichikán',
+    'Life jackets at the cenote',
+    'Regional buffet lunch',
+    'Free time at the Magical Town of UAYMA',
+    '2 bottles of water',
+    'Bilingual Guide (English and Spanish)',
+];
+
+export const shouldKnow = [
+    'Wear comfortable clothes',
+    'Use sneakers or comfortable shoes',
+    'Bring a cap or hat for sun protection',
+    'Don’t forget your camera or cell phone',
+    'Drones are not permitted',
+];
+
+export const shouldBring = [
+    'Comfortable footwear',
+    'Swimsuit and towel',
+    'Change of clothes',
+    'Biodegradable sunscreen and insect repellent',
+    'Extra cash (for drinks, souvenirs, video cameras charge, and tips)',
+    'Sunglasses and sun hat',
+];
+
+export const titles = {
+    WHAT_TO_EXPECT: 'What to expect?',
+    WHATS_INCLUDED: 'What’s included?',
+    SHOULD_KNOW: 'What you should know?',
+    SHOULD_BRING: 'What you should bring?',
+};
+
+<Accordion client:visible title={titles.WHAT_TO_EXPECT} idHash="whatToExpect">
+    <TagH2>Overview</TagH2>
+
+    <TagP>Discover the expansive archeological marvel of Ek Balam, home to one of Mesoamerica's grandest structures.</TagP>
+
+    <TagP>Climb at the top of the acropolis to admire its unique decoration and view to the mayan jungle.</TagP>
+
+    <TagP>Swim and relax in the refreshing waters of the cenote, after swimming, let us pamper you with the best of the local cuisine.</TagP>
+
+    <TagP>To finish your trip, you will have free time to explore the magical town of Valladolid.</TagP>
+
+    <TagP>Explore the remains of ancient Ek Balam, one of the largest Maya settlements in the area. Here, you will have the unique opportunity to climb on top of the main pyramid. Following a guided walk, enjoy some free time for photos.</TagP>
+
+    <TagP><strong>AVAILABILITY</strong></TagP>
+
+    <TagP>Cancún</TagP>
+
+    <TagP>Wednesday and Friday</TagP>
+</Accordion>
+
+<Accordion client:visible title={titles.WHATS_INCLUDED} idHash="whatsIncluded">
+    <Inclusions includes={includes} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_KNOW} idHash="whatYouShouldKnow">
+    <ShouldKnow shouldKnow={shouldKnow} />
+</Accordion>
+
+<Accordion client:visible title={titles.SHOULD_BRING} idHash="whatYouShouldBring">
+    <ShouldBring shouldBring={shouldBring} />
+</Accordion>

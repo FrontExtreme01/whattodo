@@ -1,23 +1,23 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCoverflow, Navigation } from 'swiper/modules';
+import { IconTripAdvisor } from '@/img/allIcons';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import "swiper/css/effect-coverflow";
 
-export default function Testimonials({ testimonials, title, description }: any) {
+export default function Testimonials({ testimonials, title }: any) {
     return (
-        <section className="bg-[url('/assets/backgrounds/background-testimonials-opinion-and-reviews.webp')] bg-no-repeat bg-center bg-cover">
-            <div className="relative pt-5 pb-20 px-5 md:px-24 container mx-auto text-center" data-aos="fade-up" data-aos-delay="400">
-                <div className="next-test absolute top-1/2 right-3 -translate-y-1/2 z-10 p-3 sm:p-4 bg-white text-black rounded-full flex items-center justify-center shadow-lg cursor-pointer transition duration-500 hover:bg-slate-200">
-                    <i className="at-arrow-right"></i>
+        <section id="reviews" className="bg-slate-100">
+            <div className="relative pt-5 pb-20 px-5 md:px-24 container mx-auto">
+                <div className="next-test absolute top-1/2 right-3 -translate-y-1/2 z-10 p-2 sm:p-4 bg-white text-black rounded-full flex items-center justify-center shadow-lg cursor-pointer transition duration-500 hover:bg-slate-200 border border-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 6l6 6l-6 6" /></svg>
                 </div>
-                <div className="prev-test absolute top-1/2 left-3 -translate-y-1/2 z-10 p-3 sm:p-4 bg-white text-black rounded-full flex items-center justify-center shadow-lg cursor-pointer transition duration-500 hover:bg-slate-200">
-                    <i className="at-arrow-left"></i>
+                <div className="prev-test absolute top-1/2 left-3 -translate-y-1/2 z-10 p-2 sm:p-4 bg-white text-black rounded-full flex items-center justify-center shadow-lg cursor-pointer transition duration-500 hover:bg-slate-200 border border-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15 6l-6 6l6 6" /></svg>
                 </div>
 
-                <h2 className="mt-16 mb-8 text-2xl md:text-4xl text-orange-500 font-bold">{title}</h2>
-                <p className="text-base/loose md:text-xl/loose text-gray-600 mb-8">{description}</p>
+                <h2 className="mt-16 mb-8 text-2xl md:text-4xl text-gray-800 font-bold">{title}</h2>
                 <Swiper
                     className="mySwiper"
                     loop={true}
@@ -79,11 +79,12 @@ export default function Testimonials({ testimonials, title, description }: any) 
                                     </div>
                                     <div className="w-7/12 sm:w-8/12 text-start">
                                         <p className="text-base text-gray-600 font-bold">{test.user}</p>
-                                        <p className="text-sm text-gray-400">{test.date}</p>
+                                        <p className="text-sm text-gray-500">{test.date}</p>
                                     </div>
-                                    <div className="w-2/12 sm:w-2/12">
-                                        <p className="font-bold text-sm">
-                                            <i className="at-star-decor text-amber-500"></i> {test.stars}
+                                    <div className="w-2/12">
+                                        <p className="font-bold text-sm flex items-center justify-center gap-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="icon icon-tabler icons-tabler-filled icon-tabler-star text-amber-500 size-5"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" /></svg>
+                                            {test.stars}
                                         </p>
                                     </div>
                                     <div className="w-full mt-5">
@@ -91,8 +92,8 @@ export default function Testimonials({ testimonials, title, description }: any) 
                                         <p className="text-justify text-base sm:text-lg text-gray-500">{test.review}</p>
                                     </div>
                                     <div className="w-full flex items-center mt-5">
-                                        <img src="/assets/icons/tripadvisor-icon.svg" alt="icon tripadvisor" className="w-8 h-8 rounded-full" />
-                                        <p className="font-extrabold ml-2 text-sm">TripAdvisor</p>
+                                        <img src={IconTripAdvisor.src} alt="icon tripadvisor" className="w-8 h-8 rounded-full" />
+                                        <p className="font-bold ml-2 text-sm">TripAdvisor</p>
                                     </div>
                                 </div>
                             </div>

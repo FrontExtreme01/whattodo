@@ -1,0 +1,91 @@
+---
+import { Image } from "astro:assets";
+import { getI18N } from "@/i18n";
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
+import { getTopThings } from "@/content/functions";
+import { BannerTopThings, Separador, BannerMera} from "@/img/allImages";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import TopThingsCard from "@components/cards/TopThingsCard.astro";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+
+const allTop = await getTopThings(lang);
+
+const seoMetaDatos = {
+    title: i18n.SEO.TOP_THINGS_CANCUN.TITLE,
+    description: i18n.SEO.TOP_THINGS_CANCUN.DESCRIPTION,
+    image: BannerTopThings.src,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    <!-- Banner -->
+    <section class="bg-white">
+        <Image
+            class="max-h-[700px] w-full h-full object-cover object-center"
+            src={BannerTopThings}
+            alt={i18n.TOP_THINGS_CANCUN.TITLE}
+        />
+    </section>
+    <!-- Intro -->
+    <section class="container mx-auto px-10 md:px-20 py-10 md:py-20">
+        <img src={Separador.src} alt="" class="mx-auto mb-8" />
+        <h1
+            class="text-orange-600 text-2xl md:text-4xl font-bold text-center mb-8"
+        >
+            {i18n.TOP_THINGS_CANCUN.TITLE}
+        </h1>
+        <p class="text-base md:text-xl/loose text-center md:w-10/12 mx-auto">
+            {i18n.TOP_THINGS_CANCUN.DESCRIPTION.TEXT_1}
+            <span class="hidden sm:inline"
+                >{i18n.TOP_THINGS_CANCUN.DESCRIPTION.TEXT_2}</span
+            >
+        </p>
+    </section>
+    <!-- Top Things -->
+    <section class="container mx-auto mb-10">
+        <div class="flex flex-wrap justify-center">
+            {allTop.map((top, index) => (
+                <TopThingsCard top={top} index={10 - index} />
+            ))}
+        </div>
+            <a href={translatePath("/cancun-airport-vip-lounge/")}>
+                <Image src={BannerMera} alt="" class="w-fit mx-auto px-4 my-10" />
+            </a>
+    </section>
+    
+    <script is:inline>
+        const cards = document.querySelectorAll(".cardTravel");
+
+        [...cards].forEach((card) => {
+            const readMore = card.querySelector("#readMore");
+            const readLess = card.querySelector("#readLess");
+            const txtMore = card.querySelector("#moreText");
+            const btnHighlights = card.querySelector("#btnHighlights");
+            const iconHighlight = card.querySelector("#iconHighlight");
+            const highlights = card.querySelector("#collapseHighlights")
+
+            readMore.addEventListener("click", () => {
+                readMore.style.display = "none";
+                txtMore.style.display = "inline";
+            });
+            readLess.addEventListener("click", () => {
+                readMore.style.display = "inline";
+                txtMore.style.display = "none";
+            });
+            btnHighlights.addEventListener("click", () => {
+                if (highlights.classList.contains("hidden")) {
+                    highlights.classList.remove("hidden");
+                    iconHighlight.classList.add("rotate-180");
+                } else {
+                    highlights.classList.add("hidden");
+                    iconHighlight.classList.remove("rotate-180");
+                }
+            });
+        });
+    </script>
+</BaseLayout>
