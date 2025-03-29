@@ -5,6 +5,10 @@
             "DESCRIPTION": "Find what to do in Cancun. From adventures, snorkeling, sailing, Mayan ruins, dining, and more experiences you will love.",
             "KEYWORDS": "Cancun, Mexico, tours, activities, things to do, travel, tourism, vacation, sightseeing, attractions"
         },
+        "BLOG_PAGE":{
+            "TITLE": "Blog Cancun - What To Do In Cancun",
+            "DESCRIPTION": "Welcome to the What To Do In Cancun blog! Discover the latest travel news, insider tips, and updates on everything in Cancun. Whether you're planning your trip or already enjoying the city, stay informed with essential insights to make the most of your experience."
+        },
         "TOUR_PAGE": {
             "ALL_TOURS": {
                 "TITLE": "The Definitive Cancun Guide - What To Do In Cancun",

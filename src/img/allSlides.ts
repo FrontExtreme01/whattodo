@@ -109,6 +109,12 @@ const images = {
                 { image: Party3, alt: "banner beachclubs in cancun", href: "" },
                 { image: Party1, alt: "banner the bests nightclubs in cancun", href: "/nightlife-in-cancun/" },
             ],
+            BLOG: [
+                { image: HomeDeskEN1, alt: "new discounts 2025", href: "" },
+                { image: HomeDeskEN3, alt: "tour pirate ship cancun jolly roger", href: "/tour/pirate-show-jolly-roger-cancun/" },
+                { image: HomeDeskEN4, alt: "tour isla mujeres catamaran premium service", href: "/tour/isla-mujeres-premium-catamaran-with-transportation-and-dock-fee/" },
+                { image: HomeDeskEN5, alt: "tour atv jungle adventure and ziplines", href: "/tour/atv-and-zipline-in-cancun/" },
+            ]
         },
         MOBILE: {
             HOME: [
@@ -174,6 +180,12 @@ const images = {
                 { image: Party3, alt: "banner beachclubs in cancun", href: "" },
                 { image: Party1, alt: "banner the bests nightclubs in cancun", href: "/nightlife-in-cancun/" },
             ],
+            BLOG: [
+                { image: HomeMobEN1, alt: "new discounts 2025", href: "" },
+                { image: HomeMobEN3, alt: "tour pirate ship cancun jolly roger", href: "/tour/pirate-show-jolly-roger-cancun/" },
+                { image: HomeMobEN4, alt: "tour isla mujeres catamaran premium service", href: "/tour/isla-mujeres-premium-catamaran-with-transportation-and-dock-fee/" },
+                { image: HomeMobEN5, alt: "tour atv jungle adventure and ziplines", href: "/tour/atv-and-zipline-in-cancun/" },
+            ]
         },
     },
 };

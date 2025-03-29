@@ -1,0 +1,42 @@
+---
+export const prerender = false;
+
+import { getPostInfo } from "@/lib/wp";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const slug = Astro.params.slug;
+if (!slug) return Astro.redirect("/404");
+
+const { title, content, date, seoTitle, seoDescription, featuredImage, seoType } = await getPostInfo(slug);
+
+const seoMetaDatos = {
+    title: seoTitle,
+    description: seoDescription,
+    image: featuredImage,
+    ogType: seoType,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    <section class="container mx-auto px-5 md:px-20 my-16">
+        <article class="prose lg:prose-xl mx-auto">
+            <h1 class="text-center">{title}</h1>
+            <p class="text-gray-500 text-center">
+                {
+                    new Date(date).toLocaleDateString("es-ES", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                    })
+                }
+            </p>
+            <img
+                src={featuredImage}
+                alt={seoTitle}
+                class="w-full h-56 md:h-96 object-cover rounded-lg"
+            />
+            <div class="text-xl mx-auto" set:html={content} />
+        </article>
+    </section>
+</BaseLayout>

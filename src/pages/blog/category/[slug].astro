@@ -1,0 +1,40 @@
+---
+import { getPostsByCategory } from "@/lib/wp";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Intro from "@components/global/Intro.astro";
+import BlogCard from "@components/cards/BlogCard.astro";
+
+const slug = Astro.params.slug;
+if (!slug) return Astro.redirect("/404");
+
+const posts = await getPostsByCategory(slug);
+
+const formattedSlug = slug
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+if (!posts.length) {
+    throw new Error(`No posts found for category: ${slug}`);
+}
+
+const seoMetaDatos = {
+    title: `Blog - ${slug}`,
+    description: `Posts related to ${slug}`,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+
+    <Intro
+        title={formattedSlug}
+        description={`Posts related to ${formattedSlug}`}
+    />
+
+    <section class="container mx-auto px-5 py-6">
+        <div class="flex flex-wrap">
+            {posts.map((post) => <BlogCard {...post} />)}
+        </div>
+    </section>
+</BaseLayout>

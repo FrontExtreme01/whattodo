@@ -43,7 +43,7 @@ export default function FormBokunMobile({ data }: any) {
                         {/* Header Modal */}
                         <div className="w-full sticky top-0 z-[5001] px-2 pt-8 pb-3 bg-white">
                             <p className="text-lg font-bold px-5">{data.i18n.TITLE}</p>
-                            <hr className="h-0.5 bg-slate-200 mt-5" />
+                            <hr className="h-0.5 bg-slate-200 mt-5 border-t-0" />
                             <button className="absolute top-8 right-8 text-red-700 text-xl" onClick={toggleModal}>
                                 <img src={Close.src} alt="Close" className="size-5" />
                             </button>

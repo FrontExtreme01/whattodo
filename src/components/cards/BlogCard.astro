@@ -1,0 +1,53 @@
+---
+import { getI18N } from "@/i18n";
+import { truncateText } from "@/content/functions";
+import { CalendarTime } from "@/img/allIcons";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+
+interface Props {
+    title: string;
+    excerpt: string;
+    featuredImage: string;
+    date: string;
+    slug: string;
+    categories: any;
+};
+
+const { title, excerpt, featuredImage, date, slug, categories } = Astro.props;
+
+const { visibleText } = truncateText(excerpt, 100);
+---
+
+<div class="snap-start shrink-0 w-3/4 sm:w-6/12 lg:w-4/12 xl:w-3/12 sm:p-2 md:p-4 lg:p-2.5 mb-5">
+    <a aria-label={i18n.ACCESSIBILITY.GO_TO_CARD_DETAILS + title} href={`/blog/${slug}/`}>
+        <div class="flex flex-wrap flex-col rounded-xl bg-white shadow h-full">
+            <!-- Image -->
+            <div class="relative w-full">
+                <img width="400" height="300" src={featuredImage} class="w-full h-64 object-cover rounded-lg cursor-pointer duration-200 lg:hover:scale-90" alt="" />
+            </div>
+            <!-- Score Star & Duration -->
+            <div class="py-6 px-5">
+                <div class="flex flex-wrap items-center justify-start gap-y-3 mb-4">
+                    {categories.map(category => (
+                        <a href={`/blog/category/${category.slug}/`} aria-label={i18n.ACCESSIBILITY.GO_TO_CARD_DETAILS + title}>
+                            <span class="block px-3 py-1 bg-green-100 rounded-full font-bold text-xs text-green-700 w-fit mr-1">{category.name}</span>
+                        </a>
+                    ))}
+                </div>
+                <h3 class="font-bold text-base/snug sm:text-xl/snug mb-3 text-start text-gray-800">{title}</h3>
+                <div class="flex flex-wrap items-center gap-3 mb-4 text-xs sm:text-sm">
+                    <div class="flex items-center font-semibold text-gray-500">
+                        {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    </div>
+                </div>
+            </div>
+            <!-- Price -->
+            <div class="w-full flex flex-wrap px-5 mb-5 mt-auto">
+                <div class="text-gray-900 text-sm/relaxed" set:html={visibleText}></div>
+            </div>
+        </div>
+    </a>
+</div>

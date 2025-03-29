@@ -5,6 +5,10 @@
             "DESCRIPTION": "Encuentra todas las actividades, lugares maravillosos para visitar, Tours en Madrid y diviértete a lo grande durante tu visita a España.",
             "KEYWORDS": "Cancún, México, tours, actividades, cosas que hacer, viajes, turismo, vacaciones, visitas turísticas, atracciones"
         },
+        "BLOG_PAGE": {
+            "TITLE": "Blog de Cancún - What To Do In Cancun",
+            "DESCRIPTION": "¡Descubre las últimas noticias, consejos de viaje y actualizaciones sobre todo en Cancún! Manténgase informado con información esencial para disfrutar al máximo de su experiencia en Cancún."
+        },
         "TOUR_PAGE": {
             "ALL_TOURS": {
                 "TITLE": "La guía definitiva de Cancún - What To Do In Cancun",

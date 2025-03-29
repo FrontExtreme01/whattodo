@@ -1,0 +1,29 @@
+---
+export const prerender = false;
+
+import { getPostsByPage } from "@/lib/wp";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogCard from "@components/cards/BlogCard.astro";
+
+const page = Astro.params.slug;
+if (!page) return Astro.redirect("/404");
+
+const posts = await getPostsByPage({ page: parseInt(page, 10) });
+if (!posts.length) {
+    throw new Error(`No posts found for page: ${page}`);
+}
+
+const seoMetaDatos = {
+    title: `Blog - Page ${page}`,
+    description: `Posts for page ${page}`,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+    <section class="container mx-auto px-5 py-6">
+        <div class="flex flex-wrap">
+            {posts.map((post) => <BlogCard {...post} />)}
+        </div>
+    </section>
+</BaseLayout>

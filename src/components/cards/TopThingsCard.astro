@@ -111,7 +111,7 @@ const { visibleText, hiddenText } = truncateText(top.data.description, 172);
                 </div>
                 <!-- Highlights -->
                 <h3 class="text-center font-bold mt-3">{i18n.CARDS.HIGHLIGHTS}</h3>
-                <hr class="w-1/2 my-3 mx-auto"/>
+                <hr class="w-1/2 my-3 mx-auto border-t-0 bg-slate-200 h-0.5"/>
                 <ul class="space-y-2 text-justify">
                     {top.data.highlights.map((item) => (
                         <li><strong><Star class="size-6 text-amber-500 inline-block" /> {item.title}</strong> {item.description}</li>
@@ -119,7 +119,7 @@ const { visibleText, hiddenText } = truncateText(top.data.description, 172);
                 </ul>
                 <!-- Includes -->
                 <h3 class="text-center font-bold mt-3">{i18n.CARDS.INCLUDES}</h3>
-                <hr class="w-1/2 my-3 mx-auto"/>
+                <hr class="w-1/2 my-3 mx-auto border-t-0 bg-slate-200 h-0.5"/>
                 <ul class="space-y-2 text-justify">
                     {top.data.includes.map((item) => (
                         <li><Check class="size-6 text-green-700 mr-1 inline-block" /> {item}</li>
@@ -128,7 +128,7 @@ const { visibleText, hiddenText } = truncateText(top.data.description, 172);
                 <!-- Not includes -->
                 {top.data.notIncludes && (
                     <h3 class="text-center font-bold mt-3">{i18n.CARDS.NOT_INCLUDES}</h3>
-                    <hr class="w-1/2 my-3 mx-auto"/>
+                    <hr class="w-1/2 my-3 mx-auto border-t-0 bg-slate-200 h-0.5"/>
                     <ul class="space-y-2 text-justify">
                         {top.data.notIncludes.map((item) => (
                             <li><Close class="size-6 text-red-600 mr-1 inline-block" /> {item}</li>

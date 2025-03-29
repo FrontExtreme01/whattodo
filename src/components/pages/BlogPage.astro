@@ -1,0 +1,46 @@
+---
+import { getI18N } from "@/i18n";
+import { getPostsByPage, getTotalPosts } from "@/lib/wp";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogCard from "@components/cards/BlogCard.astro";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const postsPerPage = 10; // Número de posts por página
+const currentPage = 1; // Página inicial
+const posts = await getPostsByPage({ perPage: postsPerPage, page: currentPage });
+const totalPosts = await getTotalPosts();
+const totalPages = Math.ceil(totalPosts / postsPerPage);
+
+const seoMetaDatos = {
+    title: i18n.SEO.BLOG_PAGE.TITLE,
+    description: i18n.SEO.BLOG_PAGE.DESCRIPTION,
+};
+---
+
+<BaseLayout seo={seoMetaDatos}>
+
+    <section class="container mx-auto px-5 py-6">
+        <div class="grid grid-cols-3 grid-rows-3 gap-3 bg-slate-300">
+            <div class="col-span-2 row-span-3 bg-white">1</div>
+            <div class="bg-white col-start-3">2</div>
+            <div class="bg-white col-start-3 row-start-2">3</div>
+            <div class="bg-white col-start-3 row-start-3">4</div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-5 py-6">
+        <div class="flex flex-wrap">
+            {posts.map((post) => <BlogCard {...post} />)}
+        </div>
+        <div class="pagination">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <a href={`/blog/page/${index + 1}/`} class="page-link">
+                {index + 1}
+              </a>
+            ))}
+          </div>
+    </section>
+</BaseLayout>

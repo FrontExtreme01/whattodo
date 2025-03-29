@@ -1,16 +1,15 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
-
 import netlify from '@astrojs/netlify';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://whattodocan.netlify.app',
-
-  integrations: [tailwind(), react(), mdx(), sitemap({
+  output: 'server',
+  integrations: [react(), mdx(), sitemap({
     i18n: {
       defaultLocale: 'en',
       locales: {
@@ -23,7 +22,6 @@ export default defineConfig({
       forward: ['dataLayer.push', 'fbq'],
     },
   })],
-
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'es'],
@@ -34,16 +32,16 @@ export default defineConfig({
       prefixDefaultLocale: false
     }
   },
-
   experimental: {
     svg: {
       mode: 'sprite',
     }
   },
-
   legacy: {
     collections: true
   },
-
-  adapter: netlify()
+  adapter: netlify(),
+  vite: {
+    plugins: [tailwindcss()]
+  }
 });

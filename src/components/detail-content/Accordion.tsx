@@ -11,7 +11,7 @@ export default function Accordion(props) {
     return (
         <div className="mt-5" id={props.idHash}>
             <button
-                className="flex items-center justify-between w-full text-gray-800"
+                className="flex items-center justify-between w-full text-gray-800 cursor-pointer"
                 onClick={() => toggleOpen()}
             >
                 <h2 className="font-bold text-lg sm:text-xl">{props.title}</h2>
@@ -23,7 +23,7 @@ export default function Accordion(props) {
             >
                 {props.children}
             </div>
-            <hr className="h-0.5 bg-slate-200 my-10"/>
+            <hr className="h-0.5 bg-slate-200 my-10 border-t-0"/>
         </div>
     );
 }
